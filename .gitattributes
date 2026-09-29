@@ -1,0 +1,3 @@
+# Benchmark fixtures: byte-exact, never converted.
+bench/corpus/binary/** binary
+bench/corpus/container/** binary

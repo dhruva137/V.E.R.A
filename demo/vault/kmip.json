@@ -1,0 +1,277 @@
+{
+  "source": "kmip",
+  "collected_at": "2026-08-29T09:00:00Z",
+  "endpoint": "kmip://keymanager.tejomaya.internal:5696",
+  "protocol_version": "2.1",
+  "note": "Authenticated with a read-only client certificate. Only attributes were fetched; no Get operation for key material was issued.",
+  "objects": [
+    {
+      "Unique Identifier": "KMIP-0001",
+      "Name": "tde-master-corebank",
+      "Object Type": "Symmetric Key",
+      "Cryptographic Algorithm": "AES",
+      "Cryptographic Length": 256,
+      "Cryptographic Usage Mask": [
+        "Encrypt",
+        "Decrypt"
+      ],
+      "State": "Active",
+      "Initial Date": "2024-09-28T09:00:00Z",
+      "Activation Date": "2024-10-08T09:00:00Z",
+      "Deactivation Date": null,
+      "Object Group": "database-tde",
+      "Protection Storage Mask": [
+        "Software"
+      ],
+      "Fresh": false,
+      "public_key_sha256": "BD:33:D9:9A:C9:DA:EB:3D:9D:3D:DD:C3:AE:57:B1:88"
+    },
+    {
+      "Unique Identifier": "KMIP-0002",
+      "Name": "backup-archive-master",
+      "Object Type": "Symmetric Key",
+      "Cryptographic Algorithm": "AES",
+      "Cryptographic Length": 256,
+      "Cryptographic Usage Mask": [
+        "Encrypt",
+        "Decrypt"
+      ],
+      "State": "Active",
+      "Initial Date": "2022-07-21T09:00:00Z",
+      "Activation Date": "2022-07-31T09:00:00Z",
+      "Deactivation Date": null,
+      "Object Group": "backup",
+      "Protection Storage Mask": [
+        "Software"
+      ],
+      "Fresh": false,
+      "public_key_sha256": "02:A2:B1:1A:85:39:5E:97:EB:A6:57:83:02:75:F2:5F"
+    },
+    {
+      "Unique Identifier": "KMIP-0003",
+      "Name": "tape-archive-legacy",
+      "Object Type": "Symmetric Key",
+      "Cryptographic Algorithm": "DES3",
+      "Cryptographic Length": 168,
+      "Cryptographic Usage Mask": [
+        "Decrypt"
+      ],
+      "State": "Deactivated",
+      "Initial Date": "2018-06-12T09:00:00Z",
+      "Activation Date": "2018-06-22T09:00:00Z",
+      "Deactivation Date": "2026-02-10T09:00:00Z",
+      "Object Group": "backup",
+      "Protection Storage Mask": [
+        "Software"
+      ],
+      "Fresh": false,
+      "public_key_sha256": "58:4B:5D:4F:3C:D5:BE:59:C8:18:64:88:06:D7:2C:CD"
+    },
+    {
+      "Unique Identifier": "KMIP-0004",
+      "Name": "netbanking-jwt-signing",
+      "Object Type": "Private Key",
+      "Cryptographic Algorithm": "RSA",
+      "Cryptographic Length": 2048,
+      "Cryptographic Usage Mask": [
+        "Sign"
+      ],
+      "State": "Active",
+      "Initial Date": "2024-12-17T09:00:00Z",
+      "Activation Date": "2024-12-22T09:00:00Z",
+      "Deactivation Date": null,
+      "Object Group": "identity",
+      "Protection Storage Mask": [
+        "Software"
+      ],
+      "Fresh": false,
+      "public_key_sha256": "05:09:81:4B:73:FF:DF:E9:42:DC:12:7A:7E:13:8A:AB"
+    },
+    {
+      "Unique Identifier": "KMIP-0005",
+      "Name": "mq-broker-tls",
+      "Object Type": "Private Key",
+      "Cryptographic Algorithm": "RSA",
+      "Cryptographic Length": 2048,
+      "Cryptographic Usage Mask": [
+        "Sign",
+        "Decrypt"
+      ],
+      "State": "Active",
+      "Initial Date": "2024-09-28T09:00:00Z",
+      "Activation Date": "2024-10-08T09:00:00Z",
+      "Deactivation Date": null,
+      "Object Group": "messaging",
+      "Protection Storage Mask": [
+        "Software"
+      ],
+      "Fresh": false,
+      "public_key_sha256": "86:BA:E0:98:42:3E:91:92:F2:D9:1E:35:93:7F:73:B6"
+    },
+    {
+      "Unique Identifier": "KMIP-0006",
+      "Name": "payments-code-signing",
+      "Object Type": "Private Key",
+      "Cryptographic Algorithm": "RSA",
+      "Cryptographic Length": 3072,
+      "Cryptographic Usage Mask": [
+        "Sign"
+      ],
+      "State": "Active",
+      "Initial Date": "2024-06-20T09:00:00Z",
+      "Activation Date": "2024-06-30T09:00:00Z",
+      "Deactivation Date": null,
+      "Object Group": "signing",
+      "Protection Storage Mask": [
+        "Software"
+      ],
+      "Fresh": false,
+      "public_key_sha256": "2F:1B:B7:21:84:CA:93:B3:10:59:81:29:84:D4:E0:62"
+    },
+    {
+      "Unique Identifier": "KMIP-0007",
+      "Name": "settlement-envelope-kek",
+      "Object Type": "Symmetric Key",
+      "Cryptographic Algorithm": "AES",
+      "Cryptographic Length": 256,
+      "Cryptographic Usage Mask": [
+        "Encrypt",
+        "Decrypt"
+      ],
+      "State": "Active",
+      "Initial Date": "2025-03-07T09:00:00Z",
+      "Activation Date": "2025-03-12T09:00:00Z",
+      "Deactivation Date": null,
+      "Object Group": "settlement",
+      "Protection Storage Mask": [
+        "Software"
+      ],
+      "Fresh": false,
+      "public_key_sha256": "EA:6E:51:35:B7:82:E2:A2:87:16:5D:60:5C:44:52:CE"
+    },
+    {
+      "Unique Identifier": "KMIP-0008",
+      "Name": "api-hmac-shared",
+      "Object Type": "Symmetric Key",
+      "Cryptographic Algorithm": "HMAC-SHA256",
+      "Cryptographic Length": 256,
+      "Cryptographic Usage Mask": [
+        "MACGenerate",
+        "MACVerify"
+      ],
+      "State": "Active",
+      "Initial Date": "2025-07-15T09:00:00Z",
+      "Activation Date": "2025-07-20T09:00:00Z",
+      "Deactivation Date": null,
+      "Object Group": "api",
+      "Protection Storage Mask": [
+        "Software"
+      ],
+      "Fresh": false,
+      "public_key_sha256": "71:CD:A4:96:C4:A6:C9:21:91:D0:EF:04:DF:F4:91:96"
+    },
+    {
+      "Unique Identifier": "KMIP-0009",
+      "Name": "tde-master-cards",
+      "Object Type": "Symmetric Key",
+      "Cryptographic Algorithm": "AES",
+      "Cryptographic Length": 256,
+      "Cryptographic Usage Mask": [
+        "Encrypt",
+        "Decrypt"
+      ],
+      "State": "Active",
+      "Initial Date": "2024-03-12T09:00:00Z",
+      "Activation Date": "2024-04-01T09:00:00Z",
+      "Deactivation Date": null,
+      "Object Group": "database-tde",
+      "Protection Storage Mask": [
+        "Software"
+      ],
+      "Fresh": false,
+      "public_key_sha256": "F7:9B:DB:99:ED:AD:C6:20:74:52:FD:74:6D:C8:61:C6"
+    },
+    {
+      "Unique Identifier": "KMIP-0010",
+      "Name": "legacy-file-transfer",
+      "Object Type": "Symmetric Key",
+      "Cryptographic Algorithm": "DES3",
+      "Cryptographic Length": 168,
+      "Cryptographic Usage Mask": [
+        "Encrypt",
+        "Decrypt"
+      ],
+      "State": "Active",
+      "Initial Date": "2020-08-20T09:00:00Z",
+      "Activation Date": "2020-08-30T09:00:00Z",
+      "Deactivation Date": null,
+      "Object Group": "legacy",
+      "Protection Storage Mask": [
+        "Software"
+      ],
+      "Fresh": false,
+      "public_key_sha256": "25:C5:A9:08:AB:0F:38:85:C1:AA:A7:1E:0F:A0:3E:F8"
+    },
+    {
+      "Unique Identifier": "KMIP-0011",
+      "Name": "statements-jwt-signing",
+      "Object Type": "Private Key",
+      "Cryptographic Algorithm": "RSA",
+      "Cryptographic Length": 2048,
+      "Cryptographic Usage Mask": [
+        "Sign"
+      ],
+      "State": "Active",
+      "Initial Date": "2025-04-16T09:00:00Z",
+      "Activation Date": "2025-04-21T09:00:00Z",
+      "Deactivation Date": null,
+      "Object Group": "identity",
+      "Protection Storage Mask": [
+        "Software"
+      ],
+      "Fresh": false,
+      "public_key_sha256": "B1:B4:60:D5:88:FF:6A:98:4C:8F:AD:5F:E2:73:01:E0"
+    },
+    {
+      "Unique Identifier": "KMIP-0012",
+      "Name": "kafka-broker-tls",
+      "Object Type": "Private Key",
+      "Cryptographic Algorithm": "EC",
+      "Cryptographic Length": 256,
+      "Cryptographic Usage Mask": [
+        "Sign",
+        "Decrypt"
+      ],
+      "State": "Active",
+      "Initial Date": "2025-09-13T09:00:00Z",
+      "Activation Date": "2025-09-18T09:00:00Z",
+      "Deactivation Date": null,
+      "Object Group": "messaging",
+      "Protection Storage Mask": [
+        "Software"
+      ],
+      "Fresh": false,
+      "public_key_sha256": "48:EA:15:8C:1B:30:C5:AE:3D:3E:7D:83:FE:3C:16:B4"
+    },
+    {
+      "Unique Identifier": "KMIP-0013",
+      "Name": "archive-2018-master",
+      "Object Type": "Symmetric Key",
+      "Cryptographic Algorithm": "AES",
+      "Cryptographic Length": 128,
+      "Cryptographic Usage Mask": [
+        "Decrypt"
+      ],
+      "State": "Deactivated",
+      "Initial Date": "2017-11-24T09:00:00Z",
+      "Activation Date": "2017-12-04T09:00:00Z",
+      "Deactivation Date": "2025-07-25T09:00:00Z",
+      "Object Group": "backup",
+      "Protection Storage Mask": [
+        "Software"
+      ],
+      "Fresh": false,
+      "public_key_sha256": "6E:D4:38:6E:BE:49:4D:2C:57:91:30:A4:0B:CB:0A:73"
+    }
+  ]
+}

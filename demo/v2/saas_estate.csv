@@ -1,0 +1,401 @@
+name,asset_class,algorithm,key_size,source_type,hostname,environment,owner,department
+web-0000.saas.internal,tls_certificate,RSA,2048,tls,web-0000.saas.internal,production,Data Platform,SaaS
+web-0001.saas.internal,token_signing,RSA,2048,keystore,web-0001.saas.internal,production,Infrastructure,SaaS
+web-0002.saas.internal,database_tls,RSA,2048,tls,web-0002.saas.internal,production,Platform Engineering,SaaS
+web-0003.saas.internal,tls_certificate,ECDSA,256,tls,web-0003.saas.internal,staging,Infrastructure,SaaS
+worker-0004.saas.internal,tls_key_exchange,ECDHE,256,tls,worker-0004.saas.internal,dr,Application Security,SaaS
+billing-0005.saas.internal,tls_certificate,RSA,2048,tls,billing-0005.saas.internal,production,Network Ops,SaaS
+web-0006.saas.internal,code_signing,ECDSA,256,keystore,web-0006.saas.internal,staging,Platform Engineering,SaaS
+billing-0007.saas.internal,tls_key_exchange,ML-KEM-768,,tls,billing-0007.saas.internal,production,PKI Team,SaaS
+billing-0008.saas.internal,tls_certificate,RSA,2048,tls,billing-0008.saas.internal,dr,Network Ops,SaaS
+ingest-0009.saas.internal,tls_key_exchange,ECDHE,256,tls,ingest-0009.saas.internal,production,Platform Engineering,SaaS
+web-0010.saas.internal,token_signing,ECDSA,256,keystore,web-0010.saas.internal,production,Payments Ops,SaaS
+worker-0011.saas.internal,tls_key_exchange,ECDHE,256,tls,worker-0011.saas.internal,dr,Platform Engineering,SaaS
+ingest-0012.saas.internal,token_signing,RSA,2048,keystore,ingest-0012.saas.internal,production,,SaaS
+worker-0013.saas.internal,generic_key,RSA,2048,keystore,worker-0013.saas.internal,production,Platform Engineering,SaaS
+api-0014.saas.internal,tls_certificate,RSA,2048,tls,api-0014.saas.internal,production,Payments Ops,SaaS
+worker-0015.saas.internal,tls_key_exchange,ECDHE,256,tls,worker-0015.saas.internal,production,,SaaS
+web-0016.saas.internal,tls_key_exchange,ECDHE,256,tls,web-0016.saas.internal,production,Platform Engineering,SaaS
+billing-0017.saas.internal,code_signing,ECDSA,256,keystore,billing-0017.saas.internal,staging,Application Security,SaaS
+ingest-0018.saas.internal,code_signing,RSA,3072,keystore,ingest-0018.saas.internal,production,Application Security,SaaS
+ingest-0019.saas.internal,tls_certificate,ECDSA,256,tls,ingest-0019.saas.internal,production,Application Security,SaaS
+api-0020.saas.internal,code_signing,RSA,3072,keystore,api-0020.saas.internal,production,Data Platform,SaaS
+api-0021.saas.internal,tls_key_exchange,ECDHE,256,tls,api-0021.saas.internal,production,PKI Team,SaaS
+web-0022.saas.internal,database_tls,RSA,2048,tls,web-0022.saas.internal,dr,Network Ops,SaaS
+web-0023.saas.internal,token_signing,ECDSA,256,keystore,web-0023.saas.internal,production,Infrastructure,SaaS
+worker-0024.saas.internal,database_tls,RSA,2048,tls,worker-0024.saas.internal,production,Application Security,SaaS
+api-0025.saas.internal,token_signing,RSA,2048,keystore,api-0025.saas.internal,production,Data Platform,SaaS
+web-0026.saas.internal,token_signing,RSA,2048,keystore,web-0026.saas.internal,production,Data Platform,SaaS
+api-0027.saas.internal,tls_key_exchange,ECDHE,256,tls,api-0027.saas.internal,dr,Network Ops,SaaS
+billing-0028.saas.internal,tls_key_exchange,ECDHE,256,tls,billing-0028.saas.internal,dr,PKI Team,SaaS
+worker-0029.saas.internal,tls_certificate,RSA,2048,tls,worker-0029.saas.internal,production,Network Ops,SaaS
+worker-0030.saas.internal,generic_key,AES,256,keystore,worker-0030.saas.internal,production,Payments Ops,SaaS
+worker-0031.saas.internal,database_tls,ECDSA,256,tls,worker-0031.saas.internal,production,Application Security,SaaS
+web-0032.saas.internal,tls_key_exchange,ECDHE,256,tls,web-0032.saas.internal,production,Network Ops,SaaS
+web-0033.saas.internal,tls_certificate,ECDSA,256,tls,web-0033.saas.internal,dr,Payments Ops,SaaS
+api-0034.saas.internal,tls_certificate,RSA,2048,tls,api-0034.saas.internal,production,Network Ops,SaaS
+worker-0035.saas.internal,code_signing,RSA,3072,keystore,worker-0035.saas.internal,production,Payments Ops,SaaS
+worker-0036.saas.internal,tls_certificate,ECDSA,256,tls,worker-0036.saas.internal,production,Network Ops,SaaS
+ingest-0037.saas.internal,tls_certificate,RSA,2048,tls,ingest-0037.saas.internal,production,,SaaS
+worker-0038.saas.internal,tls_key_exchange,X25519,255,tls,worker-0038.saas.internal,production,Platform Engineering,SaaS
+billing-0039.saas.internal,tls_certificate,RSA,2048,tls,billing-0039.saas.internal,production,Platform Engineering,SaaS
+worker-0040.saas.internal,tls_certificate,RSA,2048,tls,worker-0040.saas.internal,production,Data Platform,SaaS
+worker-0041.saas.internal,tls_key_exchange,ECDHE,256,tls,worker-0041.saas.internal,production,,SaaS
+api-0042.saas.internal,token_signing,RSA,2048,keystore,api-0042.saas.internal,dr,Payments Ops,SaaS
+api-0043.saas.internal,tls_certificate,ECDSA,256,tls,api-0043.saas.internal,staging,,SaaS
+web-0044.saas.internal,tls_certificate,RSA,2048,tls,web-0044.saas.internal,dr,Payments Ops,SaaS
+ingest-0045.saas.internal,tls_certificate,ECDSA,256,tls,ingest-0045.saas.internal,production,Network Ops,SaaS
+billing-0046.saas.internal,token_signing,RSA,2048,keystore,billing-0046.saas.internal,production,,SaaS
+api-0047.saas.internal,tls_certificate,RSA,2048,tls,api-0047.saas.internal,staging,Infrastructure,SaaS
+api-0048.saas.internal,code_signing,RSA,3072,keystore,api-0048.saas.internal,staging,Infrastructure,SaaS
+web-0049.saas.internal,database_tls,RSA,2048,tls,web-0049.saas.internal,production,Infrastructure,SaaS
+billing-0050.saas.internal,token_signing,RSA,2048,keystore,billing-0050.saas.internal,staging,Payments Ops,SaaS
+ingest-0051.saas.internal,token_signing,RSA,2048,keystore,ingest-0051.saas.internal,production,Network Ops,SaaS
+web-0052.saas.internal,token_signing,RSA,2048,keystore,web-0052.saas.internal,production,Network Ops,SaaS
+ingest-0053.saas.internal,tls_certificate,RSA,2048,tls,ingest-0053.saas.internal,production,Application Security,SaaS
+ingest-0054.saas.internal,ssh_key,Ed25519,255,keystore,ingest-0054.saas.internal,production,Infrastructure,SaaS
+billing-0055.saas.internal,token_signing,RSA,2048,keystore,billing-0055.saas.internal,staging,Infrastructure,SaaS
+worker-0056.saas.internal,tls_certificate,RSA,2048,tls,worker-0056.saas.internal,production,Payments Ops,SaaS
+api-0057.saas.internal,tls_certificate,RSA,2048,tls,api-0057.saas.internal,production,Payments Ops,SaaS
+web-0058.saas.internal,database_tls,RSA,2048,tls,web-0058.saas.internal,production,Application Security,SaaS
+web-0059.saas.internal,tls_certificate,ML-DSA-65,,tls,web-0059.saas.internal,production,Payments Ops,SaaS
+billing-0060.saas.internal,tls_key_exchange,X25519,255,tls,billing-0060.saas.internal,staging,,SaaS
+ingest-0061.saas.internal,tls_certificate,ECDSA,256,tls,ingest-0061.saas.internal,production,Payments Ops,SaaS
+ingest-0062.saas.internal,tls_certificate,RSA,2048,tls,ingest-0062.saas.internal,dr,Application Security,SaaS
+ingest-0063.saas.internal,token_signing,ECDSA,256,keystore,ingest-0063.saas.internal,production,Payments Ops,SaaS
+web-0064.saas.internal,tls_key_exchange,X25519,255,tls,web-0064.saas.internal,production,,SaaS
+web-0065.saas.internal,code_signing,ECDSA,256,keystore,web-0065.saas.internal,production,PKI Team,SaaS
+web-0066.saas.internal,ssh_key,RSA,2048,keystore,web-0066.saas.internal,production,Infrastructure,SaaS
+web-0067.saas.internal,tls_key_exchange,ECDHE,256,tls,web-0067.saas.internal,production,,SaaS
+billing-0068.saas.internal,tls_key_exchange,ML-KEM-768,,tls,billing-0068.saas.internal,staging,Application Security,SaaS
+web-0069.saas.internal,ssh_key,Ed25519,255,keystore,web-0069.saas.internal,production,Application Security,SaaS
+ingest-0070.saas.internal,database_tls,ECDSA,256,tls,ingest-0070.saas.internal,staging,PKI Team,SaaS
+web-0071.saas.internal,database_tls,RSA,2048,tls,web-0071.saas.internal,production,Application Security,SaaS
+ingest-0072.saas.internal,code_signing,RSA,3072,keystore,ingest-0072.saas.internal,production,Data Platform,SaaS
+billing-0073.saas.internal,tls_certificate,RSA,2048,tls,billing-0073.saas.internal,production,Payments Ops,SaaS
+billing-0074.saas.internal,token_signing,RSA,2048,keystore,billing-0074.saas.internal,production,Payments Ops,SaaS
+web-0075.saas.internal,token_signing,ECDSA,256,keystore,web-0075.saas.internal,production,Payments Ops,SaaS
+ingest-0076.saas.internal,generic_key,RSA,2048,keystore,ingest-0076.saas.internal,production,Infrastructure,SaaS
+worker-0077.saas.internal,tls_key_exchange,ECDHE,256,tls,worker-0077.saas.internal,production,Network Ops,SaaS
+web-0078.saas.internal,token_signing,RSA,2048,keystore,web-0078.saas.internal,staging,Infrastructure,SaaS
+billing-0079.saas.internal,code_signing,ECDSA,256,keystore,billing-0079.saas.internal,production,PKI Team,SaaS
+web-0080.saas.internal,database_tls,RSA,2048,tls,web-0080.saas.internal,production,Payments Ops,SaaS
+ingest-0081.saas.internal,tls_key_exchange,ML-KEM-768,,tls,ingest-0081.saas.internal,production,PKI Team,SaaS
+billing-0082.saas.internal,tls_key_exchange,ECDHE,256,tls,billing-0082.saas.internal,production,Application Security,SaaS
+billing-0083.saas.internal,generic_key,RSA,2048,keystore,billing-0083.saas.internal,production,Network Ops,SaaS
+ingest-0084.saas.internal,tls_certificate,ECDSA,256,tls,ingest-0084.saas.internal,dr,Platform Engineering,SaaS
+billing-0085.saas.internal,database_tls,RSA,2048,tls,billing-0085.saas.internal,production,Data Platform,SaaS
+worker-0086.saas.internal,tls_certificate,RSA,2048,tls,worker-0086.saas.internal,production,Application Security,SaaS
+worker-0087.saas.internal,tls_key_exchange,ECDHE,256,tls,worker-0087.saas.internal,production,Infrastructure,SaaS
+worker-0088.saas.internal,tls_key_exchange,ECDHE,256,tls,worker-0088.saas.internal,production,Data Platform,SaaS
+ingest-0089.saas.internal,token_signing,ECDSA,256,keystore,ingest-0089.saas.internal,dr,Data Platform,SaaS
+ingest-0090.saas.internal,tls_certificate,RSA,2048,tls,ingest-0090.saas.internal,production,PKI Team,SaaS
+ingest-0091.saas.internal,code_signing,RSA,3072,keystore,ingest-0091.saas.internal,production,Payments Ops,SaaS
+billing-0092.saas.internal,database_tls,ECDSA,256,tls,billing-0092.saas.internal,production,Platform Engineering,SaaS
+billing-0093.saas.internal,tls_certificate,RSA,2048,tls,billing-0093.saas.internal,dr,Infrastructure,SaaS
+web-0094.saas.internal,tls_certificate,RSA,2048,tls,web-0094.saas.internal,production,PKI Team,SaaS
+api-0095.saas.internal,token_signing,ECDSA,256,keystore,api-0095.saas.internal,production,Application Security,SaaS
+ingest-0096.saas.internal,ssh_key,Ed25519,255,keystore,ingest-0096.saas.internal,production,,SaaS
+billing-0097.saas.internal,database_tls,RSA,2048,tls,billing-0097.saas.internal,production,Infrastructure,SaaS
+api-0098.saas.internal,tls_certificate,ECDSA,256,tls,api-0098.saas.internal,production,Network Ops,SaaS
+billing-0099.saas.internal,ssh_key,RSA,2048,keystore,billing-0099.saas.internal,staging,Application Security,SaaS
+worker-0100.saas.internal,tls_certificate,RSA,2048,tls,worker-0100.saas.internal,staging,Infrastructure,SaaS
+billing-0101.saas.internal,token_signing,RSA,2048,keystore,billing-0101.saas.internal,production,Application Security,SaaS
+billing-0102.saas.internal,ssh_key,Ed25519,255,keystore,billing-0102.saas.internal,staging,Network Ops,SaaS
+api-0103.saas.internal,database_tls,RSA,2048,tls,api-0103.saas.internal,staging,Payments Ops,SaaS
+web-0104.saas.internal,tls_certificate,ECDSA,256,tls,web-0104.saas.internal,production,Platform Engineering,SaaS
+billing-0105.saas.internal,database_tls,ECDSA,256,tls,billing-0105.saas.internal,production,PKI Team,SaaS
+web-0106.saas.internal,tls_certificate,ECDSA,256,tls,web-0106.saas.internal,production,Application Security,SaaS
+web-0107.saas.internal,tls_certificate,ECDSA,256,tls,web-0107.saas.internal,production,Payments Ops,SaaS
+worker-0108.saas.internal,code_signing,ECDSA,256,keystore,worker-0108.saas.internal,production,Payments Ops,SaaS
+worker-0109.saas.internal,token_signing,RSA,2048,keystore,worker-0109.saas.internal,production,Network Ops,SaaS
+web-0110.saas.internal,tls_certificate,RSA,2048,tls,web-0110.saas.internal,production,PKI Team,SaaS
+web-0111.saas.internal,tls_key_exchange,ECDHE,256,tls,web-0111.saas.internal,staging,Infrastructure,SaaS
+api-0112.saas.internal,token_signing,RSA,2048,keystore,api-0112.saas.internal,production,Platform Engineering,SaaS
+worker-0113.saas.internal,tls_certificate,RSA,2048,tls,worker-0113.saas.internal,production,PKI Team,SaaS
+ingest-0114.saas.internal,database_tls,RSA,2048,tls,ingest-0114.saas.internal,dr,Network Ops,SaaS
+worker-0115.saas.internal,tls_certificate,RSA,2048,tls,worker-0115.saas.internal,production,Application Security,SaaS
+billing-0116.saas.internal,tls_certificate,ML-DSA-65,,tls,billing-0116.saas.internal,production,PKI Team,SaaS
+web-0117.saas.internal,token_signing,RSA,2048,keystore,web-0117.saas.internal,staging,,SaaS
+worker-0118.saas.internal,tls_key_exchange,ML-KEM-768,,tls,worker-0118.saas.internal,production,Platform Engineering,SaaS
+billing-0119.saas.internal,tls_certificate,RSA,2048,tls,billing-0119.saas.internal,production,,SaaS
+api-0120.saas.internal,tls_certificate,RSA,2048,tls,api-0120.saas.internal,production,PKI Team,SaaS
+worker-0121.saas.internal,generic_key,RSA,2048,keystore,worker-0121.saas.internal,production,PKI Team,SaaS
+api-0122.saas.internal,generic_key,RSA,2048,keystore,api-0122.saas.internal,production,Infrastructure,SaaS
+worker-0123.saas.internal,tls_certificate,ML-DSA-65,,tls,worker-0123.saas.internal,production,Network Ops,SaaS
+billing-0124.saas.internal,code_signing,RSA,3072,keystore,billing-0124.saas.internal,staging,Data Platform,SaaS
+billing-0125.saas.internal,tls_certificate,RSA,2048,tls,billing-0125.saas.internal,dr,Infrastructure,SaaS
+ingest-0126.saas.internal,database_tls,RSA,2048,tls,ingest-0126.saas.internal,production,,SaaS
+web-0127.saas.internal,generic_key,RSA,2048,keystore,web-0127.saas.internal,production,Infrastructure,SaaS
+api-0128.saas.internal,tls_certificate,RSA,2048,tls,api-0128.saas.internal,production,PKI Team,SaaS
+worker-0129.saas.internal,generic_key,RSA,2048,keystore,worker-0129.saas.internal,staging,,SaaS
+api-0130.saas.internal,database_tls,RSA,2048,tls,api-0130.saas.internal,production,Infrastructure,SaaS
+web-0131.saas.internal,generic_key,RSA,2048,keystore,web-0131.saas.internal,production,Infrastructure,SaaS
+worker-0132.saas.internal,database_tls,RSA,2048,tls,worker-0132.saas.internal,production,Network Ops,SaaS
+web-0133.saas.internal,token_signing,ECDSA,256,keystore,web-0133.saas.internal,production,Data Platform,SaaS
+billing-0134.saas.internal,tls_certificate,RSA,2048,tls,billing-0134.saas.internal,production,Application Security,SaaS
+api-0135.saas.internal,code_signing,ECDSA,256,keystore,api-0135.saas.internal,production,Data Platform,SaaS
+ingest-0136.saas.internal,token_signing,RSA,2048,keystore,ingest-0136.saas.internal,production,PKI Team,SaaS
+ingest-0137.saas.internal,ssh_key,RSA,2048,keystore,ingest-0137.saas.internal,production,Infrastructure,SaaS
+api-0138.saas.internal,database_tls,RSA,2048,tls,api-0138.saas.internal,production,Network Ops,SaaS
+worker-0139.saas.internal,generic_key,AES,256,keystore,worker-0139.saas.internal,production,Network Ops,SaaS
+billing-0140.saas.internal,database_tls,ECDSA,256,tls,billing-0140.saas.internal,production,Payments Ops,SaaS
+billing-0141.saas.internal,tls_certificate,RSA,2048,tls,billing-0141.saas.internal,dr,,SaaS
+billing-0142.saas.internal,generic_key,RSA,2048,keystore,billing-0142.saas.internal,production,Application Security,SaaS
+web-0143.saas.internal,tls_certificate,RSA,2048,tls,web-0143.saas.internal,production,Application Security,SaaS
+api-0144.saas.internal,token_signing,RSA,2048,keystore,api-0144.saas.internal,production,Network Ops,SaaS
+worker-0145.saas.internal,generic_key,RSA,2048,keystore,worker-0145.saas.internal,production,Payments Ops,SaaS
+worker-0146.saas.internal,tls_certificate,ECDSA,256,tls,worker-0146.saas.internal,production,Payments Ops,SaaS
+web-0147.saas.internal,tls_certificate,RSA,2048,tls,web-0147.saas.internal,staging,Infrastructure,SaaS
+web-0148.saas.internal,generic_key,RSA,2048,keystore,web-0148.saas.internal,production,Application Security,SaaS
+billing-0149.saas.internal,token_signing,ECDSA,256,keystore,billing-0149.saas.internal,dr,Payments Ops,SaaS
+api-0150.saas.internal,code_signing,RSA,3072,keystore,api-0150.saas.internal,production,Payments Ops,SaaS
+api-0151.saas.internal,tls_certificate,RSA,2048,tls,api-0151.saas.internal,production,Network Ops,SaaS
+worker-0152.saas.internal,database_tls,RSA,2048,tls,worker-0152.saas.internal,production,Network Ops,SaaS
+api-0153.saas.internal,token_signing,RSA,2048,keystore,api-0153.saas.internal,production,,SaaS
+web-0154.saas.internal,tls_key_exchange,ECDHE,256,tls,web-0154.saas.internal,production,Infrastructure,SaaS
+billing-0155.saas.internal,code_signing,ECDSA,256,keystore,billing-0155.saas.internal,production,Application Security,SaaS
+worker-0156.saas.internal,tls_certificate,RSA,2048,tls,worker-0156.saas.internal,production,Network Ops,SaaS
+web-0157.saas.internal,token_signing,RSA,2048,keystore,web-0157.saas.internal,production,Data Platform,SaaS
+ingest-0158.saas.internal,code_signing,RSA,3072,keystore,ingest-0158.saas.internal,production,Data Platform,SaaS
+billing-0159.saas.internal,database_tls,RSA,2048,tls,billing-0159.saas.internal,staging,Application Security,SaaS
+web-0160.saas.internal,tls_certificate,RSA,2048,tls,web-0160.saas.internal,production,Application Security,SaaS
+worker-0161.saas.internal,code_signing,ECDSA,256,keystore,worker-0161.saas.internal,production,Data Platform,SaaS
+web-0162.saas.internal,tls_certificate,ECDSA,256,tls,web-0162.saas.internal,dr,PKI Team,SaaS
+web-0163.saas.internal,tls_certificate,RSA,2048,tls,web-0163.saas.internal,staging,Payments Ops,SaaS
+worker-0164.saas.internal,generic_key,RSA,2048,keystore,worker-0164.saas.internal,staging,PKI Team,SaaS
+ingest-0165.saas.internal,ssh_key,RSA,2048,keystore,ingest-0165.saas.internal,production,Infrastructure,SaaS
+billing-0166.saas.internal,tls_certificate,RSA,2048,tls,billing-0166.saas.internal,production,Platform Engineering,SaaS
+worker-0167.saas.internal,tls_key_exchange,ECDHE,256,tls,worker-0167.saas.internal,production,Payments Ops,SaaS
+web-0168.saas.internal,tls_key_exchange,ECDHE,256,tls,web-0168.saas.internal,production,Infrastructure,SaaS
+api-0169.saas.internal,tls_certificate,ECDSA,256,tls,api-0169.saas.internal,staging,PKI Team,SaaS
+worker-0170.saas.internal,tls_key_exchange,X25519,255,tls,worker-0170.saas.internal,production,PKI Team,SaaS
+ingest-0171.saas.internal,tls_certificate,ECDSA,256,tls,ingest-0171.saas.internal,production,PKI Team,SaaS
+worker-0172.saas.internal,database_tls,RSA,2048,tls,worker-0172.saas.internal,production,Infrastructure,SaaS
+api-0173.saas.internal,code_signing,ECDSA,256,keystore,api-0173.saas.internal,production,,SaaS
+worker-0174.saas.internal,tls_key_exchange,ECDHE,256,tls,worker-0174.saas.internal,production,Data Platform,SaaS
+web-0175.saas.internal,token_signing,ECDSA,256,keystore,web-0175.saas.internal,production,Infrastructure,SaaS
+api-0176.saas.internal,database_tls,RSA,2048,tls,api-0176.saas.internal,production,PKI Team,SaaS
+billing-0177.saas.internal,token_signing,RSA,2048,keystore,billing-0177.saas.internal,production,PKI Team,SaaS
+ingest-0178.saas.internal,tls_certificate,RSA,2048,tls,ingest-0178.saas.internal,production,,SaaS
+api-0179.saas.internal,database_tls,RSA,2048,tls,api-0179.saas.internal,staging,Infrastructure,SaaS
+ingest-0180.saas.internal,code_signing,ECDSA,256,keystore,ingest-0180.saas.internal,production,Platform Engineering,SaaS
+web-0181.saas.internal,token_signing,RSA,2048,keystore,web-0181.saas.internal,production,Network Ops,SaaS
+ingest-0182.saas.internal,tls_key_exchange,ECDHE,256,tls,ingest-0182.saas.internal,production,,SaaS
+api-0183.saas.internal,tls_certificate,RSA,2048,tls,api-0183.saas.internal,staging,,SaaS
+api-0184.saas.internal,database_tls,RSA,2048,tls,api-0184.saas.internal,production,Network Ops,SaaS
+web-0185.saas.internal,tls_key_exchange,X25519,255,tls,web-0185.saas.internal,dr,Data Platform,SaaS
+web-0186.saas.internal,tls_certificate,RSA,2048,tls,web-0186.saas.internal,production,Platform Engineering,SaaS
+worker-0187.saas.internal,code_signing,RSA,3072,keystore,worker-0187.saas.internal,staging,Infrastructure,SaaS
+ingest-0188.saas.internal,tls_certificate,ML-DSA-65,,tls,ingest-0188.saas.internal,production,Infrastructure,SaaS
+web-0189.saas.internal,database_tls,RSA,2048,tls,web-0189.saas.internal,staging,Network Ops,SaaS
+web-0190.saas.internal,code_signing,RSA,3072,keystore,web-0190.saas.internal,production,PKI Team,SaaS
+api-0191.saas.internal,database_tls,RSA,2048,tls,api-0191.saas.internal,production,Infrastructure,SaaS
+worker-0192.saas.internal,token_signing,RSA,2048,keystore,worker-0192.saas.internal,production,Platform Engineering,SaaS
+ingest-0193.saas.internal,generic_key,RSA,2048,keystore,ingest-0193.saas.internal,production,Payments Ops,SaaS
+worker-0194.saas.internal,token_signing,ECDSA,256,keystore,worker-0194.saas.internal,staging,Data Platform,SaaS
+web-0195.saas.internal,tls_certificate,ECDSA,256,tls,web-0195.saas.internal,production,PKI Team,SaaS
+worker-0196.saas.internal,token_signing,RSA,2048,keystore,worker-0196.saas.internal,dr,,SaaS
+billing-0197.saas.internal,tls_key_exchange,ECDHE,256,tls,billing-0197.saas.internal,staging,Payments Ops,SaaS
+api-0198.saas.internal,database_tls,RSA,2048,tls,api-0198.saas.internal,production,Network Ops,SaaS
+billing-0199.saas.internal,database_tls,RSA,2048,tls,billing-0199.saas.internal,production,Application Security,SaaS
+web-0200.saas.internal,ssh_key,Ed25519,255,keystore,web-0200.saas.internal,production,Data Platform,SaaS
+worker-0201.saas.internal,token_signing,ECDSA,256,keystore,worker-0201.saas.internal,staging,Payments Ops,SaaS
+billing-0202.saas.internal,token_signing,RSA,2048,keystore,billing-0202.saas.internal,staging,Payments Ops,SaaS
+billing-0203.saas.internal,tls_certificate,ECDSA,256,tls,billing-0203.saas.internal,production,Payments Ops,SaaS
+billing-0204.saas.internal,token_signing,RSA,2048,keystore,billing-0204.saas.internal,dr,Application Security,SaaS
+ingest-0205.saas.internal,token_signing,ECDSA,256,keystore,ingest-0205.saas.internal,production,Data Platform,SaaS
+worker-0206.saas.internal,tls_certificate,ECDSA,256,tls,worker-0206.saas.internal,production,Data Platform,SaaS
+ingest-0207.saas.internal,code_signing,RSA,3072,keystore,ingest-0207.saas.internal,production,Platform Engineering,SaaS
+ingest-0208.saas.internal,token_signing,RSA,2048,keystore,ingest-0208.saas.internal,production,Infrastructure,SaaS
+web-0209.saas.internal,tls_key_exchange,ECDHE,256,tls,web-0209.saas.internal,production,Payments Ops,SaaS
+ingest-0210.saas.internal,tls_certificate,ECDSA,256,tls,ingest-0210.saas.internal,production,,SaaS
+web-0211.saas.internal,ssh_key,Ed25519,255,keystore,web-0211.saas.internal,production,Platform Engineering,SaaS
+billing-0212.saas.internal,tls_certificate,RSA,2048,tls,billing-0212.saas.internal,production,Platform Engineering,SaaS
+ingest-0213.saas.internal,database_tls,RSA,2048,tls,ingest-0213.saas.internal,production,,SaaS
+api-0214.saas.internal,tls_key_exchange,ECDHE,256,tls,api-0214.saas.internal,production,Application Security,SaaS
+billing-0215.saas.internal,tls_certificate,ECDSA,256,tls,billing-0215.saas.internal,production,Application Security,SaaS
+api-0216.saas.internal,generic_key,RSA,2048,keystore,api-0216.saas.internal,production,,SaaS
+web-0217.saas.internal,tls_key_exchange,ML-KEM-768,,tls,web-0217.saas.internal,production,Data Platform,SaaS
+ingest-0218.saas.internal,tls_key_exchange,ECDHE,256,tls,ingest-0218.saas.internal,production,Application Security,SaaS
+ingest-0219.saas.internal,generic_key,RSA,2048,keystore,ingest-0219.saas.internal,production,Network Ops,SaaS
+worker-0220.saas.internal,database_tls,RSA,2048,tls,worker-0220.saas.internal,production,Platform Engineering,SaaS
+ingest-0221.saas.internal,token_signing,ECDSA,256,keystore,ingest-0221.saas.internal,staging,Platform Engineering,SaaS
+billing-0222.saas.internal,token_signing,RSA,2048,keystore,billing-0222.saas.internal,production,PKI Team,SaaS
+api-0223.saas.internal,tls_certificate,ML-DSA-65,,tls,api-0223.saas.internal,production,Payments Ops,SaaS
+web-0224.saas.internal,token_signing,RSA,2048,keystore,web-0224.saas.internal,production,PKI Team,SaaS
+api-0225.saas.internal,tls_certificate,ML-DSA-65,,tls,api-0225.saas.internal,production,Data Platform,SaaS
+web-0226.saas.internal,database_tls,ECDSA,256,tls,web-0226.saas.internal,production,Network Ops,SaaS
+web-0227.saas.internal,generic_key,AES,256,keystore,web-0227.saas.internal,production,PKI Team,SaaS
+ingest-0228.saas.internal,tls_certificate,ECDSA,256,tls,ingest-0228.saas.internal,production,PKI Team,SaaS
+ingest-0229.saas.internal,tls_certificate,RSA,2048,tls,ingest-0229.saas.internal,production,Infrastructure,SaaS
+api-0230.saas.internal,token_signing,RSA,2048,keystore,api-0230.saas.internal,staging,Payments Ops,SaaS
+ingest-0231.saas.internal,tls_certificate,RSA,2048,tls,ingest-0231.saas.internal,production,,SaaS
+ingest-0232.saas.internal,generic_key,RSA,2048,keystore,ingest-0232.saas.internal,production,PKI Team,SaaS
+billing-0233.saas.internal,tls_certificate,ECDSA,256,tls,billing-0233.saas.internal,production,Network Ops,SaaS
+billing-0234.saas.internal,token_signing,ECDSA,256,keystore,billing-0234.saas.internal,staging,Infrastructure,SaaS
+ingest-0235.saas.internal,token_signing,RSA,2048,keystore,ingest-0235.saas.internal,production,,SaaS
+api-0236.saas.internal,generic_key,AES,256,keystore,api-0236.saas.internal,staging,Platform Engineering,SaaS
+billing-0237.saas.internal,token_signing,ECDSA,256,keystore,billing-0237.saas.internal,production,Application Security,SaaS
+billing-0238.saas.internal,code_signing,ECDSA,256,keystore,billing-0238.saas.internal,production,Payments Ops,SaaS
+billing-0239.saas.internal,token_signing,ECDSA,256,keystore,billing-0239.saas.internal,production,Data Platform,SaaS
+web-0240.saas.internal,tls_certificate,RSA,2048,tls,web-0240.saas.internal,production,Payments Ops,SaaS
+worker-0241.saas.internal,token_signing,RSA,2048,keystore,worker-0241.saas.internal,dr,Platform Engineering,SaaS
+ingest-0242.saas.internal,generic_key,RSA,2048,keystore,ingest-0242.saas.internal,production,Payments Ops,SaaS
+ingest-0243.saas.internal,tls_certificate,ECDSA,256,tls,ingest-0243.saas.internal,production,Platform Engineering,SaaS
+ingest-0244.saas.internal,database_tls,RSA,2048,tls,ingest-0244.saas.internal,production,Payments Ops,SaaS
+worker-0245.saas.internal,tls_certificate,ML-DSA-65,,tls,worker-0245.saas.internal,staging,Platform Engineering,SaaS
+web-0246.saas.internal,tls_certificate,RSA,2048,tls,web-0246.saas.internal,production,Application Security,SaaS
+web-0247.saas.internal,tls_key_exchange,ML-KEM-768,,tls,web-0247.saas.internal,production,Application Security,SaaS
+web-0248.saas.internal,token_signing,RSA,2048,keystore,web-0248.saas.internal,dr,Data Platform,SaaS
+api-0249.saas.internal,tls_certificate,ML-DSA-65,,tls,api-0249.saas.internal,production,Platform Engineering,SaaS
+worker-0250.saas.internal,generic_key,RSA,2048,keystore,worker-0250.saas.internal,staging,Payments Ops,SaaS
+ingest-0251.saas.internal,ssh_key,RSA,2048,keystore,ingest-0251.saas.internal,production,,SaaS
+web-0252.saas.internal,tls_certificate,RSA,2048,tls,web-0252.saas.internal,production,Infrastructure,SaaS
+web-0253.saas.internal,token_signing,RSA,2048,keystore,web-0253.saas.internal,production,PKI Team,SaaS
+ingest-0254.saas.internal,tls_key_exchange,ECDHE,256,tls,ingest-0254.saas.internal,production,PKI Team,SaaS
+ingest-0255.saas.internal,code_signing,RSA,3072,keystore,ingest-0255.saas.internal,production,Data Platform,SaaS
+billing-0256.saas.internal,tls_certificate,RSA,2048,tls,billing-0256.saas.internal,production,,SaaS
+ingest-0257.saas.internal,tls_key_exchange,ECDHE,256,tls,ingest-0257.saas.internal,production,Application Security,SaaS
+worker-0258.saas.internal,database_tls,ECDSA,256,tls,worker-0258.saas.internal,production,PKI Team,SaaS
+web-0259.saas.internal,tls_certificate,ECDSA,256,tls,web-0259.saas.internal,production,Application Security,SaaS
+api-0260.saas.internal,generic_key,RSA,2048,keystore,api-0260.saas.internal,production,Data Platform,SaaS
+worker-0261.saas.internal,tls_key_exchange,X25519,255,tls,worker-0261.saas.internal,production,PKI Team,SaaS
+ingest-0262.saas.internal,token_signing,RSA,2048,keystore,ingest-0262.saas.internal,staging,,SaaS
+billing-0263.saas.internal,token_signing,RSA,2048,keystore,billing-0263.saas.internal,production,,SaaS
+ingest-0264.saas.internal,token_signing,ECDSA,256,keystore,ingest-0264.saas.internal,production,,SaaS
+ingest-0265.saas.internal,token_signing,RSA,2048,keystore,ingest-0265.saas.internal,production,Payments Ops,SaaS
+api-0266.saas.internal,tls_certificate,RSA,2048,tls,api-0266.saas.internal,production,Platform Engineering,SaaS
+billing-0267.saas.internal,token_signing,RSA,2048,keystore,billing-0267.saas.internal,production,PKI Team,SaaS
+api-0268.saas.internal,generic_key,RSA,2048,keystore,api-0268.saas.internal,staging,Infrastructure,SaaS
+billing-0269.saas.internal,tls_key_exchange,ECDHE,256,tls,billing-0269.saas.internal,production,Network Ops,SaaS
+api-0270.saas.internal,tls_certificate,RSA,2048,tls,api-0270.saas.internal,production,Network Ops,SaaS
+billing-0271.saas.internal,database_tls,RSA,2048,tls,billing-0271.saas.internal,production,Payments Ops,SaaS
+api-0272.saas.internal,code_signing,RSA,3072,keystore,api-0272.saas.internal,production,Network Ops,SaaS
+billing-0273.saas.internal,tls_certificate,ECDSA,256,tls,billing-0273.saas.internal,production,Network Ops,SaaS
+api-0274.saas.internal,ssh_key,RSA,2048,keystore,api-0274.saas.internal,staging,Payments Ops,SaaS
+worker-0275.saas.internal,token_signing,RSA,2048,keystore,worker-0275.saas.internal,production,Infrastructure,SaaS
+web-0276.saas.internal,token_signing,RSA,2048,keystore,web-0276.saas.internal,production,PKI Team,SaaS
+worker-0277.saas.internal,tls_certificate,RSA,2048,tls,worker-0277.saas.internal,production,Application Security,SaaS
+web-0278.saas.internal,code_signing,RSA,3072,keystore,web-0278.saas.internal,production,,SaaS
+billing-0279.saas.internal,code_signing,ECDSA,256,keystore,billing-0279.saas.internal,production,Data Platform,SaaS
+web-0280.saas.internal,tls_certificate,RSA,2048,tls,web-0280.saas.internal,production,Application Security,SaaS
+web-0281.saas.internal,ssh_key,RSA,2048,keystore,web-0281.saas.internal,production,Platform Engineering,SaaS
+billing-0282.saas.internal,generic_key,RSA,2048,keystore,billing-0282.saas.internal,production,Payments Ops,SaaS
+ingest-0283.saas.internal,database_tls,RSA,2048,tls,ingest-0283.saas.internal,production,Application Security,SaaS
+billing-0284.saas.internal,database_tls,ECDSA,256,tls,billing-0284.saas.internal,production,Network Ops,SaaS
+web-0285.saas.internal,database_tls,RSA,2048,tls,web-0285.saas.internal,production,Platform Engineering,SaaS
+ingest-0286.saas.internal,generic_key,RSA,2048,keystore,ingest-0286.saas.internal,production,Platform Engineering,SaaS
+billing-0287.saas.internal,database_tls,RSA,2048,tls,billing-0287.saas.internal,production,Platform Engineering,SaaS
+web-0288.saas.internal,tls_key_exchange,ML-KEM-768,,tls,web-0288.saas.internal,production,Application Security,SaaS
+ingest-0289.saas.internal,tls_certificate,RSA,2048,tls,ingest-0289.saas.internal,staging,Network Ops,SaaS
+api-0290.saas.internal,token_signing,RSA,2048,keystore,api-0290.saas.internal,production,Payments Ops,SaaS
+api-0291.saas.internal,database_tls,RSA,2048,tls,api-0291.saas.internal,production,,SaaS
+web-0292.saas.internal,database_tls,RSA,2048,tls,web-0292.saas.internal,production,Payments Ops,SaaS
+worker-0293.saas.internal,token_signing,RSA,2048,keystore,worker-0293.saas.internal,staging,Infrastructure,SaaS
+api-0294.saas.internal,generic_key,RSA,2048,keystore,api-0294.saas.internal,production,Infrastructure,SaaS
+worker-0295.saas.internal,token_signing,RSA,2048,keystore,worker-0295.saas.internal,production,Payments Ops,SaaS
+worker-0296.saas.internal,tls_certificate,ML-DSA-65,,tls,worker-0296.saas.internal,production,Data Platform,SaaS
+web-0297.saas.internal,database_tls,RSA,2048,tls,web-0297.saas.internal,production,Network Ops,SaaS
+web-0298.saas.internal,database_tls,RSA,2048,tls,web-0298.saas.internal,production,Payments Ops,SaaS
+ingest-0299.saas.internal,tls_certificate,RSA,2048,tls,ingest-0299.saas.internal,production,Platform Engineering,SaaS
+web-0300.saas.internal,database_tls,ECDSA,256,tls,web-0300.saas.internal,dr,Application Security,SaaS
+ingest-0301.saas.internal,tls_certificate,ECDSA,256,tls,ingest-0301.saas.internal,production,Payments Ops,SaaS
+billing-0302.saas.internal,tls_certificate,RSA,2048,tls,billing-0302.saas.internal,production,Infrastructure,SaaS
+web-0303.saas.internal,tls_certificate,ECDSA,256,tls,web-0303.saas.internal,production,Infrastructure,SaaS
+web-0304.saas.internal,token_signing,RSA,2048,keystore,web-0304.saas.internal,production,PKI Team,SaaS
+worker-0305.saas.internal,code_signing,RSA,3072,keystore,worker-0305.saas.internal,staging,Network Ops,SaaS
+api-0306.saas.internal,tls_certificate,ECDSA,256,tls,api-0306.saas.internal,production,Data Platform,SaaS
+web-0307.saas.internal,database_tls,RSA,2048,tls,web-0307.saas.internal,production,PKI Team,SaaS
+web-0308.saas.internal,token_signing,ECDSA,256,keystore,web-0308.saas.internal,staging,Network Ops,SaaS
+worker-0309.saas.internal,code_signing,RSA,3072,keystore,worker-0309.saas.internal,production,Data Platform,SaaS
+worker-0310.saas.internal,tls_certificate,RSA,2048,tls,worker-0310.saas.internal,production,Application Security,SaaS
+api-0311.saas.internal,database_tls,ECDSA,256,tls,api-0311.saas.internal,production,Network Ops,SaaS
+billing-0312.saas.internal,tls_certificate,ECDSA,256,tls,billing-0312.saas.internal,production,Application Security,SaaS
+api-0313.saas.internal,tls_certificate,ECDSA,256,tls,api-0313.saas.internal,production,Payments Ops,SaaS
+billing-0314.saas.internal,tls_certificate,RSA,2048,tls,billing-0314.saas.internal,production,Infrastructure,SaaS
+web-0315.saas.internal,code_signing,RSA,3072,keystore,web-0315.saas.internal,production,Data Platform,SaaS
+web-0316.saas.internal,token_signing,ECDSA,256,keystore,web-0316.saas.internal,production,Platform Engineering,SaaS
+api-0317.saas.internal,token_signing,ECDSA,256,keystore,api-0317.saas.internal,staging,Data Platform,SaaS
+ingest-0318.saas.internal,code_signing,RSA,3072,keystore,ingest-0318.saas.internal,staging,Payments Ops,SaaS
+api-0319.saas.internal,code_signing,ECDSA,256,keystore,api-0319.saas.internal,production,Network Ops,SaaS
+ingest-0320.saas.internal,tls_key_exchange,ECDHE,256,tls,ingest-0320.saas.internal,production,Payments Ops,SaaS
+worker-0321.saas.internal,database_tls,RSA,2048,tls,worker-0321.saas.internal,production,,SaaS
+api-0322.saas.internal,generic_key,RSA,2048,keystore,api-0322.saas.internal,production,,SaaS
+ingest-0323.saas.internal,ssh_key,RSA,2048,keystore,ingest-0323.saas.internal,dr,PKI Team,SaaS
+web-0324.saas.internal,tls_key_exchange,ECDHE,256,tls,web-0324.saas.internal,production,Payments Ops,SaaS
+web-0325.saas.internal,token_signing,ECDSA,256,keystore,web-0325.saas.internal,production,Payments Ops,SaaS
+worker-0326.saas.internal,generic_key,AES,256,keystore,worker-0326.saas.internal,production,Data Platform,SaaS
+web-0327.saas.internal,code_signing,ECDSA,256,keystore,web-0327.saas.internal,production,Application Security,SaaS
+web-0328.saas.internal,tls_certificate,ECDSA,256,tls,web-0328.saas.internal,production,Application Security,SaaS
+billing-0329.saas.internal,code_signing,RSA,3072,keystore,billing-0329.saas.internal,staging,,SaaS
+ingest-0330.saas.internal,token_signing,RSA,2048,keystore,ingest-0330.saas.internal,production,Platform Engineering,SaaS
+api-0331.saas.internal,token_signing,RSA,2048,keystore,api-0331.saas.internal,production,Data Platform,SaaS
+web-0332.saas.internal,code_signing,ECDSA,256,keystore,web-0332.saas.internal,production,,SaaS
+billing-0333.saas.internal,code_signing,ECDSA,256,keystore,billing-0333.saas.internal,production,Application Security,SaaS
+ingest-0334.saas.internal,tls_certificate,RSA,2048,tls,ingest-0334.saas.internal,production,PKI Team,SaaS
+api-0335.saas.internal,token_signing,ECDSA,256,keystore,api-0335.saas.internal,production,Payments Ops,SaaS
+api-0336.saas.internal,tls_key_exchange,ECDHE,256,tls,api-0336.saas.internal,staging,Network Ops,SaaS
+billing-0337.saas.internal,ssh_key,Ed25519,255,keystore,billing-0337.saas.internal,production,Platform Engineering,SaaS
+worker-0338.saas.internal,token_signing,RSA,2048,keystore,worker-0338.saas.internal,production,PKI Team,SaaS
+api-0339.saas.internal,database_tls,RSA,2048,tls,api-0339.saas.internal,production,,SaaS
+worker-0340.saas.internal,tls_certificate,RSA,2048,tls,worker-0340.saas.internal,production,Data Platform,SaaS
+api-0341.saas.internal,code_signing,ECDSA,256,keystore,api-0341.saas.internal,dr,Application Security,SaaS
+web-0342.saas.internal,code_signing,RSA,3072,keystore,web-0342.saas.internal,staging,Platform Engineering,SaaS
+worker-0343.saas.internal,generic_key,RSA,2048,keystore,worker-0343.saas.internal,production,Application Security,SaaS
+billing-0344.saas.internal,code_signing,ECDSA,256,keystore,billing-0344.saas.internal,production,Infrastructure,SaaS
+worker-0345.saas.internal,database_tls,ECDSA,256,tls,worker-0345.saas.internal,staging,Application Security,SaaS
+ingest-0346.saas.internal,token_signing,RSA,2048,keystore,ingest-0346.saas.internal,staging,Data Platform,SaaS
+api-0347.saas.internal,generic_key,AES,256,keystore,api-0347.saas.internal,production,Data Platform,SaaS
+ingest-0348.saas.internal,database_tls,ECDSA,256,tls,ingest-0348.saas.internal,staging,Data Platform,SaaS
+web-0349.saas.internal,generic_key,RSA,2048,keystore,web-0349.saas.internal,dr,Infrastructure,SaaS
+worker-0350.saas.internal,ssh_key,Ed25519,255,keystore,worker-0350.saas.internal,production,,SaaS
+billing-0351.saas.internal,tls_key_exchange,X25519,255,tls,billing-0351.saas.internal,production,Platform Engineering,SaaS
+api-0352.saas.internal,tls_key_exchange,ECDHE,256,tls,api-0352.saas.internal,production,Payments Ops,SaaS
+billing-0353.saas.internal,code_signing,RSA,3072,keystore,billing-0353.saas.internal,staging,Infrastructure,SaaS
+worker-0354.saas.internal,database_tls,RSA,2048,tls,worker-0354.saas.internal,production,PKI Team,SaaS
+web-0355.saas.internal,token_signing,ECDSA,256,keystore,web-0355.saas.internal,production,Payments Ops,SaaS
+web-0356.saas.internal,code_signing,ECDSA,256,keystore,web-0356.saas.internal,staging,Infrastructure,SaaS
+web-0357.saas.internal,tls_certificate,RSA,2048,tls,web-0357.saas.internal,production,Application Security,SaaS
+api-0358.saas.internal,token_signing,ECDSA,256,keystore,api-0358.saas.internal,staging,Platform Engineering,SaaS
+api-0359.saas.internal,tls_certificate,RSA,2048,tls,api-0359.saas.internal,staging,Network Ops,SaaS
+api-0360.saas.internal,tls_certificate,ECDSA,256,tls,api-0360.saas.internal,production,Infrastructure,SaaS
+web-0361.saas.internal,ssh_key,RSA,2048,keystore,web-0361.saas.internal,production,Infrastructure,SaaS
+worker-0362.saas.internal,code_signing,ECDSA,256,keystore,worker-0362.saas.internal,production,,SaaS
+worker-0363.saas.internal,code_signing,RSA,3072,keystore,worker-0363.saas.internal,production,,SaaS
+web-0364.saas.internal,generic_key,RSA,2048,keystore,web-0364.saas.internal,production,PKI Team,SaaS
+api-0365.saas.internal,tls_certificate,RSA,2048,tls,api-0365.saas.internal,dr,Application Security,SaaS
+api-0366.saas.internal,token_signing,RSA,2048,keystore,api-0366.saas.internal,production,Platform Engineering,SaaS
+ingest-0367.saas.internal,database_tls,ECDSA,256,tls,ingest-0367.saas.internal,production,Application Security,SaaS
+web-0368.saas.internal,generic_key,AES,256,keystore,web-0368.saas.internal,production,Application Security,SaaS
+web-0369.saas.internal,token_signing,ECDSA,256,keystore,web-0369.saas.internal,dr,Network Ops,SaaS
+web-0370.saas.internal,token_signing,RSA,2048,keystore,web-0370.saas.internal,production,,SaaS
+billing-0371.saas.internal,tls_certificate,RSA,2048,tls,billing-0371.saas.internal,production,PKI Team,SaaS
+billing-0372.saas.internal,database_tls,RSA,2048,tls,billing-0372.saas.internal,staging,Network Ops,SaaS
+web-0373.saas.internal,tls_key_exchange,ML-KEM-768,,tls,web-0373.saas.internal,dr,Network Ops,SaaS
+api-0374.saas.internal,tls_key_exchange,X25519,255,tls,api-0374.saas.internal,production,,SaaS
+api-0375.saas.internal,tls_certificate,RSA,2048,tls,api-0375.saas.internal,production,,SaaS
+ingest-0376.saas.internal,tls_certificate,ECDSA,256,tls,ingest-0376.saas.internal,production,Infrastructure,SaaS
+billing-0377.saas.internal,tls_key_exchange,X25519,255,tls,billing-0377.saas.internal,production,Data Platform,SaaS
+web-0378.saas.internal,generic_key,RSA,2048,keystore,web-0378.saas.internal,production,Network Ops,SaaS
+web-0379.saas.internal,tls_certificate,RSA,2048,tls,web-0379.saas.internal,staging,,SaaS
+billing-0380.saas.internal,tls_certificate,RSA,2048,tls,billing-0380.saas.internal,production,Payments Ops,SaaS
+api-0381.saas.internal,code_signing,ECDSA,256,keystore,api-0381.saas.internal,production,,SaaS
+web-0382.saas.internal,database_tls,RSA,2048,tls,web-0382.saas.internal,staging,Network Ops,SaaS
+web-0383.saas.internal,ssh_key,RSA,2048,keystore,web-0383.saas.internal,production,Data Platform,SaaS
+web-0384.saas.internal,token_signing,ECDSA,256,keystore,web-0384.saas.internal,staging,Payments Ops,SaaS
+ingest-0385.saas.internal,token_signing,ECDSA,256,keystore,ingest-0385.saas.internal,production,Platform Engineering,SaaS
+ingest-0386.saas.internal,code_signing,RSA,3072,keystore,ingest-0386.saas.internal,production,,SaaS
+worker-0387.saas.internal,tls_key_exchange,ECDHE,256,tls,worker-0387.saas.internal,staging,,SaaS
+worker-0388.saas.internal,generic_key,RSA,2048,keystore,worker-0388.saas.internal,staging,PKI Team,SaaS
+ingest-0389.saas.internal,code_signing,RSA,3072,keystore,ingest-0389.saas.internal,production,Platform Engineering,SaaS
+billing-0390.saas.internal,generic_key,RSA,2048,keystore,billing-0390.saas.internal,production,Infrastructure,SaaS
+api-0391.saas.internal,generic_key,RSA,2048,keystore,api-0391.saas.internal,dr,Application Security,SaaS
+api-0392.saas.internal,tls_certificate,RSA,2048,tls,api-0392.saas.internal,dr,Platform Engineering,SaaS
+billing-0393.saas.internal,tls_key_exchange,ECDHE,256,tls,billing-0393.saas.internal,production,,SaaS
+api-0394.saas.internal,tls_certificate,ECDSA,256,tls,api-0394.saas.internal,production,,SaaS
+web-0395.saas.internal,database_tls,RSA,2048,tls,web-0395.saas.internal,production,PKI Team,SaaS
+web-0396.saas.internal,generic_key,AES,256,keystore,web-0396.saas.internal,production,Network Ops,SaaS
+api-0397.saas.internal,database_tls,RSA,2048,tls,api-0397.saas.internal,production,Network Ops,SaaS
+ingest-0398.saas.internal,generic_key,AES,256,keystore,ingest-0398.saas.internal,dr,Payments Ops,SaaS
+api-0399.saas.internal,ssh_key,Ed25519,255,keystore,api-0399.saas.internal,staging,,SaaS

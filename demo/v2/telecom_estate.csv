@@ -1,0 +1,401 @@
+name,asset_class,algorithm,key_size,source_type,hostname,environment,owner,department
+roaming-gw-0000.telecom.internal,vpn_ipsec,DH,2048,keystore,roaming-gw-0000.telecom.internal,staging,Infrastructure,Telecommunications operator
+roaming-gw-0001.telecom.internal,tls_certificate,RSA,2048,tls,roaming-gw-0001.telecom.internal,dr,PKI Team,Telecommunications operator
+oss-0002.telecom.internal,tls_key_exchange,ML-KEM-768,,tls,oss-0002.telecom.internal,production,PKI Team,Telecommunications operator
+pcrf-0003.telecom.internal,vpn_ipsec,ECDHE,256,keystore,pcrf-0003.telecom.internal,production,Infrastructure,Telecommunications operator
+oss-0004.telecom.internal,tls_key_exchange,ECDHE,256,tls,oss-0004.telecom.internal,production,Platform Engineering,Telecommunications operator
+pcrf-0005.telecom.internal,vpn_ipsec,ECDHE,256,keystore,pcrf-0005.telecom.internal,production,Network Ops,Telecommunications operator
+pcrf-0006.telecom.internal,vpn_ipsec,DH,2048,keystore,pcrf-0006.telecom.internal,staging,,Telecommunications operator
+oss-0007.telecom.internal,config,ECDHE,256,config,oss-0007.telecom.internal,production,,Telecommunications operator
+oss-0008.telecom.internal,device_identity,ECDSA,256,keystore,oss-0008.telecom.internal,production,PKI Team,Telecommunications operator
+roaming-gw-0009.telecom.internal,device_identity,ECDSA,256,keystore,roaming-gw-0009.telecom.internal,production,PKI Team,Telecommunications operator
+roaming-gw-0010.telecom.internal,device_identity,ECDSA,256,keystore,roaming-gw-0010.telecom.internal,production,,Telecommunications operator
+ims-core-0011.telecom.internal,tls_certificate,ECDSA,256,tls,ims-core-0011.telecom.internal,production,,Telecommunications operator
+hss-0012.telecom.internal,tls_certificate,ECDSA,256,tls,hss-0012.telecom.internal,production,Platform Engineering,Telecommunications operator
+ims-core-0013.telecom.internal,config,RSA,2048,config,ims-core-0013.telecom.internal,production,PKI Team,Telecommunications operator
+hss-0014.telecom.internal,tls_certificate,RSA,2048,tls,hss-0014.telecom.internal,production,Platform Engineering,Telecommunications operator
+oss-0015.telecom.internal,vpn_ipsec,DH,2048,keystore,oss-0015.telecom.internal,production,Payments Ops,Telecommunications operator
+hss-0016.telecom.internal,device_identity,ECDSA,256,keystore,hss-0016.telecom.internal,production,Network Ops,Telecommunications operator
+pcrf-0017.telecom.internal,tls_certificate,RSA,2048,tls,pcrf-0017.telecom.internal,production,Platform Engineering,Telecommunications operator
+roaming-gw-0018.telecom.internal,tls_certificate,RSA,2048,tls,roaming-gw-0018.telecom.internal,production,Infrastructure,Telecommunications operator
+hss-0019.telecom.internal,tls_certificate,RSA,2048,tls,hss-0019.telecom.internal,production,Platform Engineering,Telecommunications operator
+roaming-gw-0020.telecom.internal,tls_certificate,RSA,2048,tls,roaming-gw-0020.telecom.internal,dr,Payments Ops,Telecommunications operator
+ims-core-0021.telecom.internal,tls_certificate,RSA,2048,tls,ims-core-0021.telecom.internal,production,PKI Team,Telecommunications operator
+hss-0022.telecom.internal,tls_certificate,ECDSA,256,tls,hss-0022.telecom.internal,production,Network Ops,Telecommunications operator
+ims-core-0023.telecom.internal,vpn_ipsec,DH,2048,keystore,ims-core-0023.telecom.internal,production,Platform Engineering,Telecommunications operator
+oss-0024.telecom.internal,vpn_ipsec,DH,2048,keystore,oss-0024.telecom.internal,production,Data Platform,Telecommunications operator
+oss-0025.telecom.internal,vpn_ipsec,DH,2048,keystore,oss-0025.telecom.internal,production,PKI Team,Telecommunications operator
+ims-core-0026.telecom.internal,tls_certificate,RSA,2048,tls,ims-core-0026.telecom.internal,production,Application Security,Telecommunications operator
+hss-0027.telecom.internal,tls_certificate,ECDSA,256,tls,hss-0027.telecom.internal,production,PKI Team,Telecommunications operator
+hss-0028.telecom.internal,config,RSA,2048,config,hss-0028.telecom.internal,production,Infrastructure,Telecommunications operator
+hss-0029.telecom.internal,config,RSA,2048,config,hss-0029.telecom.internal,production,Platform Engineering,Telecommunications operator
+ims-core-0030.telecom.internal,device_identity,ECDSA,256,keystore,ims-core-0030.telecom.internal,production,Platform Engineering,Telecommunications operator
+oss-0031.telecom.internal,config,RSA,2048,config,oss-0031.telecom.internal,staging,Payments Ops,Telecommunications operator
+pcrf-0032.telecom.internal,config,ECDHE,256,config,pcrf-0032.telecom.internal,staging,Application Security,Telecommunications operator
+ims-core-0033.telecom.internal,payment_hsm,RSA,4096,keystore,ims-core-0033.telecom.internal,dr,Network Ops,Telecommunications operator
+hss-0034.telecom.internal,tls_key_exchange,ECDHE,256,tls,hss-0034.telecom.internal,production,Infrastructure,Telecommunications operator
+ims-core-0035.telecom.internal,vpn_ipsec,ECDHE,256,keystore,ims-core-0035.telecom.internal,production,,Telecommunications operator
+pcrf-0036.telecom.internal,device_identity,RSA,2048,keystore,pcrf-0036.telecom.internal,production,Network Ops,Telecommunications operator
+pcrf-0037.telecom.internal,device_identity,RSA,2048,keystore,pcrf-0037.telecom.internal,staging,Data Platform,Telecommunications operator
+pcrf-0038.telecom.internal,tls_certificate,RSA,2048,tls,pcrf-0038.telecom.internal,staging,Application Security,Telecommunications operator
+hss-0039.telecom.internal,tls_key_exchange,ECDHE,256,tls,hss-0039.telecom.internal,production,Application Security,Telecommunications operator
+pcrf-0040.telecom.internal,tls_key_exchange,ECDHE,256,tls,pcrf-0040.telecom.internal,staging,Data Platform,Telecommunications operator
+pcrf-0041.telecom.internal,vpn_ipsec,DH,2048,keystore,pcrf-0041.telecom.internal,production,Platform Engineering,Telecommunications operator
+ims-core-0042.telecom.internal,tls_certificate,ML-DSA-65,,tls,ims-core-0042.telecom.internal,staging,,Telecommunications operator
+oss-0043.telecom.internal,device_identity,RSA,2048,keystore,oss-0043.telecom.internal,staging,Payments Ops,Telecommunications operator
+roaming-gw-0044.telecom.internal,tls_key_exchange,ECDHE,256,tls,roaming-gw-0044.telecom.internal,staging,Infrastructure,Telecommunications operator
+hss-0045.telecom.internal,tls_certificate,ECDSA,256,tls,hss-0045.telecom.internal,production,Platform Engineering,Telecommunications operator
+pcrf-0046.telecom.internal,tls_key_exchange,X25519,255,tls,pcrf-0046.telecom.internal,production,Payments Ops,Telecommunications operator
+ims-core-0047.telecom.internal,device_identity,RSA,2048,keystore,ims-core-0047.telecom.internal,production,Network Ops,Telecommunications operator
+roaming-gw-0048.telecom.internal,payment_hsm,RSA,2048,keystore,roaming-gw-0048.telecom.internal,production,,Telecommunications operator
+oss-0049.telecom.internal,config,ECDHE,256,config,oss-0049.telecom.internal,staging,Payments Ops,Telecommunications operator
+ims-core-0050.telecom.internal,root_ca,ECDSA,384,keystore,ims-core-0050.telecom.internal,production,,Telecommunications operator
+roaming-gw-0051.telecom.internal,tls_certificate,RSA,2048,tls,roaming-gw-0051.telecom.internal,production,,Telecommunications operator
+ims-core-0052.telecom.internal,tls_certificate,RSA,2048,tls,ims-core-0052.telecom.internal,production,Infrastructure,Telecommunications operator
+hss-0053.telecom.internal,tls_key_exchange,X25519,255,tls,hss-0053.telecom.internal,production,Payments Ops,Telecommunications operator
+hss-0054.telecom.internal,tls_key_exchange,ECDHE,256,tls,hss-0054.telecom.internal,production,,Telecommunications operator
+roaming-gw-0055.telecom.internal,tls_certificate,RSA,2048,tls,roaming-gw-0055.telecom.internal,production,,Telecommunications operator
+oss-0056.telecom.internal,payment_hsm,RSA,4096,keystore,oss-0056.telecom.internal,production,Application Security,Telecommunications operator
+roaming-gw-0057.telecom.internal,tls_key_exchange,ECDHE,256,tls,roaming-gw-0057.telecom.internal,staging,Network Ops,Telecommunications operator
+hss-0058.telecom.internal,tls_certificate,ECDSA,256,tls,hss-0058.telecom.internal,production,Infrastructure,Telecommunications operator
+hss-0059.telecom.internal,device_identity,ECDSA,256,keystore,hss-0059.telecom.internal,production,,Telecommunications operator
+ims-core-0060.telecom.internal,vpn_ipsec,ECDHE,256,keystore,ims-core-0060.telecom.internal,staging,Network Ops,Telecommunications operator
+oss-0061.telecom.internal,tls_key_exchange,ECDHE,256,tls,oss-0061.telecom.internal,staging,Network Ops,Telecommunications operator
+oss-0062.telecom.internal,tls_certificate,ECDSA,256,tls,oss-0062.telecom.internal,production,,Telecommunications operator
+ims-core-0063.telecom.internal,tls_certificate,ECDSA,256,tls,ims-core-0063.telecom.internal,production,,Telecommunications operator
+hss-0064.telecom.internal,tls_certificate,RSA,2048,tls,hss-0064.telecom.internal,production,Data Platform,Telecommunications operator
+ims-core-0065.telecom.internal,tls_certificate,RSA,2048,tls,ims-core-0065.telecom.internal,production,,Telecommunications operator
+roaming-gw-0066.telecom.internal,config,ECDHE,256,config,roaming-gw-0066.telecom.internal,production,Payments Ops,Telecommunications operator
+roaming-gw-0067.telecom.internal,root_ca,RSA,4096,keystore,roaming-gw-0067.telecom.internal,production,Network Ops,Telecommunications operator
+hss-0068.telecom.internal,vpn_ipsec,DH,2048,keystore,hss-0068.telecom.internal,dr,Infrastructure,Telecommunications operator
+oss-0069.telecom.internal,payment_hsm,RSA,2048,keystore,oss-0069.telecom.internal,production,PKI Team,Telecommunications operator
+ims-core-0070.telecom.internal,tls_certificate,ECDSA,256,tls,ims-core-0070.telecom.internal,production,,Telecommunications operator
+ims-core-0071.telecom.internal,vpn_ipsec,DH,2048,keystore,ims-core-0071.telecom.internal,staging,Payments Ops,Telecommunications operator
+ims-core-0072.telecom.internal,tls_certificate,ECDSA,256,tls,ims-core-0072.telecom.internal,production,,Telecommunications operator
+ims-core-0073.telecom.internal,device_identity,ECDSA,256,keystore,ims-core-0073.telecom.internal,staging,Platform Engineering,Telecommunications operator
+ims-core-0074.telecom.internal,tls_key_exchange,ECDHE,256,tls,ims-core-0074.telecom.internal,production,PKI Team,Telecommunications operator
+oss-0075.telecom.internal,device_identity,ECDSA,256,keystore,oss-0075.telecom.internal,production,Platform Engineering,Telecommunications operator
+oss-0076.telecom.internal,root_ca,RSA,4096,keystore,oss-0076.telecom.internal,production,Data Platform,Telecommunications operator
+oss-0077.telecom.internal,tls_certificate,RSA,2048,tls,oss-0077.telecom.internal,production,PKI Team,Telecommunications operator
+pcrf-0078.telecom.internal,config,ECDHE,256,config,pcrf-0078.telecom.internal,production,PKI Team,Telecommunications operator
+oss-0079.telecom.internal,config,ECDHE,256,config,oss-0079.telecom.internal,production,Platform Engineering,Telecommunications operator
+pcrf-0080.telecom.internal,device_identity,RSA,2048,keystore,pcrf-0080.telecom.internal,production,Platform Engineering,Telecommunications operator
+oss-0081.telecom.internal,tls_key_exchange,ECDHE,256,tls,oss-0081.telecom.internal,production,Data Platform,Telecommunications operator
+roaming-gw-0082.telecom.internal,tls_key_exchange,ECDHE,256,tls,roaming-gw-0082.telecom.internal,dr,Application Security,Telecommunications operator
+hss-0083.telecom.internal,tls_certificate,RSA,2048,tls,hss-0083.telecom.internal,production,Application Security,Telecommunications operator
+ims-core-0084.telecom.internal,tls_certificate,ECDSA,256,tls,ims-core-0084.telecom.internal,production,Payments Ops,Telecommunications operator
+oss-0085.telecom.internal,tls_certificate,ECDSA,256,tls,oss-0085.telecom.internal,production,Data Platform,Telecommunications operator
+pcrf-0086.telecom.internal,config,ECDHE,256,config,pcrf-0086.telecom.internal,production,Payments Ops,Telecommunications operator
+oss-0087.telecom.internal,tls_certificate,RSA,2048,tls,oss-0087.telecom.internal,production,Payments Ops,Telecommunications operator
+hss-0088.telecom.internal,device_identity,RSA,2048,keystore,hss-0088.telecom.internal,production,Data Platform,Telecommunications operator
+ims-core-0089.telecom.internal,tls_certificate,ECDSA,256,tls,ims-core-0089.telecom.internal,production,Infrastructure,Telecommunications operator
+roaming-gw-0090.telecom.internal,vpn_ipsec,DH,2048,keystore,roaming-gw-0090.telecom.internal,production,Application Security,Telecommunications operator
+hss-0091.telecom.internal,device_identity,ECDSA,256,keystore,hss-0091.telecom.internal,staging,Network Ops,Telecommunications operator
+hss-0092.telecom.internal,root_ca,ECDSA,384,keystore,hss-0092.telecom.internal,staging,Network Ops,Telecommunications operator
+pcrf-0093.telecom.internal,device_identity,RSA,2048,keystore,pcrf-0093.telecom.internal,staging,,Telecommunications operator
+oss-0094.telecom.internal,vpn_ipsec,ECDHE,256,keystore,oss-0094.telecom.internal,production,Infrastructure,Telecommunications operator
+pcrf-0095.telecom.internal,vpn_ipsec,ECDHE,256,keystore,pcrf-0095.telecom.internal,production,,Telecommunications operator
+ims-core-0096.telecom.internal,device_identity,ECDSA,256,keystore,ims-core-0096.telecom.internal,staging,Payments Ops,Telecommunications operator
+oss-0097.telecom.internal,device_identity,RSA,2048,keystore,oss-0097.telecom.internal,dr,,Telecommunications operator
+hss-0098.telecom.internal,payment_hsm,RSA,2048,keystore,hss-0098.telecom.internal,production,Infrastructure,Telecommunications operator
+pcrf-0099.telecom.internal,tls_certificate,ECDSA,256,tls,pcrf-0099.telecom.internal,staging,Payments Ops,Telecommunications operator
+oss-0100.telecom.internal,tls_certificate,ECDSA,256,tls,oss-0100.telecom.internal,production,Platform Engineering,Telecommunications operator
+roaming-gw-0101.telecom.internal,tls_certificate,RSA,2048,tls,roaming-gw-0101.telecom.internal,staging,Application Security,Telecommunications operator
+hss-0102.telecom.internal,device_identity,ECDSA,256,keystore,hss-0102.telecom.internal,staging,Application Security,Telecommunications operator
+roaming-gw-0103.telecom.internal,tls_key_exchange,ECDHE,256,tls,roaming-gw-0103.telecom.internal,production,Data Platform,Telecommunications operator
+ims-core-0104.telecom.internal,tls_certificate,RSA,2048,tls,ims-core-0104.telecom.internal,production,Payments Ops,Telecommunications operator
+pcrf-0105.telecom.internal,config,RSA,2048,config,pcrf-0105.telecom.internal,production,,Telecommunications operator
+ims-core-0106.telecom.internal,config,ECDHE,256,config,ims-core-0106.telecom.internal,production,Payments Ops,Telecommunications operator
+roaming-gw-0107.telecom.internal,vpn_ipsec,DH,2048,keystore,roaming-gw-0107.telecom.internal,production,Infrastructure,Telecommunications operator
+hss-0108.telecom.internal,device_identity,RSA,2048,keystore,hss-0108.telecom.internal,dr,,Telecommunications operator
+pcrf-0109.telecom.internal,payment_hsm,3DES,112,keystore,pcrf-0109.telecom.internal,staging,Network Ops,Telecommunications operator
+pcrf-0110.telecom.internal,vpn_ipsec,DH,2048,keystore,pcrf-0110.telecom.internal,staging,Application Security,Telecommunications operator
+ims-core-0111.telecom.internal,config,ECDHE,256,config,ims-core-0111.telecom.internal,staging,,Telecommunications operator
+pcrf-0112.telecom.internal,tls_key_exchange,ECDHE,256,tls,pcrf-0112.telecom.internal,production,Infrastructure,Telecommunications operator
+hss-0113.telecom.internal,tls_certificate,RSA,2048,tls,hss-0113.telecom.internal,production,Network Ops,Telecommunications operator
+pcrf-0114.telecom.internal,device_identity,ECDSA,256,keystore,pcrf-0114.telecom.internal,dr,Data Platform,Telecommunications operator
+hss-0115.telecom.internal,tls_key_exchange,X25519,255,tls,hss-0115.telecom.internal,production,PKI Team,Telecommunications operator
+ims-core-0116.telecom.internal,device_identity,ECDSA,256,keystore,ims-core-0116.telecom.internal,production,Payments Ops,Telecommunications operator
+roaming-gw-0117.telecom.internal,tls_key_exchange,X25519,255,tls,roaming-gw-0117.telecom.internal,production,Infrastructure,Telecommunications operator
+oss-0118.telecom.internal,payment_hsm,RSA,2048,keystore,oss-0118.telecom.internal,production,Infrastructure,Telecommunications operator
+roaming-gw-0119.telecom.internal,tls_certificate,RSA,2048,tls,roaming-gw-0119.telecom.internal,staging,Network Ops,Telecommunications operator
+hss-0120.telecom.internal,config,RSA,2048,config,hss-0120.telecom.internal,production,Network Ops,Telecommunications operator
+ims-core-0121.telecom.internal,tls_certificate,RSA,2048,tls,ims-core-0121.telecom.internal,production,Application Security,Telecommunications operator
+hss-0122.telecom.internal,payment_hsm,RSA,2048,keystore,hss-0122.telecom.internal,staging,PKI Team,Telecommunications operator
+pcrf-0123.telecom.internal,root_ca,RSA,4096,keystore,pcrf-0123.telecom.internal,production,,Telecommunications operator
+hss-0124.telecom.internal,vpn_ipsec,ECDHE,256,keystore,hss-0124.telecom.internal,dr,,Telecommunications operator
+hss-0125.telecom.internal,tls_key_exchange,X25519,255,tls,hss-0125.telecom.internal,production,Application Security,Telecommunications operator
+roaming-gw-0126.telecom.internal,tls_certificate,ECDSA,256,tls,roaming-gw-0126.telecom.internal,production,Application Security,Telecommunications operator
+hss-0127.telecom.internal,tls_certificate,ML-DSA-65,,tls,hss-0127.telecom.internal,production,Infrastructure,Telecommunications operator
+oss-0128.telecom.internal,config,ECDHE,256,config,oss-0128.telecom.internal,production,Payments Ops,Telecommunications operator
+ims-core-0129.telecom.internal,device_identity,RSA,2048,keystore,ims-core-0129.telecom.internal,production,Data Platform,Telecommunications operator
+hss-0130.telecom.internal,tls_certificate,RSA,2048,tls,hss-0130.telecom.internal,staging,Platform Engineering,Telecommunications operator
+ims-core-0131.telecom.internal,tls_certificate,ECDSA,256,tls,ims-core-0131.telecom.internal,dr,Platform Engineering,Telecommunications operator
+oss-0132.telecom.internal,config,ECDHE,256,config,oss-0132.telecom.internal,production,,Telecommunications operator
+hss-0133.telecom.internal,device_identity,ECDSA,256,keystore,hss-0133.telecom.internal,staging,,Telecommunications operator
+roaming-gw-0134.telecom.internal,vpn_ipsec,DH,2048,keystore,roaming-gw-0134.telecom.internal,production,,Telecommunications operator
+hss-0135.telecom.internal,config,ECDHE,256,config,hss-0135.telecom.internal,production,Platform Engineering,Telecommunications operator
+ims-core-0136.telecom.internal,tls_certificate,ECDSA,256,tls,ims-core-0136.telecom.internal,production,Payments Ops,Telecommunications operator
+pcrf-0137.telecom.internal,tls_certificate,RSA,2048,tls,pcrf-0137.telecom.internal,production,Network Ops,Telecommunications operator
+hss-0138.telecom.internal,tls_certificate,RSA,2048,tls,hss-0138.telecom.internal,staging,PKI Team,Telecommunications operator
+pcrf-0139.telecom.internal,device_identity,ECDSA,256,keystore,pcrf-0139.telecom.internal,production,PKI Team,Telecommunications operator
+roaming-gw-0140.telecom.internal,tls_certificate,ML-DSA-65,,tls,roaming-gw-0140.telecom.internal,production,PKI Team,Telecommunications operator
+oss-0141.telecom.internal,tls_certificate,RSA,2048,tls,oss-0141.telecom.internal,staging,Application Security,Telecommunications operator
+oss-0142.telecom.internal,tls_certificate,ECDSA,256,tls,oss-0142.telecom.internal,production,Platform Engineering,Telecommunications operator
+hss-0143.telecom.internal,config,ECDHE,256,config,hss-0143.telecom.internal,production,Infrastructure,Telecommunications operator
+ims-core-0144.telecom.internal,vpn_ipsec,ECDHE,256,keystore,ims-core-0144.telecom.internal,production,,Telecommunications operator
+hss-0145.telecom.internal,payment_hsm,RSA,4096,keystore,hss-0145.telecom.internal,staging,Data Platform,Telecommunications operator
+ims-core-0146.telecom.internal,tls_certificate,RSA,2048,tls,ims-core-0146.telecom.internal,production,,Telecommunications operator
+hss-0147.telecom.internal,config,RSA,2048,config,hss-0147.telecom.internal,production,,Telecommunications operator
+roaming-gw-0148.telecom.internal,tls_certificate,ECDSA,256,tls,roaming-gw-0148.telecom.internal,production,Payments Ops,Telecommunications operator
+oss-0149.telecom.internal,device_identity,ECDSA,256,keystore,oss-0149.telecom.internal,production,Application Security,Telecommunications operator
+pcrf-0150.telecom.internal,tls_certificate,ECDSA,256,tls,pcrf-0150.telecom.internal,production,Data Platform,Telecommunications operator
+ims-core-0151.telecom.internal,tls_certificate,RSA,2048,tls,ims-core-0151.telecom.internal,production,Payments Ops,Telecommunications operator
+hss-0152.telecom.internal,device_identity,ECDSA,256,keystore,hss-0152.telecom.internal,production,Network Ops,Telecommunications operator
+pcrf-0153.telecom.internal,tls_key_exchange,ECDHE,256,tls,pcrf-0153.telecom.internal,production,Infrastructure,Telecommunications operator
+pcrf-0154.telecom.internal,tls_key_exchange,ML-KEM-768,,tls,pcrf-0154.telecom.internal,production,Application Security,Telecommunications operator
+pcrf-0155.telecom.internal,tls_key_exchange,ECDHE,256,tls,pcrf-0155.telecom.internal,production,,Telecommunications operator
+hss-0156.telecom.internal,tls_certificate,RSA,2048,tls,hss-0156.telecom.internal,production,PKI Team,Telecommunications operator
+hss-0157.telecom.internal,vpn_ipsec,ECDHE,256,keystore,hss-0157.telecom.internal,staging,Platform Engineering,Telecommunications operator
+ims-core-0158.telecom.internal,root_ca,ECDSA,384,keystore,ims-core-0158.telecom.internal,production,,Telecommunications operator
+oss-0159.telecom.internal,tls_certificate,RSA,2048,tls,oss-0159.telecom.internal,dr,Network Ops,Telecommunications operator
+ims-core-0160.telecom.internal,tls_certificate,RSA,2048,tls,ims-core-0160.telecom.internal,production,Application Security,Telecommunications operator
+pcrf-0161.telecom.internal,vpn_ipsec,ECDHE,256,keystore,pcrf-0161.telecom.internal,production,Infrastructure,Telecommunications operator
+oss-0162.telecom.internal,device_identity,RSA,2048,keystore,oss-0162.telecom.internal,staging,Payments Ops,Telecommunications operator
+oss-0163.telecom.internal,config,RSA,2048,config,oss-0163.telecom.internal,production,,Telecommunications operator
+pcrf-0164.telecom.internal,tls_certificate,RSA,2048,tls,pcrf-0164.telecom.internal,production,,Telecommunications operator
+ims-core-0165.telecom.internal,tls_certificate,RSA,2048,tls,ims-core-0165.telecom.internal,production,Payments Ops,Telecommunications operator
+pcrf-0166.telecom.internal,device_identity,RSA,2048,keystore,pcrf-0166.telecom.internal,staging,,Telecommunications operator
+roaming-gw-0167.telecom.internal,config,ECDHE,256,config,roaming-gw-0167.telecom.internal,production,Application Security,Telecommunications operator
+hss-0168.telecom.internal,device_identity,ECDSA,256,keystore,hss-0168.telecom.internal,staging,PKI Team,Telecommunications operator
+ims-core-0169.telecom.internal,device_identity,RSA,2048,keystore,ims-core-0169.telecom.internal,production,Data Platform,Telecommunications operator
+roaming-gw-0170.telecom.internal,tls_certificate,ECDSA,256,tls,roaming-gw-0170.telecom.internal,production,PKI Team,Telecommunications operator
+oss-0171.telecom.internal,vpn_ipsec,ECDHE,256,keystore,oss-0171.telecom.internal,production,Platform Engineering,Telecommunications operator
+hss-0172.telecom.internal,device_identity,ECDSA,256,keystore,hss-0172.telecom.internal,production,,Telecommunications operator
+roaming-gw-0173.telecom.internal,config,RSA,2048,config,roaming-gw-0173.telecom.internal,dr,Data Platform,Telecommunications operator
+roaming-gw-0174.telecom.internal,vpn_ipsec,DH,2048,keystore,roaming-gw-0174.telecom.internal,staging,Data Platform,Telecommunications operator
+roaming-gw-0175.telecom.internal,tls_key_exchange,X25519,255,tls,roaming-gw-0175.telecom.internal,dr,PKI Team,Telecommunications operator
+roaming-gw-0176.telecom.internal,tls_certificate,RSA,2048,tls,roaming-gw-0176.telecom.internal,staging,Application Security,Telecommunications operator
+ims-core-0177.telecom.internal,config,ECDHE,256,config,ims-core-0177.telecom.internal,production,PKI Team,Telecommunications operator
+roaming-gw-0178.telecom.internal,tls_key_exchange,ECDHE,256,tls,roaming-gw-0178.telecom.internal,dr,Payments Ops,Telecommunications operator
+oss-0179.telecom.internal,config,ECDHE,256,config,oss-0179.telecom.internal,production,Infrastructure,Telecommunications operator
+pcrf-0180.telecom.internal,device_identity,RSA,2048,keystore,pcrf-0180.telecom.internal,production,Data Platform,Telecommunications operator
+ims-core-0181.telecom.internal,vpn_ipsec,ECDHE,256,keystore,ims-core-0181.telecom.internal,production,Platform Engineering,Telecommunications operator
+roaming-gw-0182.telecom.internal,vpn_ipsec,ECDHE,256,keystore,roaming-gw-0182.telecom.internal,production,Network Ops,Telecommunications operator
+ims-core-0183.telecom.internal,tls_certificate,RSA,2048,tls,ims-core-0183.telecom.internal,production,Infrastructure,Telecommunications operator
+roaming-gw-0184.telecom.internal,vpn_ipsec,ECDHE,256,keystore,roaming-gw-0184.telecom.internal,production,Data Platform,Telecommunications operator
+hss-0185.telecom.internal,device_identity,RSA,2048,keystore,hss-0185.telecom.internal,production,Application Security,Telecommunications operator
+roaming-gw-0186.telecom.internal,config,RSA,2048,config,roaming-gw-0186.telecom.internal,production,Platform Engineering,Telecommunications operator
+roaming-gw-0187.telecom.internal,tls_key_exchange,ECDHE,256,tls,roaming-gw-0187.telecom.internal,staging,Application Security,Telecommunications operator
+roaming-gw-0188.telecom.internal,device_identity,ECDSA,256,keystore,roaming-gw-0188.telecom.internal,production,PKI Team,Telecommunications operator
+ims-core-0189.telecom.internal,device_identity,ECDSA,256,keystore,ims-core-0189.telecom.internal,production,Data Platform,Telecommunications operator
+ims-core-0190.telecom.internal,vpn_ipsec,ECDHE,256,keystore,ims-core-0190.telecom.internal,production,Network Ops,Telecommunications operator
+pcrf-0191.telecom.internal,vpn_ipsec,DH,2048,keystore,pcrf-0191.telecom.internal,production,Network Ops,Telecommunications operator
+pcrf-0192.telecom.internal,device_identity,ECDSA,256,keystore,pcrf-0192.telecom.internal,production,Network Ops,Telecommunications operator
+ims-core-0193.telecom.internal,tls_key_exchange,ML-KEM-768,,tls,ims-core-0193.telecom.internal,production,PKI Team,Telecommunications operator
+ims-core-0194.telecom.internal,device_identity,RSA,2048,keystore,ims-core-0194.telecom.internal,production,Payments Ops,Telecommunications operator
+roaming-gw-0195.telecom.internal,device_identity,ECDSA,256,keystore,roaming-gw-0195.telecom.internal,production,PKI Team,Telecommunications operator
+roaming-gw-0196.telecom.internal,tls_key_exchange,ECDHE,256,tls,roaming-gw-0196.telecom.internal,production,Platform Engineering,Telecommunications operator
+hss-0197.telecom.internal,device_identity,ECDSA,256,keystore,hss-0197.telecom.internal,staging,,Telecommunications operator
+pcrf-0198.telecom.internal,payment_hsm,RSA,2048,keystore,pcrf-0198.telecom.internal,production,,Telecommunications operator
+oss-0199.telecom.internal,tls_certificate,RSA,2048,tls,oss-0199.telecom.internal,production,Data Platform,Telecommunications operator
+pcrf-0200.telecom.internal,device_identity,ECDSA,256,keystore,pcrf-0200.telecom.internal,production,PKI Team,Telecommunications operator
+oss-0201.telecom.internal,vpn_ipsec,ECDHE,256,keystore,oss-0201.telecom.internal,dr,PKI Team,Telecommunications operator
+oss-0202.telecom.internal,tls_key_exchange,ECDHE,256,tls,oss-0202.telecom.internal,production,Payments Ops,Telecommunications operator
+hss-0203.telecom.internal,device_identity,ECDSA,256,keystore,hss-0203.telecom.internal,staging,Network Ops,Telecommunications operator
+ims-core-0204.telecom.internal,tls_certificate,RSA,2048,tls,ims-core-0204.telecom.internal,production,Network Ops,Telecommunications operator
+hss-0205.telecom.internal,device_identity,ECDSA,256,keystore,hss-0205.telecom.internal,dr,PKI Team,Telecommunications operator
+hss-0206.telecom.internal,device_identity,RSA,2048,keystore,hss-0206.telecom.internal,production,,Telecommunications operator
+oss-0207.telecom.internal,config,RSA,2048,config,oss-0207.telecom.internal,production,Infrastructure,Telecommunications operator
+oss-0208.telecom.internal,config,ECDHE,256,config,oss-0208.telecom.internal,production,Infrastructure,Telecommunications operator
+ims-core-0209.telecom.internal,tls_certificate,RSA,2048,tls,ims-core-0209.telecom.internal,staging,,Telecommunications operator
+ims-core-0210.telecom.internal,device_identity,RSA,2048,keystore,ims-core-0210.telecom.internal,production,Infrastructure,Telecommunications operator
+oss-0211.telecom.internal,tls_key_exchange,ECDHE,256,tls,oss-0211.telecom.internal,production,PKI Team,Telecommunications operator
+ims-core-0212.telecom.internal,config,RSA,2048,config,ims-core-0212.telecom.internal,production,Data Platform,Telecommunications operator
+roaming-gw-0213.telecom.internal,vpn_ipsec,DH,2048,keystore,roaming-gw-0213.telecom.internal,production,Platform Engineering,Telecommunications operator
+pcrf-0214.telecom.internal,config,RSA,2048,config,pcrf-0214.telecom.internal,production,PKI Team,Telecommunications operator
+ims-core-0215.telecom.internal,tls_certificate,RSA,2048,tls,ims-core-0215.telecom.internal,production,Data Platform,Telecommunications operator
+ims-core-0216.telecom.internal,config,ECDHE,256,config,ims-core-0216.telecom.internal,dr,Application Security,Telecommunications operator
+roaming-gw-0217.telecom.internal,vpn_ipsec,ECDHE,256,keystore,roaming-gw-0217.telecom.internal,production,,Telecommunications operator
+oss-0218.telecom.internal,tls_key_exchange,X25519,255,tls,oss-0218.telecom.internal,production,Network Ops,Telecommunications operator
+oss-0219.telecom.internal,tls_certificate,RSA,2048,tls,oss-0219.telecom.internal,production,Payments Ops,Telecommunications operator
+ims-core-0220.telecom.internal,tls_key_exchange,ECDHE,256,tls,ims-core-0220.telecom.internal,production,,Telecommunications operator
+oss-0221.telecom.internal,vpn_ipsec,DH,2048,keystore,oss-0221.telecom.internal,staging,Platform Engineering,Telecommunications operator
+ims-core-0222.telecom.internal,device_identity,ECDSA,256,keystore,ims-core-0222.telecom.internal,production,Network Ops,Telecommunications operator
+roaming-gw-0223.telecom.internal,vpn_ipsec,ECDHE,256,keystore,roaming-gw-0223.telecom.internal,staging,Infrastructure,Telecommunications operator
+roaming-gw-0224.telecom.internal,tls_certificate,RSA,2048,tls,roaming-gw-0224.telecom.internal,production,PKI Team,Telecommunications operator
+roaming-gw-0225.telecom.internal,config,RSA,2048,config,roaming-gw-0225.telecom.internal,dr,PKI Team,Telecommunications operator
+pcrf-0226.telecom.internal,vpn_ipsec,DH,2048,keystore,pcrf-0226.telecom.internal,production,Network Ops,Telecommunications operator
+roaming-gw-0227.telecom.internal,device_identity,RSA,2048,keystore,roaming-gw-0227.telecom.internal,production,Platform Engineering,Telecommunications operator
+pcrf-0228.telecom.internal,tls_certificate,RSA,2048,tls,pcrf-0228.telecom.internal,production,PKI Team,Telecommunications operator
+roaming-gw-0229.telecom.internal,device_identity,ECDSA,256,keystore,roaming-gw-0229.telecom.internal,production,Infrastructure,Telecommunications operator
+ims-core-0230.telecom.internal,config,ECDHE,256,config,ims-core-0230.telecom.internal,production,Platform Engineering,Telecommunications operator
+roaming-gw-0231.telecom.internal,tls_key_exchange,ECDHE,256,tls,roaming-gw-0231.telecom.internal,production,Application Security,Telecommunications operator
+hss-0232.telecom.internal,tls_key_exchange,ECDHE,256,tls,hss-0232.telecom.internal,production,Platform Engineering,Telecommunications operator
+hss-0233.telecom.internal,tls_certificate,ECDSA,256,tls,hss-0233.telecom.internal,staging,Payments Ops,Telecommunications operator
+roaming-gw-0234.telecom.internal,tls_certificate,ECDSA,256,tls,roaming-gw-0234.telecom.internal,production,PKI Team,Telecommunications operator
+pcrf-0235.telecom.internal,tls_certificate,RSA,2048,tls,pcrf-0235.telecom.internal,production,,Telecommunications operator
+oss-0236.telecom.internal,payment_hsm,RSA,2048,keystore,oss-0236.telecom.internal,dr,Network Ops,Telecommunications operator
+ims-core-0237.telecom.internal,device_identity,ECDSA,256,keystore,ims-core-0237.telecom.internal,production,PKI Team,Telecommunications operator
+pcrf-0238.telecom.internal,tls_key_exchange,ML-KEM-768,,tls,pcrf-0238.telecom.internal,production,PKI Team,Telecommunications operator
+oss-0239.telecom.internal,payment_hsm,ECDSA,256,keystore,oss-0239.telecom.internal,production,Platform Engineering,Telecommunications operator
+hss-0240.telecom.internal,device_identity,RSA,2048,keystore,hss-0240.telecom.internal,staging,PKI Team,Telecommunications operator
+hss-0241.telecom.internal,payment_hsm,RSA,2048,keystore,hss-0241.telecom.internal,staging,Application Security,Telecommunications operator
+pcrf-0242.telecom.internal,tls_key_exchange,ECDHE,256,tls,pcrf-0242.telecom.internal,production,PKI Team,Telecommunications operator
+hss-0243.telecom.internal,tls_certificate,ECDSA,256,tls,hss-0243.telecom.internal,production,Platform Engineering,Telecommunications operator
+pcrf-0244.telecom.internal,tls_certificate,RSA,2048,tls,pcrf-0244.telecom.internal,production,Infrastructure,Telecommunications operator
+ims-core-0245.telecom.internal,vpn_ipsec,ECDHE,256,keystore,ims-core-0245.telecom.internal,staging,Data Platform,Telecommunications operator
+ims-core-0246.telecom.internal,tls_certificate,ML-DSA-65,,tls,ims-core-0246.telecom.internal,production,PKI Team,Telecommunications operator
+ims-core-0247.telecom.internal,device_identity,RSA,2048,keystore,ims-core-0247.telecom.internal,production,Platform Engineering,Telecommunications operator
+hss-0248.telecom.internal,device_identity,RSA,2048,keystore,hss-0248.telecom.internal,production,PKI Team,Telecommunications operator
+roaming-gw-0249.telecom.internal,tls_certificate,RSA,2048,tls,roaming-gw-0249.telecom.internal,staging,Payments Ops,Telecommunications operator
+oss-0250.telecom.internal,tls_certificate,RSA,2048,tls,oss-0250.telecom.internal,production,Network Ops,Telecommunications operator
+hss-0251.telecom.internal,tls_certificate,ECDSA,256,tls,hss-0251.telecom.internal,staging,Payments Ops,Telecommunications operator
+hss-0252.telecom.internal,tls_certificate,RSA,2048,tls,hss-0252.telecom.internal,dr,PKI Team,Telecommunications operator
+pcrf-0253.telecom.internal,vpn_ipsec,ECDHE,256,keystore,pcrf-0253.telecom.internal,production,,Telecommunications operator
+ims-core-0254.telecom.internal,device_identity,ECDSA,256,keystore,ims-core-0254.telecom.internal,dr,Data Platform,Telecommunications operator
+oss-0255.telecom.internal,vpn_ipsec,DH,2048,keystore,oss-0255.telecom.internal,dr,Network Ops,Telecommunications operator
+oss-0256.telecom.internal,device_identity,RSA,2048,keystore,oss-0256.telecom.internal,production,Platform Engineering,Telecommunications operator
+oss-0257.telecom.internal,config,RSA,2048,config,oss-0257.telecom.internal,staging,Data Platform,Telecommunications operator
+hss-0258.telecom.internal,payment_hsm,RSA,2048,keystore,hss-0258.telecom.internal,dr,PKI Team,Telecommunications operator
+pcrf-0259.telecom.internal,tls_certificate,RSA,2048,tls,pcrf-0259.telecom.internal,production,Platform Engineering,Telecommunications operator
+ims-core-0260.telecom.internal,device_identity,ECDSA,256,keystore,ims-core-0260.telecom.internal,production,,Telecommunications operator
+hss-0261.telecom.internal,tls_certificate,RSA,2048,tls,hss-0261.telecom.internal,production,Application Security,Telecommunications operator
+pcrf-0262.telecom.internal,vpn_ipsec,ECDHE,256,keystore,pcrf-0262.telecom.internal,production,Network Ops,Telecommunications operator
+ims-core-0263.telecom.internal,tls_certificate,RSA,2048,tls,ims-core-0263.telecom.internal,production,,Telecommunications operator
+pcrf-0264.telecom.internal,vpn_ipsec,ECDHE,256,keystore,pcrf-0264.telecom.internal,staging,Data Platform,Telecommunications operator
+pcrf-0265.telecom.internal,device_identity,RSA,2048,keystore,pcrf-0265.telecom.internal,production,PKI Team,Telecommunications operator
+hss-0266.telecom.internal,tls_certificate,RSA,2048,tls,hss-0266.telecom.internal,production,Payments Ops,Telecommunications operator
+pcrf-0267.telecom.internal,tls_certificate,RSA,2048,tls,pcrf-0267.telecom.internal,production,Application Security,Telecommunications operator
+ims-core-0268.telecom.internal,tls_certificate,RSA,2048,tls,ims-core-0268.telecom.internal,dr,,Telecommunications operator
+pcrf-0269.telecom.internal,tls_certificate,RSA,2048,tls,pcrf-0269.telecom.internal,production,,Telecommunications operator
+pcrf-0270.telecom.internal,config,ECDHE,256,config,pcrf-0270.telecom.internal,staging,,Telecommunications operator
+hss-0271.telecom.internal,payment_hsm,RSA,2048,keystore,hss-0271.telecom.internal,production,,Telecommunications operator
+pcrf-0272.telecom.internal,device_identity,RSA,2048,keystore,pcrf-0272.telecom.internal,production,Payments Ops,Telecommunications operator
+roaming-gw-0273.telecom.internal,tls_certificate,ECDSA,256,tls,roaming-gw-0273.telecom.internal,staging,,Telecommunications operator
+roaming-gw-0274.telecom.internal,tls_certificate,ECDSA,256,tls,roaming-gw-0274.telecom.internal,production,Network Ops,Telecommunications operator
+pcrf-0275.telecom.internal,tls_key_exchange,ECDHE,256,tls,pcrf-0275.telecom.internal,production,PKI Team,Telecommunications operator
+oss-0276.telecom.internal,tls_certificate,ECDSA,256,tls,oss-0276.telecom.internal,production,Application Security,Telecommunications operator
+roaming-gw-0277.telecom.internal,tls_certificate,ECDSA,256,tls,roaming-gw-0277.telecom.internal,production,Platform Engineering,Telecommunications operator
+roaming-gw-0278.telecom.internal,config,RSA,2048,config,roaming-gw-0278.telecom.internal,dr,Network Ops,Telecommunications operator
+roaming-gw-0279.telecom.internal,tls_certificate,ECDSA,256,tls,roaming-gw-0279.telecom.internal,dr,Infrastructure,Telecommunications operator
+ims-core-0280.telecom.internal,device_identity,ECDSA,256,keystore,ims-core-0280.telecom.internal,production,,Telecommunications operator
+oss-0281.telecom.internal,tls_certificate,RSA,2048,tls,oss-0281.telecom.internal,production,Data Platform,Telecommunications operator
+pcrf-0282.telecom.internal,device_identity,ECDSA,256,keystore,pcrf-0282.telecom.internal,production,PKI Team,Telecommunications operator
+roaming-gw-0283.telecom.internal,vpn_ipsec,ECDHE,256,keystore,roaming-gw-0283.telecom.internal,production,,Telecommunications operator
+pcrf-0284.telecom.internal,device_identity,ECDSA,256,keystore,pcrf-0284.telecom.internal,production,Platform Engineering,Telecommunications operator
+pcrf-0285.telecom.internal,config,RSA,2048,config,pcrf-0285.telecom.internal,production,Infrastructure,Telecommunications operator
+roaming-gw-0286.telecom.internal,device_identity,ECDSA,256,keystore,roaming-gw-0286.telecom.internal,staging,Payments Ops,Telecommunications operator
+pcrf-0287.telecom.internal,tls_certificate,ECDSA,256,tls,pcrf-0287.telecom.internal,production,Payments Ops,Telecommunications operator
+oss-0288.telecom.internal,tls_key_exchange,X25519,255,tls,oss-0288.telecom.internal,staging,Application Security,Telecommunications operator
+oss-0289.telecom.internal,root_ca,RSA,4096,keystore,oss-0289.telecom.internal,production,Platform Engineering,Telecommunications operator
+pcrf-0290.telecom.internal,tls_certificate,ECDSA,256,tls,pcrf-0290.telecom.internal,production,,Telecommunications operator
+ims-core-0291.telecom.internal,tls_key_exchange,ECDHE,256,tls,ims-core-0291.telecom.internal,production,,Telecommunications operator
+roaming-gw-0292.telecom.internal,payment_hsm,RSA,2048,keystore,roaming-gw-0292.telecom.internal,production,Platform Engineering,Telecommunications operator
+ims-core-0293.telecom.internal,tls_key_exchange,ECDHE,256,tls,ims-core-0293.telecom.internal,staging,Platform Engineering,Telecommunications operator
+pcrf-0294.telecom.internal,tls_certificate,ECDSA,256,tls,pcrf-0294.telecom.internal,production,Platform Engineering,Telecommunications operator
+pcrf-0295.telecom.internal,device_identity,ECDSA,256,keystore,pcrf-0295.telecom.internal,production,,Telecommunications operator
+roaming-gw-0296.telecom.internal,tls_certificate,RSA,2048,tls,roaming-gw-0296.telecom.internal,staging,Network Ops,Telecommunications operator
+roaming-gw-0297.telecom.internal,config,ECDHE,256,config,roaming-gw-0297.telecom.internal,production,Data Platform,Telecommunications operator
+ims-core-0298.telecom.internal,tls_certificate,RSA,2048,tls,ims-core-0298.telecom.internal,dr,Network Ops,Telecommunications operator
+hss-0299.telecom.internal,tls_certificate,RSA,2048,tls,hss-0299.telecom.internal,staging,Infrastructure,Telecommunications operator
+ims-core-0300.telecom.internal,tls_key_exchange,ECDHE,256,tls,ims-core-0300.telecom.internal,production,PKI Team,Telecommunications operator
+oss-0301.telecom.internal,tls_certificate,RSA,2048,tls,oss-0301.telecom.internal,production,Platform Engineering,Telecommunications operator
+hss-0302.telecom.internal,config,RSA,2048,config,hss-0302.telecom.internal,production,,Telecommunications operator
+hss-0303.telecom.internal,payment_hsm,RSA,4096,keystore,hss-0303.telecom.internal,production,PKI Team,Telecommunications operator
+pcrf-0304.telecom.internal,tls_certificate,RSA,2048,tls,pcrf-0304.telecom.internal,production,,Telecommunications operator
+oss-0305.telecom.internal,device_identity,ECDSA,256,keystore,oss-0305.telecom.internal,production,,Telecommunications operator
+oss-0306.telecom.internal,vpn_ipsec,ECDHE,256,keystore,oss-0306.telecom.internal,dr,Application Security,Telecommunications operator
+hss-0307.telecom.internal,device_identity,RSA,2048,keystore,hss-0307.telecom.internal,production,Data Platform,Telecommunications operator
+oss-0308.telecom.internal,config,RSA,2048,config,oss-0308.telecom.internal,production,Application Security,Telecommunications operator
+hss-0309.telecom.internal,config,RSA,2048,config,hss-0309.telecom.internal,production,,Telecommunications operator
+ims-core-0310.telecom.internal,tls_certificate,RSA,2048,tls,ims-core-0310.telecom.internal,staging,Infrastructure,Telecommunications operator
+pcrf-0311.telecom.internal,payment_hsm,ECDSA,256,keystore,pcrf-0311.telecom.internal,production,Payments Ops,Telecommunications operator
+ims-core-0312.telecom.internal,tls_key_exchange,ECDHE,256,tls,ims-core-0312.telecom.internal,production,Network Ops,Telecommunications operator
+roaming-gw-0313.telecom.internal,config,ECDHE,256,config,roaming-gw-0313.telecom.internal,staging,Data Platform,Telecommunications operator
+ims-core-0314.telecom.internal,tls_key_exchange,ECDHE,256,tls,ims-core-0314.telecom.internal,production,,Telecommunications operator
+ims-core-0315.telecom.internal,vpn_ipsec,DH,2048,keystore,ims-core-0315.telecom.internal,production,Network Ops,Telecommunications operator
+ims-core-0316.telecom.internal,device_identity,ECDSA,256,keystore,ims-core-0316.telecom.internal,production,Payments Ops,Telecommunications operator
+pcrf-0317.telecom.internal,tls_certificate,ECDSA,256,tls,pcrf-0317.telecom.internal,production,Application Security,Telecommunications operator
+oss-0318.telecom.internal,tls_certificate,ECDSA,256,tls,oss-0318.telecom.internal,staging,,Telecommunications operator
+oss-0319.telecom.internal,tls_certificate,RSA,2048,tls,oss-0319.telecom.internal,production,Data Platform,Telecommunications operator
+ims-core-0320.telecom.internal,tls_certificate,ECDSA,256,tls,ims-core-0320.telecom.internal,production,PKI Team,Telecommunications operator
+pcrf-0321.telecom.internal,config,RSA,2048,config,pcrf-0321.telecom.internal,production,Payments Ops,Telecommunications operator
+hss-0322.telecom.internal,vpn_ipsec,DH,2048,keystore,hss-0322.telecom.internal,production,Data Platform,Telecommunications operator
+pcrf-0323.telecom.internal,device_identity,ECDSA,256,keystore,pcrf-0323.telecom.internal,staging,Platform Engineering,Telecommunications operator
+oss-0324.telecom.internal,tls_certificate,RSA,2048,tls,oss-0324.telecom.internal,production,PKI Team,Telecommunications operator
+pcrf-0325.telecom.internal,device_identity,RSA,2048,keystore,pcrf-0325.telecom.internal,production,Data Platform,Telecommunications operator
+oss-0326.telecom.internal,tls_certificate,ECDSA,256,tls,oss-0326.telecom.internal,dr,Data Platform,Telecommunications operator
+pcrf-0327.telecom.internal,tls_certificate,RSA,2048,tls,pcrf-0327.telecom.internal,dr,,Telecommunications operator
+hss-0328.telecom.internal,tls_key_exchange,ML-KEM-768,,tls,hss-0328.telecom.internal,production,Network Ops,Telecommunications operator
+hss-0329.telecom.internal,payment_hsm,RSA,4096,keystore,hss-0329.telecom.internal,production,Platform Engineering,Telecommunications operator
+roaming-gw-0330.telecom.internal,device_identity,ECDSA,256,keystore,roaming-gw-0330.telecom.internal,production,PKI Team,Telecommunications operator
+oss-0331.telecom.internal,config,ECDHE,256,config,oss-0331.telecom.internal,staging,Application Security,Telecommunications operator
+oss-0332.telecom.internal,tls_certificate,ECDSA,256,tls,oss-0332.telecom.internal,dr,Application Security,Telecommunications operator
+oss-0333.telecom.internal,tls_certificate,RSA,2048,tls,oss-0333.telecom.internal,production,Platform Engineering,Telecommunications operator
+hss-0334.telecom.internal,device_identity,RSA,2048,keystore,hss-0334.telecom.internal,staging,,Telecommunications operator
+hss-0335.telecom.internal,device_identity,ECDSA,256,keystore,hss-0335.telecom.internal,production,Platform Engineering,Telecommunications operator
+oss-0336.telecom.internal,device_identity,ECDSA,256,keystore,oss-0336.telecom.internal,production,PKI Team,Telecommunications operator
+ims-core-0337.telecom.internal,tls_certificate,RSA,2048,tls,ims-core-0337.telecom.internal,production,Data Platform,Telecommunications operator
+ims-core-0338.telecom.internal,device_identity,ECDSA,256,keystore,ims-core-0338.telecom.internal,production,,Telecommunications operator
+roaming-gw-0339.telecom.internal,vpn_ipsec,DH,2048,keystore,roaming-gw-0339.telecom.internal,production,Application Security,Telecommunications operator
+ims-core-0340.telecom.internal,tls_key_exchange,ECDHE,256,tls,ims-core-0340.telecom.internal,production,PKI Team,Telecommunications operator
+roaming-gw-0341.telecom.internal,tls_certificate,RSA,2048,tls,roaming-gw-0341.telecom.internal,staging,Data Platform,Telecommunications operator
+pcrf-0342.telecom.internal,tls_certificate,ECDSA,256,tls,pcrf-0342.telecom.internal,staging,Application Security,Telecommunications operator
+oss-0343.telecom.internal,vpn_ipsec,DH,2048,keystore,oss-0343.telecom.internal,staging,Data Platform,Telecommunications operator
+oss-0344.telecom.internal,tls_certificate,RSA,2048,tls,oss-0344.telecom.internal,staging,Infrastructure,Telecommunications operator
+roaming-gw-0345.telecom.internal,tls_key_exchange,ECDHE,256,tls,roaming-gw-0345.telecom.internal,production,Infrastructure,Telecommunications operator
+hss-0346.telecom.internal,tls_certificate,RSA,2048,tls,hss-0346.telecom.internal,production,Data Platform,Telecommunications operator
+pcrf-0347.telecom.internal,tls_key_exchange,ECDHE,256,tls,pcrf-0347.telecom.internal,production,Platform Engineering,Telecommunications operator
+pcrf-0348.telecom.internal,vpn_ipsec,ECDHE,256,keystore,pcrf-0348.telecom.internal,production,Data Platform,Telecommunications operator
+ims-core-0349.telecom.internal,tls_key_exchange,ECDHE,256,tls,ims-core-0349.telecom.internal,production,PKI Team,Telecommunications operator
+pcrf-0350.telecom.internal,tls_certificate,ECDSA,256,tls,pcrf-0350.telecom.internal,production,Payments Ops,Telecommunications operator
+ims-core-0351.telecom.internal,config,RSA,2048,config,ims-core-0351.telecom.internal,staging,Platform Engineering,Telecommunications operator
+roaming-gw-0352.telecom.internal,tls_key_exchange,ECDHE,256,tls,roaming-gw-0352.telecom.internal,production,PKI Team,Telecommunications operator
+hss-0353.telecom.internal,tls_certificate,RSA,2048,tls,hss-0353.telecom.internal,production,Platform Engineering,Telecommunications operator
+roaming-gw-0354.telecom.internal,tls_certificate,RSA,2048,tls,roaming-gw-0354.telecom.internal,staging,Infrastructure,Telecommunications operator
+oss-0355.telecom.internal,vpn_ipsec,DH,2048,keystore,oss-0355.telecom.internal,production,Infrastructure,Telecommunications operator
+ims-core-0356.telecom.internal,device_identity,ECDSA,256,keystore,ims-core-0356.telecom.internal,production,Network Ops,Telecommunications operator
+hss-0357.telecom.internal,tls_key_exchange,ML-KEM-768,,tls,hss-0357.telecom.internal,production,Network Ops,Telecommunications operator
+hss-0358.telecom.internal,device_identity,ECDSA,256,keystore,hss-0358.telecom.internal,dr,Infrastructure,Telecommunications operator
+hss-0359.telecom.internal,tls_certificate,RSA,2048,tls,hss-0359.telecom.internal,production,,Telecommunications operator
+ims-core-0360.telecom.internal,tls_certificate,RSA,2048,tls,ims-core-0360.telecom.internal,staging,Payments Ops,Telecommunications operator
+oss-0361.telecom.internal,device_identity,RSA,2048,keystore,oss-0361.telecom.internal,production,Application Security,Telecommunications operator
+roaming-gw-0362.telecom.internal,device_identity,ECDSA,256,keystore,roaming-gw-0362.telecom.internal,production,,Telecommunications operator
+ims-core-0363.telecom.internal,device_identity,ECDSA,256,keystore,ims-core-0363.telecom.internal,production,Network Ops,Telecommunications operator
+hss-0364.telecom.internal,tls_certificate,RSA,2048,tls,hss-0364.telecom.internal,production,,Telecommunications operator
+hss-0365.telecom.internal,tls_key_exchange,X25519,255,tls,hss-0365.telecom.internal,production,Infrastructure,Telecommunications operator
+hss-0366.telecom.internal,tls_certificate,RSA,2048,tls,hss-0366.telecom.internal,dr,PKI Team,Telecommunications operator
+ims-core-0367.telecom.internal,config,RSA,2048,config,ims-core-0367.telecom.internal,production,Network Ops,Telecommunications operator
+ims-core-0368.telecom.internal,tls_key_exchange,ECDHE,256,tls,ims-core-0368.telecom.internal,production,PKI Team,Telecommunications operator
+hss-0369.telecom.internal,vpn_ipsec,DH,2048,keystore,hss-0369.telecom.internal,dr,PKI Team,Telecommunications operator
+ims-core-0370.telecom.internal,tls_certificate,ECDSA,256,tls,ims-core-0370.telecom.internal,production,Payments Ops,Telecommunications operator
+hss-0371.telecom.internal,tls_certificate,ECDSA,256,tls,hss-0371.telecom.internal,dr,Infrastructure,Telecommunications operator
+roaming-gw-0372.telecom.internal,config,ECDHE,256,config,roaming-gw-0372.telecom.internal,staging,Platform Engineering,Telecommunications operator
+hss-0373.telecom.internal,config,RSA,2048,config,hss-0373.telecom.internal,production,Platform Engineering,Telecommunications operator
+roaming-gw-0374.telecom.internal,vpn_ipsec,ECDHE,256,keystore,roaming-gw-0374.telecom.internal,production,Network Ops,Telecommunications operator
+oss-0375.telecom.internal,device_identity,ECDSA,256,keystore,oss-0375.telecom.internal,production,,Telecommunications operator
+ims-core-0376.telecom.internal,vpn_ipsec,ECDHE,256,keystore,ims-core-0376.telecom.internal,production,Application Security,Telecommunications operator
+oss-0377.telecom.internal,tls_key_exchange,ECDHE,256,tls,oss-0377.telecom.internal,production,PKI Team,Telecommunications operator
+ims-core-0378.telecom.internal,tls_key_exchange,ML-KEM-768,,tls,ims-core-0378.telecom.internal,staging,Payments Ops,Telecommunications operator
+pcrf-0379.telecom.internal,tls_certificate,RSA,2048,tls,pcrf-0379.telecom.internal,production,PKI Team,Telecommunications operator
+pcrf-0380.telecom.internal,payment_hsm,RSA,2048,keystore,pcrf-0380.telecom.internal,production,Platform Engineering,Telecommunications operator
+ims-core-0381.telecom.internal,payment_hsm,RSA,2048,keystore,ims-core-0381.telecom.internal,production,Payments Ops,Telecommunications operator
+ims-core-0382.telecom.internal,tls_certificate,RSA,2048,tls,ims-core-0382.telecom.internal,production,,Telecommunications operator
+roaming-gw-0383.telecom.internal,config,RSA,2048,config,roaming-gw-0383.telecom.internal,production,Network Ops,Telecommunications operator
+pcrf-0384.telecom.internal,tls_certificate,ML-DSA-65,,tls,pcrf-0384.telecom.internal,production,Data Platform,Telecommunications operator
+oss-0385.telecom.internal,vpn_ipsec,DH,2048,keystore,oss-0385.telecom.internal,production,Infrastructure,Telecommunications operator
+roaming-gw-0386.telecom.internal,tls_certificate,ECDSA,256,tls,roaming-gw-0386.telecom.internal,staging,PKI Team,Telecommunications operator
+hss-0387.telecom.internal,tls_key_exchange,ECDHE,256,tls,hss-0387.telecom.internal,production,Data Platform,Telecommunications operator
+hss-0388.telecom.internal,tls_certificate,ECDSA,256,tls,hss-0388.telecom.internal,staging,Network Ops,Telecommunications operator
+hss-0389.telecom.internal,tls_certificate,RSA,2048,tls,hss-0389.telecom.internal,production,,Telecommunications operator
+ims-core-0390.telecom.internal,tls_certificate,RSA,2048,tls,ims-core-0390.telecom.internal,staging,Infrastructure,Telecommunications operator
+ims-core-0391.telecom.internal,tls_key_exchange,X25519,255,tls,ims-core-0391.telecom.internal,production,PKI Team,Telecommunications operator
+roaming-gw-0392.telecom.internal,device_identity,RSA,2048,keystore,roaming-gw-0392.telecom.internal,production,Network Ops,Telecommunications operator
+roaming-gw-0393.telecom.internal,tls_key_exchange,ECDHE,256,tls,roaming-gw-0393.telecom.internal,production,Payments Ops,Telecommunications operator
+hss-0394.telecom.internal,tls_certificate,ECDSA,256,tls,hss-0394.telecom.internal,production,,Telecommunications operator
+oss-0395.telecom.internal,payment_hsm,RSA,2048,keystore,oss-0395.telecom.internal,production,Platform Engineering,Telecommunications operator
+roaming-gw-0396.telecom.internal,device_identity,ECDSA,256,keystore,roaming-gw-0396.telecom.internal,production,Platform Engineering,Telecommunications operator
+oss-0397.telecom.internal,config,ECDHE,256,config,oss-0397.telecom.internal,production,Data Platform,Telecommunications operator
+hss-0398.telecom.internal,device_identity,ECDSA,256,keystore,hss-0398.telecom.internal,production,Network Ops,Telecommunications operator
+pcrf-0399.telecom.internal,tls_certificate,ML-DSA-65,,tls,pcrf-0399.telecom.internal,production,PKI Team,Telecommunications operator

@@ -1,0 +1,113 @@
+# Recommendation rules (engine/recommendations.py). One rule per *need*; the
+# engine decides an asset's need from its classification, then reads the
+# target for the active profile. Profiles:
+#   commercial  NIST FIPS 203/204/205 targets, hybrid first where it interoperates
+#   cnsa        CNSA 2.0 (sovereign / defence): ML-KEM-1024, ML-DSA-87, LMS/XMSS
+#               for firmware, AES-256 and SHA-384 or better; AES-128 and SHA-256 upgrade
+
+citations:
+  fips203: {label: "NIST FIPS 203, Module-Lattice-Based Key-Encapsulation Mechanism (ML-KEM), Aug 2024", url: "https://csrc.nist.gov/pubs/fips/203/final"}
+  fips204: {label: "NIST FIPS 204, Module-Lattice-Based Digital Signature Standard (ML-DSA), Aug 2024", url: "https://csrc.nist.gov/pubs/fips/204/final"}
+  fips205: {label: "NIST FIPS 205, Stateless Hash-Based Digital Signature Standard (SLH-DSA), Aug 2024", url: "https://csrc.nist.gov/pubs/fips/205/final"}
+  sp800208: {label: "NIST SP 800-208, Recommendation for Stateful Hash-Based Signature Schemes (LMS, XMSS)", url: "https://csrc.nist.gov/pubs/sp/800/208/final"}
+  ir8547: {label: "NIST IR 8547 (draft), Transition to Post-Quantum Cryptography Standards", url: "https://csrc.nist.gov/pubs/ir/8547/ipd"}
+  hybrid_tls: {label: "IETF draft-ietf-tls-ecdhe-mlkem (X25519MLKEM768)", url: "https://datatracker.ietf.org/doc/draft-ietf-tls-ecdhe-mlkem/"}
+  cnsa2: {label: "NSA Commercial National Security Algorithm Suite 2.0 (CNSA 2.0)", url: "https://www.nsa.gov/Cybersecurity/Post-Quantum-Cybersecurity-Resources/"}
+  payments: {label: "PQC in payment systems study (arXiv 2605.02276): ML-DSA adds up to 1.57 ms against a 2,000 ms SLA; SLH-DSA saturated HSM capacity", url: "https://arxiv.org/abs/2605.02276"}
+  fips206: {label: "NIST FIPS 206 (FN-DSA / Falcon), not yet final", url: "https://csrc.nist.gov/projects/post-quantum-cryptography"}
+  hqc: {label: "NIST selected HQC as a backup KEM (Mar 2025); no FIPS yet", url: "https://www.nist.gov/news-events/news/2025/03/nist-selects-hqc-fifth-algorithm-post-quantum-encryption"}
+  sp800131a: {label: "NIST SP 800-131A Rev. 2, Transitioning the Use of Cryptographic Algorithms and Key Lengths", url: "https://csrc.nist.gov/pubs/sp/800/131/a/r2/final"}
+  dst2026: {label: "DST, Implementation of Quantum Safe Ecosystem in India (Task Force report, Feb 2026): quantum-safe requirements in procurement", url: "https://www.policyedge.in/p/department-of-science-and-technology"}
+
+needs:
+  key_exchange:
+    label: "Key exchange in transit (TLS, SSH, IKE)"
+    commercial: {recommended: X25519MLKEM768, alternatives: [ML-KEM-768, SecP256r1MLKEM768]}
+    cnsa: {recommended: ML-KEM-1024, alternatives: [SecP384r1MLKEM1024]}
+    rationale: >-
+      Recorded traffic is decryptable once a CRQC exists, whatever the forward secrecy. A hybrid group keeps
+      today's security if ML-KEM were ever broken and interoperates with clients that have not moved yet.
+    citations: [fips203, hybrid_tls]
+  kem_at_rest:
+    label: "Key transport / wrapping at rest"
+    commercial: {recommended: ML-KEM-768, alternatives: [ML-KEM-1024]}
+    cnsa: {recommended: ML-KEM-1024, alternatives: []}
+    rationale: >-
+      Data encrypted today under RSA or ECDH key transport stays harvestable for its whole shelf life.
+      HQC is the selected backup KEM but has no FIPS yet, so it is not recommended.
+    citations: [fips203, hqc]
+  signature_high_volume:
+    label: "Signatures, high volume (TLS certificates, APIs, payments, tokens)"
+    commercial: {recommended: ML-DSA-65, alternatives: [ML-DSA-44, ML-DSA-87]}
+    cnsa: {recommended: ML-DSA-87, alternatives: []}
+    rationale: >-
+      Lattice signatures are fast enough for transaction paths; the cost is size on the wire, not latency.
+      SLH-DSA is not suitable here: its signing is orders of magnitude slower.
+    citations: [fips204, payments]
+  signature_long_lived:
+    label: "Signatures, long-lived and low volume (roots, firmware, code)"
+    commercial: {recommended: SLH-DSA-SHA2-128s, alternatives: [ML-DSA-87]}
+    cnsa: {recommended: LMS / XMSS (firmware and software signing), alternatives: [ML-DSA-87]}
+    rationale: >-
+      A root or firmware key is trusted for decades and used rarely, so the conservative hash-based scheme is
+      worth its signing cost; its security rests only on the hash function.
+    citations: [fips205, sp800208, cnsa2]
+  symmetric:
+    label: "Symmetric encryption"
+    commercial: {recommended: AES-256-GCM, alternatives: [ChaCha20-Poly1305]}
+    cnsa: {recommended: AES-256, alternatives: []}
+    rationale: "Grover halves effective strength; AES-256 keeps about 128 bits. Rekey AES-128 on the normal cycle."
+    citations: [ir8547]
+  hash:
+    label: "Hashing"
+    commercial: {recommended: SHA-256, alternatives: [SHA-384, SHA3-256]}
+    cnsa: {recommended: SHA-384, alternatives: [SHA-512]}
+    rationale: "SHA-2 is not broken by quantum attack; CNSA 2.0 asks for SHA-384 or better."
+    citations: [cnsa2]
+  replace_now:
+    label: "Classically broken: replace now"
+    commercial: {recommended: "Replace (see alternatives)", alternatives: [AES-256-GCM, SHA-256, RSA-3072 or ML-DSA-65]}
+    cnsa: {recommended: "Replace (see alternatives)", alternatives: [AES-256, SHA-384, ML-DSA-87]}
+    rationale: >-
+      Broken or disallowed today, independent of quantum computing. Fix it in the current release; it is
+      hygiene, not part of the post-quantum programme.
+    citations: [sp800131a]
+  library_upgrade:
+    label: "Library below its PQC-capable release"
+    commercial: {recommended: "Upgrade the library", alternatives: []}
+    cnsa: {recommended: "Upgrade the library", alternatives: []}
+    rationale: >-
+      Nothing linked against this version can negotiate ML-KEM or sign with ML-DSA. Upgrading is a dependency
+      change, not a rewrite of the application's cryptography.
+    citations: [fips203, fips204]
+  secret_exposure:
+    label: "Private key baked into an artefact"
+    commercial: {recommended: "Remove from the artefact, rotate, hold in an HSM or KMS", alternatives: []}
+    cnsa: {recommended: "Remove from the artefact, rotate, hold in an HSM", alternatives: []}
+    rationale: "Anyone who can read the artefact holds the key. This is exposure today, not a quantum question."
+    citations: []
+  resolve_first:
+    label: "Algorithm not resolved"
+    commercial: {recommended: "Resolve the algorithm, then re-scan", alternatives: []}
+    cnsa: {recommended: "Resolve the algorithm, then re-scan", alternatives: []}
+    rationale: "The algorithm is chosen at runtime or not recorded. A recommendation would be a guess."
+    citations: []
+
+# Upgrades that the CNSA profile asks for even though they are not Shor-exposed.
+cnsa_upgrades:
+  AES-128: {need: symmetric, reason: "CNSA 2.0 requires AES-256."}
+  AES-192: {need: symmetric, reason: "CNSA 2.0 requires AES-256."}
+  SHA-256: {need: hash, reason: "CNSA 2.0 requires SHA-384 or better."}
+
+# Draft standards: shown, never recommended.
+drafts:
+  FN-DSA: {status: "FIPS 206 draft", citation: fips206, note: "Size-constrained signatures (Falcon). Recommend only once FIPS 206 is final."}
+  HQC: {status: "Selected Mar 2025, no FIPS", citation: hqc, note: "Backup KEM; not recommended until standardised."}
+
+# What each cloud KMS offers for post-quantum keys, by usage. null = nothing
+# recorded here, so an asymmetric key of that usage is provider-gated.
+# status VERIFY: confirm against the provider's current documentation.
+providers:
+  aws: {name: AWS KMS, signing: "ML-DSA key specs (ML_DSA_44 / 65 / 87)", encryption: null, key_agreement: null, status: VERIFY}
+  gcp: {name: Google Cloud KMS, signing: "ML-DSA and SLH-DSA (preview)", encryption: null, key_agreement: null, status: VERIFY}
+  azure: {name: Azure Key Vault, signing: null, encryption: null, key_agreement: null, status: VERIFY}

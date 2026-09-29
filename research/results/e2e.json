@@ -1,0 +1,1703 @@
+{
+  "commit": "2fb8ca9",
+  "alpha": 0.1,
+  "selected_v2": "gnn_cfg_hybrid",
+  "calibration_n": {
+    "x86-64": 2576,
+    "aarch64": 2552
+  },
+  "programs": {
+    "aes_tiny_aarch64": {
+      "contains_crypto": true,
+      "train_overlap": true,
+      "arch": "aarch64",
+      "functions_recovered": 56,
+      "functions_scored": 44,
+      "functions_true": 70,
+      "boundary_precision": 0.9643,
+      "boundary_recall": 0.7714,
+      "flags": {
+        "vera_signatures": true,
+        "findcrypt3": true,
+        "ntt": false,
+        "v1_certified": true,
+        "v2_certified": true,
+        "fusion_certified": true
+      },
+      "certified": {
+        "v1": [
+          "0x1011850",
+          "0x1011a44",
+          "0x1011fcc"
+        ],
+        "v2": [
+          "0x1011a44",
+          "0x1011fcc"
+        ],
+        "fusion": [
+          "0x1011850",
+          "0x1011a44",
+          "0x1011fcc"
+        ]
+      },
+      "min_q": {
+        "v1": 0.06894,
+        "v2": 0.01723,
+        "fusion": 0.01723
+      }
+    },
+    "aes_tiny_x86_64": {
+      "contains_crypto": true,
+      "train_overlap": true,
+      "arch": "x86-64",
+      "functions_recovered": 46,
+      "functions_scored": 35,
+      "functions_true": 59,
+      "boundary_precision": 0.5217,
+      "boundary_recall": 0.4068,
+      "flags": {
+        "vera_signatures": true,
+        "findcrypt3": true,
+        "ntt": false,
+        "v1_certified": true,
+        "v2_certified": true,
+        "fusion_certified": true
+      },
+      "certified": {
+        "v1": [
+          "0x1002740",
+          "0x1002e10"
+        ],
+        "v2": [
+          "0x1002740",
+          "0x1002e10"
+        ],
+        "fusion": [
+          "0x1002740",
+          "0x1002e10"
+        ]
+      },
+      "min_q": {
+        "v1": 0.01358,
+        "v2": 0.01358,
+        "fusion": 0.01358
+      }
+    },
+    "blowfish_bcon_aarch64": {
+      "contains_crypto": true,
+      "train_overlap": true,
+      "arch": "aarch64",
+      "functions_recovered": 53,
+      "functions_scored": 43,
+      "functions_true": 62,
+      "boundary_precision": 0.9623,
+      "boundary_recall": 0.8226,
+      "flags": {
+        "vera_signatures": true,
+        "findcrypt3": true,
+        "ntt": false,
+        "v1_certified": true,
+        "v2_certified": true,
+        "fusion_certified": true
+      },
+      "certified": {
+        "v1": [
+          "0x10124b4"
+        ],
+        "v2": [
+          "0x10124b4"
+        ],
+        "fusion": [
+          "0x10124b4",
+          "0x1012c3c"
+        ]
+      },
+      "min_q": {
+        "v1": 0.03369,
+        "v2": 0.03369,
+        "fusion": 0.03369
+      }
+    },
+    "blowfish_bcon_x86_64": {
+      "contains_crypto": true,
+      "train_overlap": true,
+      "arch": "x86-64",
+      "functions_recovered": 43,
+      "functions_scored": 34,
+      "functions_true": 51,
+      "boundary_precision": 0.4884,
+      "boundary_recall": 0.4118,
+      "flags": {
+        "vera_signatures": true,
+        "findcrypt3": true,
+        "ntt": false,
+        "v1_certified": true,
+        "v2_certified": true,
+        "fusion_certified": true
+      },
+      "certified": {
+        "v1": [
+          "0x10031a0"
+        ],
+        "v2": [
+          "0x10031a0"
+        ],
+        "fusion": [
+          "0x10031a0",
+          "0x10038c0"
+        ]
+      },
+      "min_q": {
+        "v1": 0.07916,
+        "v2": 0.01319,
+        "fusion": 0.01319
+      }
+    },
+    "cjson_aarch64": {
+      "contains_crypto": false,
+      "train_overlap": true,
+      "arch": "aarch64",
+      "functions_recovered": 116,
+      "functions_scored": 100,
+      "functions_true": 205,
+      "boundary_precision": 0.9828,
+      "boundary_recall": 0.5561,
+      "flags": {
+        "vera_signatures": false,
+        "findcrypt3": false,
+        "ntt": false,
+        "v1_certified": false,
+        "v2_certified": false,
+        "fusion_certified": false
+      },
+      "certified": {
+        "v1": [],
+        "v2": [],
+        "fusion": []
+      },
+      "min_q": {
+        "v1": 0.82256,
+        "v2": 0.97759,
+        "fusion": 0.97804
+      }
+    },
+    "cjson_x86_64": {
+      "contains_crypto": false,
+      "train_overlap": true,
+      "arch": "x86-64",
+      "functions_recovered": 97,
+      "functions_scored": 83,
+      "functions_true": 185,
+      "boundary_precision": 0.8763,
+      "boundary_recall": 0.4595,
+      "flags": {
+        "vera_signatures": false,
+        "findcrypt3": false,
+        "ntt": false,
+        "v1_certified": false,
+        "v2_certified": false,
+        "fusion_certified": false
+      },
+      "certified": {
+        "v1": [],
+        "v2": [],
+        "fusion": []
+      },
+      "min_q": {
+        "v1": 0.97802,
+        "v2": 0.95773,
+        "fusion": 0.98073
+      }
+    },
+    "des_bcon_aarch64": {
+      "contains_crypto": true,
+      "train_overlap": true,
+      "arch": "aarch64",
+      "functions_recovered": 56,
+      "functions_scored": 46,
+      "functions_true": 66,
+      "boundary_precision": 0.9643,
+      "boundary_recall": 0.8182,
+      "flags": {
+        "vera_signatures": true,
+        "findcrypt3": false,
+        "ntt": false,
+        "v1_certified": true,
+        "v2_certified": true,
+        "fusion_certified": true
+      },
+      "certified": {
+        "v1": [
+          "0x1011a0c",
+          "0x1011ce0",
+          "0x1011fcc"
+        ],
+        "v2": [
+          "0x1011a0c",
+          "0x1011ce0",
+          "0x1011fcc"
+        ],
+        "fusion": [
+          "0x1011a0c",
+          "0x1011ce0",
+          "0x1011fcc"
+        ]
+      },
+      "min_q": {
+        "v1": 0.01802,
+        "v2": 0.03604,
+        "fusion": 0.03003
+      }
+    },
+    "des_bcon_x86_64": {
+      "contains_crypto": true,
+      "train_overlap": true,
+      "arch": "x86-64",
+      "functions_recovered": 46,
+      "functions_scored": 37,
+      "functions_true": 55,
+      "boundary_precision": 0.5217,
+      "boundary_recall": 0.4364,
+      "flags": {
+        "vera_signatures": true,
+        "findcrypt3": false,
+        "ntt": false,
+        "v1_certified": true,
+        "v2_certified": true,
+        "fusion_certified": true
+      },
+      "certified": {
+        "v1": [
+          "0x10025f0",
+          "0x1002940",
+          "0x1002c80",
+          "0x1003070",
+          "0x1003260"
+        ],
+        "v2": [
+          "0x10025f0",
+          "0x1002940",
+          "0x1002c80"
+        ],
+        "fusion": [
+          "0x10025f0",
+          "0x1002940",
+          "0x1002c80",
+          "0x1003070"
+        ]
+      },
+      "min_q": {
+        "v1": 0.01914,
+        "v2": 0.00957,
+        "fusion": 0.00957
+      }
+    },
+    "kissfft_aarch64": {
+      "contains_crypto": false,
+      "train_overlap": false,
+      "arch": "aarch64",
+      "functions_recovered": 72,
+      "functions_scored": 59,
+      "functions_true": 85,
+      "boundary_precision": 0.7778,
+      "boundary_recall": 0.6588,
+      "flags": {
+        "vera_signatures": false,
+        "findcrypt3": false,
+        "ntt": false,
+        "v1_certified": false,
+        "v2_certified": false,
+        "fusion_certified": false
+      },
+      "certified": {
+        "v1": [],
+        "v2": [],
+        "fusion": []
+      },
+      "min_q": {
+        "v1": 0.48531,
+        "v2": 0.76263,
+        "fusion": 0.87818
+      }
+    },
+    "kissfft_x86_64": {
+      "contains_crypto": false,
+      "train_overlap": false,
+      "arch": "x86-64",
+      "functions_recovered": 59,
+      "functions_scored": 48,
+      "functions_true": 71,
+      "boundary_precision": 0.3729,
+      "boundary_recall": 0.3099,
+      "flags": {
+        "vera_signatures": false,
+        "findcrypt3": false,
+        "ntt": false,
+        "v1_certified": false,
+        "v2_certified": false,
+        "fusion_certified": false
+      },
+      "certified": {
+        "v1": [],
+        "v2": [],
+        "fusion": []
+      },
+      "min_q": {
+        "v1": 0.7404,
+        "v2": 0.68917,
+        "fusion": 0.67262
+      }
+    },
+    "lodepng_aarch64": {
+      "contains_crypto": false,
+      "train_overlap": false,
+      "arch": "aarch64",
+      "functions_recovered": 114,
+      "functions_scored": 110,
+      "functions_true": 244,
+      "boundary_precision": 0.9825,
+      "boundary_recall": 0.459,
+      "flags": {
+        "vera_signatures": false,
+        "findcrypt3": true,
+        "ntt": false,
+        "v1_certified": false,
+        "v2_certified": false,
+        "fusion_certified": false
+      },
+      "certified": {
+        "v1": [],
+        "v2": [],
+        "fusion": []
+      },
+      "min_q": {
+        "v1": 0.21543,
+        "v2": 0.1149,
+        "fusion": 0.1508
+      }
+    },
+    "lodepng_x86_64": {
+      "contains_crypto": false,
+      "train_overlap": false,
+      "arch": "x86-64",
+      "functions_recovered": 105,
+      "functions_scored": 104,
+      "functions_true": 229,
+      "boundary_precision": 0.9905,
+      "boundary_recall": 0.4541,
+      "flags": {
+        "vera_signatures": false,
+        "findcrypt3": true,
+        "ntt": false,
+        "v1_certified": false,
+        "v2_certified": false,
+        "fusion_certified": false
+      },
+      "certified": {
+        "v1": [],
+        "v2": [],
+        "fusion": []
+      },
+      "min_q": {
+        "v1": 0.27241,
+        "v2": 0.16143,
+        "fusion": 0.12107
+      }
+    },
+    "lua_aarch64": {
+      "contains_crypto": false,
+      "train_overlap": true,
+      "arch": "aarch64",
+      "functions_recovered": 264,
+      "functions_scored": 245,
+      "functions_true": 879,
+      "boundary_precision": 0.9886,
+      "boundary_recall": 0.2969,
+      "flags": {
+        "vera_signatures": false,
+        "findcrypt3": false,
+        "ntt": false,
+        "v1_certified": false,
+        "v2_certified": false,
+        "fusion_certified": false
+      },
+      "certified": {
+        "v1": [],
+        "v2": [],
+        "fusion": []
+      },
+      "min_q": {
+        "v1": 0.99922,
+        "v2": 1.0,
+        "fusion": 0.99334
+      }
+    },
+    "lua_x86_64": {
+      "contains_crypto": false,
+      "train_overlap": true,
+      "arch": "x86-64",
+      "functions_recovered": 249,
+      "functions_scored": 231,
+      "functions_true": 865,
+      "boundary_precision": 0.9478,
+      "boundary_recall": 0.2728,
+      "flags": {
+        "vera_signatures": false,
+        "findcrypt3": false,
+        "ntt": false,
+        "v1_certified": false,
+        "v2_certified": false,
+        "fusion_certified": false
+      },
+      "certified": {
+        "v1": [],
+        "v2": [],
+        "fusion": []
+      },
+      "min_q": {
+        "v1": 0.99116,
+        "v2": 0.99961,
+        "fusion": 0.99496
+      }
+    },
+    "lz4_aarch64": {
+      "contains_crypto": false,
+      "train_overlap": false,
+      "arch": "aarch64",
+      "functions_recovered": 74,
+      "functions_scored": 61,
+      "functions_true": 129,
+      "boundary_precision": 0.973,
+      "boundary_recall": 0.5581,
+      "flags": {
+        "vera_signatures": false,
+        "findcrypt3": false,
+        "ntt": false,
+        "v1_certified": false,
+        "v2_certified": false,
+        "fusion_certified": false
+      },
+      "certified": {
+        "v1": [],
+        "v2": [],
+        "fusion": []
+      },
+      "min_q": {
+        "v1": 0.50176,
+        "v2": 0.70087,
+        "fusion": 0.74787
+      }
+    },
+    "lz4_x86_64": {
+      "contains_crypto": false,
+      "train_overlap": false,
+      "arch": "x86-64",
+      "functions_recovered": 40,
+      "functions_scored": 34,
+      "functions_true": 114,
+      "boundary_precision": 0.7,
+      "boundary_recall": 0.2456,
+      "flags": {
+        "vera_signatures": false,
+        "findcrypt3": false,
+        "ntt": false,
+        "v1_certified": false,
+        "v2_certified": false,
+        "fusion_certified": false
+      },
+      "certified": {
+        "v1": [],
+        "v2": [],
+        "fusion": []
+      },
+      "min_q": {
+        "v1": 0.52445,
+        "v2": 0.72565,
+        "fusion": 0.76867
+      }
+    },
+    "md5_bcon_aarch64": {
+      "contains_crypto": true,
+      "train_overlap": true,
+      "arch": "aarch64",
+      "functions_recovered": 56,
+      "functions_scored": 44,
+      "functions_true": 64,
+      "boundary_precision": 0.9643,
+      "boundary_recall": 0.8438,
+      "flags": {
+        "vera_signatures": false,
+        "findcrypt3": false,
+        "ntt": false,
+        "v1_certified": true,
+        "v2_certified": true,
+        "fusion_certified": true
+      },
+      "certified": {
+        "v1": [
+          "0x1011504"
+        ],
+        "v2": [
+          "0x1011504"
+        ],
+        "fusion": [
+          "0x1011504"
+        ]
+      },
+      "min_q": {
+        "v1": 0.01723,
+        "v2": 0.01723,
+        "fusion": 0.01723
+      }
+    },
+    "md5_bcon_x86_64": {
+      "contains_crypto": true,
+      "train_overlap": true,
+      "arch": "x86-64",
+      "functions_recovered": 46,
+      "functions_scored": 36,
+      "functions_true": 53,
+      "boundary_precision": 0.5,
+      "boundary_recall": 0.434,
+      "flags": {
+        "vera_signatures": false,
+        "findcrypt3": true,
+        "ntt": false,
+        "v1_certified": true,
+        "v2_certified": true,
+        "fusion_certified": true
+      },
+      "certified": {
+        "v1": [
+          "0x10021c0"
+        ],
+        "v2": [
+          "0x10021c0"
+        ],
+        "fusion": [
+          "0x10021c0"
+        ]
+      },
+      "min_q": {
+        "v1": 0.01397,
+        "v2": 0.02794,
+        "fusion": 0.01397
+      }
+    },
+    "microecc_aarch64": {
+      "contains_crypto": true,
+      "train_overlap": false,
+      "arch": "aarch64",
+      "functions_recovered": 72,
+      "functions_scored": 60,
+      "functions_true": 109,
+      "boundary_precision": 0.9722,
+      "boundary_recall": 0.6422,
+      "flags": {
+        "vera_signatures": true,
+        "findcrypt3": false,
+        "ntt": false,
+        "v1_certified": false,
+        "v2_certified": true,
+        "fusion_certified": true
+      },
+      "certified": {
+        "v1": [],
+        "v2": [
+          "0x101661c"
+        ],
+        "fusion": [
+          "0x101661c"
+        ]
+      },
+      "min_q": {
+        "v1": 0.49647,
+        "v2": 0.047,
+        "fusion": 0.09401
+      }
+    },
+    "microecc_x86_64": {
+      "contains_crypto": true,
+      "train_overlap": false,
+      "arch": "x86-64",
+      "functions_recovered": 62,
+      "functions_scored": 52,
+      "functions_true": 98,
+      "boundary_precision": 0.6935,
+      "boundary_recall": 0.4388,
+      "flags": {
+        "vera_signatures": true,
+        "findcrypt3": false,
+        "ntt": false,
+        "v1_certified": false,
+        "v2_certified": true,
+        "fusion_certified": true
+      },
+      "certified": {
+        "v1": [],
+        "v2": [
+          "0x10064d0",
+          "0x1007950",
+          "0x1008790",
+          "0x100e3c0"
+        ],
+        "fusion": [
+          "0x10064d0",
+          "0x1007950",
+          "0x1008790",
+          "0x100e3c0"
+        ]
+      },
+      "min_q": {
+        "v1": 0.33496,
+        "v2": 0.02018,
+        "fusion": 0.04036
+      }
+    },
+    "miniz_aarch64": {
+      "contains_crypto": false,
+      "train_overlap": false,
+      "arch": "aarch64",
+      "functions_recovered": 86,
+      "functions_scored": 72,
+      "functions_true": 126,
+      "boundary_precision": 0.9767,
+      "boundary_recall": 0.6667,
+      "flags": {
+        "vera_signatures": false,
+        "findcrypt3": true,
+        "ntt": false,
+        "v1_certified": false,
+        "v2_certified": false,
+        "fusion_certified": false
+      },
+      "certified": {
+        "v1": [],
+        "v2": [],
+        "fusion": []
+      },
+      "min_q": {
+        "v1": 0.59224,
+        "v2": 0.93067,
+        "fusion": 0.97467
+      }
+    },
+    "miniz_x86_64": {
+      "contains_crypto": false,
+      "train_overlap": false,
+      "arch": "x86-64",
+      "functions_recovered": 73,
+      "functions_scored": 61,
+      "functions_true": 111,
+      "boundary_precision": 0.5068,
+      "boundary_recall": 0.3333,
+      "flags": {
+        "vera_signatures": false,
+        "findcrypt3": true,
+        "ntt": false,
+        "v1_certified": false,
+        "v2_certified": false,
+        "fusion_certified": false
+      },
+      "certified": {
+        "v1": [],
+        "v2": [],
+        "fusion": []
+      },
+      "min_q": {
+        "v1": 0.66063,
+        "v2": 0.77945,
+        "fusion": 0.73267
+      }
+    },
+    "mldsa44_aarch64": {
+      "contains_crypto": true,
+      "train_overlap": false,
+      "arch": "aarch64",
+      "functions_recovered": 150,
+      "functions_scored": 132,
+      "functions_true": 196,
+      "boundary_precision": 0.9867,
+      "boundary_recall": 0.7551,
+      "flags": {
+        "vera_signatures": true,
+        "findcrypt3": false,
+        "ntt": true,
+        "v1_certified": true,
+        "v2_certified": true,
+        "fusion_certified": true
+      },
+      "certified": {
+        "v1": [
+          "0x1015718",
+          "0x10175a4",
+          "0x1017864",
+          "0x1019558"
+        ],
+        "v2": [
+          "0x1019558"
+        ],
+        "fusion": [
+          "0x1019558"
+        ]
+      },
+      "min_q": {
+        "v1": 0.0517,
+        "v2": 0.0517,
+        "fusion": 0.0517
+      }
+    },
+    "mldsa44_x86_64": {
+      "contains_crypto": true,
+      "train_overlap": false,
+      "arch": "x86-64",
+      "functions_recovered": 136,
+      "functions_scored": 120,
+      "functions_true": 181,
+      "boundary_precision": 0.7574,
+      "boundary_recall": 0.5691,
+      "flags": {
+        "vera_signatures": true,
+        "findcrypt3": false,
+        "ntt": true,
+        "v1_certified": true,
+        "v2_certified": true,
+        "fusion_certified": true
+      },
+      "certified": {
+        "v1": [
+          "0x100a650"
+        ],
+        "v2": [
+          "0x100a650"
+        ],
+        "fusion": [
+          "0x100a650"
+        ]
+      },
+      "min_q": {
+        "v1": 0.04657,
+        "v2": 0.04657,
+        "fusion": 0.04657
+      }
+    },
+    "mlkem768_aarch64": {
+      "contains_crypto": true,
+      "train_overlap": false,
+      "arch": "aarch64",
+      "functions_recovered": 121,
+      "functions_scored": 103,
+      "functions_true": 164,
+      "boundary_precision": 0.9835,
+      "boundary_recall": 0.7256,
+      "flags": {
+        "vera_signatures": true,
+        "findcrypt3": false,
+        "ntt": true,
+        "v1_certified": true,
+        "v2_certified": true,
+        "fusion_certified": true
+      },
+      "certified": {
+        "v1": [
+          "0x1017fb0"
+        ],
+        "v2": [
+          "0x1017fb0"
+        ],
+        "fusion": [
+          "0x1017fb0"
+        ]
+      },
+      "min_q": {
+        "v1": 0.04034,
+        "v2": 0.04034,
+        "fusion": 0.04034
+      }
+    },
+    "mlkem768_x86_64": {
+      "contains_crypto": true,
+      "train_overlap": false,
+      "arch": "x86-64",
+      "functions_recovered": 107,
+      "functions_scored": 93,
+      "functions_true": 149,
+      "boundary_precision": 0.6916,
+      "boundary_recall": 0.4966,
+      "flags": {
+        "vera_signatures": true,
+        "findcrypt3": false,
+        "ntt": true,
+        "v1_certified": true,
+        "v2_certified": true,
+        "fusion_certified": true
+      },
+      "certified": {
+        "v1": [
+          "0x1004d90",
+          "0x1008f00"
+        ],
+        "v2": [
+          "0x1003660",
+          "0x1004c90",
+          "0x1004d90",
+          "0x1004fd0",
+          "0x1005d10",
+          "0x1006910",
+          "0x1008f00"
+        ],
+        "fusion": [
+          "0x1003660",
+          "0x10042f0",
+          "0x1004c90",
+          "0x1004d90",
+          "0x1004fd0",
+          "0x1005900",
+          "0x1005bc0",
+          "0x1005d10",
+          "0x1006910",
+          "0x10075a0",
+          "0x1008f00"
+        ]
+      },
+      "min_q": {
+        "v1": 0.03609,
+        "v2": 0.03609,
+        "fusion": 0.03609
+      }
+    },
+    "monocypher_aarch64": {
+      "contains_crypto": true,
+      "train_overlap": false,
+      "arch": "aarch64",
+      "functions_recovered": 94,
+      "functions_scored": 84,
+      "functions_true": 132,
+      "boundary_precision": 0.9787,
+      "boundary_recall": 0.697,
+      "flags": {
+        "vera_signatures": true,
+        "findcrypt3": true,
+        "ntt": false,
+        "v1_certified": true,
+        "v2_certified": true,
+        "fusion_certified": true
+      },
+      "certified": {
+        "v1": [
+          "0x10134e4",
+          "0x1013fe0",
+          "0x10148b4",
+          "0x10172a8",
+          "0x1017b90",
+          "0x1019a38",
+          "0x1019ed8",
+          "0x101bf98",
+          "0x101d0a4",
+          "0x101d820",
+          "0x101e2c8",
+          "0x101fdb0",
+          "0x102047c",
+          "0x10205c8"
+        ],
+        "v2": [
+          "0x10134e4",
+          "0x10148b4",
+          "0x10172a8",
+          "0x1017b90",
+          "0x101a3dc",
+          "0x101bf98",
+          "0x101d0a4",
+          "0x101dc30",
+          "0x101fdb0",
+          "0x102047c",
+          "0x10205c8",
+          "0x1023d74"
+        ],
+        "fusion": [
+          "0x101337c",
+          "0x10134e4",
+          "0x10136cc",
+          "0x10148b4",
+          "0x10172a8",
+          "0x1017b90",
+          "0x1019a38",
+          "0x1019ed8",
+          "0x101a3dc",
+          "0x101bf98",
+          "0x101cb6c",
+          "0x101d0a4",
+          "0x101dc30",
+          "0x101fdb0",
+          "0x102047c",
+          "0x10205c8",
+          "0x1023d74"
+        ]
+      },
+      "min_q": {
+        "v1": 0.0329,
+        "v2": 0.0188,
+        "fusion": 0.01097
+      }
+    },
+    "monocypher_x86_64": {
+      "contains_crypto": true,
+      "train_overlap": false,
+      "arch": "x86-64",
+      "functions_recovered": 83,
+      "functions_scored": 74,
+      "functions_true": 121,
+      "boundary_precision": 0.7349,
+      "boundary_recall": 0.5041,
+      "flags": {
+        "vera_signatures": true,
+        "findcrypt3": true,
+        "ntt": false,
+        "v1_certified": true,
+        "v2_certified": true,
+        "fusion_certified": true
+      },
+      "certified": {
+        "v1": [
+          "0x1003d86",
+          "0x1003fc0",
+          "0x1004200",
+          "0x10055a0",
+          "0x1008530",
+          "0x1009370",
+          "0x100b8d0",
+          "0x100dc30",
+          "0x100e560",
+          "0x100f9f0",
+          "0x10103b0",
+          "0x10112c0",
+          "0x1013940",
+          "0x1013a00"
+        ],
+        "v2": [
+          "0x1003fc0",
+          "0x1004200",
+          "0x10055a0",
+          "0x1008530",
+          "0x1009370",
+          "0x100b8d0",
+          "0x100bcd0",
+          "0x100e560",
+          "0x1013940",
+          "0x1013a00"
+        ],
+        "fusion": [
+          "0x1003d86",
+          "0x1003fc0",
+          "0x1004200",
+          "0x10055a0",
+          "0x10071a0",
+          "0x1008530",
+          "0x1009370",
+          "0x100a920",
+          "0x100afa0",
+          "0x100b8d0",
+          "0x100bcd0",
+          "0x100c370",
+          "0x100e560",
+          "0x100f9f0",
+          "0x10112c0",
+          "0x1013940",
+          "0x1013a00"
+        ]
+      },
+      "min_q": {
+        "v1": 0.00957,
+        "v2": 0.01149,
+        "fusion": 0.01149
+      }
+    },
+    "proprietary_arx_aarch64": {
+      "contains_crypto": true,
+      "train_overlap": false,
+      "arch": "aarch64",
+      "functions_recovered": 53,
+      "functions_scored": 43,
+      "functions_true": 61,
+      "boundary_precision": 0.9623,
+      "boundary_recall": 0.8361,
+      "flags": {
+        "vera_signatures": false,
+        "findcrypt3": false,
+        "ntt": false,
+        "v1_certified": false,
+        "v2_certified": false,
+        "fusion_certified": false
+      },
+      "certified": {
+        "v1": [],
+        "v2": [],
+        "fusion": []
+      },
+      "min_q": {
+        "v1": 0.76148,
+        "v2": 0.55582,
+        "fusion": 0.81372
+      }
+    },
+    "proprietary_arx_x86_64": {
+      "contains_crypto": true,
+      "train_overlap": false,
+      "arch": "x86-64",
+      "functions_recovered": 43,
+      "functions_scored": 34,
+      "functions_true": 50,
+      "boundary_precision": 0.4419,
+      "boundary_recall": 0.38,
+      "flags": {
+        "vera_signatures": false,
+        "findcrypt3": false,
+        "ntt": false,
+        "v1_certified": false,
+        "v2_certified": false,
+        "fusion_certified": false
+      },
+      "certified": {
+        "v1": [],
+        "v2": [],
+        "fusion": []
+      },
+      "min_q": {
+        "v1": 0.69926,
+        "v2": 0.77214,
+        "fusion": 0.78359
+      }
+    },
+    "rc4_bcon_aarch64": {
+      "contains_crypto": true,
+      "train_overlap": true,
+      "arch": "aarch64",
+      "functions_recovered": 53,
+      "functions_scored": 43,
+      "functions_true": 61,
+      "boundary_precision": 0.9623,
+      "boundary_recall": 0.8361,
+      "flags": {
+        "vera_signatures": false,
+        "findcrypt3": false,
+        "ntt": false,
+        "v1_certified": false,
+        "v2_certified": false,
+        "fusion_certified": false
+      },
+      "certified": {
+        "v1": [],
+        "v2": [],
+        "fusion": []
+      },
+      "min_q": {
+        "v1": 0.55582,
+        "v2": 0.55582,
+        "fusion": 0.73146
+      }
+    },
+    "rc4_bcon_x86_64": {
+      "contains_crypto": true,
+      "train_overlap": true,
+      "arch": "x86-64",
+      "functions_recovered": 43,
+      "functions_scored": 34,
+      "functions_true": 50,
+      "boundary_precision": 0.4884,
+      "boundary_recall": 0.42,
+      "flags": {
+        "vera_signatures": false,
+        "findcrypt3": false,
+        "ntt": false,
+        "v1_certified": false,
+        "v2_certified": false,
+        "fusion_certified": false
+      },
+      "certified": {
+        "v1": [],
+        "v2": [],
+        "fusion": []
+      },
+      "min_q": {
+        "v1": 0.41956,
+        "v2": 0.71861,
+        "fusion": 0.58052
+      }
+    },
+    "sha256_bcon_aarch64": {
+      "contains_crypto": true,
+      "train_overlap": true,
+      "arch": "aarch64",
+      "functions_recovered": 56,
+      "functions_scored": 44,
+      "functions_true": 64,
+      "boundary_precision": 0.9643,
+      "boundary_recall": 0.8438,
+      "flags": {
+        "vera_signatures": true,
+        "findcrypt3": true,
+        "ntt": false,
+        "v1_certified": false,
+        "v2_certified": false,
+        "fusion_certified": true
+      },
+      "certified": {
+        "v1": [],
+        "v2": [],
+        "fusion": [
+          "0x1011614"
+        ]
+      },
+      "min_q": {
+        "v1": 0.10341,
+        "v2": 0.13788,
+        "fusion": 0.06894
+      }
+    },
+    "sha256_bcon_x86_64": {
+      "contains_crypto": true,
+      "train_overlap": true,
+      "arch": "x86-64",
+      "functions_recovered": 46,
+      "functions_scored": 37,
+      "functions_true": 53,
+      "boundary_precision": 0.5,
+      "boundary_recall": 0.434,
+      "flags": {
+        "vera_signatures": true,
+        "findcrypt3": true,
+        "ntt": false,
+        "v1_certified": true,
+        "v2_certified": false,
+        "fusion_certified": true
+      },
+      "certified": {
+        "v1": [
+          "0x10022d0"
+        ],
+        "v2": [],
+        "fusion": [
+          "0x10022d0"
+        ]
+      },
+      "min_q": {
+        "v1": 0.05743,
+        "v2": 0.15794,
+        "fusion": 0.08615
+      }
+    },
+    "siphash_aarch64": {
+      "contains_crypto": true,
+      "train_overlap": false,
+      "arch": "aarch64",
+      "functions_recovered": 53,
+      "functions_scored": 42,
+      "functions_true": 61,
+      "boundary_precision": 0.9623,
+      "boundary_recall": 0.8361,
+      "flags": {
+        "vera_signatures": false,
+        "findcrypt3": false,
+        "ntt": false,
+        "v1_certified": true,
+        "v2_certified": false,
+        "fusion_certified": false
+      },
+      "certified": {
+        "v1": [
+          "0x101144c"
+        ],
+        "v2": [],
+        "fusion": []
+      },
+      "min_q": {
+        "v1": 0.09871,
+        "v2": 0.54289,
+        "fusion": 0.41128
+      }
+    },
+    "siphash_x86_64": {
+      "contains_crypto": true,
+      "train_overlap": false,
+      "arch": "x86-64",
+      "functions_recovered": 43,
+      "functions_scored": 34,
+      "functions_true": 50,
+      "boundary_precision": 0.4651,
+      "boundary_recall": 0.4,
+      "flags": {
+        "vera_signatures": false,
+        "findcrypt3": false,
+        "ntt": false,
+        "v1_certified": true,
+        "v2_certified": false,
+        "fusion_certified": false
+      },
+      "certified": {
+        "v1": [
+          "0x1002160"
+        ],
+        "v2": [],
+        "fusion": []
+      },
+      "min_q": {
+        "v1": 0.05277,
+        "v2": 0.51895,
+        "fusion": 0.25068
+      }
+    },
+    "sqlite_chacha_aarch64": {
+      "contains_crypto": true,
+      "train_overlap": false,
+      "arch": "aarch64",
+      "functions_recovered": 175,
+      "functions_scored": 173,
+      "functions_true": 1613,
+      "boundary_precision": 0.9943,
+      "boundary_recall": 0.1079,
+      "flags": {
+        "vera_signatures": true,
+        "findcrypt3": true,
+        "ntt": false,
+        "v1_certified": false,
+        "v2_certified": false,
+        "fusion_certified": false
+      },
+      "certified": {
+        "v1": [],
+        "v2": [],
+        "fusion": []
+      },
+      "min_q": {
+        "v1": 0.88092,
+        "v2": 1.0,
+        "fusion": 0.27105
+      }
+    },
+    "sqlite_chacha_x86_64": {
+      "contains_crypto": true,
+      "train_overlap": false,
+      "arch": "x86-64",
+      "functions_recovered": 168,
+      "functions_scored": 166,
+      "functions_true": 1605,
+      "boundary_precision": 0.994,
+      "boundary_recall": 0.104,
+      "flags": {
+        "vera_signatures": true,
+        "findcrypt3": true,
+        "ntt": false,
+        "v1_certified": false,
+        "v2_certified": false,
+        "fusion_certified": false
+      },
+      "certified": {
+        "v1": [],
+        "v2": [],
+        "fusion": []
+      },
+      "min_q": {
+        "v1": 0.83741,
+        "v2": 1.0,
+        "fusion": 0.9969
+      }
+    },
+    "stb_image_aarch64": {
+      "contains_crypto": false,
+      "train_overlap": false,
+      "arch": "aarch64",
+      "functions_recovered": 76,
+      "functions_scored": 75,
+      "functions_true": 233,
+      "boundary_precision": 0.9868,
+      "boundary_recall": 0.3219,
+      "flags": {
+        "vera_signatures": false,
+        "findcrypt3": false,
+        "ntt": false,
+        "v1_certified": false,
+        "v2_certified": false,
+        "fusion_certified": false
+      },
+      "certified": {
+        "v1": [],
+        "v2": [],
+        "fusion": []
+      },
+      "min_q": {
+        "v1": 0.98394,
+        "v2": 0.99687,
+        "fusion": 0.99765
+      }
+    },
+    "stb_image_x86_64": {
+      "contains_crypto": false,
+      "train_overlap": false,
+      "arch": "x86-64",
+      "functions_recovered": 75,
+      "functions_scored": 74,
+      "functions_true": 218,
+      "boundary_precision": 0.9867,
+      "boundary_recall": 0.3394,
+      "flags": {
+        "vera_signatures": false,
+        "findcrypt3": false,
+        "ntt": false,
+        "v1_certified": false,
+        "v2_certified": false,
+        "fusion_certified": false
+      },
+      "certified": {
+        "v1": [],
+        "v2": [],
+        "fusion": []
+      },
+      "min_q": {
+        "v1": 0.97059,
+        "v2": 0.98913,
+        "fusion": 0.95049
+      }
+    },
+    "tweetnacl_aarch64": {
+      "contains_crypto": true,
+      "train_overlap": false,
+      "arch": "aarch64",
+      "functions_recovered": 68,
+      "functions_scored": 58,
+      "functions_true": 93,
+      "boundary_precision": 0.9706,
+      "boundary_recall": 0.7097,
+      "flags": {
+        "vera_signatures": true,
+        "findcrypt3": true,
+        "ntt": false,
+        "v1_certified": true,
+        "v2_certified": true,
+        "fusion_certified": true
+      },
+      "certified": {
+        "v1": [
+          "0x1012508",
+          "0x10128f8",
+          "0x1013388",
+          "0x1013708",
+          "0x1014800",
+          "0x1014ce8",
+          "0x1015598"
+        ],
+        "v2": [
+          "0x1012508",
+          "0x1013708",
+          "0x1014ce8",
+          "0x1015598",
+          "0x10170b4",
+          "0x1017a74"
+        ],
+        "fusion": [
+          "0x1012508",
+          "0x10128f8",
+          "0x1013388",
+          "0x1013708",
+          "0x1014800",
+          "0x1014ce8",
+          "0x1015598",
+          "0x10158b0",
+          "0x1015ce8",
+          "0x10170b4",
+          "0x1017a74",
+          "0x101b59c"
+        ]
+      },
+      "min_q": {
+        "v1": 0.02272,
+        "v2": 0.02272,
+        "fusion": 0.01515
+      }
+    },
+    "tweetnacl_x86_64": {
+      "contains_crypto": true,
+      "train_overlap": false,
+      "arch": "x86-64",
+      "functions_recovered": 57,
+      "functions_scored": 48,
+      "functions_true": 81,
+      "boundary_precision": 0.614,
+      "boundary_recall": 0.4321,
+      "flags": {
+        "vera_signatures": true,
+        "findcrypt3": true,
+        "ntt": false,
+        "v1_certified": true,
+        "v2_certified": true,
+        "fusion_certified": true
+      },
+      "certified": {
+        "v1": [
+          "0x1002fd6",
+          "0x10030f0",
+          "0x1004500",
+          "0x1004710",
+          "0x10063e0",
+          "0x1006d90",
+          "0x1008210",
+          "0x1009270"
+        ],
+        "v2": [
+          "0x10030f0",
+          "0x10039f0",
+          "0x1004710",
+          "0x1005db0",
+          "0x10063e0",
+          "0x1006d90",
+          "0x1008210",
+          "0x1009270",
+          "0x100a5a0"
+        ],
+        "fusion": [
+          "0x1002fd6",
+          "0x10030f0",
+          "0x1003690",
+          "0x10039f0",
+          "0x1004500",
+          "0x1004710",
+          "0x1005db0",
+          "0x10063e0",
+          "0x1006d90",
+          "0x1007220",
+          "0x10077f0",
+          "0x1008210",
+          "0x1009270",
+          "0x100a5a0"
+        ]
+      },
+      "min_q": {
+        "v1": 0.04346,
+        "v2": 0.03725,
+        "fusion": 0.01863
+      }
+    },
+    "xxhash_aarch64": {
+      "contains_crypto": false,
+      "train_overlap": false,
+      "arch": "aarch64",
+      "functions_recovered": 70,
+      "functions_scored": 56,
+      "functions_true": 133,
+      "boundary_precision": 0.9714,
+      "boundary_recall": 0.5113,
+      "flags": {
+        "vera_signatures": false,
+        "findcrypt3": false,
+        "ntt": false,
+        "v1_certified": false,
+        "v2_certified": false,
+        "fusion_certified": false
+      },
+      "certified": {
+        "v1": [],
+        "v2": [],
+        "fusion": []
+      },
+      "min_q": {
+        "v1": 0.23032,
+        "v2": 0.72385,
+        "fusion": 0.75676
+      }
+    },
+    "xxhash_x86_64": {
+      "contains_crypto": false,
+      "train_overlap": false,
+      "arch": "x86-64",
+      "functions_recovered": 56,
+      "functions_scored": 45,
+      "functions_true": 118,
+      "boundary_precision": 0.4107,
+      "boundary_recall": 0.1949,
+      "flags": {
+        "vera_signatures": false,
+        "findcrypt3": false,
+        "ntt": false,
+        "v1_certified": false,
+        "v2_certified": false,
+        "fusion_certified": false
+      },
+      "certified": {
+        "v1": [],
+        "v2": [],
+        "fusion": []
+      },
+      "min_q": {
+        "v1": 0.47148,
+        "v2": 0.80151,
+        "fusion": 0.75669
+      }
+    },
+    "yyjson_aarch64": {
+      "contains_crypto": false,
+      "train_overlap": false,
+      "arch": "aarch64",
+      "functions_recovered": 27,
+      "functions_scored": 27,
+      "functions_true": 164,
+      "boundary_precision": 0.963,
+      "boundary_recall": 0.1585,
+      "flags": {
+        "vera_signatures": false,
+        "findcrypt3": false,
+        "ntt": false,
+        "v1_certified": false,
+        "v2_certified": false,
+        "fusion_certified": false
+      },
+      "certified": {
+        "v1": [],
+        "v2": [],
+        "fusion": []
+      },
+      "min_q": {
+        "v1": 0.9104,
+        "v2": 0.99647,
+        "fusion": 0.99961
+      }
+    },
+    "yyjson_x86_64": {
+      "contains_crypto": false,
+      "train_overlap": false,
+      "arch": "x86-64",
+      "functions_recovered": 28,
+      "functions_scored": 27,
+      "functions_true": 149,
+      "boundary_precision": 0.9643,
+      "boundary_recall": 0.1812,
+      "flags": {
+        "vera_signatures": false,
+        "findcrypt3": false,
+        "ntt": false,
+        "v1_certified": false,
+        "v2_certified": false,
+        "fusion_certified": false
+      },
+      "certified": {
+        "v1": [],
+        "v2": [],
+        "fusion": []
+      },
+      "min_q": {
+        "v1": 0.50815,
+        "v2": 0.99263,
+        "fusion": 0.99573
+      }
+    },
+    "zlib_aarch64": {
+      "contains_crypto": false,
+      "train_overlap": true,
+      "arch": "aarch64",
+      "functions_recovered": 87,
+      "functions_scored": 73,
+      "functions_true": 129,
+      "boundary_precision": 0.977,
+      "boundary_recall": 0.6589,
+      "flags": {
+        "vera_signatures": false,
+        "findcrypt3": true,
+        "ntt": false,
+        "v1_certified": false,
+        "v2_certified": false,
+        "fusion_certified": false
+      },
+      "certified": {
+        "v1": [],
+        "v2": [],
+        "fusion": []
+      },
+      "min_q": {
+        "v1": 0.60047,
+        "v2": 0.4718,
+        "fusion": 0.71485
+      }
+    },
+    "zlib_x86_64": {
+      "contains_crypto": false,
+      "train_overlap": true,
+      "arch": "x86-64",
+      "functions_recovered": 74,
+      "functions_scored": 63,
+      "functions_true": 114,
+      "boundary_precision": 0.5811,
+      "boundary_recall": 0.3772,
+      "flags": {
+        "vera_signatures": false,
+        "findcrypt3": true,
+        "ntt": false,
+        "v1_certified": false,
+        "v2_certified": false,
+        "fusion_certified": false
+      },
+      "certified": {
+        "v1": [],
+        "v2": [],
+        "fusion": []
+      },
+      "min_q": {
+        "v1": 0.77742,
+        "v2": 0.83623,
+        "fusion": 0.84183
+      }
+    }
+  },
+  "summary_independent": {
+    "vera_signatures": {
+      "tpr": 0.75,
+      "fpr": 0.0,
+      "tp": 12,
+      "fp": 0,
+      "positives": 16,
+      "negatives": 14
+    },
+    "findcrypt3": {
+      "tpr": 0.375,
+      "fpr": 0.286,
+      "tp": 6,
+      "fp": 4,
+      "positives": 16,
+      "negatives": 14
+    },
+    "ntt": {
+      "tpr": 0.25,
+      "fpr": 0.0,
+      "tp": 4,
+      "fp": 0,
+      "positives": 16,
+      "negatives": 14
+    },
+    "v1_certified": {
+      "tpr": 0.625,
+      "fpr": 0.0,
+      "tp": 10,
+      "fp": 0,
+      "positives": 16,
+      "negatives": 14
+    },
+    "v2_certified": {
+      "tpr": 0.625,
+      "fpr": 0.0,
+      "tp": 10,
+      "fp": 0,
+      "positives": 16,
+      "negatives": 14
+    },
+    "fusion_certified": {
+      "tpr": 0.625,
+      "fpr": 0.0,
+      "tp": 10,
+      "fp": 0,
+      "positives": 16,
+      "negatives": 14
+    }
+  },
+  "boundaries": {
+    "precision_mean": 0.8109,
+    "recall_mean": 0.5027
+  },
+  "minutes": 2.9
+}

@@ -1,0 +1,60 @@
+{
+  "source": "pkcs11",
+  "collected_at": "2026-08-29T09:00:00Z",
+  "module": "softhsm2 (example path — replace with partner module)",
+  "attribute_profile": "PKCS#11 v2.40 / SoftHSM2-compatible CKA_* JSON",
+  "note": "Minimal redacted attribute dump. No key material. Truncated from demo/vault/hsm_pkcs11.json for partner handoff shape only.",
+  "slots": [
+    {
+      "slot_id": 0,
+      "token_label": "PAYMENT-HSM-01",
+      "manufacturer": "Entrust nShield",
+      "model": "nShield Connect XC",
+      "firmware_version": "12.72.1",
+      "serial_number": "REDACTED",
+      "fips_mode": "FIPS 140-3 Level 3",
+      "mechanisms": [
+        "CKM_RSA_PKCS",
+        "CKM_RSA_PKCS_PSS",
+        "CKM_SHA256_RSA_PKCS",
+        "CKM_ECDSA",
+        "CKM_AES_GCM",
+        "CKM_DES3_CBC"
+      ],
+      "pqc_mechanisms_present": [],
+      "pqc_ready": false,
+      "objects": [
+        {
+          "CKA_CLASS": "CKO_PRIVATE_KEY",
+          "CKA_KEY_TYPE": "CKK_RSA",
+          "CKA_LABEL": "card-verify-cvk",
+          "CKA_ID": "0A11",
+          "CKA_TOKEN": true,
+          "CKA_PRIVATE": true,
+          "CKA_SENSITIVE": true,
+          "CKA_EXTRACTABLE": false,
+          "CKA_MODULUS_BITS": 2048,
+          "CKA_PUBLIC_EXPONENT": "010001",
+          "CKA_SIGN": true,
+          "CKA_VERIFY": true,
+          "application": "PIN verification",
+          "pci_scope": true
+        },
+        {
+          "CKA_CLASS": "CKO_SECRET_KEY",
+          "CKA_KEY_TYPE": "CKK_DES3",
+          "CKA_LABEL": "pin-translate-legacy",
+          "CKA_ID": "0A12",
+          "CKA_TOKEN": true,
+          "CKA_SENSITIVE": true,
+          "CKA_EXTRACTABLE": false,
+          "CKA_VALUE_LEN": 24,
+          "CKA_ENCRYPT": true,
+          "CKA_DECRYPT": true,
+          "application": "PIN block translation",
+          "pci_scope": true
+        }
+      ]
+    }
+  ]
+}

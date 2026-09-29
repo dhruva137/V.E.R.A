@@ -1,0 +1,4124 @@
+{
+ "bomFormat": "CycloneDX",
+ "components": [
+  {
+   "bom-ref": "crypto:02d2dd9fd204df4efcdddf66",
+   "cryptoProperties": {
+    "algorithmProperties": {
+     "algorithmFamily": "SHA-1",
+     "certificationLevel": [
+      "none"
+     ],
+     "classicalSecurityLevel": 63,
+     "cryptoFunctions": [
+      "digest"
+     ],
+     "executionEnvironment": "software-plain-ram",
+     "implementationPlatform": "generic",
+     "nistQuantumSecurityLevel": 0,
+     "primitive": "hash"
+    },
+    "assetType": "algorithm",
+    "oid": "1.3.14.3.2.26"
+   },
+   "isExternal": false,
+   "name": "SHA-1",
+   "properties": [
+    {
+     "name": "vera:verdict",
+     "value": "classical"
+    },
+    {
+     "name": "vera:quantum-vulnerable",
+     "value": "false"
+    },
+    {
+     "name": "vera:classically-broken",
+     "value": "true"
+    },
+    {
+     "name": "vera:hndl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:tnfl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-low",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-high",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:risk-level",
+     "value": "informational"
+    },
+    {
+     "name": "vera:priority-rank",
+     "value": "12"
+    },
+    {
+     "name": "vera:persona",
+     "value": "Banking"
+    },
+    {
+     "name": "vera:statutory-deadline-year",
+     "value": "2029"
+    },
+    {
+     "name": "vera:slack-months",
+     "value": "3.1"
+    },
+    {
+     "name": "vera:migration-effort-years",
+     "value": "2.00"
+    },
+    {
+     "name": "vera:recommended-replacement",
+     "value": "SHA-256"
+    },
+    {
+     "name": "vera:tags",
+     "value": "binary-scan,layer:symbol,container-scan,layer:unknown"
+    },
+    {
+     "name": "vera:asset-class",
+     "value": "binary"
+    },
+    {
+     "name": "vera:algorithm",
+     "value": "SHA-1"
+    },
+    {
+     "name": "vera:source-location",
+     "value": "library/nginx:1.27-alpine!/usr/lib/libssl.so.3"
+    }
+   ],
+   "scope": "required",
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto:0551cfc6887c2e3aceb020d0",
+   "cryptoProperties": {
+    "algorithmProperties": {
+     "algorithmFamily": "SHA-1",
+     "certificationLevel": [
+      "none"
+     ],
+     "classicalSecurityLevel": 63,
+     "cryptoFunctions": [
+      "digest"
+     ],
+     "executionEnvironment": "software-plain-ram",
+     "implementationPlatform": "generic",
+     "nistQuantumSecurityLevel": 0,
+     "primitive": "hash"
+    },
+    "assetType": "algorithm",
+    "oid": "1.3.14.3.2.26"
+   },
+   "isExternal": false,
+   "name": "SHA-1",
+   "properties": [
+    {
+     "name": "vera:verdict",
+     "value": "classical"
+    },
+    {
+     "name": "vera:quantum-vulnerable",
+     "value": "false"
+    },
+    {
+     "name": "vera:classically-broken",
+     "value": "true"
+    },
+    {
+     "name": "vera:hndl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:tnfl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-low",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-high",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:risk-level",
+     "value": "informational"
+    },
+    {
+     "name": "vera:priority-rank",
+     "value": "10"
+    },
+    {
+     "name": "vera:persona",
+     "value": "Banking"
+    },
+    {
+     "name": "vera:statutory-deadline-year",
+     "value": "2029"
+    },
+    {
+     "name": "vera:slack-months",
+     "value": "3.1"
+    },
+    {
+     "name": "vera:migration-effort-years",
+     "value": "2.00"
+    },
+    {
+     "name": "vera:recommended-replacement",
+     "value": "SHA-256"
+    },
+    {
+     "name": "vera:tags",
+     "value": "binary-scan,layer:symbol,container-scan,layer:unknown"
+    },
+    {
+     "name": "vera:asset-class",
+     "value": "binary"
+    },
+    {
+     "name": "vera:algorithm",
+     "value": "SHA-1"
+    },
+    {
+     "name": "vera:source-location",
+     "value": "library/nginx:1.27-alpine!/sbin/apk"
+    }
+   ],
+   "scope": "required",
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto:3687fdec4ae856e3408074eb",
+   "cryptoProperties": {
+    "algorithmProperties": {
+     "algorithmFamily": "ChaCha20",
+     "certificationLevel": [
+      "none"
+     ],
+     "classicalSecurityLevel": 256,
+     "cryptoFunctions": [
+      "encrypt",
+      "decrypt"
+     ],
+     "executionEnvironment": "software-plain-ram",
+     "implementationPlatform": "generic",
+     "nistQuantumSecurityLevel": 5,
+     "primitive": "stream-cipher"
+    },
+    "assetType": "algorithm",
+    "oid": "1.2.840.113549.1.9.16.3.18"
+   },
+   "isExternal": false,
+   "name": "ChaCha20",
+   "properties": [
+    {
+     "name": "vera:verdict",
+     "value": "pqc"
+    },
+    {
+     "name": "vera:quantum-vulnerable",
+     "value": "false"
+    },
+    {
+     "name": "vera:classically-broken",
+     "value": "false"
+    },
+    {
+     "name": "vera:hndl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:tnfl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-low",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-high",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:risk-level",
+     "value": "safe"
+    },
+    {
+     "name": "vera:priority-rank",
+     "value": "38"
+    },
+    {
+     "name": "vera:persona",
+     "value": "Banking"
+    },
+    {
+     "name": "vera:statutory-deadline-year",
+     "value": "2029"
+    },
+    {
+     "name": "vera:slack-months",
+     "value": "3.1"
+    },
+    {
+     "name": "vera:migration-effort-years",
+     "value": "2.00"
+    },
+    {
+     "name": "vera:tags",
+     "value": "binary-scan,layer:symbol,container-scan,layer:unknown"
+    },
+    {
+     "name": "vera:asset-class",
+     "value": "binary"
+    },
+    {
+     "name": "vera:algorithm",
+     "value": "ChaCha20"
+    },
+    {
+     "name": "vera:source-location",
+     "value": "library/nginx:1.27-alpine!/usr/sbin/nginx-debug"
+    }
+   ],
+   "scope": "required",
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto:3c5a052eb19758f44ea64386",
+   "cryptoProperties": {
+    "algorithmProperties": {
+     "algorithmFamily": "AES",
+     "certificationLevel": [
+      "none"
+     ],
+     "classicalSecurityLevel": 128,
+     "cryptoFunctions": [
+      "encrypt",
+      "decrypt"
+     ],
+     "executionEnvironment": "software-plain-ram",
+     "implementationPlatform": "generic",
+     "mode": "ctr",
+     "nistQuantumSecurityLevel": 0,
+     "parameterSetIdentifier": "128",
+     "primitive": "block-cipher"
+    },
+    "assetType": "algorithm"
+   },
+   "isExternal": false,
+   "name": "AES-128-CTR",
+   "properties": [
+    {
+     "name": "vera:verdict",
+     "value": "grover"
+    },
+    {
+     "name": "vera:quantum-vulnerable",
+     "value": "false"
+    },
+    {
+     "name": "vera:classically-broken",
+     "value": "false"
+    },
+    {
+     "name": "vera:hndl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:tnfl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-low",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-high",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:risk-level",
+     "value": "safe"
+    },
+    {
+     "name": "vera:priority-rank",
+     "value": "24"
+    },
+    {
+     "name": "vera:persona",
+     "value": "Banking"
+    },
+    {
+     "name": "vera:statutory-deadline-year",
+     "value": "2029"
+    },
+    {
+     "name": "vera:slack-months",
+     "value": "3.1"
+    },
+    {
+     "name": "vera:migration-effort-years",
+     "value": "2.00"
+    },
+    {
+     "name": "vera:recommended-replacement",
+     "value": "AES-256"
+    },
+    {
+     "name": "vera:tags",
+     "value": "binary-scan,layer:symbol,container-scan,layer:unknown"
+    },
+    {
+     "name": "vera:asset-class",
+     "value": "binary"
+    },
+    {
+     "name": "vera:algorithm",
+     "value": "AES-128"
+    },
+    {
+     "name": "vera:source-location",
+     "value": "library/nginx:1.27-alpine!/usr/bin/njs"
+    }
+   ],
+   "scope": "required",
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto:420a1c053d022a8082204b83",
+   "cryptoProperties": {
+    "algorithmProperties": {
+     "algorithmFamily": "AES",
+     "certificationLevel": [
+      "none"
+     ],
+     "classicalSecurityLevel": 256,
+     "cryptoFunctions": [
+      "encrypt",
+      "decrypt"
+     ],
+     "executionEnvironment": "software-plain-ram",
+     "implementationPlatform": "generic",
+     "mode": "cbc",
+     "nistQuantumSecurityLevel": 5,
+     "parameterSetIdentifier": "256",
+     "primitive": "block-cipher"
+    },
+    "assetType": "algorithm",
+    "oid": "2.16.840.1.101.3.4.1.42"
+   },
+   "isExternal": false,
+   "name": "AES-256-CBC",
+   "properties": [
+    {
+     "name": "vera:verdict",
+     "value": "pqc"
+    },
+    {
+     "name": "vera:quantum-vulnerable",
+     "value": "false"
+    },
+    {
+     "name": "vera:classically-broken",
+     "value": "false"
+    },
+    {
+     "name": "vera:hndl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:tnfl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-low",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-high",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:risk-level",
+     "value": "safe"
+    },
+    {
+     "name": "vera:priority-rank",
+     "value": "30"
+    },
+    {
+     "name": "vera:persona",
+     "value": "Banking"
+    },
+    {
+     "name": "vera:statutory-deadline-year",
+     "value": "2029"
+    },
+    {
+     "name": "vera:slack-months",
+     "value": "3.1"
+    },
+    {
+     "name": "vera:migration-effort-years",
+     "value": "2.00"
+    },
+    {
+     "name": "vera:tags",
+     "value": "binary-scan,layer:symbol,container-scan,layer:unknown"
+    },
+    {
+     "name": "vera:asset-class",
+     "value": "binary"
+    },
+    {
+     "name": "vera:algorithm",
+     "value": "AES-256"
+    },
+    {
+     "name": "vera:source-location",
+     "value": "library/nginx:1.27-alpine!/usr/bin/njs"
+    }
+   ],
+   "scope": "required",
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto:43b24ed73532ec15a50e0188",
+   "cryptoProperties": {
+    "algorithmProperties": {
+     "algorithmFamily": "AES",
+     "certificationLevel": [
+      "none"
+     ],
+     "classicalSecurityLevel": 256,
+     "cryptoFunctions": [
+      "encrypt",
+      "decrypt"
+     ],
+     "executionEnvironment": "software-plain-ram",
+     "implementationPlatform": "generic",
+     "mode": "gcm",
+     "nistQuantumSecurityLevel": 5,
+     "parameterSetIdentifier": "256",
+     "primitive": "block-cipher"
+    },
+    "assetType": "algorithm",
+    "oid": "2.16.840.1.101.3.4.1.46"
+   },
+   "isExternal": false,
+   "name": "AES-256-GCM",
+   "properties": [
+    {
+     "name": "vera:verdict",
+     "value": "pqc"
+    },
+    {
+     "name": "vera:quantum-vulnerable",
+     "value": "false"
+    },
+    {
+     "name": "vera:classically-broken",
+     "value": "false"
+    },
+    {
+     "name": "vera:hndl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:tnfl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-low",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-high",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:risk-level",
+     "value": "safe"
+    },
+    {
+     "name": "vera:priority-rank",
+     "value": "34"
+    },
+    {
+     "name": "vera:persona",
+     "value": "Banking"
+    },
+    {
+     "name": "vera:statutory-deadline-year",
+     "value": "2029"
+    },
+    {
+     "name": "vera:slack-months",
+     "value": "3.1"
+    },
+    {
+     "name": "vera:migration-effort-years",
+     "value": "2.00"
+    },
+    {
+     "name": "vera:tags",
+     "value": "binary-scan,layer:symbol,container-scan,layer:unknown"
+    },
+    {
+     "name": "vera:asset-class",
+     "value": "binary"
+    },
+    {
+     "name": "vera:algorithm",
+     "value": "AES-256"
+    },
+    {
+     "name": "vera:source-location",
+     "value": "library/nginx:1.27-alpine!/usr/sbin/nginx"
+    }
+   ],
+   "scope": "required",
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto:4b96540081e4515e4fc2aa7f",
+   "cryptoProperties": {
+    "algorithmProperties": {
+     "algorithmFamily": "AES",
+     "certificationLevel": [
+      "none"
+     ],
+     "classicalSecurityLevel": 256,
+     "cryptoFunctions": [
+      "encrypt",
+      "decrypt"
+     ],
+     "executionEnvironment": "software-plain-ram",
+     "implementationPlatform": "generic",
+     "mode": "gcm",
+     "nistQuantumSecurityLevel": 5,
+     "parameterSetIdentifier": "256",
+     "primitive": "block-cipher"
+    },
+    "assetType": "algorithm",
+    "oid": "2.16.840.1.101.3.4.1.46"
+   },
+   "isExternal": false,
+   "name": "AES-256-GCM",
+   "properties": [
+    {
+     "name": "vera:verdict",
+     "value": "pqc"
+    },
+    {
+     "name": "vera:quantum-vulnerable",
+     "value": "false"
+    },
+    {
+     "name": "vera:classically-broken",
+     "value": "false"
+    },
+    {
+     "name": "vera:hndl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:tnfl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-low",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-high",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:risk-level",
+     "value": "safe"
+    },
+    {
+     "name": "vera:priority-rank",
+     "value": "36"
+    },
+    {
+     "name": "vera:persona",
+     "value": "Banking"
+    },
+    {
+     "name": "vera:statutory-deadline-year",
+     "value": "2029"
+    },
+    {
+     "name": "vera:slack-months",
+     "value": "3.1"
+    },
+    {
+     "name": "vera:migration-effort-years",
+     "value": "2.00"
+    },
+    {
+     "name": "vera:tags",
+     "value": "binary-scan,layer:symbol,container-scan,layer:unknown"
+    },
+    {
+     "name": "vera:asset-class",
+     "value": "binary"
+    },
+    {
+     "name": "vera:algorithm",
+     "value": "AES-256"
+    },
+    {
+     "name": "vera:source-location",
+     "value": "library/nginx:1.27-alpine!/usr/bin/njs"
+    }
+   ],
+   "scope": "required",
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto:570ef032641b5e3e293a0fa7",
+   "isExternal": false,
+   "name": "OpenSSL",
+   "properties": [
+    {
+     "name": "vera:verdict",
+     "value": "shor"
+    },
+    {
+     "name": "vera:quantum-vulnerable",
+     "value": "true"
+    },
+    {
+     "name": "vera:classically-broken",
+     "value": "false"
+    },
+    {
+     "name": "vera:hndl-score",
+     "value": "0.108010"
+    },
+    {
+     "name": "vera:tnfl-score",
+     "value": "0.066652"
+    },
+    {
+     "name": "vera:qirs",
+     "value": "0.087331"
+    },
+    {
+     "name": "vera:qirs-band-low",
+     "value": "0.057239"
+    },
+    {
+     "name": "vera:qirs-band-high",
+     "value": "0.115132"
+    },
+    {
+     "name": "vera:risk-level",
+     "value": "low"
+    },
+    {
+     "name": "vera:priority-rank",
+     "value": "7"
+    },
+    {
+     "name": "vera:persona",
+     "value": "Banking"
+    },
+    {
+     "name": "vera:statutory-deadline-year",
+     "value": "2028"
+    },
+    {
+     "name": "vera:slack-months",
+     "value": "3.1"
+    },
+    {
+     "name": "vera:migration-effort-years",
+     "value": "1.00"
+    },
+    {
+     "name": "vera:recommended-replacement",
+     "value": "OpenSSL 3.5 LTS"
+    },
+    {
+     "name": "vera:tags",
+     "value": "binary-scan,library,linkage:dynamic,container-scan,layer:unknown"
+    },
+    {
+     "name": "vera:asset-class",
+     "value": "crypto_library"
+    },
+    {
+     "name": "vera:source-location",
+     "value": "library/nginx:1.27-alpine!/sbin/apk"
+    },
+    {
+     "name": "vera:pqc-native-from",
+     "value": "3.5.0"
+    },
+    {
+     "name": "vera:pqc-capable",
+     "value": "False"
+    },
+    {
+     "name": "vera:library-family",
+     "value": "OpenSSL"
+    }
+   ],
+   "scope": "required",
+   "type": "library",
+   "version": "3.3.3"
+  },
+  {
+   "bom-ref": "crypto:59b9ba5116d4faa48db77f1d",
+   "cryptoProperties": {
+    "algorithmProperties": {
+     "algorithmFamily": "MD5",
+     "certificationLevel": [
+      "none"
+     ],
+     "classicalSecurityLevel": 0,
+     "cryptoFunctions": [
+      "digest"
+     ],
+     "executionEnvironment": "software-plain-ram",
+     "implementationPlatform": "generic",
+     "nistQuantumSecurityLevel": 0,
+     "primitive": "hash"
+    },
+    "assetType": "algorithm",
+    "oid": "1.2.840.113549.2.5"
+   },
+   "isExternal": false,
+   "name": "MD5",
+   "properties": [
+    {
+     "name": "vera:verdict",
+     "value": "classical"
+    },
+    {
+     "name": "vera:quantum-vulnerable",
+     "value": "false"
+    },
+    {
+     "name": "vera:classically-broken",
+     "value": "true"
+    },
+    {
+     "name": "vera:hndl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:tnfl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-low",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-high",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:risk-level",
+     "value": "informational"
+    },
+    {
+     "name": "vera:priority-rank",
+     "value": "9"
+    },
+    {
+     "name": "vera:persona",
+     "value": "Banking"
+    },
+    {
+     "name": "vera:statutory-deadline-year",
+     "value": "2029"
+    },
+    {
+     "name": "vera:slack-months",
+     "value": "3.1"
+    },
+    {
+     "name": "vera:migration-effort-years",
+     "value": "2.00"
+    },
+    {
+     "name": "vera:recommended-replacement",
+     "value": "SHA-256"
+    },
+    {
+     "name": "vera:tags",
+     "value": "binary-scan,layer:symbol,container-scan,layer:unknown"
+    },
+    {
+     "name": "vera:asset-class",
+     "value": "binary"
+    },
+    {
+     "name": "vera:algorithm",
+     "value": "MD5"
+    },
+    {
+     "name": "vera:source-location",
+     "value": "library/nginx:1.27-alpine!/usr/lib/libssl.so.3"
+    }
+   ],
+   "scope": "required",
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto:5a785ef2bda7f0ca06a5dd39",
+   "cryptoProperties": {
+    "algorithmProperties": {
+     "algorithmFamily": "AES",
+     "certificationLevel": [
+      "none"
+     ],
+     "classicalSecurityLevel": 128,
+     "cryptoFunctions": [
+      "encrypt",
+      "decrypt"
+     ],
+     "executionEnvironment": "software-plain-ram",
+     "implementationPlatform": "generic",
+     "mode": "cbc",
+     "nistQuantumSecurityLevel": 0,
+     "parameterSetIdentifier": "128",
+     "primitive": "block-cipher"
+    },
+    "assetType": "algorithm",
+    "oid": "2.16.840.1.101.3.4.1.2"
+   },
+   "isExternal": false,
+   "name": "AES-128-CBC",
+   "properties": [
+    {
+     "name": "vera:verdict",
+     "value": "grover"
+    },
+    {
+     "name": "vera:quantum-vulnerable",
+     "value": "false"
+    },
+    {
+     "name": "vera:classically-broken",
+     "value": "false"
+    },
+    {
+     "name": "vera:hndl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:tnfl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-low",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-high",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:risk-level",
+     "value": "safe"
+    },
+    {
+     "name": "vera:priority-rank",
+     "value": "19"
+    },
+    {
+     "name": "vera:persona",
+     "value": "Banking"
+    },
+    {
+     "name": "vera:statutory-deadline-year",
+     "value": "2029"
+    },
+    {
+     "name": "vera:slack-months",
+     "value": "3.1"
+    },
+    {
+     "name": "vera:migration-effort-years",
+     "value": "2.00"
+    },
+    {
+     "name": "vera:recommended-replacement",
+     "value": "AES-256"
+    },
+    {
+     "name": "vera:tags",
+     "value": "binary-scan,layer:symbol,container-scan,layer:unknown"
+    },
+    {
+     "name": "vera:asset-class",
+     "value": "binary"
+    },
+    {
+     "name": "vera:algorithm",
+     "value": "AES-128"
+    },
+    {
+     "name": "vera:source-location",
+     "value": "library/nginx:1.27-alpine!/usr/bin/njs"
+    }
+   ],
+   "scope": "required",
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto:5da8d0e0b3f75b2d8aad3a83",
+   "cryptoProperties": {
+    "algorithmProperties": {
+     "algorithmFamily": "AES",
+     "certificationLevel": [
+      "none"
+     ],
+     "classicalSecurityLevel": 256,
+     "cryptoFunctions": [
+      "encrypt",
+      "decrypt"
+     ],
+     "executionEnvironment": "software-plain-ram",
+     "implementationPlatform": "generic",
+     "mode": "ctr",
+     "nistQuantumSecurityLevel": 5,
+     "parameterSetIdentifier": "256",
+     "primitive": "block-cipher"
+    },
+    "assetType": "algorithm"
+   },
+   "isExternal": false,
+   "name": "AES-256-CTR",
+   "properties": [
+    {
+     "name": "vera:verdict",
+     "value": "pqc"
+    },
+    {
+     "name": "vera:quantum-vulnerable",
+     "value": "false"
+    },
+    {
+     "name": "vera:classically-broken",
+     "value": "false"
+    },
+    {
+     "name": "vera:hndl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:tnfl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-low",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-high",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:risk-level",
+     "value": "safe"
+    },
+    {
+     "name": "vera:priority-rank",
+     "value": "32"
+    },
+    {
+     "name": "vera:persona",
+     "value": "Banking"
+    },
+    {
+     "name": "vera:statutory-deadline-year",
+     "value": "2029"
+    },
+    {
+     "name": "vera:slack-months",
+     "value": "3.1"
+    },
+    {
+     "name": "vera:migration-effort-years",
+     "value": "2.00"
+    },
+    {
+     "name": "vera:tags",
+     "value": "binary-scan,layer:symbol,container-scan,layer:unknown"
+    },
+    {
+     "name": "vera:asset-class",
+     "value": "binary"
+    },
+    {
+     "name": "vera:algorithm",
+     "value": "AES-256"
+    },
+    {
+     "name": "vera:source-location",
+     "value": "library/nginx:1.27-alpine!/usr/sbin/nginx-debug"
+    }
+   ],
+   "scope": "required",
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto:5f1734d621a7766f839a1b84",
+   "cryptoProperties": {
+    "algorithmProperties": {
+     "algorithmFamily": "AES",
+     "certificationLevel": [
+      "none"
+     ],
+     "classicalSecurityLevel": 128,
+     "cryptoFunctions": [
+      "encrypt",
+      "decrypt"
+     ],
+     "executionEnvironment": "software-plain-ram",
+     "implementationPlatform": "generic",
+     "mode": "cbc",
+     "nistQuantumSecurityLevel": 0,
+     "parameterSetIdentifier": "128",
+     "primitive": "block-cipher"
+    },
+    "assetType": "algorithm",
+    "oid": "2.16.840.1.101.3.4.1.2"
+   },
+   "isExternal": false,
+   "name": "AES-128-CBC",
+   "properties": [
+    {
+     "name": "vera:verdict",
+     "value": "grover"
+    },
+    {
+     "name": "vera:quantum-vulnerable",
+     "value": "false"
+    },
+    {
+     "name": "vera:classically-broken",
+     "value": "false"
+    },
+    {
+     "name": "vera:hndl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:tnfl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-low",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-high",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:risk-level",
+     "value": "safe"
+    },
+    {
+     "name": "vera:priority-rank",
+     "value": "17"
+    },
+    {
+     "name": "vera:persona",
+     "value": "Banking"
+    },
+    {
+     "name": "vera:statutory-deadline-year",
+     "value": "2029"
+    },
+    {
+     "name": "vera:slack-months",
+     "value": "3.1"
+    },
+    {
+     "name": "vera:migration-effort-years",
+     "value": "2.00"
+    },
+    {
+     "name": "vera:recommended-replacement",
+     "value": "AES-256"
+    },
+    {
+     "name": "vera:tags",
+     "value": "binary-scan,layer:symbol,container-scan,layer:unknown"
+    },
+    {
+     "name": "vera:asset-class",
+     "value": "binary"
+    },
+    {
+     "name": "vera:algorithm",
+     "value": "AES-128"
+    },
+    {
+     "name": "vera:source-location",
+     "value": "library/nginx:1.27-alpine!/usr/sbin/nginx"
+    }
+   ],
+   "scope": "required",
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto:5f7dcde162df10e27a42b790",
+   "cryptoProperties": {
+    "algorithmProperties": {
+     "algorithmFamily": "ECDSA",
+     "certificationLevel": [
+      "none"
+     ],
+     "cryptoFunctions": [
+      "sign",
+      "verify"
+     ],
+     "executionEnvironment": "software-plain-ram",
+     "implementationPlatform": "generic",
+     "nistQuantumSecurityLevel": 0,
+     "primitive": "signature"
+    },
+    "assetType": "algorithm",
+    "oid": "1.2.840.10045.2.1"
+   },
+   "isExternal": false,
+   "name": "ECDSA",
+   "properties": [
+    {
+     "name": "vera:verdict",
+     "value": "shor"
+    },
+    {
+     "name": "vera:quantum-vulnerable",
+     "value": "true"
+    },
+    {
+     "name": "vera:classically-broken",
+     "value": "false"
+    },
+    {
+     "name": "vera:hndl-score",
+     "value": "0.117011"
+    },
+    {
+     "name": "vera:tnfl-score",
+     "value": "0.100237"
+    },
+    {
+     "name": "vera:qirs",
+     "value": "0.108624"
+    },
+    {
+     "name": "vera:qirs-band-low",
+     "value": "0.070604"
+    },
+    {
+     "name": "vera:qirs-band-high",
+     "value": "0.143642"
+    },
+    {
+     "name": "vera:risk-level",
+     "value": "low"
+    },
+    {
+     "name": "vera:priority-rank",
+     "value": "4"
+    },
+    {
+     "name": "vera:persona",
+     "value": "Banking"
+    },
+    {
+     "name": "vera:statutory-deadline-year",
+     "value": "2029"
+    },
+    {
+     "name": "vera:slack-months",
+     "value": "3.1"
+    },
+    {
+     "name": "vera:migration-effort-years",
+     "value": "2.00"
+    },
+    {
+     "name": "vera:recommended-replacement",
+     "value": "ML-DSA-65 (signature)"
+    },
+    {
+     "name": "vera:tags",
+     "value": "binary-scan,layer:symbol,container-scan,layer:unknown"
+    },
+    {
+     "name": "vera:asset-class",
+     "value": "binary"
+    },
+    {
+     "name": "vera:algorithm",
+     "value": "ECDSA"
+    },
+    {
+     "name": "vera:source-location",
+     "value": "library/nginx:1.27-alpine!/usr/bin/njs"
+    }
+   ],
+   "scope": "required",
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto:615f3e25b7f6bae016700874",
+   "cryptoProperties": {
+    "algorithmProperties": {
+     "algorithmFamily": "SHA-1",
+     "certificationLevel": [
+      "none"
+     ],
+     "classicalSecurityLevel": 63,
+     "cryptoFunctions": [
+      "digest"
+     ],
+     "executionEnvironment": "software-plain-ram",
+     "implementationPlatform": "generic",
+     "nistQuantumSecurityLevel": 0,
+     "primitive": "hash"
+    },
+    "assetType": "algorithm",
+    "oid": "1.3.14.3.2.26"
+   },
+   "isExternal": false,
+   "name": "SHA-1",
+   "properties": [
+    {
+     "name": "vera:verdict",
+     "value": "classical"
+    },
+    {
+     "name": "vera:quantum-vulnerable",
+     "value": "false"
+    },
+    {
+     "name": "vera:classically-broken",
+     "value": "true"
+    },
+    {
+     "name": "vera:hndl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:tnfl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-low",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-high",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:risk-level",
+     "value": "informational"
+    },
+    {
+     "name": "vera:priority-rank",
+     "value": "13"
+    },
+    {
+     "name": "vera:persona",
+     "value": "Banking"
+    },
+    {
+     "name": "vera:statutory-deadline-year",
+     "value": "2029"
+    },
+    {
+     "name": "vera:slack-months",
+     "value": "3.1"
+    },
+    {
+     "name": "vera:migration-effort-years",
+     "value": "2.00"
+    },
+    {
+     "name": "vera:recommended-replacement",
+     "value": "SHA-256"
+    },
+    {
+     "name": "vera:tags",
+     "value": "binary-scan,layer:symbol,container-scan,layer:unknown"
+    },
+    {
+     "name": "vera:asset-class",
+     "value": "binary"
+    },
+    {
+     "name": "vera:algorithm",
+     "value": "SHA-1"
+    },
+    {
+     "name": "vera:source-location",
+     "value": "library/nginx:1.27-alpine!/usr/sbin/nginx"
+    }
+   ],
+   "scope": "required",
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto:6842c144d2c289fb5021aef9",
+   "cryptoProperties": {
+    "algorithmProperties": {
+     "algorithmFamily": "FFDH",
+     "certificationLevel": [
+      "none"
+     ],
+     "classicalSecurityLevel": 112,
+     "cryptoFunctions": [
+      "keygen",
+      "encapsulate",
+      "decapsulate"
+     ],
+     "executionEnvironment": "software-plain-ram",
+     "implementationPlatform": "generic",
+     "nistQuantumSecurityLevel": 0,
+     "primitive": "key-agree"
+    },
+    "assetType": "algorithm",
+    "oid": "1.2.840.10046.2.1"
+   },
+   "isExternal": false,
+   "name": "Diffie-Hellman",
+   "properties": [
+    {
+     "name": "vera:verdict",
+     "value": "shor"
+    },
+    {
+     "name": "vera:quantum-vulnerable",
+     "value": "true"
+    },
+    {
+     "name": "vera:classically-broken",
+     "value": "false"
+    },
+    {
+     "name": "vera:hndl-score",
+     "value": "0.117011"
+    },
+    {
+     "name": "vera:tnfl-score",
+     "value": "0.100237"
+    },
+    {
+     "name": "vera:qirs",
+     "value": "0.108624"
+    },
+    {
+     "name": "vera:qirs-band-low",
+     "value": "0.070604"
+    },
+    {
+     "name": "vera:qirs-band-high",
+     "value": "0.143642"
+    },
+    {
+     "name": "vera:risk-level",
+     "value": "low"
+    },
+    {
+     "name": "vera:priority-rank",
+     "value": "2"
+    },
+    {
+     "name": "vera:persona",
+     "value": "Banking"
+    },
+    {
+     "name": "vera:statutory-deadline-year",
+     "value": "2029"
+    },
+    {
+     "name": "vera:slack-months",
+     "value": "3.1"
+    },
+    {
+     "name": "vera:migration-effort-years",
+     "value": "2.00"
+    },
+    {
+     "name": "vera:recommended-replacement",
+     "value": "ML-KEM-768"
+    },
+    {
+     "name": "vera:tags",
+     "value": "binary-scan,layer:symbol,container-scan,layer:unknown"
+    },
+    {
+     "name": "vera:asset-class",
+     "value": "binary"
+    },
+    {
+     "name": "vera:algorithm",
+     "value": "DH"
+    },
+    {
+     "name": "vera:source-location",
+     "value": "library/nginx:1.27-alpine!/usr/sbin/nginx-debug"
+    }
+   ],
+   "scope": "required",
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto:7e9e4a4567463204a3ec291f",
+   "cryptoProperties": {
+    "algorithmProperties": {
+     "algorithmFamily": "AES",
+     "certificationLevel": [
+      "none"
+     ],
+     "classicalSecurityLevel": 128,
+     "cryptoFunctions": [
+      "encrypt",
+      "decrypt"
+     ],
+     "executionEnvironment": "software-plain-ram",
+     "implementationPlatform": "generic",
+     "mode": "gcm",
+     "nistQuantumSecurityLevel": 0,
+     "parameterSetIdentifier": "128",
+     "primitive": "block-cipher"
+    },
+    "assetType": "algorithm",
+    "oid": "2.16.840.1.101.3.4.1.6"
+   },
+   "isExternal": false,
+   "name": "AES-128-GCM",
+   "properties": [
+    {
+     "name": "vera:verdict",
+     "value": "grover"
+    },
+    {
+     "name": "vera:quantum-vulnerable",
+     "value": "false"
+    },
+    {
+     "name": "vera:classically-broken",
+     "value": "false"
+    },
+    {
+     "name": "vera:hndl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:tnfl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-low",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-high",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:risk-level",
+     "value": "safe"
+    },
+    {
+     "name": "vera:priority-rank",
+     "value": "26"
+    },
+    {
+     "name": "vera:persona",
+     "value": "Banking"
+    },
+    {
+     "name": "vera:statutory-deadline-year",
+     "value": "2029"
+    },
+    {
+     "name": "vera:slack-months",
+     "value": "3.1"
+    },
+    {
+     "name": "vera:migration-effort-years",
+     "value": "2.00"
+    },
+    {
+     "name": "vera:recommended-replacement",
+     "value": "AES-256"
+    },
+    {
+     "name": "vera:tags",
+     "value": "binary-scan,layer:symbol,container-scan,layer:unknown"
+    },
+    {
+     "name": "vera:asset-class",
+     "value": "binary"
+    },
+    {
+     "name": "vera:algorithm",
+     "value": "AES-128"
+    },
+    {
+     "name": "vera:source-location",
+     "value": "library/nginx:1.27-alpine!/usr/sbin/nginx-debug"
+    }
+   ],
+   "scope": "required",
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto:82e213972281554b8ef84dc5",
+   "cryptoProperties": {
+    "algorithmProperties": {
+     "algorithmFamily": "AES",
+     "certificationLevel": [
+      "none"
+     ],
+     "classicalSecurityLevel": 128,
+     "cryptoFunctions": [
+      "encrypt",
+      "decrypt"
+     ],
+     "executionEnvironment": "software-plain-ram",
+     "implementationPlatform": "generic",
+     "mode": "cbc",
+     "nistQuantumSecurityLevel": 0,
+     "parameterSetIdentifier": "128",
+     "primitive": "block-cipher"
+    },
+    "assetType": "algorithm",
+    "oid": "2.16.840.1.101.3.4.1.2"
+   },
+   "isExternal": false,
+   "name": "AES-128-CBC",
+   "properties": [
+    {
+     "name": "vera:verdict",
+     "value": "grover"
+    },
+    {
+     "name": "vera:quantum-vulnerable",
+     "value": "false"
+    },
+    {
+     "name": "vera:classically-broken",
+     "value": "false"
+    },
+    {
+     "name": "vera:hndl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:tnfl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-low",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-high",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:risk-level",
+     "value": "safe"
+    },
+    {
+     "name": "vera:priority-rank",
+     "value": "18"
+    },
+    {
+     "name": "vera:persona",
+     "value": "Banking"
+    },
+    {
+     "name": "vera:statutory-deadline-year",
+     "value": "2029"
+    },
+    {
+     "name": "vera:slack-months",
+     "value": "3.1"
+    },
+    {
+     "name": "vera:migration-effort-years",
+     "value": "2.00"
+    },
+    {
+     "name": "vera:recommended-replacement",
+     "value": "AES-256"
+    },
+    {
+     "name": "vera:tags",
+     "value": "binary-scan,layer:symbol,container-scan,layer:unknown"
+    },
+    {
+     "name": "vera:asset-class",
+     "value": "binary"
+    },
+    {
+     "name": "vera:algorithm",
+     "value": "AES-128"
+    },
+    {
+     "name": "vera:source-location",
+     "value": "library/nginx:1.27-alpine!/usr/sbin/nginx-debug"
+    }
+   ],
+   "scope": "required",
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto:89081e3cb0d8f9627d5b6b18",
+   "cryptoProperties": {
+    "algorithmProperties": {
+     "algorithmFamily": "SHA-1",
+     "certificationLevel": [
+      "none"
+     ],
+     "classicalSecurityLevel": 63,
+     "cryptoFunctions": [
+      "digest"
+     ],
+     "executionEnvironment": "software-plain-ram",
+     "implementationPlatform": "generic",
+     "nistQuantumSecurityLevel": 0,
+     "primitive": "hash"
+    },
+    "assetType": "algorithm",
+    "oid": "1.3.14.3.2.26"
+   },
+   "isExternal": false,
+   "name": "SHA-1",
+   "properties": [
+    {
+     "name": "vera:verdict",
+     "value": "classical"
+    },
+    {
+     "name": "vera:quantum-vulnerable",
+     "value": "false"
+    },
+    {
+     "name": "vera:classically-broken",
+     "value": "true"
+    },
+    {
+     "name": "vera:hndl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:tnfl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-low",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-high",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:risk-level",
+     "value": "informational"
+    },
+    {
+     "name": "vera:priority-rank",
+     "value": "11"
+    },
+    {
+     "name": "vera:persona",
+     "value": "Banking"
+    },
+    {
+     "name": "vera:statutory-deadline-year",
+     "value": "2029"
+    },
+    {
+     "name": "vera:slack-months",
+     "value": "3.1"
+    },
+    {
+     "name": "vera:migration-effort-years",
+     "value": "2.00"
+    },
+    {
+     "name": "vera:recommended-replacement",
+     "value": "SHA-256"
+    },
+    {
+     "name": "vera:tags",
+     "value": "binary-scan,layer:symbol,container-scan,layer:unknown"
+    },
+    {
+     "name": "vera:asset-class",
+     "value": "binary"
+    },
+    {
+     "name": "vera:algorithm",
+     "value": "SHA-1"
+    },
+    {
+     "name": "vera:source-location",
+     "value": "library/nginx:1.27-alpine!/usr/bin/c_rehash"
+    }
+   ],
+   "scope": "required",
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto:8a9665be2bcc862487ca1046",
+   "cryptoProperties": {
+    "algorithmProperties": {
+     "algorithmFamily": "AES",
+     "certificationLevel": [
+      "none"
+     ],
+     "classicalSecurityLevel": 128,
+     "cryptoFunctions": [
+      "encrypt",
+      "decrypt"
+     ],
+     "executionEnvironment": "software-plain-ram",
+     "implementationPlatform": "generic",
+     "mode": "gcm",
+     "nistQuantumSecurityLevel": 0,
+     "parameterSetIdentifier": "128",
+     "primitive": "block-cipher"
+    },
+    "assetType": "algorithm",
+    "oid": "2.16.840.1.101.3.4.1.6"
+   },
+   "isExternal": false,
+   "name": "AES-128-GCM",
+   "properties": [
+    {
+     "name": "vera:verdict",
+     "value": "grover"
+    },
+    {
+     "name": "vera:quantum-vulnerable",
+     "value": "false"
+    },
+    {
+     "name": "vera:classically-broken",
+     "value": "false"
+    },
+    {
+     "name": "vera:hndl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:tnfl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-low",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-high",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:risk-level",
+     "value": "safe"
+    },
+    {
+     "name": "vera:priority-rank",
+     "value": "25"
+    },
+    {
+     "name": "vera:persona",
+     "value": "Banking"
+    },
+    {
+     "name": "vera:statutory-deadline-year",
+     "value": "2029"
+    },
+    {
+     "name": "vera:slack-months",
+     "value": "3.1"
+    },
+    {
+     "name": "vera:migration-effort-years",
+     "value": "2.00"
+    },
+    {
+     "name": "vera:recommended-replacement",
+     "value": "AES-256"
+    },
+    {
+     "name": "vera:tags",
+     "value": "binary-scan,layer:symbol,container-scan,layer:unknown"
+    },
+    {
+     "name": "vera:asset-class",
+     "value": "binary"
+    },
+    {
+     "name": "vera:algorithm",
+     "value": "AES-128"
+    },
+    {
+     "name": "vera:source-location",
+     "value": "library/nginx:1.27-alpine!/usr/sbin/nginx"
+    }
+   ],
+   "scope": "required",
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto:91256c6a91b9ec0da1236652",
+   "cryptoProperties": {
+    "algorithmProperties": {
+     "algorithmFamily": "AES",
+     "certificationLevel": [
+      "none"
+     ],
+     "classicalSecurityLevel": 256,
+     "cryptoFunctions": [
+      "encrypt",
+      "decrypt"
+     ],
+     "executionEnvironment": "software-plain-ram",
+     "implementationPlatform": "generic",
+     "mode": "cbc",
+     "nistQuantumSecurityLevel": 5,
+     "parameterSetIdentifier": "256",
+     "primitive": "block-cipher"
+    },
+    "assetType": "algorithm",
+    "oid": "2.16.840.1.101.3.4.1.42"
+   },
+   "isExternal": false,
+   "name": "AES-256-CBC",
+   "properties": [
+    {
+     "name": "vera:verdict",
+     "value": "pqc"
+    },
+    {
+     "name": "vera:quantum-vulnerable",
+     "value": "false"
+    },
+    {
+     "name": "vera:classically-broken",
+     "value": "false"
+    },
+    {
+     "name": "vera:hndl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:tnfl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-low",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-high",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:risk-level",
+     "value": "safe"
+    },
+    {
+     "name": "vera:priority-rank",
+     "value": "28"
+    },
+    {
+     "name": "vera:persona",
+     "value": "Banking"
+    },
+    {
+     "name": "vera:statutory-deadline-year",
+     "value": "2029"
+    },
+    {
+     "name": "vera:slack-months",
+     "value": "3.1"
+    },
+    {
+     "name": "vera:migration-effort-years",
+     "value": "2.00"
+    },
+    {
+     "name": "vera:tags",
+     "value": "binary-scan,layer:symbol,container-scan,layer:unknown"
+    },
+    {
+     "name": "vera:asset-class",
+     "value": "binary"
+    },
+    {
+     "name": "vera:algorithm",
+     "value": "AES-256"
+    },
+    {
+     "name": "vera:source-location",
+     "value": "library/nginx:1.27-alpine!/usr/sbin/nginx"
+    }
+   ],
+   "scope": "required",
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto:a695d2eb8854bb57f320c324",
+   "cryptoProperties": {
+    "algorithmProperties": {
+     "algorithmFamily": "ChaCha20",
+     "certificationLevel": [
+      "none"
+     ],
+     "classicalSecurityLevel": 256,
+     "cryptoFunctions": [
+      "encrypt",
+      "decrypt"
+     ],
+     "executionEnvironment": "software-plain-ram",
+     "implementationPlatform": "generic",
+     "nistQuantumSecurityLevel": 5,
+     "primitive": "stream-cipher"
+    },
+    "assetType": "algorithm",
+    "oid": "1.2.840.113549.1.9.16.3.18"
+   },
+   "isExternal": false,
+   "name": "ChaCha20",
+   "properties": [
+    {
+     "name": "vera:verdict",
+     "value": "pqc"
+    },
+    {
+     "name": "vera:quantum-vulnerable",
+     "value": "false"
+    },
+    {
+     "name": "vera:classically-broken",
+     "value": "false"
+    },
+    {
+     "name": "vera:hndl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:tnfl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-low",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-high",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:risk-level",
+     "value": "safe"
+    },
+    {
+     "name": "vera:priority-rank",
+     "value": "37"
+    },
+    {
+     "name": "vera:persona",
+     "value": "Banking"
+    },
+    {
+     "name": "vera:statutory-deadline-year",
+     "value": "2029"
+    },
+    {
+     "name": "vera:slack-months",
+     "value": "3.1"
+    },
+    {
+     "name": "vera:migration-effort-years",
+     "value": "2.00"
+    },
+    {
+     "name": "vera:tags",
+     "value": "binary-scan,layer:symbol,container-scan,layer:unknown"
+    },
+    {
+     "name": "vera:asset-class",
+     "value": "binary"
+    },
+    {
+     "name": "vera:algorithm",
+     "value": "ChaCha20"
+    },
+    {
+     "name": "vera:source-location",
+     "value": "library/nginx:1.27-alpine!/usr/sbin/nginx"
+    }
+   ],
+   "scope": "required",
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto:ba9c81aeb0302ddca1e3b700",
+   "cryptoProperties": {
+    "algorithmProperties": {
+     "algorithmFamily": "FFDH",
+     "certificationLevel": [
+      "none"
+     ],
+     "classicalSecurityLevel": 112,
+     "cryptoFunctions": [
+      "keygen",
+      "encapsulate",
+      "decapsulate"
+     ],
+     "executionEnvironment": "software-plain-ram",
+     "implementationPlatform": "generic",
+     "nistQuantumSecurityLevel": 0,
+     "primitive": "key-agree"
+    },
+    "assetType": "algorithm",
+    "oid": "1.2.840.10046.2.1"
+   },
+   "isExternal": false,
+   "name": "Diffie-Hellman",
+   "properties": [
+    {
+     "name": "vera:verdict",
+     "value": "shor"
+    },
+    {
+     "name": "vera:quantum-vulnerable",
+     "value": "true"
+    },
+    {
+     "name": "vera:classically-broken",
+     "value": "false"
+    },
+    {
+     "name": "vera:hndl-score",
+     "value": "0.117011"
+    },
+    {
+     "name": "vera:tnfl-score",
+     "value": "0.100237"
+    },
+    {
+     "name": "vera:qirs",
+     "value": "0.108624"
+    },
+    {
+     "name": "vera:qirs-band-low",
+     "value": "0.070604"
+    },
+    {
+     "name": "vera:qirs-band-high",
+     "value": "0.143642"
+    },
+    {
+     "name": "vera:risk-level",
+     "value": "low"
+    },
+    {
+     "name": "vera:priority-rank",
+     "value": "1"
+    },
+    {
+     "name": "vera:persona",
+     "value": "Banking"
+    },
+    {
+     "name": "vera:statutory-deadline-year",
+     "value": "2029"
+    },
+    {
+     "name": "vera:slack-months",
+     "value": "3.1"
+    },
+    {
+     "name": "vera:migration-effort-years",
+     "value": "2.00"
+    },
+    {
+     "name": "vera:recommended-replacement",
+     "value": "ML-KEM-768"
+    },
+    {
+     "name": "vera:tags",
+     "value": "binary-scan,layer:symbol,container-scan,layer:unknown"
+    },
+    {
+     "name": "vera:asset-class",
+     "value": "binary"
+    },
+    {
+     "name": "vera:algorithm",
+     "value": "DH"
+    },
+    {
+     "name": "vera:source-location",
+     "value": "library/nginx:1.27-alpine!/usr/sbin/nginx"
+    }
+   ],
+   "scope": "required",
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto:bbcde61a852626a0c0dc1546",
+   "cryptoProperties": {
+    "algorithmProperties": {
+     "certificationLevel": [
+      "none"
+     ],
+     "classicalSecurityLevel": 152,
+     "cryptoFunctions": [
+      "sign",
+      "verify"
+     ],
+     "executionEnvironment": "software-plain-ram",
+     "implementationPlatform": "generic",
+     "nistQuantumSecurityLevel": 0,
+     "parameterSetIdentifier": "4096",
+     "primitive": "pke"
+    },
+    "assetType": "algorithm",
+    "oid": "1.2.840.113549.1.1.1"
+   },
+   "isExternal": false,
+   "name": "RSA-4096",
+   "properties": [
+    {
+     "name": "vera:verdict",
+     "value": "shor"
+    },
+    {
+     "name": "vera:quantum-vulnerable",
+     "value": "true"
+    },
+    {
+     "name": "vera:classically-broken",
+     "value": "false"
+    },
+    {
+     "name": "vera:hndl-score",
+     "value": "0.071589"
+    },
+    {
+     "name": "vera:tnfl-score",
+     "value": "0.154912"
+    },
+    {
+     "name": "vera:qirs",
+     "value": "0.113251"
+    },
+    {
+     "name": "vera:qirs-band-low",
+     "value": "0.069515"
+    },
+    {
+     "name": "vera:qirs-band-high",
+     "value": "0.152555"
+    },
+    {
+     "name": "vera:risk-level",
+     "value": "high"
+    },
+    {
+     "name": "vera:priority-rank",
+     "value": "8"
+    },
+    {
+     "name": "vera:persona",
+     "value": "Banking"
+    },
+    {
+     "name": "vera:statutory-deadline-year",
+     "value": "2028"
+    },
+    {
+     "name": "vera:slack-months",
+     "value": "-8.9"
+    },
+    {
+     "name": "vera:migration-effort-years",
+     "value": "2.00"
+    },
+    {
+     "name": "vera:recommended-replacement",
+     "value": "ML-KEM-768 (encryption) / ML-DSA-65 (signature)"
+    },
+    {
+     "name": "vera:tags",
+     "value": "container-scan,trust-store,layer:unknown"
+    },
+    {
+     "name": "vera:asset-class",
+     "value": "trust_store"
+    },
+    {
+     "name": "vera:algorithm",
+     "value": "RSA"
+    },
+    {
+     "name": "vera:source-location",
+     "value": "library/nginx:1.27-alpine!/etc/ssl/certs/ca-certificates.crt"
+    }
+   ],
+   "scope": "required",
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto:c4e5d8acec0c25f5d4039910",
+   "cryptoProperties": {
+    "algorithmProperties": {
+     "algorithmFamily": "AES",
+     "certificationLevel": [
+      "none"
+     ],
+     "classicalSecurityLevel": 256,
+     "cryptoFunctions": [
+      "encrypt",
+      "decrypt"
+     ],
+     "executionEnvironment": "software-plain-ram",
+     "implementationPlatform": "generic",
+     "mode": "ctr",
+     "nistQuantumSecurityLevel": 5,
+     "parameterSetIdentifier": "256",
+     "primitive": "block-cipher"
+    },
+    "assetType": "algorithm"
+   },
+   "isExternal": false,
+   "name": "AES-256-CTR",
+   "properties": [
+    {
+     "name": "vera:verdict",
+     "value": "pqc"
+    },
+    {
+     "name": "vera:quantum-vulnerable",
+     "value": "false"
+    },
+    {
+     "name": "vera:classically-broken",
+     "value": "false"
+    },
+    {
+     "name": "vera:hndl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:tnfl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-low",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-high",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:risk-level",
+     "value": "safe"
+    },
+    {
+     "name": "vera:priority-rank",
+     "value": "33"
+    },
+    {
+     "name": "vera:persona",
+     "value": "Banking"
+    },
+    {
+     "name": "vera:statutory-deadline-year",
+     "value": "2029"
+    },
+    {
+     "name": "vera:slack-months",
+     "value": "3.1"
+    },
+    {
+     "name": "vera:migration-effort-years",
+     "value": "2.00"
+    },
+    {
+     "name": "vera:tags",
+     "value": "binary-scan,layer:symbol,container-scan,layer:unknown"
+    },
+    {
+     "name": "vera:asset-class",
+     "value": "binary"
+    },
+    {
+     "name": "vera:algorithm",
+     "value": "AES-256"
+    },
+    {
+     "name": "vera:source-location",
+     "value": "library/nginx:1.27-alpine!/usr/bin/njs"
+    }
+   ],
+   "scope": "required",
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto:c6a19047c8ca9e23c3cd8da7",
+   "cryptoProperties": {
+    "algorithmProperties": {
+     "algorithmFamily": "AES",
+     "certificationLevel": [
+      "none"
+     ],
+     "classicalSecurityLevel": 256,
+     "cryptoFunctions": [
+      "encrypt",
+      "decrypt"
+     ],
+     "executionEnvironment": "software-plain-ram",
+     "implementationPlatform": "generic",
+     "mode": "ctr",
+     "nistQuantumSecurityLevel": 5,
+     "parameterSetIdentifier": "256",
+     "primitive": "block-cipher"
+    },
+    "assetType": "algorithm"
+   },
+   "isExternal": false,
+   "name": "AES-256-CTR",
+   "properties": [
+    {
+     "name": "vera:verdict",
+     "value": "pqc"
+    },
+    {
+     "name": "vera:quantum-vulnerable",
+     "value": "false"
+    },
+    {
+     "name": "vera:classically-broken",
+     "value": "false"
+    },
+    {
+     "name": "vera:hndl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:tnfl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-low",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-high",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:risk-level",
+     "value": "safe"
+    },
+    {
+     "name": "vera:priority-rank",
+     "value": "31"
+    },
+    {
+     "name": "vera:persona",
+     "value": "Banking"
+    },
+    {
+     "name": "vera:statutory-deadline-year",
+     "value": "2029"
+    },
+    {
+     "name": "vera:slack-months",
+     "value": "3.1"
+    },
+    {
+     "name": "vera:migration-effort-years",
+     "value": "2.00"
+    },
+    {
+     "name": "vera:tags",
+     "value": "binary-scan,layer:symbol,container-scan,layer:unknown"
+    },
+    {
+     "name": "vera:asset-class",
+     "value": "binary"
+    },
+    {
+     "name": "vera:algorithm",
+     "value": "AES-256"
+    },
+    {
+     "name": "vera:source-location",
+     "value": "library/nginx:1.27-alpine!/usr/sbin/nginx"
+    }
+   ],
+   "scope": "required",
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto:d4500ce1dfd3088ee9a87f81",
+   "cryptoProperties": {
+    "algorithmProperties": {
+     "algorithmFamily": "AES",
+     "certificationLevel": [
+      "none"
+     ],
+     "classicalSecurityLevel": 128,
+     "cryptoFunctions": [
+      "encrypt",
+      "decrypt"
+     ],
+     "executionEnvironment": "software-plain-ram",
+     "implementationPlatform": "generic",
+     "mode": "ctr",
+     "nistQuantumSecurityLevel": 0,
+     "parameterSetIdentifier": "128",
+     "primitive": "block-cipher"
+    },
+    "assetType": "algorithm"
+   },
+   "isExternal": false,
+   "name": "AES-128-CTR",
+   "properties": [
+    {
+     "name": "vera:verdict",
+     "value": "grover"
+    },
+    {
+     "name": "vera:quantum-vulnerable",
+     "value": "false"
+    },
+    {
+     "name": "vera:classically-broken",
+     "value": "false"
+    },
+    {
+     "name": "vera:hndl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:tnfl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-low",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-high",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:risk-level",
+     "value": "safe"
+    },
+    {
+     "name": "vera:priority-rank",
+     "value": "22"
+    },
+    {
+     "name": "vera:persona",
+     "value": "Banking"
+    },
+    {
+     "name": "vera:statutory-deadline-year",
+     "value": "2029"
+    },
+    {
+     "name": "vera:slack-months",
+     "value": "3.1"
+    },
+    {
+     "name": "vera:migration-effort-years",
+     "value": "2.00"
+    },
+    {
+     "name": "vera:recommended-replacement",
+     "value": "AES-256"
+    },
+    {
+     "name": "vera:tags",
+     "value": "binary-scan,layer:symbol,container-scan,layer:unknown"
+    },
+    {
+     "name": "vera:asset-class",
+     "value": "binary"
+    },
+    {
+     "name": "vera:algorithm",
+     "value": "AES-128"
+    },
+    {
+     "name": "vera:source-location",
+     "value": "library/nginx:1.27-alpine!/usr/sbin/nginx"
+    }
+   ],
+   "scope": "required",
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto:d76efc57ca8cebb356d89fab",
+   "cryptoProperties": {
+    "algorithmProperties": {
+     "certificationLevel": [
+      "none"
+     ],
+     "cryptoFunctions": [
+      "encrypt",
+      "decrypt"
+     ],
+     "executionEnvironment": "software-plain-ram",
+     "implementationPlatform": "generic",
+     "nistQuantumSecurityLevel": 0,
+     "primitive": "pke"
+    },
+    "assetType": "algorithm",
+    "oid": "1.2.840.113549.1.1.1"
+   },
+   "isExternal": false,
+   "name": "RSA",
+   "properties": [
+    {
+     "name": "vera:verdict",
+     "value": "shor"
+    },
+    {
+     "name": "vera:quantum-vulnerable",
+     "value": "true"
+    },
+    {
+     "name": "vera:classically-broken",
+     "value": "false"
+    },
+    {
+     "name": "vera:hndl-score",
+     "value": "0.117011"
+    },
+    {
+     "name": "vera:tnfl-score",
+     "value": "0.100237"
+    },
+    {
+     "name": "vera:qirs",
+     "value": "0.108624"
+    },
+    {
+     "name": "vera:qirs-band-low",
+     "value": "0.070604"
+    },
+    {
+     "name": "vera:qirs-band-high",
+     "value": "0.143642"
+    },
+    {
+     "name": "vera:risk-level",
+     "value": "low"
+    },
+    {
+     "name": "vera:priority-rank",
+     "value": "5"
+    },
+    {
+     "name": "vera:persona",
+     "value": "Banking"
+    },
+    {
+     "name": "vera:statutory-deadline-year",
+     "value": "2029"
+    },
+    {
+     "name": "vera:slack-months",
+     "value": "3.1"
+    },
+    {
+     "name": "vera:migration-effort-years",
+     "value": "2.00"
+    },
+    {
+     "name": "vera:recommended-replacement",
+     "value": "ML-KEM-768 (encryption) / ML-DSA-65 (signature)"
+    },
+    {
+     "name": "vera:tags",
+     "value": "binary-scan,layer:symbol,container-scan,layer:unknown"
+    },
+    {
+     "name": "vera:asset-class",
+     "value": "binary"
+    },
+    {
+     "name": "vera:algorithm",
+     "value": "RSA"
+    },
+    {
+     "name": "vera:source-location",
+     "value": "library/nginx:1.27-alpine!/usr/lib/libssl.so.3"
+    }
+   ],
+   "scope": "required",
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto:db059634a92322662b3add5e",
+   "cryptoProperties": {
+    "algorithmProperties": {
+     "certificationLevel": [
+      "none"
+     ],
+     "cryptoFunctions": [
+      "unknown"
+     ],
+     "executionEnvironment": "software-plain-ram",
+     "implementationPlatform": "generic",
+     "nistQuantumSecurityLevel": 0,
+     "primitive": "unknown"
+    },
+    "assetType": "algorithm"
+   },
+   "isExternal": false,
+   "name": "Unknown",
+   "properties": [
+    {
+     "name": "vera:verdict",
+     "value": "unknown"
+    },
+    {
+     "name": "vera:quantum-vulnerable",
+     "value": "false"
+    },
+    {
+     "name": "vera:classically-broken",
+     "value": "false"
+    },
+    {
+     "name": "vera:hndl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:tnfl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-low",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-high",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:risk-level",
+     "value": "safe"
+    },
+    {
+     "name": "vera:priority-rank",
+     "value": "16"
+    },
+    {
+     "name": "vera:persona",
+     "value": "Banking"
+    },
+    {
+     "name": "vera:statutory-deadline-year",
+     "value": "2029"
+    },
+    {
+     "name": "vera:slack-months",
+     "value": "3.1"
+    },
+    {
+     "name": "vera:migration-effort-years",
+     "value": "2.00"
+    },
+    {
+     "name": "vera:tags",
+     "value": "binary-scan,layer:learned_function,unattributed,container-scan,layer:unknown"
+    },
+    {
+     "name": "vera:asset-class",
+     "value": "binary"
+    },
+    {
+     "name": "vera:source-location",
+     "value": "library/nginx:1.27-alpine!/usr/bin/iconv"
+    },
+    {
+     "name": "vera:detection-method",
+     "value": "learned_function (signature-free) + conformal BH"
+    },
+    {
+     "name": "vera:detection-q-value",
+     "value": "0.0548604427333975"
+    },
+    {
+     "name": "vera:detection-alpha",
+     "value": "0.1"
+    },
+    {
+     "name": "vera:detection-isa",
+     "value": "x86-64"
+    },
+    {
+     "name": "vera:functions-selected",
+     "value": "1"
+    }
+   ],
+   "scope": "required",
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto:dea4788eacac16dea3952443",
+   "cryptoProperties": {
+    "algorithmProperties": {
+     "algorithmFamily": "AES",
+     "certificationLevel": [
+      "none"
+     ],
+     "classicalSecurityLevel": 128,
+     "cryptoFunctions": [
+      "encrypt",
+      "decrypt"
+     ],
+     "executionEnvironment": "software-plain-ram",
+     "implementationPlatform": "generic",
+     "mode": "ctr",
+     "nistQuantumSecurityLevel": 0,
+     "parameterSetIdentifier": "128",
+     "primitive": "block-cipher"
+    },
+    "assetType": "algorithm"
+   },
+   "isExternal": false,
+   "name": "AES-128-CTR",
+   "properties": [
+    {
+     "name": "vera:verdict",
+     "value": "grover"
+    },
+    {
+     "name": "vera:quantum-vulnerable",
+     "value": "false"
+    },
+    {
+     "name": "vera:classically-broken",
+     "value": "false"
+    },
+    {
+     "name": "vera:hndl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:tnfl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-low",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-high",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:risk-level",
+     "value": "safe"
+    },
+    {
+     "name": "vera:priority-rank",
+     "value": "23"
+    },
+    {
+     "name": "vera:persona",
+     "value": "Banking"
+    },
+    {
+     "name": "vera:statutory-deadline-year",
+     "value": "2029"
+    },
+    {
+     "name": "vera:slack-months",
+     "value": "3.1"
+    },
+    {
+     "name": "vera:migration-effort-years",
+     "value": "2.00"
+    },
+    {
+     "name": "vera:recommended-replacement",
+     "value": "AES-256"
+    },
+    {
+     "name": "vera:tags",
+     "value": "binary-scan,layer:symbol,container-scan,layer:unknown"
+    },
+    {
+     "name": "vera:asset-class",
+     "value": "binary"
+    },
+    {
+     "name": "vera:algorithm",
+     "value": "AES-128"
+    },
+    {
+     "name": "vera:source-location",
+     "value": "library/nginx:1.27-alpine!/usr/sbin/nginx-debug"
+    }
+   ],
+   "scope": "required",
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto:df3f983445701073afc03ad8",
+   "cryptoProperties": {
+    "algorithmProperties": {
+     "algorithmFamily": "SHA-1",
+     "certificationLevel": [
+      "none"
+     ],
+     "classicalSecurityLevel": 63,
+     "cryptoFunctions": [
+      "digest"
+     ],
+     "executionEnvironment": "software-plain-ram",
+     "implementationPlatform": "generic",
+     "nistQuantumSecurityLevel": 0,
+     "primitive": "hash"
+    },
+    "assetType": "algorithm",
+    "oid": "1.3.14.3.2.26"
+   },
+   "isExternal": false,
+   "name": "SHA-1",
+   "properties": [
+    {
+     "name": "vera:verdict",
+     "value": "classical"
+    },
+    {
+     "name": "vera:quantum-vulnerable",
+     "value": "false"
+    },
+    {
+     "name": "vera:classically-broken",
+     "value": "true"
+    },
+    {
+     "name": "vera:hndl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:tnfl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-low",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-high",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:risk-level",
+     "value": "informational"
+    },
+    {
+     "name": "vera:priority-rank",
+     "value": "15"
+    },
+    {
+     "name": "vera:persona",
+     "value": "Banking"
+    },
+    {
+     "name": "vera:statutory-deadline-year",
+     "value": "2029"
+    },
+    {
+     "name": "vera:slack-months",
+     "value": "3.1"
+    },
+    {
+     "name": "vera:migration-effort-years",
+     "value": "2.00"
+    },
+    {
+     "name": "vera:recommended-replacement",
+     "value": "SHA-256"
+    },
+    {
+     "name": "vera:tags",
+     "value": "binary-scan,layer:symbol,container-scan,layer:unknown"
+    },
+    {
+     "name": "vera:asset-class",
+     "value": "binary"
+    },
+    {
+     "name": "vera:algorithm",
+     "value": "SHA-1"
+    },
+    {
+     "name": "vera:source-location",
+     "value": "library/nginx:1.27-alpine!/usr/bin/njs"
+    }
+   ],
+   "scope": "required",
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto:eff8d3763b3beedcee53f2f5",
+   "cryptoProperties": {
+    "algorithmProperties": {
+     "algorithmFamily": "SHA-1",
+     "certificationLevel": [
+      "none"
+     ],
+     "classicalSecurityLevel": 63,
+     "cryptoFunctions": [
+      "digest"
+     ],
+     "executionEnvironment": "software-plain-ram",
+     "implementationPlatform": "generic",
+     "nistQuantumSecurityLevel": 0,
+     "primitive": "hash"
+    },
+    "assetType": "algorithm",
+    "oid": "1.3.14.3.2.26"
+   },
+   "isExternal": false,
+   "name": "SHA-1",
+   "properties": [
+    {
+     "name": "vera:verdict",
+     "value": "classical"
+    },
+    {
+     "name": "vera:quantum-vulnerable",
+     "value": "false"
+    },
+    {
+     "name": "vera:classically-broken",
+     "value": "true"
+    },
+    {
+     "name": "vera:hndl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:tnfl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-low",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-high",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:risk-level",
+     "value": "informational"
+    },
+    {
+     "name": "vera:priority-rank",
+     "value": "14"
+    },
+    {
+     "name": "vera:persona",
+     "value": "Banking"
+    },
+    {
+     "name": "vera:statutory-deadline-year",
+     "value": "2029"
+    },
+    {
+     "name": "vera:slack-months",
+     "value": "3.1"
+    },
+    {
+     "name": "vera:migration-effort-years",
+     "value": "2.00"
+    },
+    {
+     "name": "vera:recommended-replacement",
+     "value": "SHA-256"
+    },
+    {
+     "name": "vera:tags",
+     "value": "binary-scan,layer:symbol,container-scan,layer:unknown"
+    },
+    {
+     "name": "vera:asset-class",
+     "value": "binary"
+    },
+    {
+     "name": "vera:algorithm",
+     "value": "SHA-1"
+    },
+    {
+     "name": "vera:source-location",
+     "value": "library/nginx:1.27-alpine!/usr/sbin/nginx-debug"
+    }
+   ],
+   "scope": "required",
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto:f912b053a36f573de18782aa",
+   "cryptoProperties": {
+    "algorithmProperties": {
+     "algorithmFamily": "AES",
+     "certificationLevel": [
+      "none"
+     ],
+     "classicalSecurityLevel": 256,
+     "cryptoFunctions": [
+      "encrypt",
+      "decrypt"
+     ],
+     "executionEnvironment": "software-plain-ram",
+     "implementationPlatform": "generic",
+     "mode": "gcm",
+     "nistQuantumSecurityLevel": 5,
+     "parameterSetIdentifier": "256",
+     "primitive": "block-cipher"
+    },
+    "assetType": "algorithm",
+    "oid": "2.16.840.1.101.3.4.1.46"
+   },
+   "isExternal": false,
+   "name": "AES-256-GCM",
+   "properties": [
+    {
+     "name": "vera:verdict",
+     "value": "pqc"
+    },
+    {
+     "name": "vera:quantum-vulnerable",
+     "value": "false"
+    },
+    {
+     "name": "vera:classically-broken",
+     "value": "false"
+    },
+    {
+     "name": "vera:hndl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:tnfl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-low",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-high",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:risk-level",
+     "value": "safe"
+    },
+    {
+     "name": "vera:priority-rank",
+     "value": "35"
+    },
+    {
+     "name": "vera:persona",
+     "value": "Banking"
+    },
+    {
+     "name": "vera:statutory-deadline-year",
+     "value": "2029"
+    },
+    {
+     "name": "vera:slack-months",
+     "value": "3.1"
+    },
+    {
+     "name": "vera:migration-effort-years",
+     "value": "2.00"
+    },
+    {
+     "name": "vera:tags",
+     "value": "binary-scan,layer:symbol,container-scan,layer:unknown"
+    },
+    {
+     "name": "vera:asset-class",
+     "value": "binary"
+    },
+    {
+     "name": "vera:algorithm",
+     "value": "AES-256"
+    },
+    {
+     "name": "vera:source-location",
+     "value": "library/nginx:1.27-alpine!/usr/sbin/nginx-debug"
+    }
+   ],
+   "scope": "required",
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto:f997feb43d05afbcad9ab618",
+   "cryptoProperties": {
+    "algorithmProperties": {
+     "certificationLevel": [
+      "none"
+     ],
+     "cryptoFunctions": [
+      "encrypt",
+      "decrypt"
+     ],
+     "executionEnvironment": "software-plain-ram",
+     "implementationPlatform": "generic",
+     "nistQuantumSecurityLevel": 0,
+     "primitive": "pke"
+    },
+    "assetType": "algorithm",
+    "oid": "1.2.840.113549.1.1.1"
+   },
+   "isExternal": false,
+   "name": "RSA",
+   "properties": [
+    {
+     "name": "vera:verdict",
+     "value": "shor"
+    },
+    {
+     "name": "vera:quantum-vulnerable",
+     "value": "true"
+    },
+    {
+     "name": "vera:classically-broken",
+     "value": "false"
+    },
+    {
+     "name": "vera:hndl-score",
+     "value": "0.117011"
+    },
+    {
+     "name": "vera:tnfl-score",
+     "value": "0.100237"
+    },
+    {
+     "name": "vera:qirs",
+     "value": "0.108624"
+    },
+    {
+     "name": "vera:qirs-band-low",
+     "value": "0.070604"
+    },
+    {
+     "name": "vera:qirs-band-high",
+     "value": "0.143642"
+    },
+    {
+     "name": "vera:risk-level",
+     "value": "low"
+    },
+    {
+     "name": "vera:priority-rank",
+     "value": "6"
+    },
+    {
+     "name": "vera:persona",
+     "value": "Banking"
+    },
+    {
+     "name": "vera:statutory-deadline-year",
+     "value": "2029"
+    },
+    {
+     "name": "vera:slack-months",
+     "value": "3.1"
+    },
+    {
+     "name": "vera:migration-effort-years",
+     "value": "2.00"
+    },
+    {
+     "name": "vera:recommended-replacement",
+     "value": "ML-KEM-768 (encryption) / ML-DSA-65 (signature)"
+    },
+    {
+     "name": "vera:tags",
+     "value": "binary-scan,layer:symbol,container-scan,layer:unknown"
+    },
+    {
+     "name": "vera:asset-class",
+     "value": "binary"
+    },
+    {
+     "name": "vera:algorithm",
+     "value": "RSA"
+    },
+    {
+     "name": "vera:source-location",
+     "value": "library/nginx:1.27-alpine!/usr/bin/njs"
+    }
+   ],
+   "scope": "required",
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto:fa20663bb10511769404299b",
+   "cryptoProperties": {
+    "algorithmProperties": {
+     "algorithmFamily": "AES",
+     "certificationLevel": [
+      "none"
+     ],
+     "classicalSecurityLevel": 128,
+     "cryptoFunctions": [
+      "encrypt",
+      "decrypt"
+     ],
+     "executionEnvironment": "software-plain-ram",
+     "implementationPlatform": "generic",
+     "mode": "gcm",
+     "nistQuantumSecurityLevel": 0,
+     "parameterSetIdentifier": "128",
+     "primitive": "block-cipher"
+    },
+    "assetType": "algorithm",
+    "oid": "2.16.840.1.101.3.4.1.6"
+   },
+   "isExternal": false,
+   "name": "AES-128-GCM",
+   "properties": [
+    {
+     "name": "vera:verdict",
+     "value": "grover"
+    },
+    {
+     "name": "vera:quantum-vulnerable",
+     "value": "false"
+    },
+    {
+     "name": "vera:classically-broken",
+     "value": "false"
+    },
+    {
+     "name": "vera:hndl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:tnfl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-low",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-high",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:risk-level",
+     "value": "safe"
+    },
+    {
+     "name": "vera:priority-rank",
+     "value": "27"
+    },
+    {
+     "name": "vera:persona",
+     "value": "Banking"
+    },
+    {
+     "name": "vera:statutory-deadline-year",
+     "value": "2029"
+    },
+    {
+     "name": "vera:slack-months",
+     "value": "3.1"
+    },
+    {
+     "name": "vera:migration-effort-years",
+     "value": "2.00"
+    },
+    {
+     "name": "vera:recommended-replacement",
+     "value": "AES-256"
+    },
+    {
+     "name": "vera:tags",
+     "value": "binary-scan,layer:symbol,container-scan,layer:unknown"
+    },
+    {
+     "name": "vera:asset-class",
+     "value": "binary"
+    },
+    {
+     "name": "vera:algorithm",
+     "value": "AES-128"
+    },
+    {
+     "name": "vera:source-location",
+     "value": "library/nginx:1.27-alpine!/usr/bin/njs"
+    }
+   ],
+   "scope": "required",
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto:fbbf4d775d6f1ff262f4ff1b",
+   "cryptoProperties": {
+    "algorithmProperties": {
+     "algorithmFamily": "AES",
+     "certificationLevel": [
+      "none"
+     ],
+     "classicalSecurityLevel": 128,
+     "cryptoFunctions": [
+      "encrypt",
+      "decrypt"
+     ],
+     "executionEnvironment": "software-plain-ram",
+     "implementationPlatform": "generic",
+     "mode": "ccm",
+     "nistQuantumSecurityLevel": 0,
+     "parameterSetIdentifier": "128",
+     "primitive": "block-cipher"
+    },
+    "assetType": "algorithm",
+    "oid": "2.16.840.1.101.3.4.1.7"
+   },
+   "isExternal": false,
+   "name": "AES-128-CCM",
+   "properties": [
+    {
+     "name": "vera:verdict",
+     "value": "grover"
+    },
+    {
+     "name": "vera:quantum-vulnerable",
+     "value": "false"
+    },
+    {
+     "name": "vera:classically-broken",
+     "value": "false"
+    },
+    {
+     "name": "vera:hndl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:tnfl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-low",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-high",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:risk-level",
+     "value": "safe"
+    },
+    {
+     "name": "vera:priority-rank",
+     "value": "20"
+    },
+    {
+     "name": "vera:persona",
+     "value": "Banking"
+    },
+    {
+     "name": "vera:statutory-deadline-year",
+     "value": "2029"
+    },
+    {
+     "name": "vera:slack-months",
+     "value": "3.1"
+    },
+    {
+     "name": "vera:migration-effort-years",
+     "value": "2.00"
+    },
+    {
+     "name": "vera:recommended-replacement",
+     "value": "AES-256"
+    },
+    {
+     "name": "vera:tags",
+     "value": "binary-scan,layer:symbol,container-scan,layer:unknown"
+    },
+    {
+     "name": "vera:asset-class",
+     "value": "binary"
+    },
+    {
+     "name": "vera:algorithm",
+     "value": "AES-128"
+    },
+    {
+     "name": "vera:source-location",
+     "value": "library/nginx:1.27-alpine!/usr/sbin/nginx"
+    }
+   ],
+   "scope": "required",
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto:ff46cd39f2ec1c1534bb04ed",
+   "cryptoProperties": {
+    "algorithmProperties": {
+     "algorithmFamily": "AES",
+     "certificationLevel": [
+      "none"
+     ],
+     "classicalSecurityLevel": 128,
+     "cryptoFunctions": [
+      "encrypt",
+      "decrypt"
+     ],
+     "executionEnvironment": "software-plain-ram",
+     "implementationPlatform": "generic",
+     "mode": "ccm",
+     "nistQuantumSecurityLevel": 0,
+     "parameterSetIdentifier": "128",
+     "primitive": "block-cipher"
+    },
+    "assetType": "algorithm",
+    "oid": "2.16.840.1.101.3.4.1.7"
+   },
+   "isExternal": false,
+   "name": "AES-128-CCM",
+   "properties": [
+    {
+     "name": "vera:verdict",
+     "value": "grover"
+    },
+    {
+     "name": "vera:quantum-vulnerable",
+     "value": "false"
+    },
+    {
+     "name": "vera:classically-broken",
+     "value": "false"
+    },
+    {
+     "name": "vera:hndl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:tnfl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-low",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-high",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:risk-level",
+     "value": "safe"
+    },
+    {
+     "name": "vera:priority-rank",
+     "value": "21"
+    },
+    {
+     "name": "vera:persona",
+     "value": "Banking"
+    },
+    {
+     "name": "vera:statutory-deadline-year",
+     "value": "2029"
+    },
+    {
+     "name": "vera:slack-months",
+     "value": "3.1"
+    },
+    {
+     "name": "vera:migration-effort-years",
+     "value": "2.00"
+    },
+    {
+     "name": "vera:recommended-replacement",
+     "value": "AES-256"
+    },
+    {
+     "name": "vera:tags",
+     "value": "binary-scan,layer:symbol,container-scan,layer:unknown"
+    },
+    {
+     "name": "vera:asset-class",
+     "value": "binary"
+    },
+    {
+     "name": "vera:algorithm",
+     "value": "AES-128"
+    },
+    {
+     "name": "vera:source-location",
+     "value": "library/nginx:1.27-alpine!/usr/sbin/nginx-debug"
+    }
+   ],
+   "scope": "required",
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto:ff61361482ccdb74f4ca5acd",
+   "cryptoProperties": {
+    "algorithmProperties": {
+     "algorithmFamily": "ECDSA",
+     "certificationLevel": [
+      "none"
+     ],
+     "cryptoFunctions": [
+      "sign",
+      "verify"
+     ],
+     "executionEnvironment": "software-plain-ram",
+     "implementationPlatform": "generic",
+     "nistQuantumSecurityLevel": 0,
+     "primitive": "signature"
+    },
+    "assetType": "algorithm",
+    "oid": "1.2.840.10045.2.1"
+   },
+   "isExternal": false,
+   "name": "ECDSA",
+   "properties": [
+    {
+     "name": "vera:verdict",
+     "value": "shor"
+    },
+    {
+     "name": "vera:quantum-vulnerable",
+     "value": "true"
+    },
+    {
+     "name": "vera:classically-broken",
+     "value": "false"
+    },
+    {
+     "name": "vera:hndl-score",
+     "value": "0.117011"
+    },
+    {
+     "name": "vera:tnfl-score",
+     "value": "0.100237"
+    },
+    {
+     "name": "vera:qirs",
+     "value": "0.108624"
+    },
+    {
+     "name": "vera:qirs-band-low",
+     "value": "0.070604"
+    },
+    {
+     "name": "vera:qirs-band-high",
+     "value": "0.143642"
+    },
+    {
+     "name": "vera:risk-level",
+     "value": "low"
+    },
+    {
+     "name": "vera:priority-rank",
+     "value": "3"
+    },
+    {
+     "name": "vera:persona",
+     "value": "Banking"
+    },
+    {
+     "name": "vera:statutory-deadline-year",
+     "value": "2029"
+    },
+    {
+     "name": "vera:slack-months",
+     "value": "3.1"
+    },
+    {
+     "name": "vera:migration-effort-years",
+     "value": "2.00"
+    },
+    {
+     "name": "vera:recommended-replacement",
+     "value": "ML-DSA-65 (signature)"
+    },
+    {
+     "name": "vera:tags",
+     "value": "binary-scan,layer:symbol,container-scan,layer:unknown"
+    },
+    {
+     "name": "vera:asset-class",
+     "value": "binary"
+    },
+    {
+     "name": "vera:algorithm",
+     "value": "ECDSA"
+    },
+    {
+     "name": "vera:source-location",
+     "value": "library/nginx:1.27-alpine!/usr/lib/libssl.so.3"
+    }
+   ],
+   "scope": "required",
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto:ff7e6bbcdc8e5608c651f837",
+   "cryptoProperties": {
+    "algorithmProperties": {
+     "algorithmFamily": "AES",
+     "certificationLevel": [
+      "none"
+     ],
+     "classicalSecurityLevel": 256,
+     "cryptoFunctions": [
+      "encrypt",
+      "decrypt"
+     ],
+     "executionEnvironment": "software-plain-ram",
+     "implementationPlatform": "generic",
+     "mode": "cbc",
+     "nistQuantumSecurityLevel": 5,
+     "parameterSetIdentifier": "256",
+     "primitive": "block-cipher"
+    },
+    "assetType": "algorithm",
+    "oid": "2.16.840.1.101.3.4.1.42"
+   },
+   "isExternal": false,
+   "name": "AES-256-CBC",
+   "properties": [
+    {
+     "name": "vera:verdict",
+     "value": "pqc"
+    },
+    {
+     "name": "vera:quantum-vulnerable",
+     "value": "false"
+    },
+    {
+     "name": "vera:classically-broken",
+     "value": "false"
+    },
+    {
+     "name": "vera:hndl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:tnfl-score",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-low",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:qirs-band-high",
+     "value": "0.000000"
+    },
+    {
+     "name": "vera:risk-level",
+     "value": "safe"
+    },
+    {
+     "name": "vera:priority-rank",
+     "value": "29"
+    },
+    {
+     "name": "vera:persona",
+     "value": "Banking"
+    },
+    {
+     "name": "vera:statutory-deadline-year",
+     "value": "2029"
+    },
+    {
+     "name": "vera:slack-months",
+     "value": "3.1"
+    },
+    {
+     "name": "vera:migration-effort-years",
+     "value": "2.00"
+    },
+    {
+     "name": "vera:tags",
+     "value": "binary-scan,layer:symbol,container-scan,layer:unknown"
+    },
+    {
+     "name": "vera:asset-class",
+     "value": "binary"
+    },
+    {
+     "name": "vera:algorithm",
+     "value": "AES-256"
+    },
+    {
+     "name": "vera:source-location",
+     "value": "library/nginx:1.27-alpine!/usr/sbin/nginx-debug"
+    }
+   ],
+   "scope": "required",
+   "type": "cryptographic-asset"
+  }
+ ],
+ "dependencies": [
+  {
+   "dependsOn": [],
+   "ref": "crypto:02d2dd9fd204df4efcdddf66"
+  },
+  {
+   "dependsOn": [],
+   "ref": "crypto:0551cfc6887c2e3aceb020d0"
+  },
+  {
+   "dependsOn": [],
+   "ref": "crypto:3687fdec4ae856e3408074eb"
+  },
+  {
+   "dependsOn": [],
+   "ref": "crypto:3c5a052eb19758f44ea64386"
+  },
+  {
+   "dependsOn": [],
+   "ref": "crypto:420a1c053d022a8082204b83"
+  },
+  {
+   "dependsOn": [],
+   "ref": "crypto:43b24ed73532ec15a50e0188"
+  },
+  {
+   "dependsOn": [],
+   "ref": "crypto:4b96540081e4515e4fc2aa7f"
+  },
+  {
+   "dependsOn": [],
+   "ref": "crypto:570ef032641b5e3e293a0fa7"
+  },
+  {
+   "dependsOn": [],
+   "ref": "crypto:59b9ba5116d4faa48db77f1d"
+  },
+  {
+   "dependsOn": [],
+   "ref": "crypto:5a785ef2bda7f0ca06a5dd39"
+  },
+  {
+   "dependsOn": [],
+   "ref": "crypto:5da8d0e0b3f75b2d8aad3a83"
+  },
+  {
+   "dependsOn": [],
+   "ref": "crypto:5f1734d621a7766f839a1b84"
+  },
+  {
+   "dependsOn": [],
+   "ref": "crypto:5f7dcde162df10e27a42b790"
+  },
+  {
+   "dependsOn": [],
+   "ref": "crypto:615f3e25b7f6bae016700874"
+  },
+  {
+   "dependsOn": [],
+   "ref": "crypto:6842c144d2c289fb5021aef9"
+  },
+  {
+   "dependsOn": [],
+   "ref": "crypto:7e9e4a4567463204a3ec291f"
+  },
+  {
+   "dependsOn": [],
+   "ref": "crypto:82e213972281554b8ef84dc5"
+  },
+  {
+   "dependsOn": [],
+   "ref": "crypto:89081e3cb0d8f9627d5b6b18"
+  },
+  {
+   "dependsOn": [],
+   "ref": "crypto:8a9665be2bcc862487ca1046"
+  },
+  {
+   "dependsOn": [],
+   "ref": "crypto:91256c6a91b9ec0da1236652"
+  },
+  {
+   "dependsOn": [],
+   "ref": "crypto:a695d2eb8854bb57f320c324"
+  },
+  {
+   "dependsOn": [],
+   "ref": "crypto:ba9c81aeb0302ddca1e3b700"
+  },
+  {
+   "dependsOn": [],
+   "ref": "crypto:bbcde61a852626a0c0dc1546"
+  },
+  {
+   "dependsOn": [],
+   "ref": "crypto:c4e5d8acec0c25f5d4039910"
+  },
+  {
+   "dependsOn": [],
+   "ref": "crypto:c6a19047c8ca9e23c3cd8da7"
+  },
+  {
+   "dependsOn": [],
+   "ref": "crypto:d4500ce1dfd3088ee9a87f81"
+  },
+  {
+   "dependsOn": [],
+   "ref": "crypto:d76efc57ca8cebb356d89fab"
+  },
+  {
+   "dependsOn": [],
+   "ref": "crypto:db059634a92322662b3add5e"
+  },
+  {
+   "dependsOn": [],
+   "ref": "crypto:dea4788eacac16dea3952443"
+  },
+  {
+   "dependsOn": [],
+   "ref": "crypto:df3f983445701073afc03ad8"
+  },
+  {
+   "dependsOn": [],
+   "ref": "crypto:eff8d3763b3beedcee53f2f5"
+  },
+  {
+   "dependsOn": [],
+   "ref": "crypto:f912b053a36f573de18782aa"
+  },
+  {
+   "dependsOn": [],
+   "ref": "crypto:f997feb43d05afbcad9ab618"
+  },
+  {
+   "dependsOn": [],
+   "ref": "crypto:fa20663bb10511769404299b"
+  },
+  {
+   "dependsOn": [],
+   "ref": "crypto:fbbf4d775d6f1ff262f4ff1b"
+  },
+  {
+   "dependsOn": [],
+   "ref": "crypto:ff46cd39f2ec1c1534bb04ed"
+  },
+  {
+   "dependsOn": [],
+   "ref": "crypto:ff61361482ccdb74f4ca5acd"
+  },
+  {
+   "dependsOn": [],
+   "ref": "crypto:ff7e6bbcdc8e5608c651f837"
+  }
+ ],
+ "metadata": {
+  "component": {
+   "bom-ref": "vera:target-estate",
+   "description": "Cryptographic estate under assessment",
+   "isExternal": false,
+   "name": "Full scan (1 targets)",
+   "scope": "required",
+   "type": "application"
+  },
+  "properties": [
+   {
+    "name": "vera:tool-version",
+    "value": "2.0.0-sih"
+   },
+   {
+    "name": "vera:threat-model-version",
+    "value": "2026.09.1"
+   }
+  ],
+  "timestamp": "2026-09-28T13:06:51Z",
+  "tools": {
+   "components": [
+    {
+     "description": "Cryptographic discovery, quantum-risk assessment and CBOM",
+     "isExternal": false,
+     "name": "VERA",
+     "scope": "required",
+     "type": "application",
+     "version": "2.0.0-sih"
+    }
+   ]
+  }
+ },
+ "serialNumber": "urn:uuid:1751189f-6d43-601b-da7c-6afe86ab2378",
+ "specVersion": "1.7",
+ "version": 1
+}

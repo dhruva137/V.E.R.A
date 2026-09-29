@@ -1,0 +1,54 @@
+{
+  "commit": "331176e",
+  "note": "The same two images scanned by the code before the version/mode fix (git worktree at 331176e), kept as the baseline for the after-fix CBOMs in cbom_*.json.",
+  "images": {
+    "alpine_3.20": {
+      "crypto_components": 7,
+      "certin_present": 35,
+      "certin_required": 42,
+      "certin_percent": 83.3,
+      "mode_present_applicable": [
+        0,
+        0
+      ],
+      "oid_present_applicable": [
+        6,
+        7
+      ],
+      "libraries": [
+        [
+          "OpenSSL",
+          "3.3.7"
+        ],
+        [
+          "OpenSSL",
+          "unknown"
+        ]
+      ]
+    },
+    "nginx_1.27-alpine": {
+      "crypto_components": 23,
+      "certin_present": 123,
+      "certin_required": 144,
+      "certin_percent": 85.4,
+      "mode_present_applicable": [
+        0,
+        6
+      ],
+      "oid_present_applicable": [
+        16,
+        23
+      ],
+      "libraries": [
+        [
+          "OpenSSL",
+          "unknown"
+        ],
+        [
+          "OpenSSL",
+          "3.3.3"
+        ]
+      ]
+    }
+  }
+}

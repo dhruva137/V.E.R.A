@@ -1,0 +1,616 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:d5c767cc-6249-4d17-8ab3-8368368eb32c",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-08-20T05:28:11Z",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "CBOMkit",
+          "version": "1.4.0",
+          "publisher": "Third-party discovery tool"
+        }
+      ]
+    },
+    "component": {
+      "type": "application",
+      "bom-ref": "vera:target-estate",
+      "name": "CSV import: cmdb_inventory.csv (22 assets)",
+      "description": "Cryptographic estate under assessment"
+    }
+  },
+  "components": [
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto:e132f73b25e8681ad8b2d686",
+      "name": "RSA-2048",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "pke",
+          "executionEnvironment": "hardware",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "unknown"
+          ],
+          "parameterSetIdentifier": "2048",
+          "classicalSecurityLevel": 112,
+          "nistQuantumSecurityLevel": 0
+        },
+        "oid": "1.2.840.113549.1.1.1"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto:bd764bdf1fbd17fe6096ef97",
+      "name": "RSA-4096",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "pke",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "unknown"
+          ],
+          "parameterSetIdentifier": "4096",
+          "classicalSecurityLevel": 152,
+          "nistQuantumSecurityLevel": 0
+        },
+        "oid": "1.2.840.113549.1.1.1"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto:fb8dbd6bc94b8e7890bc5c8b",
+      "name": "RSA-3072",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "pke",
+          "executionEnvironment": "hardware",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "unknown"
+          ],
+          "parameterSetIdentifier": "3072",
+          "classicalSecurityLevel": 128,
+          "nistQuantumSecurityLevel": 0
+        },
+        "oid": "1.2.840.113549.1.1.1"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto:5763cb75556fb749a115572c",
+      "name": "ECDSA-P-256",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "executionEnvironment": "hardware",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "unknown"
+          ],
+          "parameterSetIdentifier": "256",
+          "curve": "P-256",
+          "classicalSecurityLevel": 128,
+          "nistQuantumSecurityLevel": 0
+        },
+        "oid": "1.2.840.10045.2.1"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto:e816746f90b579d9b81a2a51",
+      "name": "Diffie-Hellman",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "key-agree",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "unknown"
+          ],
+          "parameterSetIdentifier": "2048",
+          "classicalSecurityLevel": 112,
+          "nistQuantumSecurityLevel": 0
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto:8f35405b6e145b6f71e94dd0",
+      "name": "RSA-2048",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "pke",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "unknown"
+          ],
+          "parameterSetIdentifier": "2048",
+          "classicalSecurityLevel": 112,
+          "nistQuantumSecurityLevel": 0
+        },
+        "oid": "1.2.840.113549.1.1.1"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto:9d77d5a8643c1ff220ef8af8",
+      "name": "ECDHE",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "key-agree",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "unknown"
+          ],
+          "parameterSetIdentifier": "256",
+          "classicalSecurityLevel": 128,
+          "nistQuantumSecurityLevel": 0
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto:55899d2dfcfe997c5f08a57d",
+      "name": "RSA-3072",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "pke",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "unknown"
+          ],
+          "parameterSetIdentifier": "3072",
+          "classicalSecurityLevel": 128,
+          "nistQuantumSecurityLevel": 0
+        },
+        "oid": "1.2.840.113549.1.1.1"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto:da1f9523d4956a251c1b7c36",
+      "name": "ECDSA-P-256",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "unknown"
+          ],
+          "parameterSetIdentifier": "256",
+          "curve": "P-256",
+          "classicalSecurityLevel": 128,
+          "nistQuantumSecurityLevel": 0
+        },
+        "oid": "1.2.840.10045.2.1"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto:ed50ee838853497737af20d1",
+      "name": "RSA-2048",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "pke",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "unknown"
+          ],
+          "parameterSetIdentifier": "2048",
+          "classicalSecurityLevel": 112,
+          "nistQuantumSecurityLevel": 0
+        },
+        "oid": "1.2.840.113549.1.1.1"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto:02a551dec733d685f38ea5d1",
+      "name": "RSA-2048",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "pke",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "unknown"
+          ],
+          "parameterSetIdentifier": "2048",
+          "classicalSecurityLevel": 112,
+          "nistQuantumSecurityLevel": 0
+        },
+        "oid": "1.2.840.113549.1.1.1"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto:2d9fb9c56b97d92ef279ac52",
+      "name": "RSA-3072",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "pke",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "unknown"
+          ],
+          "parameterSetIdentifier": "3072",
+          "classicalSecurityLevel": 128,
+          "nistQuantumSecurityLevel": 0
+        },
+        "oid": "1.2.840.113549.1.1.1"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto:ea25430ddf5a2951de237c90",
+      "name": "Ed25519",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "unknown"
+          ],
+          "parameterSetIdentifier": "256",
+          "curve": "Curve25519",
+          "classicalSecurityLevel": 128,
+          "nistQuantumSecurityLevel": 0
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto:a69e389fc31eafc1307003c2",
+      "name": "RSA-2048",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "pke",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "unknown"
+          ],
+          "parameterSetIdentifier": "2048",
+          "classicalSecurityLevel": 112,
+          "nistQuantumSecurityLevel": 0
+        },
+        "oid": "1.2.840.113549.1.1.1"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto:11c409031f6f23c93fd974fb",
+      "name": "RSA-2048",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "pke",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "unknown"
+          ],
+          "parameterSetIdentifier": "2048",
+          "classicalSecurityLevel": 112,
+          "nistQuantumSecurityLevel": 0
+        },
+        "oid": "1.2.840.113549.1.1.1"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto:f08138c35bd99ad6fe590b74",
+      "name": "3DES",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "block-cipher",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "unknown"
+          ],
+          "parameterSetIdentifier": "168",
+          "classicalSecurityLevel": 112,
+          "nistQuantumSecurityLevel": 0
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto:b515fc70125fc2029dca2cab",
+      "name": "3DES",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "block-cipher",
+          "executionEnvironment": "hardware",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "unknown"
+          ],
+          "parameterSetIdentifier": "168",
+          "classicalSecurityLevel": 112,
+          "nistQuantumSecurityLevel": 0
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto:95072e9c1bbcd40dc8259e35",
+      "name": "MD5",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "hash",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "unknown"
+          ],
+          "parameterSetIdentifier": "128",
+          "classicalSecurityLevel": 0,
+          "nistQuantumSecurityLevel": 0
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto:c424cc721e3016163d800c40",
+      "name": "DES",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "block-cipher",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "unknown"
+          ],
+          "parameterSetIdentifier": "56",
+          "classicalSecurityLevel": 56,
+          "nistQuantumSecurityLevel": 0
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto:5eaa32719e5f84b4237ae5ff",
+      "name": "AES-256",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "block-cipher",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "unknown"
+          ],
+          "parameterSetIdentifier": "256",
+          "classicalSecurityLevel": 256,
+          "nistQuantumSecurityLevel": 5
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto:306ed9e94587307ff6a83617",
+      "name": "AES-256",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "block-cipher",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "unknown"
+          ],
+          "parameterSetIdentifier": "256",
+          "classicalSecurityLevel": 256,
+          "nistQuantumSecurityLevel": 5
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto:5159fda769687040651d76ae",
+      "name": "AES-256",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "block-cipher",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "generic",
+          "certificationLevel": [
+            "none"
+          ],
+          "cryptoFunctions": [
+            "unknown"
+          ],
+          "parameterSetIdentifier": "256",
+          "classicalSecurityLevel": 256,
+          "nistQuantumSecurityLevel": 5
+        }
+      }
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "crypto:e132f73b25e8681ad8b2d686",
+      "dependsOn": []
+    },
+    {
+      "ref": "crypto:bd764bdf1fbd17fe6096ef97",
+      "dependsOn": []
+    },
+    {
+      "ref": "crypto:fb8dbd6bc94b8e7890bc5c8b",
+      "dependsOn": []
+    },
+    {
+      "ref": "crypto:5763cb75556fb749a115572c",
+      "dependsOn": []
+    },
+    {
+      "ref": "crypto:e816746f90b579d9b81a2a51",
+      "dependsOn": []
+    },
+    {
+      "ref": "crypto:8f35405b6e145b6f71e94dd0",
+      "dependsOn": []
+    },
+    {
+      "ref": "crypto:9d77d5a8643c1ff220ef8af8",
+      "dependsOn": []
+    },
+    {
+      "ref": "crypto:55899d2dfcfe997c5f08a57d",
+      "dependsOn": []
+    },
+    {
+      "ref": "crypto:da1f9523d4956a251c1b7c36",
+      "dependsOn": []
+    },
+    {
+      "ref": "crypto:ed50ee838853497737af20d1",
+      "dependsOn": []
+    },
+    {
+      "ref": "crypto:02a551dec733d685f38ea5d1",
+      "dependsOn": []
+    },
+    {
+      "ref": "crypto:2d9fb9c56b97d92ef279ac52",
+      "dependsOn": []
+    },
+    {
+      "ref": "crypto:ea25430ddf5a2951de237c90",
+      "dependsOn": []
+    },
+    {
+      "ref": "crypto:a69e389fc31eafc1307003c2",
+      "dependsOn": []
+    },
+    {
+      "ref": "crypto:11c409031f6f23c93fd974fb",
+      "dependsOn": []
+    },
+    {
+      "ref": "crypto:f08138c35bd99ad6fe590b74",
+      "dependsOn": []
+    },
+    {
+      "ref": "crypto:b515fc70125fc2029dca2cab",
+      "dependsOn": []
+    },
+    {
+      "ref": "crypto:95072e9c1bbcd40dc8259e35",
+      "dependsOn": []
+    },
+    {
+      "ref": "crypto:c424cc721e3016163d800c40",
+      "dependsOn": []
+    },
+    {
+      "ref": "crypto:5eaa32719e5f84b4237ae5ff",
+      "dependsOn": []
+    },
+    {
+      "ref": "crypto:306ed9e94587307ff6a83617",
+      "dependsOn": []
+    },
+    {
+      "ref": "crypto:5159fda769687040651d76ae",
+      "dependsOn": []
+    }
+  ]
+}

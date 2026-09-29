@@ -1,0 +1,23 @@
+{
+  "source": "ssh",
+  "synthetic": true,
+  "probes": [
+    {
+      "target": "10.9.0.1:22",
+      "banner": "SSH-2.0-OpenSSH_7.4",
+      "kex_algorithms": [
+        "diffie-hellman-group1-sha1",
+        "diffie-hellman-group14-sha1"
+      ],
+      "server_host_key_algorithms": [
+        "ssh-rsa"
+      ],
+      "encryption_algorithms_client_to_server": [
+        "aes128-cbc"
+      ],
+      "encryption_algorithms_server_to_client": [
+        "aes128-cbc"
+      ]
+    }
+  ]
+}

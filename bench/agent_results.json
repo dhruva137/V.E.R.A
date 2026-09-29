@@ -1,0 +1,5094 @@
+{
+  "measured": true,
+  "measured_at": "2026-09-24T15:09:31+00:00",
+  "what": "Agent tool selection on bench/agent_prompts.yaml against demo/estate: model alone vs router + model.",
+  "model": {
+    "name": "qwen3:1.7b",
+    "digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "qwen3",
+      "families": [
+        "qwen3"
+      ],
+      "parameter_size": "2.0B",
+      "quantization_level": "Q4_K_M",
+      "context_length": 40960,
+      "embedding_length": 2048
+    },
+    "server": "http://localhost:11434",
+    "temperature": 0.2,
+    "thinking": false,
+    "warmup_ms": 1164
+  },
+  "host": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.13.11",
+    "processor": "AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD"
+  },
+  "git_commit": "7f9256831d87b68f67c3e85f5f1525ae5a444f4e",
+  "prompts": {
+    "file": "bench/agent_prompts.yaml",
+    "count": 30,
+    "sha256": "584ac4043e83f339be4bdbf1551f10fb51bbd579f8fcc9f90343e753612e65e4"
+  },
+  "repeats": 3,
+  "scoring": "first_decision_accuracy: the first tool called (or 'none' / 'clarify') is in the prompt's expect list and, where given, its asset_id resolves to the named asset. turn_accuracy: any call in the turn satisfies that. Latency: wall time to the first decision and to turn end.",
+  "caveat": "The prompts were written by the authors of the router's patterns; they are not a held-out set. The 'natural' group holds phrasings the patterns do not cover. The model samples at the temperature above, so model-side results vary between runs; the router's are deterministic.",
+  "summary": {
+    "llm_only": {
+      "runs": 90,
+      "first_decision_accuracy": 0.478,
+      "turn_accuracy": 0.478,
+      "median_selection_ms": 1476,
+      "median_turn_ms": 3168,
+      "routed": 0,
+      "answered_by": [
+        "qwen3:1.7b"
+      ],
+      "failovers": 0,
+      "by_group": {
+        "ambiguous": 0.0,
+        "conversational": 1.0,
+        "estate": 0.889,
+        "natural": 0.476,
+        "verb_asset": 0.091
+      },
+      "errors": []
+    },
+    "router_llm": {
+      "runs": 90,
+      "first_decision_accuracy": 0.878,
+      "turn_accuracy": 0.878,
+      "median_selection_ms": 14,
+      "median_turn_ms": 3043,
+      "routed": 63,
+      "answered_by": [
+        "qwen3:1.7b"
+      ],
+      "failovers": 0,
+      "by_group": {
+        "ambiguous": 1.0,
+        "conversational": 1.0,
+        "estate": 1.0,
+        "natural": 0.476,
+        "verb_asset": 1.0
+      },
+      "errors": []
+    }
+  },
+  "router_fixed": [
+    "migrate-jar",
+    "migrate-signing-key",
+    "upgrade-jwt",
+    "why-jar",
+    "explain-reconcile",
+    "explain-top",
+    "when-jwt",
+    "recommend-jar",
+    "preview-lib-rs",
+    "migrate-200",
+    "providers-roadmap",
+    "audit-tamper",
+    "ambiguous-cardvault"
+  ],
+  "router_regressed": [],
+  "unrouted_model_variance": [
+    "policy-violated",
+    "double-check",
+    "sure-signing-key",
+    "migrate-first"
+  ],
+  "per_prompt": [
+    {
+      "id": "migrate-jar",
+      "group": "verb_asset",
+      "text": "Migrate the RSA in payments-gateway.jar",
+      "expect": [
+        "migrate_asset"
+      ],
+      "llm_only": {
+        "first_correct": 0,
+        "of": 3,
+        "decisions": [
+          "preview_migration",
+          "preview_migration",
+          "preview_migration"
+        ],
+        "router_rule": null
+      },
+      "router_llm": {
+        "first_correct": 3,
+        "of": 3,
+        "decisions": [
+          "migrate_asset",
+          "migrate_asset",
+          "migrate_asset"
+        ],
+        "router_rule": "migrate.asset"
+      }
+    },
+    {
+      "id": "migrate-signing-key",
+      "group": "verb_asset",
+      "text": "migrate signing.key to hybrid",
+      "expect": [
+        "migrate_asset"
+      ],
+      "llm_only": {
+        "first_correct": 0,
+        "of": 3,
+        "decisions": [
+          "preview_migration",
+          "preview_migration",
+          "preview_migration"
+        ],
+        "router_rule": null
+      },
+      "router_llm": {
+        "first_correct": 3,
+        "of": 3,
+        "decisions": [
+          "migrate_asset",
+          "migrate_asset",
+          "migrate_asset"
+        ],
+        "router_rule": "migrate.asset"
+      }
+    },
+    {
+      "id": "upgrade-jwt",
+      "group": "verb_asset",
+      "text": "upgrade jwt.sign in auth.ts to ML-DSA",
+      "expect": [
+        "migrate_asset"
+      ],
+      "llm_only": {
+        "first_correct": 0,
+        "of": 3,
+        "decisions": [
+          "none",
+          "none",
+          "none"
+        ],
+        "router_rule": null
+      },
+      "router_llm": {
+        "first_correct": 3,
+        "of": 3,
+        "decisions": [
+          "migrate_asset",
+          "migrate_asset",
+          "migrate_asset"
+        ],
+        "router_rule": "migrate.asset"
+      }
+    },
+    {
+      "id": "why-jar",
+      "group": "verb_asset",
+      "text": "Why is RSA in payments-gateway.jar ranked so high?",
+      "expect": [
+        "explain_asset",
+        "explain_evidence",
+        "explain_mosca"
+      ],
+      "llm_only": {
+        "first_correct": 0,
+        "of": 3,
+        "decisions": [
+          "none",
+          "none",
+          "none"
+        ],
+        "router_rule": null
+      },
+      "router_llm": {
+        "first_correct": 3,
+        "of": 3,
+        "decisions": [
+          "explain_asset",
+          "explain_asset",
+          "explain_asset"
+        ],
+        "router_rule": "explain.asset"
+      }
+    },
+    {
+      "id": "explain-reconcile",
+      "group": "verb_asset",
+      "text": "explain rsa.generate_private_key in reconcile.py",
+      "expect": [
+        "explain_asset",
+        "get_asset"
+      ],
+      "llm_only": {
+        "first_correct": 0,
+        "of": 3,
+        "decisions": [
+          "list_assets",
+          "none",
+          "list_assets"
+        ],
+        "router_rule": null
+      },
+      "router_llm": {
+        "first_correct": 3,
+        "of": 3,
+        "decisions": [
+          "explain_asset",
+          "explain_asset",
+          "explain_asset"
+        ],
+        "router_rule": "explain.asset"
+      }
+    },
+    {
+      "id": "explain-top",
+      "group": "verb_asset",
+      "text": "Explain the top-ranked asset",
+      "expect": [
+        "explain_asset",
+        "get_asset"
+      ],
+      "llm_only": {
+        "first_correct": 0,
+        "of": 3,
+        "decisions": [
+          "none",
+          "get_estate_summary",
+          "get_axis_extremes"
+        ],
+        "router_rule": null
+      },
+      "router_llm": {
+        "first_correct": 3,
+        "of": 3,
+        "decisions": [
+          "explain_asset",
+          "explain_asset",
+          "explain_asset"
+        ],
+        "router_rule": "explain.asset"
+      }
+    },
+    {
+      "id": "mosca-signing-key",
+      "group": "verb_asset",
+      "text": "Explain the Mosca reading for signing.key",
+      "expect": [
+        "explain_mosca"
+      ],
+      "llm_only": {
+        "first_correct": 3,
+        "of": 3,
+        "decisions": [
+          "explain_mosca",
+          "explain_mosca",
+          "explain_mosca"
+        ],
+        "router_rule": null
+      },
+      "router_llm": {
+        "first_correct": 3,
+        "of": 3,
+        "decisions": [
+          "explain_mosca",
+          "explain_mosca",
+          "explain_mosca"
+        ],
+        "router_rule": "explain.mosca"
+      }
+    },
+    {
+      "id": "when-jwt",
+      "group": "verb_asset",
+      "text": "When does jwt.sign in auth.ts become vulnerable?",
+      "expect": [
+        "explain_mosca"
+      ],
+      "llm_only": {
+        "first_correct": 0,
+        "of": 3,
+        "decisions": [
+          "none",
+          "none",
+          "none"
+        ],
+        "router_rule": null
+      },
+      "router_llm": {
+        "first_correct": 3,
+        "of": 3,
+        "decisions": [
+          "explain_mosca",
+          "explain_mosca",
+          "explain_mosca"
+        ],
+        "router_rule": "explain.mosca"
+      }
+    },
+    {
+      "id": "recommend-jar",
+      "group": "verb_asset",
+      "text": "Recommend a replacement for the RSA in payments-gateway.jar",
+      "expect": [
+        "recommend"
+      ],
+      "llm_only": {
+        "first_correct": 0,
+        "of": 3,
+        "decisions": [
+          "recommend",
+          "recommend",
+          "recommend"
+        ],
+        "router_rule": null
+      },
+      "router_llm": {
+        "first_correct": 3,
+        "of": 3,
+        "decisions": [
+          "recommend",
+          "recommend",
+          "recommend"
+        ],
+        "router_rule": "recommend.asset"
+      }
+    },
+    {
+      "id": "preview-lib-rs",
+      "group": "verb_asset",
+      "text": "Preview migrating the ECDSA in lib.rs",
+      "expect": [
+        "preview_migration"
+      ],
+      "llm_only": {
+        "first_correct": 0,
+        "of": 3,
+        "decisions": [
+          "preview_migration",
+          "preview_migration",
+          "preview_migration"
+        ],
+        "router_rule": null
+      },
+      "router_llm": {
+        "first_correct": 3,
+        "of": 3,
+        "decisions": [
+          "preview_migration",
+          "preview_migration",
+          "preview_migration"
+        ],
+        "router_rule": "preview.asset"
+      }
+    },
+    {
+      "id": "migrate-200",
+      "group": "verb_asset",
+      "text": "migrate 200 assets",
+      "expect": [
+        "migrate_asset"
+      ],
+      "llm_only": {
+        "first_correct": 0,
+        "of": 3,
+        "decisions": [
+          "none",
+          "list_assets",
+          "list_flagged"
+        ],
+        "router_rule": null
+      },
+      "router_llm": {
+        "first_correct": 3,
+        "of": 3,
+        "decisions": [
+          "migrate_asset",
+          "migrate_asset",
+          "migrate_asset"
+        ],
+        "router_rule": "migrate.estate"
+      }
+    },
+    {
+      "id": "count-assets",
+      "group": "estate",
+      "text": "How many assets do we have?",
+      "expect": [
+        "get_estate_summary"
+      ],
+      "llm_only": {
+        "first_correct": 3,
+        "of": 3,
+        "decisions": [
+          "get_estate_summary",
+          "get_estate_summary",
+          "get_estate_summary"
+        ],
+        "router_rule": null
+      },
+      "router_llm": {
+        "first_correct": 3,
+        "of": 3,
+        "decisions": [
+          "get_estate_summary",
+          "get_estate_summary",
+          "get_estate_summary"
+        ],
+        "router_rule": "estate.summary"
+      }
+    },
+    {
+      "id": "overview",
+      "group": "estate",
+      "text": "Give me an overview of the estate",
+      "expect": [
+        "get_estate_summary"
+      ],
+      "llm_only": {
+        "first_correct": 3,
+        "of": 3,
+        "decisions": [
+          "get_estate_summary",
+          "get_estate_summary",
+          "get_estate_summary"
+        ],
+        "router_rule": null
+      },
+      "router_llm": {
+        "first_correct": 3,
+        "of": 3,
+        "decisions": [
+          "get_estate_summary",
+          "get_estate_summary",
+          "get_estate_summary"
+        ],
+        "router_rule": "estate.summary"
+      }
+    },
+    {
+      "id": "show-drift",
+      "group": "estate",
+      "text": "Show me the drift findings",
+      "expect": [
+        "list_drift"
+      ],
+      "llm_only": {
+        "first_correct": 3,
+        "of": 3,
+        "decisions": [
+          "list_drift",
+          "list_drift",
+          "list_drift"
+        ],
+        "router_rule": null
+      },
+      "router_llm": {
+        "first_correct": 3,
+        "of": 3,
+        "decisions": [
+          "list_drift",
+          "list_drift",
+          "list_drift"
+        ],
+        "router_rule": "drift.list"
+      }
+    },
+    {
+      "id": "vendor-blocked",
+      "group": "estate",
+      "text": "What is blocked on vendors?",
+      "expect": [
+        "list_vendor_gated"
+      ],
+      "llm_only": {
+        "first_correct": 3,
+        "of": 3,
+        "decisions": [
+          "list_vendor_gated",
+          "list_vendor_gated",
+          "list_vendor_gated"
+        ],
+        "router_rule": null
+      },
+      "router_llm": {
+        "first_correct": 3,
+        "of": 3,
+        "decisions": [
+          "list_vendor_gated",
+          "list_vendor_gated",
+          "list_vendor_gated"
+        ],
+        "router_rule": "gated.list"
+      }
+    },
+    {
+      "id": "providers-roadmap",
+      "group": "estate",
+      "text": "Which HSM vendors or cloud providers do we need a PQC roadmap from?",
+      "expect": [
+        "list_vendor_gated"
+      ],
+      "llm_only": {
+        "first_correct": 2,
+        "of": 3,
+        "decisions": [
+          "none",
+          "list_vendor_gated",
+          "list_vendor_gated"
+        ],
+        "router_rule": null
+      },
+      "router_llm": {
+        "first_correct": 3,
+        "of": 3,
+        "decisions": [
+          "list_vendor_gated",
+          "list_vendor_gated",
+          "list_vendor_gated"
+        ],
+        "router_rule": "gated.list"
+      }
+    },
+    {
+      "id": "what-changed",
+      "group": "estate",
+      "text": "What changed since the last scan?",
+      "expect": [
+        "compare_scans"
+      ],
+      "llm_only": {
+        "first_correct": 3,
+        "of": 3,
+        "decisions": [
+          "compare_scans",
+          "compare_scans",
+          "compare_scans"
+        ],
+        "router_rule": null
+      },
+      "router_llm": {
+        "first_correct": 3,
+        "of": 3,
+        "decisions": [
+          "compare_scans",
+          "compare_scans",
+          "compare_scans"
+        ],
+        "router_rule": "scans.compare"
+      }
+    },
+    {
+      "id": "verify-manifest",
+      "group": "estate",
+      "text": "Verify the signed manifest",
+      "expect": [
+        "verify_manifest"
+      ],
+      "llm_only": {
+        "first_correct": 3,
+        "of": 3,
+        "decisions": [
+          "verify_manifest",
+          "verify_manifest",
+          "verify_manifest"
+        ],
+        "router_rule": null
+      },
+      "router_llm": {
+        "first_correct": 3,
+        "of": 3,
+        "decisions": [
+          "verify_manifest",
+          "verify_manifest",
+          "verify_manifest"
+        ],
+        "router_rule": "evidence.verify"
+      }
+    },
+    {
+      "id": "audit-tamper",
+      "group": "estate",
+      "text": "Has anyone tampered with the audit log?",
+      "expect": [
+        "verify_manifest"
+      ],
+      "llm_only": {
+        "first_correct": 1,
+        "of": 3,
+        "decisions": [
+          "none",
+          "none",
+          "verify_manifest"
+        ],
+        "router_rule": null
+      },
+      "router_llm": {
+        "first_correct": 3,
+        "of": 3,
+        "decisions": [
+          "verify_manifest",
+          "verify_manifest",
+          "verify_manifest"
+        ],
+        "router_rule": "evidence.verify"
+      }
+    },
+    {
+      "id": "rescan-configs",
+      "group": "estate",
+      "text": "Run a fresh scan of the configs",
+      "expect": [
+        "run_scan"
+      ],
+      "llm_only": {
+        "first_correct": 3,
+        "of": 3,
+        "decisions": [
+          "run_scan",
+          "run_scan",
+          "run_scan"
+        ],
+        "router_rule": null
+      },
+      "router_llm": {
+        "first_correct": 3,
+        "of": 3,
+        "decisions": [
+          "run_scan",
+          "run_scan",
+          "run_scan"
+        ],
+        "router_rule": "scan.run"
+      }
+    },
+    {
+      "id": "policy-violated",
+      "group": "natural",
+      "text": "Is the declared TLS policy being violated anywhere?",
+      "expect": [
+        "list_drift"
+      ],
+      "llm_only": {
+        "first_correct": 1,
+        "of": 3,
+        "decisions": [
+          "none",
+          "list_drift",
+          "none"
+        ],
+        "router_rule": null
+      },
+      "router_llm": {
+        "first_correct": 0,
+        "of": 3,
+        "decisions": [
+          "none",
+          "none",
+          "none"
+        ],
+        "router_rule": null
+      }
+    },
+    {
+      "id": "double-check",
+      "group": "natural",
+      "text": "Which findings should we double-check first?",
+      "expect": [
+        "list_flagged"
+      ],
+      "llm_only": {
+        "first_correct": 3,
+        "of": 3,
+        "decisions": [
+          "list_flagged",
+          "list_flagged",
+          "list_flagged"
+        ],
+        "router_rule": null
+      },
+      "router_llm": {
+        "first_correct": 2,
+        "of": 3,
+        "decisions": [
+          "list_flagged",
+          "none",
+          "list_flagged"
+        ],
+        "router_rule": null
+      }
+    },
+    {
+      "id": "sure-signing-key",
+      "group": "natural",
+      "text": "How sure are you about the signing.key finding?",
+      "expect": [
+        "explain_evidence"
+      ],
+      "llm_only": {
+        "first_correct": 0,
+        "of": 3,
+        "decisions": [
+          "none",
+          "none",
+          "none"
+        ],
+        "router_rule": null
+      },
+      "router_llm": {
+        "first_correct": 1,
+        "of": 3,
+        "decisions": [
+          "none",
+          "explain_evidence",
+          "none"
+        ],
+        "router_rule": null
+      }
+    },
+    {
+      "id": "migrate-first",
+      "group": "natural",
+      "text": "What should I migrate first?",
+      "expect": [
+        "list_assets",
+        "get_estate_summary",
+        "get_roadmap"
+      ],
+      "llm_only": {
+        "first_correct": 0,
+        "of": 3,
+        "decisions": [
+          "none",
+          "none",
+          "none"
+        ],
+        "router_rule": null
+      },
+      "router_llm": {
+        "first_correct": 1,
+        "of": 3,
+        "decisions": [
+          "list_assets",
+          "none",
+          "none"
+        ],
+        "router_rule": null
+      }
+    },
+    {
+      "id": "blast-signing-key",
+      "group": "natural",
+      "text": "What breaks if we rotate the key in signing.key?",
+      "expect": [
+        "get_blast_radius"
+      ],
+      "llm_only": {
+        "first_correct": 0,
+        "of": 3,
+        "decisions": [
+          "none",
+          "none",
+          "inspect_key"
+        ],
+        "router_rule": null
+      },
+      "router_llm": {
+        "first_correct": 0,
+        "of": 3,
+        "decisions": [
+          "none",
+          "none",
+          "none"
+        ],
+        "router_rule": null
+      }
+    },
+    {
+      "id": "biggest-hub",
+      "group": "natural",
+      "text": "Which asset is the biggest dependency hub?",
+      "expect": [
+        "list_most_depended_on"
+      ],
+      "llm_only": {
+        "first_correct": 3,
+        "of": 3,
+        "decisions": [
+          "list_most_depended_on",
+          "list_most_depended_on",
+          "list_most_depended_on"
+        ],
+        "router_rule": null
+      },
+      "router_llm": {
+        "first_correct": 3,
+        "of": 3,
+        "decisions": [
+          "list_most_depended_on",
+          "list_most_depended_on",
+          "list_most_depended_on"
+        ],
+        "router_rule": null
+      }
+    },
+    {
+      "id": "open-inventory",
+      "group": "natural",
+      "text": "Take me to the inventory page",
+      "expect": [
+        "open_page"
+      ],
+      "llm_only": {
+        "first_correct": 3,
+        "of": 3,
+        "decisions": [
+          "open_page",
+          "open_page",
+          "open_page"
+        ],
+        "router_rule": null
+      },
+      "router_llm": {
+        "first_correct": 3,
+        "of": 3,
+        "decisions": [
+          "open_page",
+          "open_page",
+          "open_page"
+        ],
+        "router_rule": null
+      }
+    },
+    {
+      "id": "what-are-you",
+      "group": "conversational",
+      "text": "What are you?",
+      "expect": [
+        "none"
+      ],
+      "llm_only": {
+        "first_correct": 3,
+        "of": 3,
+        "decisions": [
+          "none",
+          "none",
+          "none"
+        ],
+        "router_rule": null
+      },
+      "router_llm": {
+        "first_correct": 3,
+        "of": 3,
+        "decisions": [
+          "none",
+          "none",
+          "none"
+        ],
+        "router_rule": null
+      }
+    },
+    {
+      "id": "hello",
+      "group": "conversational",
+      "text": "hi there",
+      "expect": [
+        "none"
+      ],
+      "llm_only": {
+        "first_correct": 3,
+        "of": 3,
+        "decisions": [
+          "none",
+          "none",
+          "none"
+        ],
+        "router_rule": null
+      },
+      "router_llm": {
+        "first_correct": 3,
+        "of": 3,
+        "decisions": [
+          "none",
+          "none",
+          "none"
+        ],
+        "router_rule": null
+      }
+    },
+    {
+      "id": "ambiguous-cardvault",
+      "group": "ambiguous",
+      "text": "Migrate CardVault.java",
+      "expect": [
+        "clarify",
+        "list_assets"
+      ],
+      "llm_only": {
+        "first_correct": 0,
+        "of": 3,
+        "decisions": [
+          "preview_migration",
+          "preview_migration",
+          "preview_migration"
+        ],
+        "router_rule": null
+      },
+      "router_llm": {
+        "first_correct": 3,
+        "of": 3,
+        "decisions": [
+          "clarify",
+          "clarify",
+          "clarify"
+        ],
+        "router_rule": "migrate.asset"
+      }
+    }
+  ],
+  "runs": {
+    "llm_only": [
+      {
+        "id": "migrate-jar",
+        "repeat": 0,
+        "decision": "preview_migration",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 1990,
+        "turn_ms": 3164,
+        "router": null,
+        "calls": [
+          {
+            "name": "preview_migration",
+            "arguments": {
+              "asset_id": "payments-gateway.jar",
+              "strategy": "pqc_only",
+              "target": "payments-gateway.jar"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "The asset \"payments-gateway.jar\" does not exist in the current estate. Please provide the exact asset ID or full name, and I will preview the migration for you.",
+        "error": null
+      },
+      {
+        "id": "migrate-signing-key",
+        "repeat": 0,
+        "decision": "preview_migration",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 1535,
+        "turn_ms": 3926,
+        "router": null,
+        "calls": [
+          {
+            "name": "preview_migration",
+            "arguments": {
+              "strategy": "hybrid",
+              "target": "hybrid",
+              "asset_id": "signing.key"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "The migration of \"signing.key\" to the hybrid strategy has been previewed. Here are the key details:\n\n- **Assets Affected**: 1\n- **Strategy**: Hybrid (keeps a classical fallback)\n- **Target**: Hybrid\n- **Average QIRS Before Migration**: 0.29",
+        "error": null
+      },
+      {
+        "id": "upgrade-jwt",
+        "repeat": 0,
+        "decision": "none",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 1612,
+        "turn_ms": 1612,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "I cannot perform code modifications or suggest changes to files like `auth.ts`. My role is to analyze cryptographic assets in an estate, assess risks, and recommend migrations based on post-quantum cryptography considerations. If you'd like",
+        "error": null
+      },
+      {
+        "id": "why-jar",
+        "repeat": 0,
+        "decision": "none",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 1646,
+        "turn_ms": 1647,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "RSA is weak, but it is ranked high because it is a root CA whose validity horizon exceeds the migration window. This means that RSA is not yet quantum-vulnerable, and its exposure horizon is long enough that delaying migration does not make",
+        "error": null
+      },
+      {
+        "id": "explain-reconcile",
+        "repeat": 0,
+        "decision": "list_assets",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 1621,
+        "turn_ms": 6408,
+        "router": null,
+        "calls": [
+          {
+            "name": "list_assets",
+            "arguments": {
+              "asset_class": "encryption",
+              "query": "RSA",
+              "sort_by": "priority"
+            }
+          },
+          {
+            "name": "list_assets",
+            "arguments": {
+              "asset_class": "encryption",
+              "query": "RSA",
+              "sort_by": "hndl"
+            }
+          },
+          {
+            "name": "list_assets",
+            "arguments": {
+              "asset_class": "encryption",
+              "query": "RSA",
+              "sort_by": "hndl"
+            }
+          },
+          {
+            "name": "list_assets",
+            "arguments": {
+              "asset_class": "encryption",
+              "query": "RSA",
+              "sort_by": "name"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 5,
+        "answer": "I cannot find any RSA assets in the estate. Let me check again.",
+        "error": null
+      },
+      {
+        "id": "explain-top",
+        "repeat": 0,
+        "decision": "none",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 3101,
+        "turn_ms": 3102,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The top-ranked asset in the estate is **RSA-2048**, which is a public-key cryptosystem with a 2048-bit key length. This asset is ranked **high** on the **TNFL (Integrity Risk)** axis due to its nature as a signing and identity asset, which ",
+        "error": null
+      },
+      {
+        "id": "mosca-signing-key",
+        "repeat": 0,
+        "decision": "explain_mosca",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1340,
+        "turn_ms": 6420,
+        "router": null,
+        "calls": [
+          {
+            "name": "explain_mosca",
+            "arguments": {
+              "asset_id": "signing.key"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "The Mosca reading for **signing.key** provides insight into the confidentiality and integrity risks associated with the asset. Here's a breakdown:\n\n### **Confidentiality Risk (X-axis)**\n- **X_confidentiality_years**: 20.0  \n  - The asset is",
+        "error": null
+      },
+      {
+        "id": "when-jwt",
+        "repeat": 0,
+        "decision": "none",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 2511,
+        "turn_ms": 2512,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The JWT signing mechanism in `auth.ts` becomes vulnerable when a quantum computer is capable of breaking the underlying cryptographic algorithm. The exact timeline for when this occurs is determined by the **Threat Timeline** function, whic",
+        "error": null
+      },
+      {
+        "id": "recommend-jar",
+        "repeat": 0,
+        "decision": "recommend",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 1409,
+        "turn_ms": 6621,
+        "router": null,
+        "calls": [
+          {
+            "name": "recommend",
+            "arguments": {
+              "asset_id": "payments-gateway.jar",
+              "profile": "commercial"
+            }
+          },
+          {
+            "name": "list_assets",
+            "arguments": {
+              "limit": 10
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 3,
+        "answer": "The recommended replacement for the RSA in the payments-gateway.jar asset is **ECDH** (Elliptic Curve Diffie-Hellman) with the following details:\n\n- **Target Algorithm**: ECDH\n- **Alternatives**: \n  - ECDH (Groups, openssl.cnf:5)\n  - ECDSA ",
+        "error": null
+      },
+      {
+        "id": "preview-lib-rs",
+        "repeat": 0,
+        "decision": "preview_migration",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 1694,
+        "turn_ms": 3012,
+        "router": null,
+        "calls": [
+          {
+            "name": "preview_migration",
+            "arguments": {
+              "asset_id": "ECDSA in lib.rs",
+              "strategy": "hybrid",
+              "target": "lib.rs"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "The preview migration request could not find an asset with the specified ID: \"ECDSA in lib.rs\". Please ensure that the asset ID is correct and try again. If the ID is accurate, the issue may be related to the asset not being fully recognize",
+        "error": null
+      },
+      {
+        "id": "migrate-200",
+        "repeat": 0,
+        "decision": "none",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 1562,
+        "turn_ms": 1563,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "I cannot apply a migration without human approval. Please provide the specific assets you wish to migrate, and I will prepare a migration plan for review.",
+        "error": null
+      },
+      {
+        "id": "count-assets",
+        "repeat": 0,
+        "decision": "get_estate_summary",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1358,
+        "turn_ms": 6224,
+        "router": null,
+        "calls": [
+          {
+            "name": "get_estate_summary",
+            "arguments": {
+              "limit": 1
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "We have **219 assets** in our estate. Here's a breakdown:\n\n- **Quantum-vulnerable assets**: 138\n- **Quantum-safe assets**: 81\n- **Classically broken assets**: 23\n- **Total assets**: 219\n\n### Key Metrics:\n- **Average HNDL (Confidentiality Ri",
+        "error": null
+      },
+      {
+        "id": "overview",
+        "repeat": 0,
+        "decision": "get_estate_summary",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1667,
+        "turn_ms": 10307,
+        "router": null,
+        "calls": [
+          {
+            "name": "get_estate_summary",
+            "arguments": {}
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "Here's an overview of the cryptographic asset estate:\n\n### General Overview\n- **Total Assets**: 219\n- **Quantum-Vulnerable**: 138\n- **Quantum-Safe**: 81\n- **Classically Broken**: 23\n- **Average HNDL (Confidentiality Risk)**: 0.1945\n- **Aver",
+        "error": null
+      },
+      {
+        "id": "show-drift",
+        "repeat": 0,
+        "decision": "list_drift",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1469,
+        "turn_ms": 10133,
+        "router": null,
+        "calls": [
+          {
+            "name": "list_drift",
+            "arguments": {
+              "limit": 10,
+              "severity": "critical"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "Here are the critical drift findings:\n\n1. **Rule D6**:  \n   - **Severity**: Critical  \n   - **Title**: Expired certificate still served  \n   - **Subject**: CN=mq-broker.tejomaya.internal, O=Tejomaya Bank, C=IN  \n   - **Declared**: Certifica",
+        "error": null
+      },
+      {
+        "id": "vendor-blocked",
+        "repeat": 0,
+        "decision": "list_vendor_gated",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1522,
+        "turn_ms": 7294,
+        "router": null,
+        "calls": [
+          {
+            "name": "list_vendor_gated",
+            "arguments": {}
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "The following assets are blocked on vendors due to the need for specific post-quantum mechanisms or firmware releases:\n\n### **Azure Key Vault (provider_gated)**\n- **Assets:**\n  1. **doc-encrypt-ec (Azure Key Vault)** - Algorithm: ECDSA, Dea",
+        "error": null
+      },
+      {
+        "id": "providers-roadmap",
+        "repeat": 0,
+        "decision": "none",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 2851,
+        "turn_ms": 2851,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "To determine which HSM vendors or cloud providers we need a PQC roadmap from, we need to identify the assets that are currently blocked on a vendor firmware release. This can be done by first listing the assets that are blocked on a vendor ",
+        "error": null
+      },
+      {
+        "id": "what-changed",
+        "repeat": 0,
+        "decision": "compare_scans",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1762,
+        "turn_ms": 3016,
+        "router": null,
+        "calls": [
+          {
+            "name": "compare_scans",
+            "arguments": {
+              "from": "2026-09-24T14:57:19+00:00",
+              "to": "2026-09-24T14:57:19+00:00"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "I cannot proceed with comparing scans since the last scan was not found. Please run at least two scans or provide the scan IDs from the Scans list to continue.",
+        "error": null
+      },
+      {
+        "id": "verify-manifest",
+        "repeat": 0,
+        "decision": "verify_manifest",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1306,
+        "turn_ms": 4867,
+        "router": null,
+        "calls": [
+          {
+            "name": "verify_manifest",
+            "arguments": {}
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "The signed manifest is valid, with the following details:\n\n- **Algorithm**: ML-DSA-65  \n- **Signature Verified**: Yes  \n- **Key Trusted**: Yes  \n- **CBOM Matches Current Scan**: Yes  \n- **Scan ID**: `70bfffe3-269e-4fe4-8f4f-ba0052315375`  \n",
+        "error": null
+      },
+      {
+        "id": "audit-tamper",
+        "repeat": 0,
+        "decision": "none",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 1234,
+        "turn_ms": 1234,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "<tool>\n{\"name\": \"verify_manifest\", \"arguments\": {}}\n</tool>",
+        "error": null
+      },
+      {
+        "id": "rescan-configs",
+        "repeat": 0,
+        "decision": "run_scan",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1326,
+        "turn_ms": 3371,
+        "router": null,
+        "calls": [
+          {
+            "name": "run_scan",
+            "arguments": {
+              "surfaces": [
+                "config"
+              ],
+              "targets": []
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "The scan of the configuration files has been completed successfully. Here are the key findings:\n\n- **Quantum Vulnerable Assets**: 20 assets are currently quantum-vulnerable.\n- **Drift**: No conflicts were detected between the declared polic",
+        "error": null
+      },
+      {
+        "id": "policy-violated",
+        "repeat": 0,
+        "decision": "none",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 3091,
+        "turn_ms": 3091,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "To determine if the declared TLS policy is being violated, we need to examine the asset's TLS policy inputs and its current status. This involves checking the asset's policy inputs (x_c, x_i, y, s, e, c), its current risk level, and whether",
+        "error": null
+      },
+      {
+        "id": "double-check",
+        "repeat": 0,
+        "decision": "list_flagged",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1653,
+        "turn_ms": 7402,
+        "router": null,
+        "calls": [
+          {
+            "name": "list_flagged",
+            "arguments": {
+              "limit": 10
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "The findings that should be double-checked first are the 16 flagged assets. These assets are ranked based on their evidence confidence and are currently flagged due to thin or conflicting evidence. They are the most critical to validate for",
+        "error": null
+      },
+      {
+        "id": "sure-signing-key",
+        "repeat": 0,
+        "decision": "none",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 1241,
+        "turn_ms": 1241,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "I am not able to provide a certainty rating for the signing.key finding. The scores are derived from an expert-elicitation process and are reported as bands, not absolute values. The ordering of assets is the defensible claim, and the absol",
+        "error": null
+      },
+      {
+        "id": "migrate-first",
+        "repeat": 0,
+        "decision": "none",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 3598,
+        "turn_ms": 3598,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "To determine what should be migrated first, we need to consider the following factors:\n\n1. **Risk Levels**: Assets with higher HNDL (confidentiality risk) or TNFL (integrity risk should be migrated later, as delaying them increases the risk",
+        "error": null
+      },
+      {
+        "id": "blast-signing-key",
+        "repeat": 0,
+        "decision": "none",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 5139,
+        "turn_ms": 5140,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The rotation of a key in a signing key is a critical operation that can have significant implications for the security and integrity of the cryptographic system. Here's what could break if we rotate the key in `signing.key`:\n\n### 1. **Loss ",
+        "error": null
+      },
+      {
+        "id": "biggest-hub",
+        "repeat": 0,
+        "decision": "list_most_depended_on",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1015,
+        "turn_ms": 3015,
+        "router": null,
+        "calls": [
+          {
+            "name": "list_most_depended_on",
+            "arguments": {
+              "limit": 20
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "The biggest dependency hub in the estate is **\"vault-ks--opt-tomcat-conf-keystore-jks-tejomaya-root-g3\"**, which has the highest number of transitive dependents at **53**.\n\nThis asset is a **critical root certificate authority** with a **QI",
+        "error": null
+      },
+      {
+        "id": "open-inventory",
+        "repeat": 0,
+        "decision": "open_page",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1043,
+        "turn_ms": 3199,
+        "router": null,
+        "calls": [
+          {
+            "name": "open_page",
+            "arguments": {
+              "page": "inventory",
+              "focus_asset_id": "root-ca"
+            }
+          },
+          {
+            "name": "list_assets",
+            "arguments": {
+              "query": "root-ca"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 3,
+        "answer": "The list_assets call did not find any assets matching \"root-ca\". Please provide the exact asset ID or full name to proceed.",
+        "error": null
+      },
+      {
+        "id": "what-are-you",
+        "repeat": 0,
+        "decision": "none",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1612,
+        "turn_ms": 1612,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "I am a migration analyst embedded in the VERA dashboard. I help determine which cryptographic assets in an estate should be migrated first, why they rank the way they do, what depends on what, and where they stand against their statutory d",
+        "error": null
+      },
+      {
+        "id": "hello",
+        "repeat": 0,
+        "decision": "none",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1016,
+        "turn_ms": 1017,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "Hello! I'm VERA, your post-quantum cryptography migration analyst. How can I assist you today?",
+        "error": null
+      },
+      {
+        "id": "ambiguous-cardvault",
+        "repeat": 0,
+        "decision": "preview_migration",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 1127,
+        "turn_ms": 2295,
+        "router": null,
+        "calls": [
+          {
+            "name": "preview_migration",
+            "arguments": {
+              "asset_id": "CardVault.java",
+              "strategy": "pqc_only",
+              "target": ""
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "The asset \"CardVault.java\" does not exist in the current estate. Please provide the exact asset ID or full name, and I will preview the migration for you.",
+        "error": null
+      },
+      {
+        "id": "migrate-jar",
+        "repeat": 1,
+        "decision": "preview_migration",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 1212,
+        "turn_ms": 2367,
+        "router": null,
+        "calls": [
+          {
+            "name": "preview_migration",
+            "arguments": {
+              "asset_id": "payments-gateway.jar",
+              "strategy": "pqc_only",
+              "target": "payments-gateway.jar"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "The asset \"payments-gateway.jar\" does not exist in the current estate. Please provide the exact asset ID or full name, and I will preview the migration for you.",
+        "error": null
+      },
+      {
+        "id": "migrate-signing-key",
+        "repeat": 1,
+        "decision": "preview_migration",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 1516,
+        "turn_ms": 3458,
+        "router": null,
+        "calls": [
+          {
+            "name": "preview_migration",
+            "arguments": {
+              "asset_id": "signing.key",
+              "strategy": "hybrid",
+              "target": "hybrid"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "The migration of \"signing.key\" to the hybrid strategy has been previewed. Here are the key details:\n\n- **Asset Affected**: \"Embedded EC private key in signing.key\"  \n- **Strategy**: Hybrid  \n- **Target**: Hybrid  \n- **QIRS Before Migration*",
+        "error": null
+      },
+      {
+        "id": "upgrade-jwt",
+        "repeat": 1,
+        "decision": "none",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 1561,
+        "turn_ms": 1561,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "I cannot perform code-level operations such as upgrading JavaScript files. My capabilities are limited to analyzing cryptographic assets in an estate, recommending migrations, and providing insights into their risk profiles and deadlines. I",
+        "error": null
+      },
+      {
+        "id": "why-jar",
+        "repeat": 1,
+        "decision": "none",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 2238,
+        "turn_ms": 2239,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The RSA algorithm is ranked high in the payments-gateway.jar asset due to its strong cryptographic properties and widespread adoption in secure communication. However, it is considered quantum-vulnerable, as it is not post-quantum secure. T",
+        "error": null
+      },
+      {
+        "id": "explain-reconcile",
+        "repeat": 1,
+        "decision": "none",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 2626,
+        "turn_ms": 2626,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "I cannot explain the `rsa.generate_private_key` function directly, as it is not part of the tools available to me. However, I can guide you on how to explain such a function in the context of post-quantum cryptography migration analysis.\n\nI",
+        "error": null
+      },
+      {
+        "id": "explain-top",
+        "repeat": 1,
+        "decision": "get_estate_summary",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 1388,
+        "turn_ms": 5987,
+        "router": null,
+        "calls": [
+          {
+            "name": "get_estate_summary",
+            "arguments": {
+              "limit": 10
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "The top-ranked asset in the estate is **\"tejomaya-root-g3 (JKS)\"**, which is a root certificate authority with a high risk level. This asset is ranked highly due to its critical role in the cryptographic infrastructure and its long-term val",
+        "error": null
+      },
+      {
+        "id": "mosca-signing-key",
+        "repeat": 1,
+        "decision": "explain_mosca",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1419,
+        "turn_ms": 6499,
+        "router": null,
+        "calls": [
+          {
+            "name": "explain_mosca",
+            "arguments": {
+              "asset_id": "signing.key"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "The Mosca reading for **signing.key** provides insight into the confidentiality and integrity risks associated with the asset. Here's a breakdown:\n\n### **Confidentiality (X-axis)**\n- **X_confidentiality_years**: 20.0  \n  - The asset is expo",
+        "error": null
+      },
+      {
+        "id": "when-jwt",
+        "repeat": 1,
+        "decision": "none",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 2763,
+        "turn_ms": 2764,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The JWT signing mechanism in `auth.ts` becomes vulnerable when the underlying cryptographic algorithm is no longer secure against quantum computer attacks. This depends on the specific algorithm used and the timeline for post-quantum crypto",
+        "error": null
+      },
+      {
+        "id": "recommend-jar",
+        "repeat": 1,
+        "decision": "recommend",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 1371,
+        "turn_ms": 2752,
+        "router": null,
+        "calls": [
+          {
+            "name": "recommend",
+            "arguments": {
+              "asset_id": "payments-gateway.jar",
+              "profile": "commercial"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "The asset \"payments-gateway.jar\" was not found in the estate. To proceed, call the `list_assets` function to retrieve the exact asset ID for the payments gateway before recommending a replacement. Once you have the correct asset ID, use it ",
+        "error": null
+      },
+      {
+        "id": "preview-lib-rs",
+        "repeat": 1,
+        "decision": "preview_migration",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 1538,
+        "turn_ms": 2787,
+        "router": null,
+        "calls": [
+          {
+            "name": "preview_migration",
+            "arguments": {
+              "asset_id": "ECDSA in lib.rs",
+              "strategy": "hybrid",
+              "target": "lib.rs"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "The preview migration request could not find an asset with the specified ID: \"ECDSA in lib.rs\". Please ensure that the asset ID is correct and try again. If the ID is accurate, the issue may be related to the asset not being fully recognize",
+        "error": null
+      },
+      {
+        "id": "migrate-200",
+        "repeat": 1,
+        "decision": "list_assets",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 1435,
+        "turn_ms": 2842,
+        "router": null,
+        "calls": [
+          {
+            "name": "list_assets",
+            "arguments": {
+              "risk_level": "all",
+              "query": "200"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "The list of assets matching the query returned no results. This could be due to the query parameters not being correctly specified or the assets not being available in the current dataset. If you would like to refine the search or check for",
+        "error": null
+      },
+      {
+        "id": "count-assets",
+        "repeat": 1,
+        "decision": "get_estate_summary",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1323,
+        "turn_ms": 8514,
+        "router": null,
+        "calls": [
+          {
+            "name": "get_estate_summary",
+            "arguments": {
+              "limit": 1
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "We have **219 assets** in our estate. Here's a breakdown:\n\n- **Quantum-vulnerable assets**: 138\n- **Quantum-safe assets**: 81\n- **Classically broken assets**: 23\n- **Total assets**: 219\n\n### Key Statistics:\n- **Average HNDL (Confidentiality",
+        "error": null
+      },
+      {
+        "id": "overview",
+        "repeat": 1,
+        "decision": "get_estate_summary",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1418,
+        "turn_ms": 8470,
+        "router": null,
+        "calls": [
+          {
+            "name": "get_estate_summary",
+            "arguments": {}
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "Here's an overview of the cryptographic asset estate:\n\n### General Overview\n- **Total Assets**: 219\n- **Quantum-Vulnerable**: 138\n- **Quantum-Safe**: 81\n- **Classically Broken**: 23\n- **Average HNDL (Confidentiality Risk)**: 0.1945\n- **Aver",
+        "error": null
+      },
+      {
+        "id": "show-drift",
+        "repeat": 1,
+        "decision": "list_drift",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1376,
+        "turn_ms": 3875,
+        "router": null,
+        "calls": [
+          {
+            "name": "list_drift",
+            "arguments": {
+              "limit": 10,
+              "severity": "critical"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "Here are the critical drift findings:\n\n1. **Rule D6**:  \n   - **Severity**: Critical  \n   - **Title**: Expired certificate still served  \n   - **Description**: The certificate for `mq-broker.tejomaya.internal` expired on 2026-09-19, but it ",
+        "error": null
+      },
+      {
+        "id": "vendor-blocked",
+        "repeat": 1,
+        "decision": "list_vendor_gated",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 2020,
+        "turn_ms": 7222,
+        "router": null,
+        "calls": [
+          {
+            "name": "list_vendor_gated",
+            "arguments": {}
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "The assets that are **blocked on vendors** are those that cannot be migrated until a post-quantum mechanism is available from a vendor. These assets are **vendor-gated**, and they are **blocked** until the required mechanism is shipped by t",
+        "error": null
+      },
+      {
+        "id": "providers-roadmap",
+        "repeat": 1,
+        "decision": "list_vendor_gated",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1456,
+        "turn_ms": 6192,
+        "router": null,
+        "calls": [
+          {
+            "name": "list_vendor_gated",
+            "arguments": {
+              "limit": 10
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "We need a PQC roadmap from the following vendors and cloud providers:\n\n### **Azure Key Vault**\n- **Action**: Ask Azure Key Vault for a post-quantum signing key type and a date.\n- **Capabilities Needed**: ML-DSA-65\n- **Earliest Deadline**: 2",
+        "error": null
+      },
+      {
+        "id": "what-changed",
+        "repeat": 1,
+        "decision": "compare_scans",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1760,
+        "turn_ms": 3173,
+        "router": null,
+        "calls": [
+          {
+            "name": "compare_scans",
+            "arguments": {
+              "from": "2026-09-24T15:00:25+00:00",
+              "to": "2026-09-24T15:00:25+00:00"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "The scan with the ID \"2026-09-24T15:00:25+00:00\" could not be found. To proceed, run at least two scans or use scan IDs from the Scans list to compare the latest scan with a previous one.",
+        "error": null
+      },
+      {
+        "id": "verify-manifest",
+        "repeat": 1,
+        "decision": "verify_manifest",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1241,
+        "turn_ms": 3215,
+        "router": null,
+        "calls": [
+          {
+            "name": "verify_manifest",
+            "arguments": {}
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "The signed manifest is valid, with the following details:\n\n- **Algorithm**: ML-DSA-65  \n- **Signature Verified**: Yes  \n- **Key Trusted**: Yes  \n- **CBOM Matches Current Scan**: Yes  \n- **Scan ID**: `f3cabbe0-dced-45e7-9300-d4d44e19202b`  \n",
+        "error": null
+      },
+      {
+        "id": "audit-tamper",
+        "repeat": 1,
+        "decision": "none",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 1393,
+        "turn_ms": 1394,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "<tool>\n{\"name\": \"verify_manifest\", \"arguments\": {}}\n</tool>",
+        "error": null
+      },
+      {
+        "id": "rescan-configs",
+        "repeat": 1,
+        "decision": "run_scan",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1316,
+        "turn_ms": 3325,
+        "router": null,
+        "calls": [
+          {
+            "name": "run_scan",
+            "arguments": {
+              "surfaces": [
+                "config"
+              ]
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "The scan of the configuration files has been completed successfully. Here are the key findings:\n\n- **Total assets scanned:** 39  \n- **Quantum-vulnerable assets:** 20  \n- **Drift detected:** 0  \n- **Cross-plane assets:** 0  \n\nThe scan did no",
+        "error": null
+      },
+      {
+        "id": "policy-violated",
+        "repeat": 1,
+        "decision": "list_drift",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1809,
+        "turn_ms": 3668,
+        "router": null,
+        "calls": [
+          {
+            "name": "list_drift",
+            "arguments": {
+              "limit": 10,
+              "rule": "D1",
+              "severity": "critical"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "The declared TLS policy is being violated in several instances. Specifically, there is a violation in rule D1, D2, D3, D5, D8, and D7. These violations are critical or high severity, indicating that the TLS policies are not being properly i",
+        "error": null
+      },
+      {
+        "id": "double-check",
+        "repeat": 1,
+        "decision": "list_flagged",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1533,
+        "turn_ms": 7340,
+        "router": null,
+        "calls": [
+          {
+            "name": "list_flagged",
+            "arguments": {
+              "limit": 10
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "The findings that should be double-checked first are the 16 flagged assets, which are still ranked in the estate and have evidence that is either thin or inconsistent across sensors. These assets are critical to ensure the integrity and rel",
+        "error": null
+      },
+      {
+        "id": "sure-signing-key",
+        "repeat": 1,
+        "decision": "none",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 1857,
+        "turn_ms": 1857,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "I am not able to provide a definitive certainty about the \"signing.key\" finding, as that information is not directly accessible through the tools provided. However, I can guide you through the process of verifying the findings using the ava",
+        "error": null
+      },
+      {
+        "id": "migrate-first",
+        "repeat": 1,
+        "decision": "none",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 3094,
+        "turn_ms": 3094,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "To determine what should be migrated first, we need to consider several factors, including the risk levels of the assets, their deadlines, dependencies, and the potential impact of migrating them. Here's a structured approach:\n\n1. **Risk As",
+        "error": null
+      },
+      {
+        "id": "blast-signing-key",
+        "repeat": 1,
+        "decision": "none",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 2389,
+        "turn_ms": 2390,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The rotation of the signing.key would break any cryptographic operations that rely on this key for signing data or establishing trust. Specifically, it would affect:\n\n1. **Trust Establishment**: If the signing.key is used to sign trust anch",
+        "error": null
+      },
+      {
+        "id": "biggest-hub",
+        "repeat": 1,
+        "decision": "list_most_depended_on",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1009,
+        "turn_ms": 3643,
+        "router": null,
+        "calls": [
+          {
+            "name": "list_most_depended_on",
+            "arguments": {
+              "limit": 20
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "The biggest dependency hub in the estate is **\"vault-ks--opt-tomcat-conf-keystore-jks-tejomaya-root-g3\"**, which has the highest number of transitive dependents at **53**.\n\n### Key Details:\n- **Asset ID**: `vault-ks--opt-tomcat-conf-keystor",
+        "error": null
+      },
+      {
+        "id": "open-inventory",
+        "repeat": 1,
+        "decision": "open_page",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1063,
+        "turn_ms": 6048,
+        "router": null,
+        "calls": [
+          {
+            "name": "open_page",
+            "arguments": {
+              "page": "inventory",
+              "focus_asset_id": "root-ca"
+            }
+          },
+          {
+            "name": "list_assets",
+            "arguments": {
+              "limit": 10
+            }
+          },
+          {
+            "name": "open_page",
+            "arguments": {
+              "focus_asset_id": "878f5912-e689-a216-70bd-04eba6edf215",
+              "page": "inventory"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 4,
+        "answer": "You are now looking at the **inventory** page, which displays a list of all assets in your estate, ranked by their risk levels (from highest to lowest). Each asset shows its current score, risk exposure, migration status, and other relevant",
+        "error": null
+      },
+      {
+        "id": "what-are-you",
+        "repeat": 1,
+        "decision": "none",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1463,
+        "turn_ms": 1463,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "I am a migration analyst embedded in the VERA dashboard. I help determine which assets to migrate first, why they rank the way they do, what depends on what, and where an asset stands against its statutory deadline. I do not compute the sc",
+        "error": null
+      },
+      {
+        "id": "hello",
+        "repeat": 1,
+        "decision": "none",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1004,
+        "turn_ms": 1005,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "Hello! I'm VERA, your post-quantum cryptography migration analyst. How can I assist you today?",
+        "error": null
+      },
+      {
+        "id": "ambiguous-cardvault",
+        "repeat": 1,
+        "decision": "preview_migration",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 1122,
+        "turn_ms": 2342,
+        "router": null,
+        "calls": [
+          {
+            "name": "preview_migration",
+            "arguments": {
+              "asset_id": "CardVault.java",
+              "strategy": "pqc_only",
+              "target": "CardVault.java"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "The asset `CardVault.java` does not exist in the current estate. Please provide the exact asset ID or full name, and I will preview the migration for you.",
+        "error": null
+      },
+      {
+        "id": "migrate-jar",
+        "repeat": 2,
+        "decision": "preview_migration",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 1190,
+        "turn_ms": 2341,
+        "router": null,
+        "calls": [
+          {
+            "name": "preview_migration",
+            "arguments": {
+              "asset_id": "payments-gateway.jar",
+              "strategy": "pqc_only",
+              "target": "payments-gateway.jar"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "The asset `payments-gateway.jar` could not be found in the estate. Please provide the exact asset ID or full name, and I will preview the migration for you.",
+        "error": null
+      },
+      {
+        "id": "migrate-signing-key",
+        "repeat": 2,
+        "decision": "preview_migration",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 1482,
+        "turn_ms": 3543,
+        "router": null,
+        "calls": [
+          {
+            "name": "preview_migration",
+            "arguments": {
+              "target": "hybrid",
+              "asset_id": "signing.key",
+              "strategy": "hybrid"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "The migration of \"signing.key\" to the hybrid strategy has been previewed successfully. Here are the key details:\n\n- **Asset Affected**: \"Embedded EC private key in signing.key\"\n- **Strategy Used**: \"hybrid\"\n- **Target Algorithm**: \"ML-KEM-7",
+        "error": null
+      },
+      {
+        "id": "upgrade-jwt",
+        "repeat": 2,
+        "decision": "none",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 1800,
+        "turn_ms": 1800,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The task of upgrading `jwt.sign` in `auth.ts` to use the ML-DSA algorithm is not within the scope of the VERA system. VERA is focused on post-quantum cryptography migration analysis, not on modifying application code or cryptographic libr",
+        "error": null
+      },
+      {
+        "id": "why-jar",
+        "repeat": 2,
+        "decision": "none",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 2106,
+        "turn_ms": 2107,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The RSA algorithm is ranked high in the payments-gateway.jar asset due to its strong integrity risk (TNFL) and relatively short exposure horizon (x_c + y). RSA is a widely used cryptographic algorithm in payment systems, and its use in a cr",
+        "error": null
+      },
+      {
+        "id": "explain-reconcile",
+        "repeat": 2,
+        "decision": "list_assets",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 1527,
+        "turn_ms": 7010,
+        "router": null,
+        "calls": [
+          {
+            "name": "list_assets",
+            "arguments": {
+              "query": "RSA",
+              "risk_level": "high"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "The RSA algorithm is a widely used public-key cryptosystem, and in the context of the provided assets, several RSA-based certificates and configurations are identified as quantum-vulnerable. These assets are ranked based on their confidenti",
+        "error": null
+      },
+      {
+        "id": "explain-top",
+        "repeat": 2,
+        "decision": "get_axis_extremes",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 1399,
+        "turn_ms": 5167,
+        "router": null,
+        "calls": [
+          {
+            "name": "get_axis_extremes",
+            "arguments": {
+              "count": 5
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "The top-ranked asset on the **HNDL (Confidentiality Risk)** axis is **\"upi-switch.tejomaya.internal\"** with a score of **0.783924**. This asset is a **TLS server certificate** that is **not quantum-vulnerable** and is used for **ephemeral k",
+        "error": null
+      },
+      {
+        "id": "mosca-signing-key",
+        "repeat": 2,
+        "decision": "explain_mosca",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1414,
+        "turn_ms": 6094,
+        "router": null,
+        "calls": [
+          {
+            "name": "explain_mosca",
+            "arguments": {
+              "asset_id": "signing.key"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "The Mosca reading for **signing.key** provides insight into the confidentiality and integrity risks associated with the asset. Here's a breakdown:\n\n### **Confidentiality (X-axis)**\n- **X_confidentiality_years**: 20.0  \n  - The asset is expo",
+        "error": null
+      },
+      {
+        "id": "when-jwt",
+        "repeat": 2,
+        "decision": "none",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 2374,
+        "turn_ms": 2374,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The JWT signing mechanism in `auth.ts` becomes vulnerable when the underlying cryptographic algorithm is no longer secure against quantum computer attacks. This depends on the specific algorithm used and the timeline for post-quantum crypto",
+        "error": null
+      },
+      {
+        "id": "recommend-jar",
+        "repeat": 2,
+        "decision": "recommend",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 1458,
+        "turn_ms": 7199,
+        "router": null,
+        "calls": [
+          {
+            "name": "recommend",
+            "arguments": {
+              "asset_id": "payments-gateway.jar",
+              "profile": "commercial"
+            }
+          },
+          {
+            "name": "list_assets",
+            "arguments": {
+              "limit": 10
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 3,
+        "answer": "The recommended replacement for the RSA in the payments-gateway.jar is **ECDSA** with the following details:\n\n- **Target Algorithm**: ECDSA\n- **Alternatives**: \n  - ECDSA (as shown in the asset)\n  - Other ECDSA variants (e.g., ECDSA256, ECD",
+        "error": null
+      },
+      {
+        "id": "preview-lib-rs",
+        "repeat": 2,
+        "decision": "preview_migration",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 1641,
+        "turn_ms": 3097,
+        "router": null,
+        "calls": [
+          {
+            "name": "preview_migration",
+            "arguments": {
+              "asset_id": "ECDSA in lib.rs",
+              "strategy": "hybrid",
+              "target": "lib.rs"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "The preview migration request could not find an asset with the specified ID: \"ECDSA in lib.rs\". Please ensure that the asset ID is correct and try again. If the ID is accurate, the issue may be due to the asset not being fully registered or",
+        "error": null
+      },
+      {
+        "id": "migrate-200",
+        "repeat": 2,
+        "decision": "list_flagged",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 1400,
+        "turn_ms": 4389,
+        "router": null,
+        "calls": [
+          {
+            "name": "list_flagged",
+            "arguments": {
+              "limit": 10
+            }
+          },
+          {
+            "name": "preview_migration",
+            "arguments": {
+              "asset_id": "903b717a-6220-b3e6-b3d4-ec6a42ddb322",
+              "strategy": "hybrid",
+              "target": "ledgerd"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 3,
+        "answer": "The asset **DES in ledgerd** is not quantum-vulnerable, and there is nothing to migrate. Therefore, it cannot be moved, as there are no cryptographic algorithms to replace. This asset remains in its current state, and no migration is applic",
+        "error": null
+      },
+      {
+        "id": "count-assets",
+        "repeat": 2,
+        "decision": "get_estate_summary",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1381,
+        "turn_ms": 5378,
+        "router": null,
+        "calls": [
+          {
+            "name": "get_estate_summary",
+            "arguments": {
+              "limit": 1
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "We have **219 assets** in our estate. Here's a breakdown:\n\n- **Quantum-vulnerable assets**: 138  \n- **Quantum-safe assets**: 81  \n- **Classically broken assets**: 23  \n\n### Key metrics:\n- **Average HNDL (Confidentiality Risk)**: 0.1945  \n- ",
+        "error": null
+      },
+      {
+        "id": "overview",
+        "repeat": 2,
+        "decision": "get_estate_summary",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1384,
+        "turn_ms": 9892,
+        "router": null,
+        "calls": [
+          {
+            "name": "get_estate_summary",
+            "arguments": {}
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "Here's an overview of the cryptographic asset estate:\n\n### Total Assets\n- **Total assets**: 219\n- **Quantum-vulnerable**: 138\n- **Quantum-safe**: 81\n- **Classically broken**: 23\n\n### Risk Metrics\n- **Average HNDL (Confidentiality Risk)**: 0",
+        "error": null
+      },
+      {
+        "id": "show-drift",
+        "repeat": 2,
+        "decision": "list_drift",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1565,
+        "turn_ms": 11647,
+        "router": null,
+        "calls": [
+          {
+            "name": "list_drift",
+            "arguments": {
+              "limit": 10,
+              "severity": "critical"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "Here are the critical drift findings:\n\n1. **Rule D6**:  \n   - **Severity**: Critical  \n   - **Title**: Expired certificate still served  \n   - **Subject**: CN=mq-broker.tejomaya.internal, O=Tejomaya Bank, C=IN  \n   - **Declared**: Certifica",
+        "error": null
+      },
+      {
+        "id": "vendor-blocked",
+        "repeat": 2,
+        "decision": "list_vendor_gated",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1570,
+        "turn_ms": 6428,
+        "router": null,
+        "calls": [
+          {
+            "name": "list_vendor_gated",
+            "arguments": {}
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "The assets that are blocked due to vendor constraints are those that cannot be migrated until a specific vendor firmware or cloud provider ships a post-quantum mechanism. Here's a summary of the gated assets:\n\n### Gated Assets by Vendor\n1. ",
+        "error": null
+      },
+      {
+        "id": "providers-roadmap",
+        "repeat": 2,
+        "decision": "list_vendor_gated",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1589,
+        "turn_ms": 6238,
+        "router": null,
+        "calls": [
+          {
+            "name": "list_vendor_gated",
+            "arguments": {}
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "We need a PQC roadmap from the following vendors and cloud providers:\n\n### **Azure Key Vault**\n- **Action**: Ask Azure Key Vault for a post-quantum signing key type and a date.\n- **Capabilities Needed**: ML-DSA-65\n- **Earliest Deadline**: 2",
+        "error": null
+      },
+      {
+        "id": "what-changed",
+        "repeat": 2,
+        "decision": "compare_scans",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1753,
+        "turn_ms": 3179,
+        "router": null,
+        "calls": [
+          {
+            "name": "compare_scans",
+            "arguments": {
+              "from": "2026-09-24T15:04:33+00:00",
+              "to": "2026-09-24T15:04:33+00:00"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "The scan with the ID \"2026-09-24T15:04:33+00:00\" could not be found. To proceed, I need the ID of the previous scan to compare changes between them. Please provide the scan ID of the scan that occurred before the last one, and I will invest",
+        "error": null
+      },
+      {
+        "id": "verify-manifest",
+        "repeat": 2,
+        "decision": "verify_manifest",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1318,
+        "turn_ms": 3443,
+        "router": null,
+        "calls": [
+          {
+            "name": "verify_manifest",
+            "arguments": {}
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "The signed manifest is valid, with the following details:\n\n- **Algorithm**: ML-DSA-65  \n- **Signature Verified**: Yes  \n- **Key Trusted**: Yes  \n- **CBOM Matches Current Scan**: Yes  \n- **Scan ID**: `0a29efa2-cc48-4fa4-9b62-b86a6a8111d9`  \n",
+        "error": null
+      },
+      {
+        "id": "audit-tamper",
+        "repeat": 2,
+        "decision": "verify_manifest",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1302,
+        "turn_ms": 2753,
+        "router": null,
+        "calls": [
+          {
+            "name": "verify_manifest",
+            "arguments": {}
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "The audit log has not been tampered with. The verification shows that the manifest is valid, with a signature verified and the CBOM matches the current scan. The audit chain is also intact, with 146 entries, indicating that the log is trust",
+        "error": null
+      },
+      {
+        "id": "rescan-configs",
+        "repeat": 2,
+        "decision": "run_scan",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1300,
+        "turn_ms": 3311,
+        "router": null,
+        "calls": [
+          {
+            "name": "run_scan",
+            "arguments": {
+              "surfaces": [
+                "config"
+              ]
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "The scan of the configuration files has been successfully completed. Here are the key findings:\n\n- **Total assets scanned**: 39  \n- **Quantum-vulnerable assets**: 20  \n- **Drift detected**: 0  \n- **Cross-plane assets**: 0  \n\nThe scan did no",
+        "error": null
+      },
+      {
+        "id": "policy-violated",
+        "repeat": 2,
+        "decision": "none",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 2507,
+        "turn_ms": 2507,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The declared TLS policy may be violated if there are assets that are not compliant with the stated policy, such as those that are not using post-quantum cryptographic algorithms or are not properly configured to support the required TLS ver",
+        "error": null
+      },
+      {
+        "id": "double-check",
+        "repeat": 2,
+        "decision": "list_flagged",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1531,
+        "turn_ms": 7033,
+        "router": null,
+        "calls": [
+          {
+            "name": "list_flagged",
+            "arguments": {
+              "limit": 10
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "The findings that should be double-checked first are the flagged assets, as they are ranked and have evidence that is either thin or inconsistent across sensors. These assets are critical to ensure the accuracy and reliability of the estate",
+        "error": null
+      },
+      {
+        "id": "sure-signing-key",
+        "repeat": 2,
+        "decision": "none",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 1448,
+        "turn_ms": 1448,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The finding about the signing.key is based on the evidence planes and readings behind it, its corroborated confidence, and the Mosca reading (X, Y, Z and the category). The confidence level is determined by the consistency of the evidence a",
+        "error": null
+      },
+      {
+        "id": "migrate-first",
+        "repeat": 2,
+        "decision": "none",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 3100,
+        "turn_ms": 3100,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "To determine what should be migrated first, we need to consider several factors, including the risk levels of the assets, their deadlines, dependencies, and the potential impact of migrating them. Here's a step-by-step approach:\n\n1. **Ident",
+        "error": null
+      },
+      {
+        "id": "blast-signing-key",
+        "repeat": 2,
+        "decision": "inspect_key",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 1061,
+        "turn_ms": 2118,
+        "router": null,
+        "calls": [
+          {
+            "name": "inspect_key",
+            "arguments": {
+              "asset_id": "sign.key"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "Call list_assets first to obtain the exact asset ID for \"sign.key\" before proceeding with any inspection or migration actions.",
+        "error": null
+      },
+      {
+        "id": "biggest-hub",
+        "repeat": 2,
+        "decision": "list_most_depended_on",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1074,
+        "turn_ms": 3065,
+        "router": null,
+        "calls": [
+          {
+            "name": "list_most_depended_on",
+            "arguments": {
+              "limit": 20
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "The biggest dependency hub in the estate is **\"vault-ks--opt-tomcat-conf-keystore-jks-tejomaya-root-g3\"**, which has the highest number of transitive dependents at **53**.\n\nThis asset is a **critical root certificate authority** with a **QI",
+        "error": null
+      },
+      {
+        "id": "open-inventory",
+        "repeat": 2,
+        "decision": "open_page",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1056,
+        "turn_ms": 5965,
+        "router": null,
+        "calls": [
+          {
+            "name": "open_page",
+            "arguments": {
+              "page": "inventory",
+              "focus_asset_id": "root-ca"
+            }
+          },
+          {
+            "name": "list_assets",
+            "arguments": {
+              "limit": 10
+            }
+          },
+          {
+            "name": "open_page",
+            "arguments": {
+              "focus_asset_id": "878f5912-e689-a216-70bd-04eba6edf215",
+              "page": "inventory"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 4,
+        "answer": "You are now looking at the **inventory** page, which lists all assets in the estate, ranked by their risk levels (from highest to lowest). Each asset shows its current status, risk profile, and any pending migrations. The ranking is based o",
+        "error": null
+      },
+      {
+        "id": "what-are-you",
+        "repeat": 2,
+        "decision": "none",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1552,
+        "turn_ms": 1552,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "I am a migration analyst embedded in the VERA dashboard. I help determine which cryptographic assets in an estate should be migrated first, why they rank the way they do, what depends on what, and where they stand against their statutory d",
+        "error": null
+      },
+      {
+        "id": "hello",
+        "repeat": 2,
+        "decision": "none",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1039,
+        "turn_ms": 1039,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "Hello! I'm VERA, your post-quantum cryptography migration analyst. How can I assist you today?",
+        "error": null
+      },
+      {
+        "id": "ambiguous-cardvault",
+        "repeat": 2,
+        "decision": "preview_migration",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 1175,
+        "turn_ms": 2378,
+        "router": null,
+        "calls": [
+          {
+            "name": "preview_migration",
+            "arguments": {
+              "asset_id": "CardVault.java",
+              "strategy": "pqc_only",
+              "target": "CardVault.pqc"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "The asset `CardVault.java` does not exist in the current estate. Please provide the exact asset ID or full name, or use `list_assets` to search for the asset before proceeding with a migration.",
+        "error": null
+      }
+    ],
+    "router_llm": [
+      {
+        "id": "migrate-jar",
+        "repeat": 0,
+        "decision": "migrate_asset",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 15,
+        "turn_ms": 2395,
+        "router": {
+          "kind": "tool",
+          "rule": "migrate.asset",
+          "tool": "migrate_asset"
+        },
+        "calls": [
+          {
+            "name": "migrate_asset",
+            "arguments": {
+              "strategy": "hybrid",
+              "asset_id": "342f772d-2ff1-1801-728c-7e17e194919e"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The RSA algorithm in `payments-gateway.jar` is being migrated to a post-quantum equivalent, specifically `ML-KEM-768`. This migration is scheduled for the next available window, and it will reduce the confidentiality risk (HNDL) while maint",
+        "error": null
+      },
+      {
+        "id": "migrate-signing-key",
+        "repeat": 0,
+        "decision": "migrate_asset",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 16,
+        "turn_ms": 2846,
+        "router": {
+          "kind": "tool",
+          "rule": "migrate.asset",
+          "tool": "migrate_asset"
+        },
+        "calls": [
+          {
+            "name": "migrate_asset",
+            "arguments": {
+              "strategy": "hybrid",
+              "asset_id": "be46ce4b-8d6a-10ea-7a59-076927176762"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The migration of the asset **\"Embedded EC private key in signing.key\"** to the **hybrid strategy** has been proposed and is now queued for human approval. Here's what the migration entails:\n\n- **Asset Affected**: \"Embedded EC private key in",
+        "error": null
+      },
+      {
+        "id": "upgrade-jwt",
+        "repeat": 0,
+        "decision": "migrate_asset",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 14,
+        "turn_ms": 2132,
+        "router": {
+          "kind": "tool",
+          "rule": "migrate.asset",
+          "tool": "migrate_asset"
+        },
+        "calls": [
+          {
+            "name": "migrate_asset",
+            "arguments": {
+              "strategy": "hybrid",
+              "asset_id": "5c373289-3706-ac02-73f6-c25494645037"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The migration proposal for \"RSA via jwt.sign (auth.ts:6)\" has been queued for human approval. Here's what is being proposed:\n\n- **Asset Affected**: RSA via jwt.sign (auth.ts:6)\n- **Migration Strategy**: Hybrid (retains classical fallback)\n-",
+        "error": null
+      },
+      {
+        "id": "why-jar",
+        "repeat": 0,
+        "decision": "explain_asset",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 17,
+        "turn_ms": 8410,
+        "router": {
+          "kind": "tool",
+          "rule": "explain.asset",
+          "tool": "explain_asset"
+        },
+        "calls": [
+          {
+            "name": "explain_asset",
+            "arguments": {
+              "asset_id": "342f772d-2ff1-1801-728c-7e17e194919e"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "RSA in payments-gateway.jar is ranked high due to its **high confidentiality risk (H)** and **moderate integrity risk (T)**, which together contribute to a **QIRS score of 0.2544**. Here's why:\n\n### **Confidentiality Risk (H)**\n- **Formula*",
+        "error": null
+      },
+      {
+        "id": "explain-reconcile",
+        "repeat": 0,
+        "decision": "explain_asset",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 14,
+        "turn_ms": 5272,
+        "router": {
+          "kind": "tool",
+          "rule": "explain.asset",
+          "tool": "explain_asset"
+        },
+        "calls": [
+          {
+            "name": "explain_asset",
+            "arguments": {
+              "asset_id": "428bba90-0bc8-5813-e8e4-70bb2b4acf34"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "RSA via `rsa.generate_private_key` is a cryptographic API call that generates a private key for RSA encryption. It is hard-coded with specific algorithm choices, requiring a development, test, and release cycle, and often involves a library",
+        "error": null
+      },
+      {
+        "id": "explain-top",
+        "repeat": 0,
+        "decision": "explain_asset",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1,
+        "turn_ms": 6964,
+        "router": {
+          "kind": "tool",
+          "rule": "explain.asset",
+          "tool": "explain_asset"
+        },
+        "calls": [
+          {
+            "name": "explain_asset",
+            "arguments": {
+              "asset_id": "846f6add-c77a-9322-e14f-428f805dcf94"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The top-ranked asset, **ECDSA via EcdsaKeyPair::from_pkcs8 (lib.rs:10)**, is a cryptographic API call that hardcodes the use of **ECDSA-P-256**. This algorithm is vulnerable to quantum attacks due to the **Shor's algorithm** which can solve",
+        "error": null
+      },
+      {
+        "id": "mosca-signing-key",
+        "repeat": 0,
+        "decision": "explain_mosca",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 16,
+        "turn_ms": 6639,
+        "router": {
+          "kind": "tool",
+          "rule": "explain.mosca",
+          "tool": "explain_mosca"
+        },
+        "calls": [
+          {
+            "name": "explain_mosca",
+            "arguments": {
+              "asset_id": "be46ce4b-8d6a-10ea-7a59-076927176762"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The Mosca reading for the asset **\"Embedded EC private key in signing.key\"** provides a comprehensive view of its confidentiality and integrity risks, along with its exposure horizon and potential impact.\n\n### Key Details from the Mosca Rea",
+        "error": null
+      },
+      {
+        "id": "when-jwt",
+        "repeat": 0,
+        "decision": "explain_mosca",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 17,
+        "turn_ms": 3194,
+        "router": {
+          "kind": "tool",
+          "rule": "explain.mosca",
+          "tool": "explain_mosca"
+        },
+        "calls": [
+          {
+            "name": "explain_mosca",
+            "arguments": {
+              "asset_id": "5c373289-3706-ac02-73f6-c25494645037"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The `jwt.sign` method in `auth.ts` becomes vulnerable when the quantum computer's exposure horizon exceeds the migration window. \n\n### Key Details:\n- **Confidentiality Risk (HNDL):** The asset is exposed under every reading, meaning it is v",
+        "error": null
+      },
+      {
+        "id": "recommend-jar",
+        "repeat": 0,
+        "decision": "recommend",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 14,
+        "turn_ms": 4627,
+        "router": {
+          "kind": "tool",
+          "rule": "recommend.asset",
+          "tool": "recommend"
+        },
+        "calls": [
+          {
+            "name": "recommend",
+            "arguments": {
+              "asset_id": "342f772d-2ff1-1801-728c-7e17e194919e"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The recommended replacement for the RSA in payments-gateway.jar is **ML-KEM-768**, a lattice-based key-encapsulation mechanism that is quantum-safe and suitable for secure key transport.\n\n### Key Details:\n- **Algorithm**: ML-KEM-768\n- **Sys",
+        "error": null
+      },
+      {
+        "id": "preview-lib-rs",
+        "repeat": 0,
+        "decision": "preview_migration",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 15,
+        "turn_ms": 3066,
+        "router": {
+          "kind": "tool",
+          "rule": "preview.asset",
+          "tool": "preview_migration"
+        },
+        "calls": [
+          {
+            "name": "preview_migration",
+            "arguments": {
+              "asset_id": "846f6add-c77a-9322-e14f-428f805dcf94"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "Preview migration of \"ECDSA via EcdsaKeyPair::from_pkcs8 (lib.rs:10)\" would affect the following asset:\n\n- **Asset ID**: `846f6add-c77a-9322-e14f-428f805dcf94`\n- **Current Score**: 0.1831 (QIRS)\n- **Strategy**: Hybrid\n- **Target Algorithm**",
+        "error": null
+      },
+      {
+        "id": "migrate-200",
+        "repeat": 0,
+        "decision": "migrate_asset",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 0,
+        "turn_ms": 1806,
+        "router": {
+          "kind": "tool",
+          "rule": "migrate.estate",
+          "tool": "migrate_asset"
+        },
+        "calls": [
+          {
+            "name": "migrate_asset",
+            "arguments": {
+              "target": "",
+              "strategy": "hybrid"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The control plane limits single agent actions to 25 assets to prevent overloading. Since migrating 200 assets would exceed this limit, we need to narrow the target or increase the cap in the Settings. Let's narrow the target to a manageable",
+        "error": null
+      },
+      {
+        "id": "count-assets",
+        "repeat": 0,
+        "decision": "get_estate_summary",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 2,
+        "turn_ms": 7056,
+        "router": {
+          "kind": "tool",
+          "rule": "estate.summary",
+          "tool": "get_estate_summary"
+        },
+        "calls": [
+          {
+            "name": "get_estate_summary",
+            "arguments": {}
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "From the estate summary, we have **219 assets** in total. Here's a breakdown:\n\n- **Quantum-vulnerable assets**: 138\n- **Quantum-safe assets**: 81\n- **Classically broken assets**: 23\n\n### Key Metrics:\n- **Average HNDL (Confidentiality Risk)*",
+        "error": null
+      },
+      {
+        "id": "overview",
+        "repeat": 0,
+        "decision": "get_estate_summary",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 0,
+        "turn_ms": 7197,
+        "router": {
+          "kind": "tool",
+          "rule": "estate.summary",
+          "tool": "get_estate_summary"
+        },
+        "calls": [
+          {
+            "name": "get_estate_summary",
+            "arguments": {}
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "Here's an overview of the cryptographic asset estate in the Banking sector as of September 24, 2026:\n\n### Total Assets:\n- **Total assets**: 219\n- **Quantum-vulnerable**: 138\n- **Quantum-safe**: 81\n- **Classically broken**: 23\n\n### Risk Metr",
+        "error": null
+      },
+      {
+        "id": "show-drift",
+        "repeat": 0,
+        "decision": "list_drift",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 0,
+        "turn_ms": 11820,
+        "router": {
+          "kind": "tool",
+          "rule": "drift.list",
+          "tool": "list_drift"
+        },
+        "calls": [
+          {
+            "name": "list_drift",
+            "arguments": {}
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "Here are the drift findings:\n\n### Summary\n- **Total Drift Records**: 9\n- **Severity Levels**: Critical (1), High (6), Medium (2)\n- **Rules Involved**: D1, D2, D3, D4, D5, D6, D7, D8\n\n### Detailed Drift Findings\n\n1. **D6 - Expired Certificat",
+        "error": null
+      },
+      {
+        "id": "vendor-blocked",
+        "repeat": 0,
+        "decision": "list_vendor_gated",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 0,
+        "turn_ms": 5343,
+        "router": {
+          "kind": "tool",
+          "rule": "gated.list",
+          "tool": "list_vendor_gated"
+        },
+        "calls": [
+          {
+            "name": "list_vendor_gated",
+            "arguments": {}
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The following assets are blocked due to vendor constraints and require specific actions from vendors before they can be migrated:\n\n### **Vendor-Firmware-Gated Assets**\n1. **Azure Key Vault**:\n   - **Assets**:\n     - `doc-encrypt-ec (Azure K",
+        "error": null
+      },
+      {
+        "id": "providers-roadmap",
+        "repeat": 0,
+        "decision": "list_vendor_gated",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 0,
+        "turn_ms": 5856,
+        "router": {
+          "kind": "tool",
+          "rule": "gated.list",
+          "tool": "list_vendor_gated"
+        },
+        "calls": [
+          {
+            "name": "list_vendor_gated",
+            "arguments": {}
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "We need a PQC roadmap from the following HSM vendors and cloud providers:\n\n### 1. **Azure Key Vault**\n   - **Action**: Ask Azure Key Vault for a post-quantum signing key type and a date.\n   - **Capabilities Needed**: ML-DSA-65\n   - **Earlie",
+        "error": null
+      },
+      {
+        "id": "what-changed",
+        "repeat": 0,
+        "decision": "compare_scans",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 0,
+        "turn_ms": 2374,
+        "router": {
+          "kind": "tool",
+          "rule": "scans.compare",
+          "tool": "compare_scans"
+        },
+        "calls": [
+          {
+            "name": "compare_scans",
+            "arguments": {}
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "Since the last scan, nothing changed in the estate's composition. The number of quantum-vulnerable assets remained the same, and no assets were added, removed, or modified. The migration progress is at 0%, indicating that no assets have bee",
+        "error": null
+      },
+      {
+        "id": "verify-manifest",
+        "repeat": 0,
+        "decision": "verify_manifest",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 0,
+        "turn_ms": 3565,
+        "router": {
+          "kind": "tool",
+          "rule": "evidence.verify",
+          "tool": "verify_manifest"
+        },
+        "calls": [
+          {
+            "name": "verify_manifest",
+            "arguments": {}
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The signed manifest is valid, with the following details:\n\n- **Algorithm**: ML-DSA-65  \n- **Signature Verified**: Yes  \n- **Key Trusted**: Yes  \n- **CBOM Matches Current Scan**: Yes  \n- **Scan ID**: `70bfffe3-269e-4fe4-8f4f-ba0052315375`  \n",
+        "error": null
+      },
+      {
+        "id": "audit-tamper",
+        "repeat": 0,
+        "decision": "verify_manifest",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 0,
+        "turn_ms": 2296,
+        "router": {
+          "kind": "tool",
+          "rule": "evidence.verify",
+          "tool": "verify_manifest"
+        },
+        "calls": [
+          {
+            "name": "verify_manifest",
+            "arguments": {}
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The audit log has not been tampered with. The verification shows that the manifest is valid, with a signature verified and the CBOM matches the current scan. The audit chain is also valid, with 38 entries, and no breaks were found. This con",
+        "error": null
+      },
+      {
+        "id": "rescan-configs",
+        "repeat": 0,
+        "decision": "run_scan",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 0,
+        "turn_ms": 2293,
+        "router": {
+          "kind": "tool",
+          "rule": "scan.run",
+          "tool": "run_scan"
+        },
+        "calls": [
+          {
+            "name": "run_scan",
+            "arguments": {
+              "surfaces": [
+                "config"
+              ]
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The scan of the configs has been successfully completed. Here are the key findings:\n\n- **Total assets**: 39  \n- **Quantum-vulnerable assets**: 20  \n- **Drift**: 0  \n- **Cross-plane assets**: 0  \n\nThe scan did not modify any assets, as it wa",
+        "error": null
+      },
+      {
+        "id": "policy-violated",
+        "repeat": 0,
+        "decision": "none",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 1635,
+        "turn_ms": 1635,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The declared TLS policy may be violated if there are assets that are not compliant with the stated policy, such as those that are not using the required encryption algorithms or protocols. To determine this, we would need to check the estat",
+        "error": null
+      },
+      {
+        "id": "double-check",
+        "repeat": 0,
+        "decision": "list_flagged",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1377,
+        "turn_ms": 6781,
+        "router": null,
+        "calls": [
+          {
+            "name": "list_flagged",
+            "arguments": {
+              "limit": 10
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "The findings that should be double-checked first are the flagged assets, as they have thin or disagreeing evidence and are ranked in the estate. Here are the key findings to verify:\n\n1. **DES in ledgerd** - Rank 144, Confidence 0.6, Reason:",
+        "error": null
+      },
+      {
+        "id": "sure-signing-key",
+        "repeat": 0,
+        "decision": "none",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 1467,
+        "turn_ms": 1467,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The finding about the signing.key is based on the evidence planes and readings behind it, its corroborated confidence, and the Mosca reading (X, Y, Z and the category). The confidence level is determined by the consistency of the evidence a",
+        "error": null
+      },
+      {
+        "id": "migrate-first",
+        "repeat": 0,
+        "decision": "list_assets",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 3135,
+        "turn_ms": 13931,
+        "router": null,
+        "calls": [
+          {
+            "name": "list_assets",
+            "arguments": {
+              "sort_by": "qirs",
+              "only_vulnerable": true
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "Based on the sorted list by **QIRS (weighted composite risk)**, the highest-risk assets are prioritized. Here are the top assets to migrate first:\n\n### Top Assets to Migrate First (Highest QIRS Risk):\n1. **`878f5912-e689-a216-70bd-04eba6edf",
+        "error": null
+      },
+      {
+        "id": "blast-signing-key",
+        "repeat": 0,
+        "decision": "none",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 3205,
+        "turn_ms": 3205,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The rotation of a signing key is a critical operation that affects the security and integrity of cryptographic operations. If we rotate the key in `signing.key`, several potential issues could arise, depending on the specific implementation",
+        "error": null
+      },
+      {
+        "id": "biggest-hub",
+        "repeat": 0,
+        "decision": "list_most_depended_on",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 994,
+        "turn_ms": 3099,
+        "router": null,
+        "calls": [
+          {
+            "name": "list_most_depended_on",
+            "arguments": {
+              "limit": 20
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "The biggest dependency hub in the estate is **\"vault-ks--opt-tomcat-conf-keystore-jks-tejomaya-root-g3\"**, which has the highest number of transitive dependents at **53**.\n\nThis asset is a **critical root certificate authority** with a **QI",
+        "error": null
+      },
+      {
+        "id": "open-inventory",
+        "repeat": 0,
+        "decision": "open_page",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1057,
+        "turn_ms": 3200,
+        "router": null,
+        "calls": [
+          {
+            "name": "open_page",
+            "arguments": {
+              "page": "inventory",
+              "focus_asset_id": "root-ca"
+            }
+          },
+          {
+            "name": "list_assets",
+            "arguments": {
+              "query": "root-ca"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 3,
+        "answer": "The list_assets call did not find any assets matching \"root-ca\". Please provide the exact asset ID or full name to proceed.",
+        "error": null
+      },
+      {
+        "id": "what-are-you",
+        "repeat": 0,
+        "decision": "none",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1544,
+        "turn_ms": 1544,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "I am a migration analyst embedded in the VERA dashboard. I help determine which assets to migrate first, why they rank the way they do, what depends on what, and where an asset stands against its statutory deadline. I do not compute the sc",
+        "error": null
+      },
+      {
+        "id": "hello",
+        "repeat": 0,
+        "decision": "none",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 994,
+        "turn_ms": 994,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "Hello! I'm VERA, your post-quantum cryptography migration analyst. How can I assist you today?",
+        "error": null
+      },
+      {
+        "id": "ambiguous-cardvault",
+        "repeat": 0,
+        "decision": "clarify",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 14,
+        "turn_ms": 14,
+        "router": {
+          "kind": "clarify",
+          "rule": "migrate.asset",
+          "tool": "migrate_asset"
+        },
+        "calls": [],
+        "answered_by": null,
+        "failed_over_from": [],
+        "iterations": 0,
+        "answer": "6 assets match \"cardvault.java\". Which one do you mean?\n1. RSA via KeyPairGenerator.getInstance (CardVault.java:17) (rank 5, id 7f9f742e-d1ab-10d1-1c22-006f291e0260)\n2. RSA via RSAKeyGenParameterSpec (CardVault.java:18) (rank 6, id d88a7e24",
+        "error": null
+      },
+      {
+        "id": "migrate-jar",
+        "repeat": 1,
+        "decision": "migrate_asset",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 13,
+        "turn_ms": 2669,
+        "router": {
+          "kind": "tool",
+          "rule": "migrate.asset",
+          "tool": "migrate_asset"
+        },
+        "calls": [
+          {
+            "name": "migrate_asset",
+            "arguments": {
+              "strategy": "hybrid",
+              "asset_id": "342f772d-2ff1-1801-728c-7e17e194919e"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The migration proposal for the RSA in payments-gateway.jar has been queued for human approval. Here's what is being proposed:\n\n- **Asset Affected**: RSA in payments-gateway.jar  \n- **Strategy Used**: Hybrid (retains classical RSA as a fallb",
+        "error": null
+      },
+      {
+        "id": "migrate-signing-key",
+        "repeat": 1,
+        "decision": "migrate_asset",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 19,
+        "turn_ms": 2240,
+        "router": {
+          "kind": "tool",
+          "rule": "migrate.asset",
+          "tool": "migrate_asset"
+        },
+        "calls": [
+          {
+            "name": "migrate_asset",
+            "arguments": {
+              "strategy": "hybrid",
+              "asset_id": "be46ce4b-8d6a-10ea-7a59-076927176762"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The migration proposal for the asset **\"Embedded EC private key in signing.key\"** has been queued for human approval. Here's what is being proposed:\n\n- **Asset Affected**: \"Embedded EC private key in signing.key\"\n- **Current Algorithm**: EC",
+        "error": null
+      },
+      {
+        "id": "upgrade-jwt",
+        "repeat": 1,
+        "decision": "migrate_asset",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 15,
+        "turn_ms": 2212,
+        "router": {
+          "kind": "tool",
+          "rule": "migrate.asset",
+          "tool": "migrate_asset"
+        },
+        "calls": [
+          {
+            "name": "migrate_asset",
+            "arguments": {
+              "strategy": "hybrid",
+              "asset_id": "5c373289-3706-ac02-73f6-c25494645037"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The migration proposal for \"RSA via jwt.sign (auth.ts:6)\" has been queued for human approval. Here's what is being proposed:\n\n- **Asset Affected**: RSA via jwt.sign (auth.ts:6)\n- **Migration Strategy**: Hybrid (retains classical fallback)\n-",
+        "error": null
+      },
+      {
+        "id": "why-jar",
+        "repeat": 1,
+        "decision": "explain_asset",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 16,
+        "turn_ms": 6574,
+        "router": {
+          "kind": "tool",
+          "rule": "explain.asset",
+          "tool": "explain_asset"
+        },
+        "calls": [
+          {
+            "name": "explain_asset",
+            "arguments": {
+              "asset_id": "342f772d-2ff1-1801-728c-7e17e194919e"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "RSA in payments-gateway.jar is ranked high due to its **high confidentiality risk (H)** and **moderate integrity risk (T)**, which together result in a **QIRS score of 0.2544**, placing it in the **high risk** category.\n\n### Key Factors:\n- ",
+        "error": null
+      },
+      {
+        "id": "explain-reconcile",
+        "repeat": 1,
+        "decision": "explain_asset",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 14,
+        "turn_ms": 5041,
+        "router": {
+          "kind": "tool",
+          "rule": "explain.asset",
+          "tool": "explain_asset"
+        },
+        "calls": [
+          {
+            "name": "explain_asset",
+            "arguments": {
+              "asset_id": "428bba90-0bc8-5813-e8e4-70bb2b4acf34"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "RSA via `rsa.generate_private_key` is a cryptographic API call that generates a private key for RSA encryption. It is hard-coded with specific algorithm choices, requiring a development, test, and release cycle, and often involves a library",
+        "error": null
+      },
+      {
+        "id": "explain-top",
+        "repeat": 1,
+        "decision": "explain_asset",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1,
+        "turn_ms": 9022,
+        "router": {
+          "kind": "tool",
+          "rule": "explain.asset",
+          "tool": "explain_asset"
+        },
+        "calls": [
+          {
+            "name": "explain_asset",
+            "arguments": {
+              "asset_id": "846f6add-c77a-9322-e14f-428f805dcf94"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The top-ranked asset, **ECDSA via EcdsaKeyPair::from_pkcs8 (lib.rs:10)**, is a cryptographic API call that uses the ECDSA-P-256 algorithm. It is ranked **1st** in the estate due to its **medium risk** (QIRS = 0.1831), which is derived from ",
+        "error": null
+      },
+      {
+        "id": "mosca-signing-key",
+        "repeat": 1,
+        "decision": "explain_mosca",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 14,
+        "turn_ms": 5794,
+        "router": {
+          "kind": "tool",
+          "rule": "explain.mosca",
+          "tool": "explain_mosca"
+        },
+        "calls": [
+          {
+            "name": "explain_mosca",
+            "arguments": {
+              "asset_id": "be46ce4b-8d6a-10ea-7a59-076927176762"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The Mosca reading for the asset **\"Embedded EC private key in signing.key\"** provides a comprehensive view of its confidentiality and integrity risks, based on the current timeline and the threat model.\n\n### Key Details:\n- **Confidentiality",
+        "error": null
+      },
+      {
+        "id": "when-jwt",
+        "repeat": 1,
+        "decision": "explain_mosca",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 14,
+        "turn_ms": 3565,
+        "router": {
+          "kind": "tool",
+          "rule": "explain.mosca",
+          "tool": "explain_mosca"
+        },
+        "calls": [
+          {
+            "name": "explain_mosca",
+            "arguments": {
+              "asset_id": "5c373289-3706-ac02-73f6-c25494645037"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The `jwt.sign` method in `auth.ts` becomes vulnerable when the cryptographic key used for signing is no longer secure. Based on the MOSCA analysis, the key size is not specified, but the asset is classified as **\"Exposed under every reading",
+        "error": null
+      },
+      {
+        "id": "recommend-jar",
+        "repeat": 1,
+        "decision": "recommend",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 18,
+        "turn_ms": 6002,
+        "router": {
+          "kind": "tool",
+          "rule": "recommend.asset",
+          "tool": "recommend"
+        },
+        "calls": [
+          {
+            "name": "recommend",
+            "arguments": {
+              "asset_id": "342f772d-2ff1-1801-728c-7e17e194919e"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The recommended replacement for the RSA in payments-gateway.jar is **ML-KEM-768**. Here's a breakdown of the recommendation:\n\n### **Why This Replacement?**\n- **Security**: ML-KEM-768 is a lattice-based key-encapsulation mechanism (KEM) that",
+        "error": null
+      },
+      {
+        "id": "preview-lib-rs",
+        "repeat": 1,
+        "decision": "preview_migration",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 15,
+        "turn_ms": 2851,
+        "router": {
+          "kind": "tool",
+          "rule": "preview.asset",
+          "tool": "preview_migration"
+        },
+        "calls": [
+          {
+            "name": "preview_migration",
+            "arguments": {
+              "asset_id": "846f6add-c77a-9322-e14f-428f805dcf94"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "Preview migration of \"ECDSA via EcdsaKeyPair::from_pkcs8 (lib.rs:10)\" would affect the following asset:\n\n- **Asset ID**: `846f6add-c77a-9322-e14f-428f805dcf94`\n- **Current Score**: 0.1831 (QIRS)\n- **Strategy**: Hybrid\n- **Target Algorithm**",
+        "error": null
+      },
+      {
+        "id": "migrate-200",
+        "repeat": 1,
+        "decision": "migrate_asset",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 0,
+        "turn_ms": 1632,
+        "router": {
+          "kind": "tool",
+          "rule": "migrate.estate",
+          "tool": "migrate_asset"
+        },
+        "calls": [
+          {
+            "name": "migrate_asset",
+            "arguments": {
+              "target": "",
+              "strategy": "hybrid"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The control plane limits single agent actions to 25 assets to prevent overloading. Since migrating 200 assets would exceed this limit, we need to narrow the target or increase the cap in the Settings. Let's narrow the target to a manageable",
+        "error": null
+      },
+      {
+        "id": "count-assets",
+        "repeat": 1,
+        "decision": "get_estate_summary",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 0,
+        "turn_ms": 8141,
+        "router": {
+          "kind": "tool",
+          "rule": "estate.summary",
+          "tool": "get_estate_summary"
+        },
+        "calls": [
+          {
+            "name": "get_estate_summary",
+            "arguments": {}
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "From the estate summary, we have **219 assets** in total. Here's a breakdown:\n\n- **Quantum-vulnerable assets**: 138\n- **Quantum-safe assets**: 81\n- **Classically broken assets**: 23\n- **Total assets**: 219\n\n### Key Metrics:\n- **Average HNDL",
+        "error": null
+      },
+      {
+        "id": "overview",
+        "repeat": 1,
+        "decision": "get_estate_summary",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 0,
+        "turn_ms": 7469,
+        "router": {
+          "kind": "tool",
+          "rule": "estate.summary",
+          "tool": "get_estate_summary"
+        },
+        "calls": [
+          {
+            "name": "get_estate_summary",
+            "arguments": {}
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "Here's an overview of the cryptographic asset estate in the Banking sector as of September 24, 2026:\n\n### Total Assets\n- **Total assets**: 219\n- **Quantum-vulnerable**: 138\n- **Quantum-safe**: 81\n- **Classically broken**: 23\n\n### Risk Metri",
+        "error": null
+      },
+      {
+        "id": "show-drift",
+        "repeat": 1,
+        "decision": "list_drift",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 0,
+        "turn_ms": 11535,
+        "router": {
+          "kind": "tool",
+          "rule": "drift.list",
+          "tool": "list_drift"
+        },
+        "calls": [
+          {
+            "name": "list_drift",
+            "arguments": {}
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "Here are the drift findings:\n\n### Summary\n- **Total Drift Records:** 9\n- **Severity Levels:** Critical (1), High (6), Medium (2)\n- **Rules Involved:** D1, D2, D3, D4, D5, D6, D7, D8\n\n---\n\n### Drift Findings\n\n1. **D6 - Expired certificate st",
+        "error": null
+      },
+      {
+        "id": "vendor-blocked",
+        "repeat": 1,
+        "decision": "list_vendor_gated",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 0,
+        "turn_ms": 6757,
+        "router": {
+          "kind": "tool",
+          "rule": "gated.list",
+          "tool": "list_vendor_gated"
+        },
+        "calls": [
+          {
+            "name": "list_vendor_gated",
+            "arguments": {}
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The assets that are **blocked on vendors** are those that cannot be migrated until a specific vendor firmware or cloud provider ships a post-quantum mechanism. These assets are grouped by the vendor that must provide the necessary post-quan",
+        "error": null
+      },
+      {
+        "id": "providers-roadmap",
+        "repeat": 1,
+        "decision": "list_vendor_gated",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 0,
+        "turn_ms": 6443,
+        "router": {
+          "kind": "tool",
+          "rule": "gated.list",
+          "tool": "list_vendor_gated"
+        },
+        "calls": [
+          {
+            "name": "list_vendor_gated",
+            "arguments": {}
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "Based on the list_vendor_gated result, we need to engage with the following HSM vendors or cloud providers for a PQC roadmap:\n\n1. **Azure Key Vault**  \n   - **Action**: Request a post-quantum signing key type and a date.  \n   - **Capabiliti",
+        "error": null
+      },
+      {
+        "id": "what-changed",
+        "repeat": 1,
+        "decision": "compare_scans",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 0,
+        "turn_ms": 2794,
+        "router": {
+          "kind": "tool",
+          "rule": "scans.compare",
+          "tool": "compare_scans"
+        },
+        "calls": [
+          {
+            "name": "compare_scans",
+            "arguments": {}
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "I am a migration analyst embedded in the VERA dashboard, tasked with evaluating and recommending the migration of cryptographic assets in an estate. I analyze the risk profile of each asset based on two axes: HNDL (confidentiality risk) an",
+        "error": null
+      },
+      {
+        "id": "verify-manifest",
+        "repeat": 1,
+        "decision": "verify_manifest",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 0,
+        "turn_ms": 2509,
+        "router": {
+          "kind": "tool",
+          "rule": "evidence.verify",
+          "tool": "verify_manifest"
+        },
+        "calls": [
+          {
+            "name": "verify_manifest",
+            "arguments": {}
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The signed manifest is valid, with the following details:\n\n- **Algorithm**: ML-DSA-65  \n- **Signature Verified**: Yes  \n- **Key Trusted**: Yes  \n- **CBOM Matches Current Scan**: Yes  \n- **Scan ID**: `f3cabbe0-dced-45e7-9300-d4d44e19202b`  \n",
+        "error": null
+      },
+      {
+        "id": "audit-tamper",
+        "repeat": 1,
+        "decision": "verify_manifest",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 0,
+        "turn_ms": 1756,
+        "router": {
+          "kind": "tool",
+          "rule": "evidence.verify",
+          "tool": "verify_manifest"
+        },
+        "calls": [
+          {
+            "name": "verify_manifest",
+            "arguments": {}
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The audit log has not been tampered with. The verification shows that the manifest is valid, with a signature that has been successfully verified, and it matches the current CBOM. The audit chain is also intact, with 90 entries, and no brea",
+        "error": null
+      },
+      {
+        "id": "rescan-configs",
+        "repeat": 1,
+        "decision": "run_scan",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 0,
+        "turn_ms": 2239,
+        "router": {
+          "kind": "tool",
+          "rule": "scan.run",
+          "tool": "run_scan"
+        },
+        "calls": [
+          {
+            "name": "run_scan",
+            "arguments": {
+              "surfaces": [
+                "config"
+              ]
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The scan has completed successfully. Here are the key findings:\n\n- **Total assets**: 39  \n- **Quantum-vulnerable assets**: 20  \n- **Drift**: 0  \n- **Cross-plane assets**: 0  \n\nThe scan was performed on the **config** surface, and no changes",
+        "error": null
+      },
+      {
+        "id": "policy-violated",
+        "repeat": 1,
+        "decision": "none",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 1914,
+        "turn_ms": 1914,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "To determine if the declared TLS policy is being violated, we need to examine the asset's TLS policy inputs and its current status. This involves checking the asset's policy inputs (x_c, x_i, y, s, e, c), its current risk level, and whether",
+        "error": null
+      },
+      {
+        "id": "double-check",
+        "repeat": 1,
+        "decision": "none",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 2716,
+        "turn_ms": 2717,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "To determine which findings should be double-checked first, we need to consider the **risk levels** and **deadline urgency** of the assets. The **highest TNFL (Integrity Risk)** assets are the most urgent, as they are the most vulnerable to",
+        "error": null
+      },
+      {
+        "id": "sure-signing-key",
+        "repeat": 1,
+        "decision": "explain_evidence",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1100,
+        "turn_ms": 2369,
+        "router": null,
+        "calls": [
+          {
+            "name": "explain_evidence",
+            "arguments": {
+              "asset_id": "signing.key"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "The asset \"signing.key\" does not exist in the current estate. Please provide the exact asset ID or full name of the asset you are interested in, and I will explain its ranking based on the available data.",
+        "error": null
+      },
+      {
+        "id": "migrate-first",
+        "repeat": 1,
+        "decision": "none",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 2420,
+        "turn_ms": 2421,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "To determine what should be migrated first, we need to consider the following factors:\n\n1. **Risk Levels**: Assets with higher QIRS (Quantum Risk Index) should be migrated first as they pose a greater threat to security.\n2. **Deadline Urgen",
+        "error": null
+      },
+      {
+        "id": "blast-signing-key",
+        "repeat": 1,
+        "decision": "none",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 2311,
+        "turn_ms": 2311,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The rotation of the signing.key would break any cryptographic operations that rely on this key for signing data or signatures. Specifically, it would affect:\n\n1. **Signature Validity**: Any data or signature that was signed using the signin",
+        "error": null
+      },
+      {
+        "id": "biggest-hub",
+        "repeat": 1,
+        "decision": "list_most_depended_on",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1029,
+        "turn_ms": 3622,
+        "router": null,
+        "calls": [
+          {
+            "name": "list_most_depended_on",
+            "arguments": {
+              "limit": 20
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "The biggest dependency hub in the estate is **\"vault-ks--opt-tomcat-conf-keystore-jks-tejomaya-root-g3\"**, which has the highest number of transitive dependents at **53**.\n\n### Key Details:\n- **Asset ID**: `vault-ks--opt-tomcat-conf-keystor",
+        "error": null
+      },
+      {
+        "id": "open-inventory",
+        "repeat": 1,
+        "decision": "open_page",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1060,
+        "turn_ms": 3510,
+        "router": null,
+        "calls": [
+          {
+            "name": "open_page",
+            "arguments": {
+              "page": "inventory",
+              "focus_asset_id": "root-ca"
+            }
+          },
+          {
+            "name": "list_assets",
+            "arguments": {
+              "query": "root-ca"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 3,
+        "answer": "The list_assets call did not find any assets matching the query \"root-ca\". This suggests that either the asset name is different, or it does not exist in the current estate. To proceed, you would need to use an exact asset ID returned by li",
+        "error": null
+      },
+      {
+        "id": "what-are-you",
+        "repeat": 1,
+        "decision": "none",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1545,
+        "turn_ms": 1545,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "I am a migration analyst embedded in the VERA dashboard. I help determine which cryptographic assets in an estate should be migrated first, why they rank the way they do, what depends on what, and where they stand against their statutory d",
+        "error": null
+      },
+      {
+        "id": "hello",
+        "repeat": 1,
+        "decision": "none",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1010,
+        "turn_ms": 1010,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "Hello! I'm VERA, your post-quantum cryptography migration analyst. How can I assist you today?",
+        "error": null
+      },
+      {
+        "id": "ambiguous-cardvault",
+        "repeat": 1,
+        "decision": "clarify",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 14,
+        "turn_ms": 14,
+        "router": {
+          "kind": "clarify",
+          "rule": "migrate.asset",
+          "tool": "migrate_asset"
+        },
+        "calls": [],
+        "answered_by": null,
+        "failed_over_from": [],
+        "iterations": 0,
+        "answer": "6 assets match \"cardvault.java\". Which one do you mean?\n1. RSA via KeyPairGenerator.getInstance (CardVault.java:17) (rank 5, id 7f9f742e-d1ab-10d1-1c22-006f291e0260)\n2. RSA via RSAKeyGenParameterSpec (CardVault.java:18) (rank 6, id d88a7e24",
+        "error": null
+      },
+      {
+        "id": "migrate-jar",
+        "repeat": 2,
+        "decision": "migrate_asset",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 13,
+        "turn_ms": 2852,
+        "router": {
+          "kind": "tool",
+          "rule": "migrate.asset",
+          "tool": "migrate_asset"
+        },
+        "calls": [
+          {
+            "name": "migrate_asset",
+            "arguments": {
+              "strategy": "hybrid",
+              "asset_id": "342f772d-2ff1-1801-728c-7e17e194919e"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The migration proposal for the RSA in payments-gateway.jar has been queued for human approval. Here's what is being proposed:\n\n- **Asset Affected**: RSA in payments-gateway.jar  \n- **Strategy Used**: Hybrid (retains classical RSA as a fallb",
+        "error": null
+      },
+      {
+        "id": "migrate-signing-key",
+        "repeat": 2,
+        "decision": "migrate_asset",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 72,
+        "turn_ms": 2647,
+        "router": {
+          "kind": "tool",
+          "rule": "migrate.asset",
+          "tool": "migrate_asset"
+        },
+        "calls": [
+          {
+            "name": "migrate_asset",
+            "arguments": {
+              "strategy": "hybrid",
+              "asset_id": "be46ce4b-8d6a-10ea-7a59-076927176762"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The migration of the asset **\"Embedded EC private key in signing.key\"** to the **hybrid strategy** has been proposed and is queued for human approval. Here's what the migration entails:\n\n- **Asset Affected**: \"Embedded EC private key in sig",
+        "error": null
+      },
+      {
+        "id": "upgrade-jwt",
+        "repeat": 2,
+        "decision": "migrate_asset",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 14,
+        "turn_ms": 2272,
+        "router": {
+          "kind": "tool",
+          "rule": "migrate.asset",
+          "tool": "migrate_asset"
+        },
+        "calls": [
+          {
+            "name": "migrate_asset",
+            "arguments": {
+              "strategy": "hybrid",
+              "asset_id": "5c373289-3706-ac02-73f6-c25494645037"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The migration proposal for \"RSA via jwt.sign (auth.ts:6)\" has been queued for human approval. Here's what is being proposed:\n\n- **Asset**: RSA via jwt.sign (auth.ts:6)\n- **Migration Strategy**: Hybrid\n- **Replacement Algorithm**: ML-KEM-768",
+        "error": null
+      },
+      {
+        "id": "why-jar",
+        "repeat": 2,
+        "decision": "explain_asset",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 16,
+        "turn_ms": 7125,
+        "router": {
+          "kind": "tool",
+          "rule": "explain.asset",
+          "tool": "explain_asset"
+        },
+        "calls": [
+          {
+            "name": "explain_asset",
+            "arguments": {
+              "asset_id": "342f772d-2ff1-1801-728c-7e17e194919e"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "RSA in payments-gateway.jar is ranked high due to its classification as a **high-risk, quantum-vulnerable asset** with a **high priority** in the estate. Here's why:\n\n### \ud83d\udd12 Confidentiality Risk (HNDL)\n- **H = 0.408568** (Confidentiality Ris",
+        "error": null
+      },
+      {
+        "id": "explain-reconcile",
+        "repeat": 2,
+        "decision": "explain_asset",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 14,
+        "turn_ms": 4351,
+        "router": {
+          "kind": "tool",
+          "rule": "explain.asset",
+          "tool": "explain_asset"
+        },
+        "calls": [
+          {
+            "name": "explain_asset",
+            "arguments": {
+              "asset_id": "428bba90-0bc8-5813-e8e4-70bb2b4acf34"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "RSA via `rsa.generate_private_key` is a cryptographic API call that generates a private key for RSA encryption. It is hard-coded with specific algorithm choices, requiring a development, testing, and release cycle. It is slower than configu",
+        "error": null
+      },
+      {
+        "id": "explain-top",
+        "repeat": 2,
+        "decision": "explain_asset",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1,
+        "turn_ms": 7432,
+        "router": {
+          "kind": "tool",
+          "rule": "explain.asset",
+          "tool": "explain_asset"
+        },
+        "calls": [
+          {
+            "name": "explain_asset",
+            "arguments": {
+              "asset_id": "846f6add-c77a-9322-e14f-428f805dcf94"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The top-ranked asset, **ECDSA via EcdsaKeyPair::from_pkcs8 (lib.rs:10)**, is a cryptographic API call that hardcodes the use of **ECDSA-P-256**. This algorithm is vulnerable to quantum attacks due to the **Shor's algorithm**, which can solv",
+        "error": null
+      },
+      {
+        "id": "mosca-signing-key",
+        "repeat": 2,
+        "decision": "explain_mosca",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 15,
+        "turn_ms": 6282,
+        "router": {
+          "kind": "tool",
+          "rule": "explain.mosca",
+          "tool": "explain_mosca"
+        },
+        "calls": [
+          {
+            "name": "explain_mosca",
+            "arguments": {
+              "asset_id": "be46ce4b-8d6a-10ea-7a59-076927176762"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The Mosca reading for the asset **\"Embedded EC private key in signing.key\"** provides a comprehensive view of its confidentiality and integrity risks, based on the current timeline and the threat model.\n\n### Key Insights:\n\n- **Confidentiali",
+        "error": null
+      },
+      {
+        "id": "when-jwt",
+        "repeat": 2,
+        "decision": "explain_mosca",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 14,
+        "turn_ms": 2907,
+        "router": {
+          "kind": "tool",
+          "rule": "explain.mosca",
+          "tool": "explain_mosca"
+        },
+        "calls": [
+          {
+            "name": "explain_mosca",
+            "arguments": {
+              "asset_id": "5c373289-3706-ac02-73f6-c25494645037"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The `jwt.sign` method in `auth.ts` becomes vulnerable when the exposure horizon exceeds the quantum computing threat horizon. \n\n### Key Details:\n- **Confidentiality Risk (HNDL):** The exposure horizon is $ 26.3 $ years, which is much longer",
+        "error": null
+      },
+      {
+        "id": "recommend-jar",
+        "repeat": 2,
+        "decision": "recommend",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 19,
+        "turn_ms": 5717,
+        "router": {
+          "kind": "tool",
+          "rule": "recommend.asset",
+          "tool": "recommend"
+        },
+        "calls": [
+          {
+            "name": "recommend",
+            "arguments": {
+              "asset_id": "342f772d-2ff1-1801-728c-7e17e194919e"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The recommended replacement for the RSA algorithm in the payments-gateway.jar is **ML-KEM-768**. Here's a breakdown of the recommendation:\n\n### **Why This Replacement?**\n- **Security**: ML-KEM-768 is a lattice-based key-encapsulation mechan",
+        "error": null
+      },
+      {
+        "id": "preview-lib-rs",
+        "repeat": 2,
+        "decision": "preview_migration",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 13,
+        "turn_ms": 3020,
+        "router": {
+          "kind": "tool",
+          "rule": "preview.asset",
+          "tool": "preview_migration"
+        },
+        "calls": [
+          {
+            "name": "preview_migration",
+            "arguments": {
+              "asset_id": "846f6add-c77a-9322-e14f-428f805dcf94"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "Preview migration of \"ECDSA via EcdsaKeyPair::from_pkcs8 (lib.rs:10)\" would affect the following asset:\n\n- **Asset ID**: `846f6add-c77a-9322-e14f-428f805dcf94`\n- **Current Score**: 0.1831 (QIRS)\n- **Strategy**: Hybrid\n- **Target Algorithm**",
+        "error": null
+      },
+      {
+        "id": "migrate-200",
+        "repeat": 2,
+        "decision": "migrate_asset",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 0,
+        "turn_ms": 1692,
+        "router": {
+          "kind": "tool",
+          "rule": "migrate.estate",
+          "tool": "migrate_asset"
+        },
+        "calls": [
+          {
+            "name": "migrate_asset",
+            "arguments": {
+              "target": "",
+              "strategy": "hybrid"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The migration action would change 138 assets, which exceeds the 25-asset limit for a single agent action. To proceed, narrow the target or raise the cap in the Settings.",
+        "error": null
+      },
+      {
+        "id": "count-assets",
+        "repeat": 2,
+        "decision": "get_estate_summary",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 0,
+        "turn_ms": 3294,
+        "router": {
+          "kind": "tool",
+          "rule": "estate.summary",
+          "tool": "get_estate_summary"
+        },
+        "calls": [
+          {
+            "name": "get_estate_summary",
+            "arguments": {}
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "From the estate summary, we have **219 assets** in total. Out of these:\n\n- **138 assets** are quantum-vulnerable.\n- **8 assets** cannot meet their statutory deadlines.\n\nThe estate is primarily in the **Banking** sector. \n\n### Key Observatio",
+        "error": null
+      },
+      {
+        "id": "overview",
+        "repeat": 2,
+        "decision": "get_estate_summary",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 0,
+        "turn_ms": 8041,
+        "router": {
+          "kind": "tool",
+          "rule": "estate.summary",
+          "tool": "get_estate_summary"
+        },
+        "calls": [
+          {
+            "name": "get_estate_summary",
+            "arguments": {}
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "Here's an overview of the cryptographic asset estate:\n\n### Total Assets\n- **Total assets**: 219\n- **Quantum-vulnerable assets**: 138\n- **Quantum-safe assets**: 81\n- **Classically broken assets**: 23\n\n### Risk Metrics\n- **Average HNDL (Confi",
+        "error": null
+      },
+      {
+        "id": "show-drift",
+        "repeat": 2,
+        "decision": "list_drift",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 0,
+        "turn_ms": 11338,
+        "router": {
+          "kind": "tool",
+          "rule": "drift.list",
+          "tool": "list_drift"
+        },
+        "calls": [
+          {
+            "name": "list_drift",
+            "arguments": {}
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "Here are the drift findings:\n\n### Summary\n- **Total Drift Records:** 9\n- **Severity Distribution:** \n  - Critical: 1\n  - High: 6\n  - Medium: 2\n- **Rules Involved:** D1, D2, D3, D4, D5, D6, D7, D8\n\n---\n\n### Drift Findings\n\n1. **D6 - Expired ",
+        "error": null
+      },
+      {
+        "id": "vendor-blocked",
+        "repeat": 2,
+        "decision": "list_vendor_gated",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 0,
+        "turn_ms": 6048,
+        "router": {
+          "kind": "tool",
+          "rule": "gated.list",
+          "tool": "list_vendor_gated"
+        },
+        "calls": [
+          {
+            "name": "list_vendor_gated",
+            "arguments": {}
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "What is blocked on vendors?\n\nVendor gatekeeping blocks assets that cannot be migrated until a specific vendor firmware or cloud provider ships a post-quantum mechanism. These assets are ranked first and cannot be started first, as the next ",
+        "error": null
+      },
+      {
+        "id": "providers-roadmap",
+        "repeat": 2,
+        "decision": "list_vendor_gated",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 0,
+        "turn_ms": 5647,
+        "router": {
+          "kind": "tool",
+          "rule": "gated.list",
+          "tool": "list_vendor_gated"
+        },
+        "calls": [
+          {
+            "name": "list_vendor_gated",
+            "arguments": {}
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "We need to obtain a PQC roadmap from the following HSM vendors or cloud providers:\n\n1. **Azure Key Vault**  \n   - **Action**: Ask Azure Key Vault for a post-quantum signing key type and a date.  \n   - **Capabilities Needed**: ML-DSA-65  \n  ",
+        "error": null
+      },
+      {
+        "id": "what-changed",
+        "repeat": 2,
+        "decision": "compare_scans",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 0,
+        "turn_ms": 2794,
+        "router": {
+          "kind": "tool",
+          "rule": "scans.compare",
+          "tool": "compare_scans"
+        },
+        "calls": [
+          {
+            "name": "compare_scans",
+            "arguments": {}
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "I am a migration analyst embedded in the VERA dashboard, tasked with evaluating and recommending the most critical assets to migrate first based on their risk profiles. I do not apply migrations directly but guide the operator through the ",
+        "error": null
+      },
+      {
+        "id": "verify-manifest",
+        "repeat": 2,
+        "decision": "verify_manifest",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 0,
+        "turn_ms": 2487,
+        "router": {
+          "kind": "tool",
+          "rule": "evidence.verify",
+          "tool": "verify_manifest"
+        },
+        "calls": [
+          {
+            "name": "verify_manifest",
+            "arguments": {}
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The signed manifest is valid, with the following details:\n\n- **Algorithm**: ML-DSA-65  \n- **Signature Verified**: Yes  \n- **Key Trusted**: Yes  \n- **CBOM Matches Current Scan**: Yes  \n- **Scan ID**: `0a29efa2-cc48-4fa4-9b62-b86a6a8111d9`  \n",
+        "error": null
+      },
+      {
+        "id": "audit-tamper",
+        "repeat": 2,
+        "decision": "verify_manifest",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 0,
+        "turn_ms": 1819,
+        "router": {
+          "kind": "tool",
+          "rule": "evidence.verify",
+          "tool": "verify_manifest"
+        },
+        "calls": [
+          {
+            "name": "verify_manifest",
+            "arguments": {}
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The audit log has not been tampered with. The verification shows that the signed evidence manifest is valid, with a signature verified and the CBOM matches the current scan. The audit chain is intact, with 148 entries, and no breaks were de",
+        "error": null
+      },
+      {
+        "id": "rescan-configs",
+        "repeat": 2,
+        "decision": "run_scan",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 0,
+        "turn_ms": 2295,
+        "router": {
+          "kind": "tool",
+          "rule": "scan.run",
+          "tool": "run_scan"
+        },
+        "calls": [
+          {
+            "name": "run_scan",
+            "arguments": {
+              "surfaces": [
+                "config"
+              ]
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The scan of the configuration files has been successfully completed. Here are the key findings:\n\n- **Total assets**: 39  \n- **Quantum-vulnerable assets**: 20  \n- **Drift**: 0  \n- **Cross-plane assets**: 0  \n\nThe scan did not modify any asse",
+        "error": null
+      },
+      {
+        "id": "policy-violated",
+        "repeat": 2,
+        "decision": "none",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 2353,
+        "turn_ms": 2353,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "To determine if the declared TLS policy is being violated, we need to examine the asset's TLS policy inputs and its current status. This involves checking the asset's configuration, migration status, and whether it is still quantum-vulnerab",
+        "error": null
+      },
+      {
+        "id": "double-check",
+        "repeat": 2,
+        "decision": "list_flagged",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1547,
+        "turn_ms": 5561,
+        "router": null,
+        "calls": [
+          {
+            "name": "list_flagged",
+            "arguments": {
+              "limit": 10
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "The findings that should be double-checked first are the 16 flagged assets. These assets are ranked based on their confidence level and evidence quality, and they are considered to have thin or conflicting evidence. The following are the ke",
+        "error": null
+      },
+      {
+        "id": "sure-signing-key",
+        "repeat": 2,
+        "decision": "none",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 1420,
+        "turn_ms": 1420,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "The finding about the signing.key is based on the evidence planes and readings behind it, its corroborated confidence, and the Mosca reading (X, Y, Z and the category). The confidence level is determined by the consistency of the evidence a",
+        "error": null
+      },
+      {
+        "id": "migrate-first",
+        "repeat": 2,
+        "decision": "none",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 4336,
+        "turn_ms": 4336,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "To determine what should be migrated first, we need to consider several factors, including the risk levels, deadlines, dependencies, and the overall migration priority determined by the QIRS (Quantum Risk Index Score). Here's a high-level a",
+        "error": null
+      },
+      {
+        "id": "blast-signing-key",
+        "repeat": 2,
+        "decision": "none",
+        "first_correct": false,
+        "turn_correct": false,
+        "selection_ms": 1069,
+        "turn_ms": 1069,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "<tool>\n{\"name\": \"inspect_key\", \"arguments\": {\"asset_id\": \"sign.key\"}}\n</tool>",
+        "error": null
+      },
+      {
+        "id": "biggest-hub",
+        "repeat": 2,
+        "decision": "list_most_depended_on",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1042,
+        "turn_ms": 3506,
+        "router": null,
+        "calls": [
+          {
+            "name": "list_most_depended_on",
+            "arguments": {
+              "limit": 20
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 2,
+        "answer": "The biggest dependency hub in the estate is **\"vault-ks--opt-tomcat-conf-keystore-jks-tejomaya-root-g3\"**, which has the highest number of transitive dependents at **53**.\n\n### Key Details:\n- **Asset ID**: `vault-ks--opt-tomcat-conf-keystor",
+        "error": null
+      },
+      {
+        "id": "open-inventory",
+        "repeat": 2,
+        "decision": "open_page",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1060,
+        "turn_ms": 5041,
+        "router": null,
+        "calls": [
+          {
+            "name": "open_page",
+            "arguments": {
+              "page": "inventory",
+              "focus_asset_id": "root-ca"
+            }
+          },
+          {
+            "name": "list_assets",
+            "arguments": {
+              "limit": 10
+            }
+          },
+          {
+            "name": "open_page",
+            "arguments": {
+              "page": "inventory"
+            }
+          }
+        ],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 4,
+        "answer": "Opened inventory. You are now looking at the list of all assets in the estate, ranked by their risk levels. The assets are sorted by QIRS (weighted composite risk score), with the highest risk at the top. This list includes all assets that ",
+        "error": null
+      },
+      {
+        "id": "what-are-you",
+        "repeat": 2,
+        "decision": "none",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1383,
+        "turn_ms": 1383,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "I am a migration analyst embedded in the VERA dashboard. I help determine which assets to migrate first, why they rank the way they do, what depends on what, and when they face their statutory deadlines. I do not compute the scores myself,",
+        "error": null
+      },
+      {
+        "id": "hello",
+        "repeat": 2,
+        "decision": "none",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 1037,
+        "turn_ms": 1037,
+        "router": null,
+        "calls": [],
+        "answered_by": "qwen3:1.7b",
+        "failed_over_from": [],
+        "iterations": 1,
+        "answer": "Hello! I'm VERA, your post-quantum cryptography migration analyst. How can I assist you today?",
+        "error": null
+      },
+      {
+        "id": "ambiguous-cardvault",
+        "repeat": 2,
+        "decision": "clarify",
+        "first_correct": true,
+        "turn_correct": true,
+        "selection_ms": 18,
+        "turn_ms": 18,
+        "router": {
+          "kind": "clarify",
+          "rule": "migrate.asset",
+          "tool": "migrate_asset"
+        },
+        "calls": [],
+        "answered_by": null,
+        "failed_over_from": [],
+        "iterations": 0,
+        "answer": "6 assets match \"cardvault.java\". Which one do you mean?\n1. RSA via KeyPairGenerator.getInstance (CardVault.java:17) (rank 5, id 7f9f742e-d1ab-10d1-1c22-006f291e0260)\n2. RSA via RSAKeyGenParameterSpec (CardVault.java:18) (rank 6, id d88a7e24",
+        "error": null
+      }
+    ]
+  }
+}

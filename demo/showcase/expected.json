@@ -1,0 +1,59 @@
+{
+  "vault": "demo/vault",
+  "synthetic": true,
+  "raw_objects": 92,
+  "assets": 89,
+  "assets_range": [
+    88,
+    90
+  ],
+  "correlated_away": 3,
+  "correlated_away_range": [
+    2,
+    4
+  ],
+  "change_blocked": 13,
+  "change_blocked_range": [
+    13,
+    13
+  ],
+  "qirs_top_asset_class": "firmware_signing",
+  "qirs_top_label_contains": "atm-firmware-sign",
+  "qirs_top_change_blocked": true,
+  "qirs_top_range": [
+    0.18,
+    0.21
+  ],
+  "priority_rank1_most_exposed": true,
+  "hndl_tnfl_distinct": true,
+  "tnfl_top_classes_allowed": [
+    "root_ca",
+    "firmware_signing",
+    "issuing_ca"
+  ],
+  "adapter_ids": [
+    "pkcs11",
+    "kmip",
+    "cloud_kms",
+    "tls",
+    "keystore"
+  ],
+  "sources_required": [
+    "vault_pkcs11",
+    "vault_kmip",
+    "vault_cloud_kms",
+    "vault_keystore",
+    "vault_certificate"
+  ],
+  "by_source": {
+    "vault_pkcs11": 16,
+    "vault_kmip": 13,
+    "vault_cloud_kms": 13,
+    "vault_keystore": 8,
+    "vault_certificate": 39
+  },
+  "key_material_present": false,
+  "tls_vault_file": false,
+  "max_corroboration": 2,
+  "note": "92 raw metadata objects correlate to 89 assets (three certificates seen by keystore and chain). 13 HSM keys sit on tokens with no PQC mechanism and are change_blocked; the 3 keys on GENERAL-HSM-02 (PQC-capable firmware) are the actionable control. QIRS-top is atm-firmware-sign and change_blocked. TLS adapter is catalogued; this vault has no tls.json (that is demo/live)."
+}

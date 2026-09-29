@@ -1,0 +1,22 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>in.tejomaya</groupId>
+  <artifactId>payments-gateway</artifactId>
+  <version>4.2.0</version>
+  <properties>
+    <maven.compiler.release>17</maven.compiler.release>
+    <bc.version>1.78</bc.version>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>org.bouncycastle</groupId>
+      <artifactId>bcprov-jdk18on</artifactId>
+      <version>${bc.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>io.jsonwebtoken</groupId>
+      <artifactId>jjwt-api</artifactId>
+      <version>0.12.5</version>
+    </dependency>
+  </dependencies>
+</project>

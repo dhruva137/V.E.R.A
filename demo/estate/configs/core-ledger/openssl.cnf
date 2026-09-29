@@ -1,0 +1,5 @@
+openssl_conf = default_conf
+
+[system_default_sect]
+MinProtocol = TLSv1.2
+Groups = X25519:P-256

@@ -1,0 +1,101 @@
+[
+  {
+    "id": "a2",
+    "title": "DST task force: CII quantum-safe by 2029, vendor CBOMs from FY 2027-28",
+    "body": "The DST task force report 'Implementation of Quantum Safe Ecosystem in India' sets CII milestones: foundations and a cryptographic inventory by 31 Dec 2027, high-priority systems migrated by 31 Dec 2028, full PQC adoption by 31 Dec 2029 (other enterprises: 2028, 2030, 2033). Organisations should request CBOMs from vendors from FY 2026-27 and mandate them through procurement from FY 2027-28.",
+    "severity": "critical",
+    "source": "DST, National Quantum Mission",
+    "date": "2026-02-04",
+    "category": "regulatory",
+    "url": "https://dst.gov.in/sites/default/files/Report_TaskForce_PQMigration_4Feb26%20(v1).pdf",
+    "dismissed": false
+  },
+  {
+    "id": "a1",
+    "title": "RBI constitutes the Q-SAFE expert committee",
+    "body": "The Reserve Bank of India constituted an eight-member expert committee for a Quantum Secure and Adaptive Financial Ecosystem (Q-SAFE). Its remit includes assessing the financial sector's cryptographic inventory through a CBOM, crypto agility and vendor readiness, and recommending a roadmap within six months of its first meeting.",
+    "severity": "warning",
+    "source": "Reserve Bank of India",
+    "date": "2026-05-25",
+    "category": "regulatory",
+    "url": "https://rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62803",
+    "dismissed": false
+  },
+  {
+    "id": "a6",
+    "title": "US EO 14412: federal PQC encryption by 2030, authentication by 2035",
+    "body": "Executive Order 14412, 'Securing the Nation Against Advanced Cryptographic Attacks', sets 31 Dec 2030 for federal agencies' most sensitive systems to use post-quantum encryption and 31 Dec 2035 for post-quantum authentication, with NIST post-quantum FIPS requirements for federal contractors.",
+    "severity": "info",
+    "source": "The White House",
+    "date": "2026-06-22",
+    "category": "regulatory",
+    "url": "https://www.whitehouse.gov/presidential-actions/2026/06/securing-the-nation-against-advanced-cryptographic-attacks/",
+    "dismissed": false
+  },
+  {
+    "id": "a7",
+    "title": "EU roadmap: critical infrastructure on PQC by end of 2030",
+    "body": "The EU coordinated implementation roadmap asks Member States to start the transition, including cryptographic inventories, by the end of 2026, and to move high-risk and critical-infrastructure use cases to post-quantum cryptography by the end of 2030.",
+    "severity": "info",
+    "source": "European Commission and NIS Cooperation Group",
+    "date": "2025-06-23",
+    "category": "regulatory",
+    "url": "https://digital-strategy.ec.europa.eu/en/news/eu-reinforces-its-cybersecurity-post-quantum-cryptography",
+    "dismissed": false
+  },
+  {
+    "id": "a3",
+    "title": "NIST IR 8547 (draft): RSA and ECC deprecated after 2030, disallowed after 2035",
+    "body": "The initial public draft of NIST IR 8547 proposes deprecating 112-bit RSA and ECC after 2030 and disallowing RSA and ECC after 2035. These are proposed dates until the final version is published.",
+    "severity": "info",
+    "source": "NIST",
+    "date": "2024-11-12",
+    "category": "standard",
+    "url": "https://nvlpubs.nist.gov/nistpubs/ir/2024/NIST.IR.8547.ipd.pdf",
+    "dismissed": false
+  },
+  {
+    "id": "a4",
+    "title": "FIPS 203, 204 and 205 published",
+    "body": "NIST published the first post-quantum standards: ML-KEM (FIPS 203), ML-DSA (FIPS 204) and SLH-DSA (FIPS 205).",
+    "severity": "info",
+    "source": "NIST",
+    "date": "2024-08-13",
+    "category": "standard",
+    "url": "https://csrc.nist.gov/pubs/fips/203/final",
+    "dismissed": false
+  },
+  {
+    "id": "a10",
+    "title": "P-256 needs fewer logical qubits than RSA-2048",
+    "body": "Chevignard, Fouque and Schrottenloher estimate 1,193 logical qubits for the elliptic-curve discrete logarithm on P-256, against 1,409 for RSA-2048 (Gidney 2025). VERA shifts the P-256 horizon earlier accordingly (threat model 2026.09.1).",
+    "severity": "warning",
+    "source": "EUROCRYPT 2026 (IACR ePrint 2026/280)",
+    "date": "2026-02",
+    "category": "threat",
+    "url": "https://eprint.iacr.org/2026/280",
+    "dismissed": false
+  },
+  {
+    "id": "a5",
+    "title": "Gidney: RSA-2048 with under a million noisy qubits",
+    "body": "Craig Gidney estimates RSA-2048 can be factored with under a million noisy qubits (1,409 logical qubits at peak) in under a week. This is the reference row of VERA's quantum-resources table.",
+    "severity": "info",
+    "source": "arXiv 2505.15917",
+    "date": "2025-05",
+    "category": "threat",
+    "url": "https://arxiv.org/abs/2505.15917",
+    "dismissed": false
+  },
+  {
+    "id": "a9",
+    "title": "OpenSSL 3.5 adds ML-KEM, ML-DSA and SLH-DSA",
+    "body": "OpenSSL 3.5.0 (8 Apr 2025) adds native ML-KEM, ML-DSA and SLH-DSA. VERA uses it to sign its evidence manifest with ML-DSA-65 and to measure PQC latency on the assessment host.",
+    "severity": "info",
+    "source": "OpenSSL",
+    "date": "2025-04-08",
+    "category": "standard",
+    "url": "https://openssl-library.org/news/openssl-3.5-notes/",
+    "dismissed": false
+  }
+]

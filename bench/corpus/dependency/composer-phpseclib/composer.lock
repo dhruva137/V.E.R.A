@@ -1,0 +1,12 @@
+{
+  "packages": [
+    {
+      "name": "phpseclib/phpseclib",
+      "version": "3.0.37"
+    },
+    {
+      "name": "monolog/monolog",
+      "version": "3.5.0"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+surface: container
+holdout_percent: 30
+cases:
+- id: container/dpkg-openssl-and-tls-config
+  split: tune
+  path: container/dpkg-openssl-and-tls-config/image.oci.tar
+  expect:
+  - name: OpenSSL
+  - name: TLSv1.1
+- id: container/decoy-no-crypto
+  split: tune
+  path: container/decoy-no-crypto/image.oci.tar
+  expect: []

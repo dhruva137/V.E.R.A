@@ -1,0 +1,47 @@
+# Private: never commit
+_private/
+START_HERE.md
+
+# Secrets and local config
+.env
+.env.local
+.env.*.local
+backend/data/agent_keys.json
+backend/data/signing/
+
+# Runtime state
+backend/data/*.db
+backend/data/model_health.json
+backend/data/engine_policy.json
+
+# Build output and dependencies
+node_modules/
+frontend/dist/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Benchmark scratch
+bench/tmp/
+*.log
+
+# Built frontend served by FastAPI in production (regenerate with: cd frontend && npm run build)
+backend/static/
+
+
+# research: regenerable from pinned sources (research/README.md)
+research/indicrypt_bench/src/
+research/indicrypt_bench/objects/
+research/indicrypt_bench/functions.csv.gz
+research/indicrypt_bench/*.log
+research/**/__pycache__/
+submission/render/
+research/indicrypt_bench/v2*/
+research/e2e/bin/
+research/models/
+research/results/*.npy
+research/*.log
+research/e2e/images/
+
+# generated
+deck/icons/

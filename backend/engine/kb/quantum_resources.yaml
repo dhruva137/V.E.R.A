@@ -1,0 +1,93 @@
+# Quantum resources to break each primitive (engine/quantum_resources.py).
+#
+# Different primitives need different quantum computers, so one CRQC arrival
+# date for every Shor-vulnerable asset is wrong. Each row gives the best
+# published logical-qubit estimate; the engine shifts the reference survival
+# curve by  delta = D * log2(L_p / L_ref)  years (D = doubling time of logical
+# qubit capacity, a stated assumption). Negative delta = arrives earlier.
+#
+# A row with `logical_qubits: null` has no verified published estimate. The
+# engine then uses the reference curve (delta = 0) and says so. Nothing here is
+# interpolated or guessed: RSA-3072 needs *more* qubits than RSA-2048, so using
+# the RSA-2048 curve for it is conservative, never optimistic.
+#
+# status: verified = checked against the source on `verified_on`.
+
+reference: rsa-2048
+verified_on: "2026-09-24"
+
+rows:
+  - id: rsa-2048
+    label: RSA-2048
+    algorithms: [RSA]
+    key_sizes: [2048]
+    logical_qubits: 1409
+    physical_qubits: 1000000
+    source: 'Gidney, "How to factor 2048 bit RSA integers with less than a million noisy qubits", 2025'
+    url: https://arxiv.org/abs/2505.15917
+    date: "2025-05"
+    status: verified
+    note: "Peak of 1,409 logical qubits; about 900,000 physical qubits, reported as under a million; under a week of runtime."
+
+  - id: ecdlp-p256
+    label: ECDLP on P-256
+    algorithms: [ECDSA, ECDH]
+    curves: [P-256, secp256r1, prime256v1]
+    key_sizes: [256]
+    logical_qubits: 1193
+    source: 'Chevignard, Fouque, Schrottenloher, "Reducing the Number of Qubits in Quantum Discrete Logarithms on Elliptic Curves", EUROCRYPT 2026'
+    url: https://eprint.iacr.org/2026/280
+    date: "2026-02"
+    status: verified
+    note: "Down from 2,124 logical qubits (Haner et al. 2020); fewer qubits at the cost of more gates."
+
+  - id: ecdlp-secp256k1
+    label: ECDLP on secp256k1
+    algorithms: [ECDSA]
+    curves: [secp256k1]
+    logical_qubits: 1200
+    physical_qubits: 500000
+    source: "Google Quantum AI with the Ethereum Foundation and Stanford, resource estimate for ECDLP-256 on secp256k1, 2026"
+    url: https://postquantum.com/security-pqc/google-quantum-bitcoin-ecdlp/
+    date: "2026-03"
+    status: verified
+    note: "Low-qubit variant: at most 1,200 logical qubits, under 500,000 physical. Circuits withheld; the claim is backed by a published zero-knowledge proof."
+
+  - id: rsa-3072
+    label: RSA-3072
+    algorithms: [RSA]
+    key_sizes: [3072]
+    logical_qubits: null
+    status: not_established
+    note: "No verified estimate on the same construction. Needs more qubits than RSA-2048, so the reference curve is conservative."
+
+  - id: rsa-4096
+    label: RSA-4096
+    algorithms: [RSA]
+    key_sizes: [4096]
+    logical_qubits: null
+    status: not_established
+    note: "No verified estimate on the same construction; reference curve used (conservative)."
+
+  - id: ecdlp-p384
+    label: ECDLP on P-384 / P-521
+    algorithms: [ECDSA, ECDH]
+    curves: [P-384, secp384r1, P-521, secp521r1]
+    key_sizes: [384, 521]
+    logical_qubits: null
+    status: not_established
+    note: "Larger curves need more qubits; no verified 2026 estimate, so the reference curve is used (conservative)."
+
+  - id: ecdlp-curve25519
+    label: ECDLP on Curve25519 / Curve448
+    algorithms: [X25519, Ed25519, X448, Ed448]
+    logical_qubits: null
+    status: not_established
+    note: "A 255-bit curve; no separately published estimate. The P-256 figure suggests about half a year earlier than RSA-2048, but it is not applied without a source."
+
+  - id: finite-field-dlp
+    label: Finite-field discrete log (DH, DSA)
+    algorithms: [DH, DHE, DSA]
+    logical_qubits: null
+    status: not_established
+    note: "Comparable to factoring at the same size; no verified 2026 estimate, so the reference curve is used."

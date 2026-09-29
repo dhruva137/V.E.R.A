@@ -1,0 +1,23 @@
+asset_name,hostname,type,algo,bits,protocol,env,department,owner,notes
+UPI Switch TLS Certificate,upi-switch.tejomaya.internal:443,tls_certificate,RSA,2048,TLSv1.2,production,Payments,payments-platform@tejomaya.example,NPCI-facing switch; certificate rotated annually
+UPI Switch Key Exchange,upi-switch.tejomaya.internal:443,tls_key_exchange,ECDHE,256,TLSv1.2,production,Payments,payments-platform@tejomaya.example,Harvest-now-decrypt-later surface for settlement traffic
+Core Banking API Certificate,corebank-api.tejomaya.internal:443,tls_certificate,RSA,2048,TLSv1.2,production,Core Banking,corebank-ops@tejomaya.example,Internal service mesh ingress
+Core Banking Batch Key Exchange,corebank-batch.tejomaya.internal:443,tls_key_exchange,RSA,2048,TLSv1.2,production,Core Banking,corebank-ops@tejomaya.example,Static RSA key exchange; no forward secrecy
+Tejomaya Root CA G3,pki://tejomaya/root-ca-g3,root_ca,RSA,4096,,production,PKI,pki-team@tejomaya.example,Offline root; 20 year validity horizon
+Tejomaya Issuing CA - Devices,pki://tejomaya/issuing-ca-devices,issuing_ca,RSA,3072,,production,PKI,pki-team@tejomaya.example,Issues ATM and POS device identities
+ATM Firmware Signing Key,hsm://atm-hsm-01/slot0/firmware-sign,firmware_signing,RSA,3072,,production,ATM Estate,atm-engineering@tejomaya.example,Signs firmware for 4200 ATMs; cannot be rotated in field
+POS Terminal Firmware Signing,hsm://pos-hsm-01/slot0/firmware-sign,firmware_signing,ECDSA,256,,production,Cards,cards-engineering@tejomaya.example,Signs POS terminal firmware images
+Card Verification Key,hsm://payment-hsm-01/slot0/card-verify,payment_hsm,RSA,2048,,production,Cards,cards-engineering@tejomaya.example,PIN verification; PCI scope
+Legacy PIN Translation Key,hsm://payment-hsm-01/slot1/pin-translate,payment_hsm,3DES,168,,production,Cards,cards-engineering@tejomaya.example,Classically weak; scheduled for decommission
+ATM Device Identity Certificate,atm-fleet.tejomaya.internal,device_identity,ECDSA,256,,production,ATM Estate,atm-engineering@tejomaya.example,Per-terminal client certificates
+Netbanking JWT Signing Key,/opt/idp/jwt-signing-rs256.pem,token_signing,RSA,2048,,production,Digital Channels,identity-team@tejomaya.example,Signs customer session assertions
+Branch VPN IPsec Tunnel,vpn-concentrator.tejomaya.internal,vpn_ipsec,DH,2048,,production,Network,network-ops@tejomaya.example,Branch-to-datacentre tunnels
+Core Banking Database TDE,oracle://corebank/wallet/tde-master,database_tls,AES,256,,production,Core Banking,dba-team@tejomaya.example,Transparent data encryption master key
+Backup Archive Master Key,/opt/backup/archive-master-key,backup_encryption,AES,256,,production,Infrastructure,backup-ops@tejomaya.example,Seven year retention requirement
+Legacy Tape Archive Key,/opt/backup/tape-archive-legacy,backup_encryption,3DES,168,,production,Infrastructure,backup-ops@tejomaya.example,Regulatory archive; classically broken
+Jump Host SSH Key,/etc/ssh/ssh_host_rsa_key,ssh_key,RSA,2048,,production,Infrastructure,platform-team@tejomaya.example,Administrative access to production
+Deployment SSH Key,/etc/ssh/ssh_host_ed25519_key,ssh_key,Ed25519,256,,production,Infrastructure,platform-team@tejomaya.example,CI deployment identity
+Release Signing Key,/opt/ci/release-signing.pem,code_signing,RSA,3072,,production,Engineering,release-eng@tejomaya.example,Signs internal application releases
+Legacy Password Hashing,services/auth/password_legacy.py:33,source,MD5,128,,production,Digital Channels,identity-team@tejomaya.example,Unresolved legacy call site; classically broken
+Statement Export Cipher,services/statements/legacy_export.py:26,source,DES,56,,production,Reporting,reporting-team@tejomaya.example,Legacy export path; classically broken
+Tokenisation Service Cipher,services/cards/tokenize.java:64,source,AES,256,,production,Cards,cards-engineering@tejomaya.example,PAN tokenisation; quantum safe

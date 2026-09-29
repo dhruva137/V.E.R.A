@@ -1,0 +1,50 @@
+{
+  "source": "ssh",
+  "collected_at": "2026-09-22T09:30:00Z",
+  "synthetic": true,
+  "probes": [
+    {
+      "target": "10.20.0.5:22",
+      "banner": "SSH-2.0-OpenSSH_9.2p1 Debian-2+deb12u3",
+      "kex_algorithms": [
+        "sntrup761x25519-sha512@openssh.com",
+        "curve25519-sha256",
+        "ecdh-sha2-nistp256",
+        "diffie-hellman-group14-sha256",
+        "kex-strict-s-v00@openssh.com"
+      ],
+      "server_host_key_algorithms": [
+        "rsa-sha2-512",
+        "rsa-sha2-256",
+        "ssh-ed25519"
+      ],
+      "encryption_server_to_client": [
+        "chacha20-poly1305@openssh.com",
+        "aes256-gcm@openssh.com"
+      ],
+      "mac_server_to_client": [
+        "hmac-sha2-256-etm@openssh.com",
+        "hmac-sha1"
+      ]
+    },
+    {
+      "target": "git.tejomaya.internal:22",
+      "banner": "SSH-2.0-OpenSSH_10.0p2",
+      "kex_algorithms": [
+        "mlkem768x25519-sha256",
+        "sntrup761x25519-sha512",
+        "curve25519-sha256"
+      ],
+      "server_host_key_algorithms": [
+        "ssh-ed25519",
+        "ecdsa-sha2-nistp256"
+      ],
+      "encryption_server_to_client": [
+        "aes256-gcm@openssh.com"
+      ],
+      "mac_server_to_client": [
+        "hmac-sha2-512-etm@openssh.com"
+      ]
+    }
+  ]
+}

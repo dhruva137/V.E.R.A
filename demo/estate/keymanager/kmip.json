@@ -1,0 +1,29 @@
+{
+  "source": "kmip",
+  "collected_at": "2026-09-01T09:00:00Z",
+  "endpoint": "kmip://partner-km.tejomaya.internal:5696",
+  "protocol_version": "2.1",
+  "note": "Attributes only; no Get operation for key material was issued.",
+  "objects": [
+    {
+      "Unique Identifier": "PKM-0019",
+      "Name": "partner-signing-2019",
+      "Object Type": "Private Key",
+      "Cryptographic Algorithm": "RSA",
+      "Cryptographic Length": 2048,
+      "Cryptographic Usage Mask": [
+        "Sign"
+      ],
+      "State": "Deactivated",
+      "Initial Date": "2019-04-02T09:00:00Z",
+      "Activation Date": "2019-04-10T09:00:00Z",
+      "Deactivation Date": "2025-12-31T00:00:00Z",
+      "Object Group": "partner-signing",
+      "Protection Storage Mask": [
+        "Software"
+      ],
+      "Fresh": false,
+      "public_key_sha256": "6b698344cd69c6a50e6d41ee9eec11cb37ff60f834efd7ac687222330455cf53"
+    }
+  ]
+}

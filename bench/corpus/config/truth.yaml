@@ -1,0 +1,45 @@
+surface: config
+holdout_percent: 30
+cases:
+- id: config/nginx-tlsv1
+  split: tune
+  path: config/nginx-tlsv1
+  expect:
+  - name: TLSv1
+  - name: TLSv1.2
+- id: config/nginx-rc4
+  split: tune
+  path: config/nginx-rc4
+  expect:
+  - name: RC4
+- id: config/sshd-weak-kex
+  split: holdout
+  path: config/sshd-weak-kex
+  expect:
+  - name: DH
+- id: config/sshd-3des
+  split: tune
+  path: config/sshd-3des
+  expect:
+  - name: 3DES
+- id: config/openssl-cnf-minprotocol
+  split: tune
+  path: config/openssl-cnf-minprotocol
+  expect:
+  - name: TLSv1
+- id: config/strongswan-modp1024
+  split: tune
+  path: config/strongswan-modp1024
+  expect:
+  - name: AES
+  - name: HMAC
+  - name: DH
+- id: config/terraform-kms-rsa
+  split: holdout
+  path: config/terraform-kms-rsa
+  expect:
+  - name: RSA
+- id: config/decoy-plain-http
+  split: tune
+  path: config/decoy-plain-http
+  expect: []

@@ -1,0 +1,10 @@
+{
+  "tls_targets": [
+    "sbi.co.in", "hdfcbank.com", "icicibank.com", "axisbank.com",
+    "kotak.com", "bankofbaroda.co.in", "rbi.org.in", "sebi.gov.in",
+    "npci.org.in", "irctc.co.in", "uidai.gov.in", "incometax.gov.in",
+    "tcs.com", "infosys.com", "wipro.com", "hcltech.com",
+    "reliance.com", "lic.in", "nsdl.co.in", "bseindia.com", "nseindia.com",
+    "tatamotors.com", "onlinesbi.sbi", "pnbindia.in", "unionbankofindia.co.in"
+  ]
+}

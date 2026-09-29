@@ -1,0 +1,388 @@
+# Cryptographic library knowledge base (offline).
+#
+# One entry per library family. Collectors map what they find (a linked DLL, a
+# version banner, a lockfile package) to an entry by `id`, then ask one
+# question: does this version block post-quantum migration?
+#
+# pqc_native_from
+#   "<version>"  first release with native ML-KEM / ML-DSA (or hybrid TLS groups).
+#                May be a map keyed by ecosystem when the version lines differ.
+#   "any"        a post-quantum library: every release qualifies.
+#   "never"      implements only named classical public-key algorithms; the
+#                migration is replacing the library, not upgrading it.
+#   null         not established. Never guessed: the finding says "unknown".
+#
+# status: "verified" means checked against the cited primary source on the
+# date in `as_of`; "VERIFY" means the claim must be confirmed before a report
+# relies on it, and the UI shows it that way.
+#
+# public_key: false marks libraries that only offer symmetric primitives,
+# hashes or password hashing. They are inventoried but are not PQC blockers.
+
+as_of: "2026-09-24"
+
+libraries:
+  - id: openssl
+    name: OpenSSL
+    role: tls+primitives
+    public_key: true
+    native: [libssl, libcrypto, ssleay32, libeay32]
+    packages: {conan: [openssl], vcpkg: [openssl], deb: [openssl, libssl3, libssl3t64, libssl1.1], apk: [openssl, libssl3, libcrypto3, libssl1.1, libcrypto1.1]}
+    banners: ['OpenSSL (\d+\.\d+\.\d+[a-z]?)']
+    pqc_native_from: "3.5.0"
+    status: VERIFY
+    source: "https://openssl-library.org/news/openssl-3.5-notes/"
+    note: "3.5 adds ML-KEM, ML-DSA, SLH-DSA and the X25519MLKEM768 TLS group. Below 3.5, PQC needs oqs-provider."
+    upgrade: "OpenSSL 3.5 LTS"
+
+  - id: boringssl
+    name: BoringSSL
+    role: tls+primitives
+    public_key: true
+    banners: ['BoringSSL']
+    pqc_native_from: null
+    status: VERIFY
+    note: "BoringSSL has no version numbers. Builds from late 2024 onward negotiate X25519MLKEM768; check the build date."
+
+  - id: libressl
+    name: LibreSSL
+    role: tls+primitives
+    public_key: true
+    banners: ['LibreSSL (\d+\.\d+\.\d+)']
+    pqc_native_from: null
+    status: VERIFY
+    note: "ML-KEM support landed in the 4.x line; confirm the exact release before relying on it."
+
+  - id: aws-lc
+    name: AWS-LC
+    role: tls+primitives
+    public_key: true
+    banners: ['AWS-LC']
+    packages: {cargo: [aws-lc-rs, aws-lc-sys]}
+    pqc_native_from: null
+    status: VERIFY
+    note: "AWS-LC ships ML-KEM and hybrid groups; the first qualifying release is not pinned here."
+
+  - id: wolfssl
+    name: wolfSSL
+    role: tls+primitives
+    public_key: true
+    native: [libwolfssl, wolfssl]
+    packages: {conan: [wolfssl], vcpkg: [wolfssl], apk: [wolfssl]}
+    banners: ['wolfSSL (\d+\.\d+\.\d+)']
+    pqc_native_from: null
+    status: VERIFY
+    note: "ML-KEM and ML-DSA are build-time options; a banner alone does not show whether they were enabled."
+
+  - id: mbedtls
+    name: Mbed TLS
+    role: tls+primitives
+    public_key: true
+    native: [libmbedcrypto, libmbedtls, libmbedx509]
+    packages: {conan: [mbedtls], vcpkg: [mbedtls]}
+    banners: ['[Mm]bed ?TLS (\d+\.\d+\.\d+)']
+    pqc_native_from: null
+    status: VERIFY
+    note: "No released ML-KEM in the 3.x line reviewed; PQC work is tracked in TF-PSA-Crypto."
+
+  - id: gnutls
+    name: GnuTLS
+    role: tls+primitives
+    public_key: true
+    native: [libgnutls]
+    packages: {conan: [gnutls], vcpkg: [gnutls], deb: [libgnutls30, libgnutls30t64], apk: [gnutls]}
+    banners: ['GnuTLS (\d+\.\d+\.\d+)']
+    pqc_native_from: null
+    status: VERIFY
+    note: "Recent 3.8.x releases add ML-KEM hybrids through leancrypto when built with it."
+
+  - id: libsodium
+    name: libsodium
+    role: primitives
+    public_key: true
+    native: [libsodium]
+    packages: {pypi: [pynacl], npm: [libsodium-wrappers, sodium-native], gem: [rbnacl], composer: [paragonie/sodium_compat], conan: [libsodium], vcpkg: [libsodium]}
+    pqc_native_from: null
+    status: VERIFY
+    note: "X25519 and Ed25519 are Shor-exposed. PQC availability depends on the release; not pinned here."
+
+  - id: windows-cng
+    name: Windows CNG
+    role: primitives
+    public_key: true
+    native: [bcrypt.dll, ncrypt.dll]
+    pqc_native_from: null
+    status: VERIFY
+    note: "ML-KEM and ML-DSA arrive through OS updates, not a library version, so the DLL cannot show it."
+
+  - id: windows-capi
+    name: Windows CryptoAPI (legacy)
+    role: primitives
+    public_key: true
+    native: [advapi32.dll, crypt32.dll]
+    pqc_native_from: "never"
+    status: VERIFY
+    note: "The legacy CryptAcquireContext API is deprecated in favour of CNG and will not gain PQC."
+    upgrade: "Port to CNG (bcrypt.dll / ncrypt.dll)"
+
+  - id: apple-security
+    name: Apple Security / CommonCrypto
+    role: primitives
+    public_key: true
+    native: [Security.framework, CommonCrypto, libcommonCrypto]
+    pqc_native_from: null
+    status: VERIFY
+    note: "PQC arrives with OS releases through CryptoKit; the linked framework does not show the OS version."
+
+  - id: go-stdlib
+    name: Go standard library
+    role: tls+primitives
+    public_key: true
+    banners: ['\bgo(1\.\d{1,2}(?:\.\d{1,2})?)\b']
+    pqc_native_from: "1.24"
+    status: VERIFY
+    source: "https://go.dev/doc/go1.24"
+    note: "Go 1.24 adds crypto/mlkem and enables X25519MLKEM768 in crypto/tls by default."
+    upgrade: "Go 1.24 or later"
+
+  - id: openjdk
+    name: OpenJDK
+    role: tls+primitives
+    public_key: true
+    packages:
+      deb: [openjdk-11-jre-headless, openjdk-17-jre-headless, openjdk-21-jre-headless, openjdk-25-jre-headless, openjdk-17-jdk-headless, openjdk-21-jdk-headless]
+      apk: [openjdk11-jre, openjdk17-jre, openjdk21-jre, openjdk17-jre-headless, openjdk21-jre-headless]
+    pqc_native_from: "24"
+    status: VERIFY
+    source: "https://openjdk.org/jeps/496"
+    note: "JDK 24 adds ML-KEM (JEP 496) and ML-DSA (JEP 497)."
+    upgrade: "JDK 24 or later (25 LTS)"
+
+  - id: dotnet
+    name: .NET runtime
+    role: tls+primitives
+    public_key: true
+    pqc_native_from: "10"
+    status: VERIFY
+    note: ".NET 10 adds MLKem, MLDsa and SlhDsa types where the OS crypto provider supports them."
+    upgrade: ".NET 10"
+
+  - id: bouncycastle
+    name: Bouncy Castle
+    role: primitives+pki
+    public_key: true
+    packages:
+      maven: [org.bouncycastle:bcprov-jdk18on, org.bouncycastle:bcprov-jdk15on, org.bouncycastle:bcprov-jdk15to18, org.bouncycastle:bcpkix-jdk18on]
+      nuget: [BouncyCastle.Cryptography, Portable.BouncyCastle]
+    pqc_native_from: {maven: "1.79", nuget: null}
+    status: VERIFY
+    note: "The Java provider has FIPS 203/204/205 names from 1.79; the C# line is versioned separately."
+    upgrade: "bcprov 1.79 or later"
+
+  - id: python-cryptography
+    name: pyca/cryptography
+    role: primitives+pki
+    public_key: true
+    packages: {pypi: [cryptography, pyopenssl]}
+    pqc_native_from: null
+    status: VERIFY
+    note: "Wraps a bundled OpenSSL or AWS-LC. PQC exposure depends on the release; not pinned here."
+
+  - id: pycryptodome
+    name: PyCryptodome
+    role: primitives
+    public_key: true
+    packages: {pypi: [pycryptodome, pycryptodomex, pycrypto]}
+    pqc_native_from: null
+    status: VERIFY
+    note: "RSA, ECC and DSA are Shor-exposed. No ML-KEM or ML-DSA in the releases reviewed."
+
+  - id: python-rsa
+    name: python-rsa
+    role: primitives
+    public_key: true
+    packages: {pypi: [rsa]}
+    pqc_native_from: "never"
+    status: verified
+    note: "Implements RSA only."
+    upgrade: "Replace with a PQC-capable library (liboqs-python, or cryptography over OpenSSL 3.5)"
+
+  - id: python-ecdsa
+    name: python-ecdsa
+    role: primitives
+    public_key: true
+    packages: {pypi: [ecdsa]}
+    pqc_native_from: "never"
+    status: verified
+    note: "Implements ECDSA and EdDSA only."
+    upgrade: "Replace with a PQC-capable library"
+
+  - id: ruby-openssl
+    name: Ruby openssl gem
+    role: binding
+    public_key: true
+    packages: {gem: [openssl]}
+    pqc_native_from: null
+    status: VERIFY
+    note: "A binding to the system OpenSSL. PQC support follows the linked OpenSSL (3.5 or later), not the gem's own version, so the gem version alone cannot settle it."
+
+  - id: jwt-libraries
+    name: JWT / JOSE library
+    role: token-signing
+    public_key: true
+    packages:
+      pypi: [pyjwt, python-jose, jwcrypto, authlib]
+      npm: [jsonwebtoken, jose, node-jose]
+      maven: [io.jsonwebtoken:jjwt, io.jsonwebtoken:jjwt-api, com.nimbusds:nimbus-jose-jwt, com.auth0:java-jwt]
+      composer: [firebase/php-jwt, lcobucci/jwt]
+      gem: [jwt]
+      nuget: [System.IdentityModel.Tokens.Jwt, jose-jwt]
+      go: [github.com/golang-jwt/jwt/v5, github.com/golang-jwt/jwt/v4, github.com/lestrrat-go/jwx/v2]
+      cargo: [jsonwebtoken]
+    pqc_native_from: null
+    status: VERIFY
+    note: "RS256 and ES256 are Shor-exposed. ML-DSA for JOSE is still an IETF draft, so library support varies."
+
+  - id: node-forge
+    name: node-forge
+    role: primitives+pki
+    public_key: true
+    packages: {npm: [node-forge]}
+    pqc_native_from: null
+    status: VERIFY
+    note: "Pure-JS RSA and X.509. No PQC in the releases reviewed."
+
+  - id: classical-only-js
+    name: Classical-only JS crypto
+    role: primitives
+    public_key: true
+    packages: {npm: [node-rsa, elliptic, tweetnacl, "@noble/curves", secp256k1]}
+    pqc_native_from: "never"
+    status: verified
+    note: "Each implements named classical curves or RSA only."
+    upgrade: "Add @noble/post-quantum or a liboqs binding"
+
+  - id: classical-only-rust
+    name: Classical-only Rust crypto
+    role: primitives
+    public_key: true
+    packages: {cargo: [rsa, p256, p384, k256, ed25519-dalek, x25519-dalek]}
+    pqc_native_from: "never"
+    status: verified
+    note: "Each crate implements one classical algorithm family."
+    upgrade: "Add the RustCrypto ml-kem / ml-dsa crates"
+
+  - id: ring
+    name: ring
+    role: primitives
+    public_key: true
+    packages: {cargo: [ring]}
+    pqc_native_from: null
+    status: VERIFY
+    note: "RSA, ECDSA, Ed25519 and X25519. No PQC in the releases reviewed."
+
+  - id: rustls
+    name: rustls
+    role: tls
+    public_key: true
+    packages: {cargo: [rustls]}
+    pqc_native_from: null
+    status: VERIFY
+    note: "Recent 0.23.x releases negotiate X25519MLKEM768 with the aws-lc-rs provider; the first such release is not pinned here."
+
+  - id: golang-x-crypto
+    name: golang.org/x/crypto
+    role: primitives+ssh
+    public_key: true
+    packages: {go: [golang.org/x/crypto]}
+    pqc_native_from: null
+    status: VERIFY
+    note: "The ssh package gained ML-KEM hybrid key exchange in 2025; the first release is not pinned here."
+
+  - id: circl
+    name: Cloudflare CIRCL
+    role: pqc
+    public_key: true
+    packages: {go: [github.com/cloudflare/circl]}
+    pqc_native_from: null
+    status: VERIFY
+    note: "Carries Kyber / ML-KEM and Dilithium / ML-DSA implementations; confirm which the pinned version exposes."
+
+  - id: tink
+    name: Google Tink
+    role: primitives
+    public_key: true
+    packages: {maven: [com.google.crypto.tink:tink], pypi: [tink], go: [github.com/tink-crypto/tink-go/v2]}
+    pqc_native_from: null
+    status: VERIFY
+    note: "PQC key types vary by language port."
+
+  - id: phpseclib
+    name: phpseclib
+    role: primitives+ssh
+    public_key: true
+    packages: {composer: [phpseclib/phpseclib]}
+    pqc_native_from: null
+    status: VERIFY
+    note: "Pure-PHP RSA, EC and SSH. No PQC in the releases reviewed."
+
+  - id: ssh-libraries
+    name: SSH library
+    role: ssh
+    public_key: true
+    packages: {pypi: [paramiko, asyncssh], npm: [ssh2], maven: [com.jcraft:jsch, com.github.mwiede:jsch, org.apache.sshd:sshd-core], gem: [net-ssh]}
+    pqc_native_from: null
+    status: VERIFY
+    note: "SSH key exchange is Shor-exposed unless an ML-KEM or sntrup761 hybrid is negotiated."
+
+  - id: openpgp
+    name: OpenPGP library
+    role: pgp
+    public_key: true
+    packages: {npm: [openpgp], pypi: [pgpy, python-gnupg], go: [github.com/ProtonMail/go-crypto]}
+    pqc_native_from: null
+    status: VERIFY
+    note: "PQC for OpenPGP (draft-ietf-openpgp-pqc) is new; support varies by release."
+
+  - id: liboqs
+    name: Open Quantum Safe (liboqs)
+    role: pqc
+    public_key: true
+    native: [liboqs, oqsprovider]
+    packages:
+      pypi: [liboqs-python, oqs]
+      maven: [org.openquantumsafe:liboqs-java]
+      go: [github.com/open-quantum-safe/liboqs-go]
+      cargo: [oqs, oqs-sys]
+      conan: [liboqs]
+      vcpkg: [liboqs]
+    pqc_native_from: "any"
+    status: verified
+    source: "https://openquantumsafe.org/"
+    note: "A post-quantum library. OQS advises it for prototyping and evaluation, not production."
+
+  - id: pqc-native
+    name: Post-quantum implementation
+    role: pqc
+    public_key: true
+    packages:
+      npm: ["@noble/post-quantum", "crystals-kyber", "mlkem"]
+      pypi: [kyber-py, dilithium-py, pqcrypto]
+      cargo: [ml-kem, ml-dsa, slh-dsa, pqcrypto, pqcrypto-mlkem]
+    pqc_native_from: "any"
+    status: verified
+    note: "Implements FIPS 203/204/205 algorithms."
+
+  - id: symmetric-only
+    name: Symmetric / hashing library
+    role: symmetric
+    public_key: false
+    packages:
+      npm: [crypto-js, bcrypt, bcryptjs, argon2, scrypt-js]
+      pypi: [bcrypt, argon2-cffi, passlib]
+      gem: [bcrypt]
+      composer: [defuse/php-encryption]
+      maven: [org.mindrot:jbcrypt]
+    pqc_native_from: "any"
+    status: verified
+    note: "Symmetric ciphers, hashes or password hashing only. Grover, not Shor; not a PQC migration blocker. Weak algorithm choices are found where they are called."

@@ -1,0 +1,33 @@
+# Source rules: Java (JCA/JCE, Bouncy Castle, JJWT, Nimbus).
+language: java
+grammars: {.java: java}
+strings: [string_literal]
+queries:
+  call: '(method_invocation object: (_)? @obj name: (identifier) @name arguments: (argument_list) @args) @site'
+  new: '(object_creation_expression type: (_) @callee arguments: (argument_list) @args) @site'
+  reference: '(field_access) @site'
+rules:
+  - {id: java-cipher, kind: call, match: '(?:^|\.)Cipher\.getInstance$', algorithm_from: {arg: 0}, usage: encryption}
+  - {id: java-digest, kind: call, match: '(?:^|\.)MessageDigest\.getInstance$', algorithm_from: {arg: 0}, usage: hashing}
+  - {id: java-signature, kind: call, match: '(?:^|\.)Signature\.getInstance$', algorithm_from: {arg: 0, signature: true}, usage: signing}
+  - {id: java-kpg, kind: call, match: '(?:^|\.)KeyPairGenerator\.getInstance$', algorithm_from: {arg: 0}, usage: signing}
+  - {id: java-kf, kind: call, match: '(?:^|\.)KeyFactory\.getInstance$', algorithm_from: {arg: 0}, usage: signing}
+  - {id: java-ka, kind: call, match: '(?:^|\.)KeyAgreement\.getInstance$', algorithm_from: {arg: 0}, usage: key_exchange}
+  - {id: java-kem, kind: call, match: '(?:^|\.)KEM\.getInstance$', algorithm_from: {arg: 0}, usage: key_exchange}
+  - {id: java-keygen, kind: call, match: '(?:^|\.)KeyGenerator\.getInstance$', algorithm_from: {arg: 0}, usage: encryption}
+  - {id: java-mac, kind: call, match: '(?:^|\.)Mac\.getInstance$', algorithm_from: {arg: 0}, usage: authentication}
+  - {id: java-skf, kind: call, match: '(?:^|\.)SecretKeyFactory\.getInstance$', algorithm_from: {arg: 0}, usage: key_derivation}
+  - {id: java-sslcontext, kind: call, match: '(?:^|\.)SSLContext\.getInstance$', protocol_from: {arg: 0}, usage: encryption}
+  - {id: java-rsa-spec, kind: new, match: '^RSAKeyGenParameterSpec$', algorithm: RSA, usage: signing, key_size: {arg: 0}}
+  - {id: java-ec-spec, kind: new, match: '^ECGenParameterSpec$', algorithm: ECDSA, usage: signing, key_size: {arg: 0, pattern: '(\d{3})'}}
+  - {id: java-secretkeyspec, kind: new, match: '^SecretKeySpec$', algorithm_from: {arg: 1}, usage: encryption}
+  - {id: java-des-spec, kind: new, match: '^DESKeySpec$', algorithm: DES, usage: encryption}
+  - {id: java-desede-spec, kind: new, match: '^DESedeKeySpec$', algorithm: 3DES, usage: encryption}
+  - {id: java-bc-rsa, kind: new, match: '^RSAKeyPairGenerator$', algorithm: RSA, usage: signing}
+  - {id: java-bc-ec, kind: new, match: '^ECKeyPairGenerator$', algorithm: ECDSA, usage: signing}
+  - {id: java-bc-mlkem, kind: new, match: '^(MLKEMKeyPairGenerator|KyberKeyPairGenerator)$', algorithm: ML-KEM-768, usage: key_exchange}
+  - {id: java-bc-mldsa, kind: new, match: '^(MLDSAKeyPairGenerator|DilithiumKeyPairGenerator)$', algorithm: ML-DSA-65, usage: signing}
+  - {id: java-jwt-rsa, kind: reference, match: '(?:^|\.)(SignatureAlgorithm|SIG|JWSAlgorithm)\.(RS|PS)(256|384|512)$', algorithm: RSA, usage: signing}
+  - {id: java-jwt-ec, kind: reference, match: '(?:^|\.)(SignatureAlgorithm|SIG|JWSAlgorithm)\.ES(256|384|512)$', algorithm: ECDSA, usage: signing}
+  - {id: java-jwt-hmac, kind: reference, match: '(?:^|\.)(SignatureAlgorithm|SIG|JWSAlgorithm)\.HS(256|384|512)$', algorithm: HMAC, usage: authentication}
+  - {id: java-jwt-eddsa, kind: reference, match: '(?:^|\.)(SignatureAlgorithm|SIG|JWSAlgorithm)\.(EdDSA|Ed25519)$', algorithm: Ed25519, usage: signing}

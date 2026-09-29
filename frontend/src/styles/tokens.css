@@ -1,0 +1,124 @@
+/* Design tokens (UX4G 3.0 based).
+ *
+ * Colour follows UX4G 3.0 (NeGD, MeitY): primary #4a2bc2, neutrals #fafafa /
+ * #ffffff / #e5e5e5 / #171717 / #404040, success #128937, error #db372d,
+ * warning #fa8c16 (fills) and #ad4e00 (text), info #006d75. The primary's hover
+ * and tint steps are derived from #4a2bc2 for interaction states. The dark set
+ * keeps the same meanings at contrast that passes WCAG 2.1 AA on its surfaces.
+ *
+ * Everything is in rem, so the text-size setting (GIGW: text resize) scales
+ * spacing with the type and nothing overlaps at 125%.
+ */
+
+:root {
+  --font-sans: "Noto Sans", "Noto Sans Devanagari", system-ui, "Segoe UI", sans-serif;
+  --font-mono: "Noto Sans Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+
+  --fs-12: 0.75rem;
+  --fs-13: 0.8125rem;
+  --fs-14: 0.875rem;
+  --fs-16: 1rem;
+  --fs-18: 1.125rem;
+  --fs-22: 1.375rem;
+  --fs-28: 1.75rem;
+  --lh: 1.5;
+  --lh-tight: 1.25;
+
+  --s-1: 0.25rem;
+  --s-2: 0.5rem;
+  --s-3: 0.75rem;
+  --s-4: 1rem;
+  --s-5: 1.5rem;
+  --s-6: 2rem;
+  --s-7: 3rem;
+
+  --r-card: 8px;
+  --r-input: 6px;
+  --r-pill: 999px;
+
+  --dur: 150ms;
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+
+  --nav-w: 14.5rem;
+  --top-h: 3.5rem;
+  --panel-w: 34rem;
+  --assist-w: 26rem;
+}
+
+/* Light: the default. */
+:root,
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #fafafa;
+  --surface: #ffffff;
+  --surface-2: #f5f5f5;
+  --surface-3: #eeeeee;
+  --line: #e5e5e5;
+  --line-strong: #d4d4d4;
+  --text: #171717;
+  --text-2: #404040;
+  --text-3: #5c5c5c;
+
+  --primary: #4a2bc2;
+  --primary-hover: #3d23a3;
+  --primary-weak: #f1edfc;
+  --primary-line: #d3c8f3;
+  --primary-text: #4a2bc2;
+  --on-primary: #ffffff;
+  --focus: #4a2bc2;
+
+  --ok: #128937;
+  --ok-text: #0f7a31;
+  --ok-weak: #e7f4eb;
+  --bad: #db372d;
+  --bad-text: #b8261d;
+  --bad-weak: #fdecea;
+  --warn: #fa8c16;
+  --warn-text: #ad4e00;
+  --warn-weak: #fff3e3;
+  --info: #006d75;
+  --info-text: #006d75;
+  --info-weak: #e3f2f3;
+  --neutral-weak: #f0f0f0;
+
+  --shadow: 0 12px 32px rgba(23, 23, 23, 0.14), 0 2px 6px rgba(23, 23, 23, 0.08);
+  --scrim: rgba(23, 23, 23, 0.28);
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #111113;
+  --surface: #19191c;
+  --surface-2: #202024;
+  --surface-3: #29292e;
+  --line: #2e2e33;
+  --line-strong: #3d3d44;
+  --text: #f4f4f5;
+  --text-2: #d2d2d7;
+  --text-3: #a3a3ab;
+
+  --primary: #7b62e0;
+  --primary-hover: #8f7ae8;
+  --primary-weak: #252040;
+  --primary-line: #4a3f86;
+  --primary-text: #b7a9f6;
+  --on-primary: #ffffff;
+  --focus: #b7a9f6;
+
+  --ok: #3fb96a;
+  --ok-text: #6fd08f;
+  --ok-weak: #13301f;
+  --bad: #ff6b5e;
+  --bad-text: #ff8b80;
+  --bad-weak: #3b1714;
+  --warn: #f5a524;
+  --warn-text: #f8bd59;
+  --warn-weak: #382810;
+  --info: #3cc3cc;
+  --info-text: #6fd6dc;
+  --info-weak: #0f2f31;
+  --neutral-weak: #26262b;
+
+  --shadow: 0 12px 32px rgba(0, 0, 0, 0.55), 0 2px 6px rgba(0, 0, 0, 0.4);
+  --scrim: rgba(0, 0, 0, 0.5);
+}

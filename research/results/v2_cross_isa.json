@@ -1,0 +1,275 @@
+{
+  "commit": "2fb8ca9",
+  "model": "gnn_cfg_hybrid",
+  "alpha": 0.1,
+  "prevalence": 0.05,
+  "splits": 500,
+  "seeds": 5,
+  "matrix": {
+    "train=x86-64/test=x86-64/calibrate=x86-64": {
+      "mean_fdp": 0.048,
+      "fdp_ci95": [
+        0.0423,
+        0.0537
+      ],
+      "mean_power": 0.0116,
+      "n": 2500
+    },
+    "train=x86-64/test=x86-64/calibrate=per-isa": {
+      "mean_fdp": 0.0461,
+      "fdp_ci95": [
+        0.0406,
+        0.0516
+      ],
+      "mean_power": 0.0117,
+      "n": 2500
+    },
+    "train=x86-64/test=aarch64/calibrate=x86-64": {
+      "mean_fdp": 0.0137,
+      "fdp_ci95": [
+        0.011,
+        0.0164
+      ],
+      "mean_power": 0.0055,
+      "n": 2500
+    },
+    "train=x86-64/test=aarch64/calibrate=per-isa": {
+      "mean_fdp": 0.0322,
+      "fdp_ci95": [
+        0.0276,
+        0.0368
+      ],
+      "mean_power": 0.0148,
+      "n": 2500
+    },
+    "train=x86-64/test=arm32/calibrate=x86-64": {
+      "mean_fdp": 0.0357,
+      "fdp_ci95": [
+        0.0307,
+        0.0408
+      ],
+      "mean_power": 0.0117,
+      "n": 2500
+    },
+    "train=x86-64/test=arm32/calibrate=per-isa": {
+      "mean_fdp": 0.0217,
+      "fdp_ci95": [
+        0.0177,
+        0.0258
+      ],
+      "mean_power": 0.0078,
+      "n": 2500
+    },
+    "train=all/test=x86-64/calibrate=x86-64": {
+      "mean_fdp": 0.054,
+      "fdp_ci95": [
+        0.0481,
+        0.06
+      ],
+      "mean_power": 0.0127,
+      "n": 2500
+    },
+    "train=all/test=x86-64/calibrate=per-isa": {
+      "mean_fdp": 0.05,
+      "fdp_ci95": [
+        0.0443,
+        0.0556
+      ],
+      "mean_power": 0.012,
+      "n": 2500
+    },
+    "train=all/test=aarch64/calibrate=x86-64": {
+      "mean_fdp": 0.0603,
+      "fdp_ci95": [
+        0.0541,
+        0.0664
+      ],
+      "mean_power": 0.0181,
+      "n": 2500
+    },
+    "train=all/test=aarch64/calibrate=per-isa": {
+      "mean_fdp": 0.0119,
+      "fdp_ci95": [
+        0.0089,
+        0.015
+      ],
+      "mean_power": 0.0043,
+      "n": 2500
+    },
+    "train=all/test=arm32/calibrate=x86-64": {
+      "mean_fdp": 0.0776,
+      "fdp_ci95": [
+        0.0705,
+        0.0848
+      ],
+      "mean_power": 0.0229,
+      "n": 2500
+    },
+    "train=all/test=arm32/calibrate=per-isa": {
+      "mean_fdp": 0.0192,
+      "fdp_ci95": [
+        0.0154,
+        0.023
+      ],
+      "mean_power": 0.0066,
+      "n": 2500
+    }
+  },
+  "budget": {
+    "x86-64/n=25": {
+      "mean_fdp": 0.0,
+      "fdp_ci95": [
+        0.0,
+        0.0
+      ],
+      "mean_power": 0.0,
+      "n": 500
+    },
+    "x86-64/n=50": {
+      "mean_fdp": 0.0,
+      "fdp_ci95": [
+        0.0,
+        0.0
+      ],
+      "mean_power": 0.0,
+      "n": 500
+    },
+    "x86-64/n=100": {
+      "mean_fdp": 0.0,
+      "fdp_ci95": [
+        0.0,
+        0.0
+      ],
+      "mean_power": 0.0,
+      "n": 500
+    },
+    "x86-64/n=200": {
+      "mean_fdp": 0.0,
+      "fdp_ci95": [
+        0.0,
+        0.0
+      ],
+      "mean_power": 0.0,
+      "n": 500
+    },
+    "x86-64/n=400": {
+      "mean_fdp": 0.0023,
+      "fdp_ci95": [
+        -0.0009,
+        0.0056
+      ],
+      "mean_power": 0.001,
+      "n": 500
+    },
+    "x86-64/n=800": {
+      "mean_fdp": 0.0239,
+      "fdp_ci95": [
+        0.0149,
+        0.033
+      ],
+      "mean_power": 0.0094,
+      "n": 500
+    },
+    "aarch64/n=25": {
+      "mean_fdp": 0.0,
+      "fdp_ci95": [
+        0.0,
+        0.0
+      ],
+      "mean_power": 0.0,
+      "n": 500
+    },
+    "aarch64/n=50": {
+      "mean_fdp": 0.0,
+      "fdp_ci95": [
+        0.0,
+        0.0
+      ],
+      "mean_power": 0.0,
+      "n": 500
+    },
+    "aarch64/n=100": {
+      "mean_fdp": 0.0,
+      "fdp_ci95": [
+        0.0,
+        0.0
+      ],
+      "mean_power": 0.0,
+      "n": 500
+    },
+    "aarch64/n=200": {
+      "mean_fdp": 0.0012,
+      "fdp_ci95": [
+        -0.0011,
+        0.0035
+      ],
+      "mean_power": 0.0008,
+      "n": 500
+    },
+    "aarch64/n=400": {
+      "mean_fdp": 0.0053,
+      "fdp_ci95": [
+        0.001,
+        0.0096
+      ],
+      "mean_power": 0.0037,
+      "n": 500
+    },
+    "aarch64/n=800": null,
+    "arm32/n=25": {
+      "mean_fdp": 0.0,
+      "fdp_ci95": [
+        0.0,
+        0.0
+      ],
+      "mean_power": 0.0,
+      "n": 500
+    },
+    "arm32/n=50": {
+      "mean_fdp": 0.0,
+      "fdp_ci95": [
+        0.0,
+        0.0
+      ],
+      "mean_power": 0.0,
+      "n": 500
+    },
+    "arm32/n=100": {
+      "mean_fdp": 0.0,
+      "fdp_ci95": [
+        0.0,
+        0.0
+      ],
+      "mean_power": 0.0,
+      "n": 500
+    },
+    "arm32/n=200": {
+      "mean_fdp": 0.0039,
+      "fdp_ci95": [
+        -0.0005,
+        0.0082
+      ],
+      "mean_power": 0.0022,
+      "n": 500
+    },
+    "arm32/n=400": {
+      "mean_fdp": 0.0021,
+      "fdp_ci95": [
+        -0.0008,
+        0.0051
+      ],
+      "mean_power": 0.001,
+      "n": 500
+    },
+    "arm32/n=800": {
+      "mean_fdp": 0.0,
+      "fdp_ci95": [
+        0.0,
+        0.0
+      ],
+      "mean_power": 0.0,
+      "n": 1
+    }
+  },
+  "minutes": 13.9
+}

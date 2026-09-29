@@ -1,0 +1,18 @@
+{
+  "siphash_x86_64": {
+    "contains_crypto": true,
+    "what": "SipHash-2-4 (a keyed hash), statically linked, stripped"
+  },
+  "siphash_aarch64": {
+    "contains_crypto": true,
+    "what": "SipHash-2-4 (a keyed hash), statically linked, stripped"
+  },
+  "lz4_x86_64": {
+    "contains_crypto": false,
+    "what": "LZ4 compression, statically linked, stripped"
+  },
+  "xxhash_x86_64": {
+    "contains_crypto": false,
+    "what": "xxHash (non-cryptographic hash), statically linked, stripped"
+  }
+}

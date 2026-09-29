@@ -1,0 +1,30 @@
+{
+  "vault": "Live Collection Test \u2014 collected estate",
+  "generated": "2026-08-30T17:55:29.661095+00:00",
+  "synthetic": false,
+  "sector": "payments",
+  "key_material_present": false,
+  "measured": [
+    {
+      "source": "tls (live handshake)",
+      "objects": 9
+    }
+  ],
+  "unmeasured": [
+    {
+      "source": "pkcs11 (HSM)",
+      "reason": "no PKCS#11 driver installed.",
+      "remedy": "pip install python-pkcs11"
+    },
+    {
+      "source": "kmip",
+      "reason": "no KMIP driver installed.",
+      "remedy": "pip install PyKMIP"
+    },
+    {
+      "source": "cloud_kms:aws",
+      "reason": "boto3 is not installed.",
+      "remedy": "pip install boto3"
+    }
+  ]
+}

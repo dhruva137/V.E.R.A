@@ -1,0 +1,48 @@
+fastapi>=0.115.0
+uvicorn[standard]>=0.34.0
+pydantic>=2.0.0
+
+# Certificate and keystore parsing (M1).
+cryptography>=44.0.0
+pyOpenSSL>=25.0.0
+
+# Survival fitting and the Kendall-tau invariance analysis (M3, sensitivity).
+numpy>=2.0.0
+scipy>=1.14.0
+
+# Board memo (M9). Chosen over WeasyPrint: WeasyPrint needs GTK/Pango system
+# libraries on Windows, which is a poor dependency to discover on demo day.
+reportlab>=4.2
+
+python-multipart>=0.0.20
+
+# Collector rules and the crypto-library knowledge base are YAML data.
+PyYAML>=6.0
+
+# Binary collector (WP1): LIEF reads ELF/PE/Mach-O structure; pyelftools is the
+# ELF fallback. Both are read-only parsers; nothing is executed.
+lief>=0.15
+pyelftools>=0.31
+
+# Learned binary detector (research v1, engine/binary_ml): capstone disassembles x86-64,
+# AArch64 and ARM32; scikit-learn loads the exported CPU model. No GPU, no network.
+capstone>=5.0
+scikit-learn>=1.5
+
+# Source collector (WP4): tree-sitter parses seven language families. If a
+# grammar cannot load, Python and Java fall back to regex and say so.
+tree-sitter>=0.25
+tree-sitter-language-pack>=0.9
+
+# Provider calls from the LLM bridge (engine/llm_bridge.py), and the transport
+# FastAPI's TestClient runs on. A runtime dependency, not a test-only one.
+httpx>=0.27.0
+
+# Reads a local .env at startup so an operator can keep configuration in a file
+# instead of exporting shell variables. .env is gitignored; on a host such as
+# Render the platform's own environment settings are used instead and this
+# simply finds nothing to load.
+python-dotenv>=1.0.0
+
+# Tests.
+pytest>=8.0.0

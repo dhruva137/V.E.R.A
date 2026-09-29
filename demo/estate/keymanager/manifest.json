@@ -1,0 +1,14 @@
+{
+  "vault": "Tejomaya partner key manager (demo)",
+  "synthetic": true,
+  "key_material_present": false,
+  "sources": [
+    {
+      "file": "kmip.json",
+      "provenance": "declared",
+      "confidence": 0.85,
+      "proves": "Managed object attributes and lifecycle state.",
+      "cannot_prove": "Use."
+    }
+  ]
+}

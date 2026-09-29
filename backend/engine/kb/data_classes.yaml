@@ -1,0 +1,26 @@
+# Data classes -> X, the years the protected data must stay confidential
+# (engine/classification.py). Mosca's X comes from here when the estate
+# register declares what a system holds (PS clause iii: classify by lifetime).
+#
+# These are defaults to confirm with each data owner.
+# An asset with several classes takes the longest shelf life.
+
+classes:
+  defence_intelligence: {years: 25, label: "Defence / intelligence", basis: "Classified material stays sensitive for decades."}
+  classified: {years: 25, label: "Classified (government)", basis: "Same horizon as defence / intelligence."}
+  health: {years: 25, label: "Health records", basis: "Health data is sensitive for a patient's lifetime."}
+  identity: {years: 20, label: "Identity data", basis: "National ID, biometrics and KYC documents do not expire."}
+  customer_pii: {years: 20, label: "Customer personal data", basis: "Identity-grade personal data; treated as identity."}
+  financial_records: {years: 10, label: "Financial records", basis: "Transaction and account records under multi-year retention rules."}
+  payment_card: {years: 5, label: "Payment card data", basis: "Card data loses value once cards are reissued (about 3 to 5 years)."}
+  internal_business: {years: 5, label: "Internal business data", basis: "Plans, contracts and internal correspondence."}
+  authentication: {years: 1, label: "Authentication and sessions", basis: "Credentials and tokens rotate; the harvest window is short."}
+  session: {years: 1, label: "Session / ephemeral transport", basis: "Ephemeral data in transit."}
+  public: {years: 0, label: "Public data", basis: "Already public; no confidentiality horizon."}
+
+# Business criticality -> sensitivity weight floor (the S input of QIRS).
+criticality:
+  critical: 0.95
+  high: 0.85
+  medium: 0.65
+  low: 0.40

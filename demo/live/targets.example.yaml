@@ -1,0 +1,133 @@
+# VERA live collection targets
+#
+#   cp demo/live/targets.example.yaml demo/live/targets.yaml
+#   python demo/live/collect.py
+#
+# Point this at REAL infrastructure. Everything here is read-only and
+# metadata-only: the collector reads algorithms, sizes, validity windows and
+# usage flags. It never reads, stores or transmits key material, and for the
+# HSM and cloud-KMS paths it could not even if it tried — those systems do not
+# export managed keys.
+#
+# `targets.yaml` is gitignored. Do not commit real hostnames or credentials.
+# ---------------------------------------------------------------------------
+
+organisation: "Your Organisation"
+
+# Sector track, which selects the statutory deadlines and the required-sensor
+# set the estate is judged against.
+#   payments | banking | erp | saas | industrial | healthcare | telecom |
+#   energy | government
+sector: payments
+
+
+# ---------------------------------------------------------------------------
+# 1. TLS ENDPOINTS  — works today, no extra dependency
+#
+# A real handshake against each host. This is the only sensor that proves
+# cryptography is actually in use rather than merely present. It generates the
+# same traffic any browser does.
+#
+# Only scan hosts you are authorised to scan.
+# ---------------------------------------------------------------------------
+tls:
+  enabled: true
+  probe_key_exchange_groups: true    # extra handshakes; the only way to see the
+                                     # TLS 1.3 group and spot hybrid support
+  endpoints:
+    - internal-api.example.internal:443
+    - gateway.example.internal:8443
+    # - mtls-partner.example.com:443
+
+
+# ---------------------------------------------------------------------------
+# 2. CERTIFICATES ON DISK — works today
+#
+# Any PEM/DER certificate the collector can read. Issuer/subject pairs are what
+# build the dependency graph, so exporting your chain here is high value.
+# ---------------------------------------------------------------------------
+certificates:
+  enabled: true
+  paths:
+    - /etc/ssl/certs/*.pem
+    # - C:\certs\**\*.crt
+
+
+# ---------------------------------------------------------------------------
+# 3. KEYSTORES — PKCS#12 works today; JKS needs `pip install pyjks`
+#
+# Passwords are read from environment variables, never from this file.
+# ---------------------------------------------------------------------------
+keystores:
+  enabled: true
+  stores:
+    - path: /opt/tomcat/conf/keystore.p12
+      type: PKCS12
+      password_env: VERA_KEYSTORE_PW      # export VERA_KEYSTORE_PW=...
+    # - path: /opt/legacy/keystore.jks
+    #   type: JKS
+    #   password_env: VERA_JKS_PW
+
+
+# ---------------------------------------------------------------------------
+# 4. HSM over PKCS#11 — needs `pip install python-pkcs11`
+#
+# Enumerates key objects and their attributes, and reads the token's mechanism
+# list, which is how PQC firmware readiness is established without asking the
+# vendor. Use a READ-ONLY slot credential. Private objects report
+# CKA_EXTRACTABLE=false and the HSM will refuse an export.
+# ---------------------------------------------------------------------------
+pkcs11:
+  enabled: false
+  module: /opt/nfast/toolkits/pkcs11/libcknfast.so
+  # module: C:\Program Files\SafeNet\LunaClient\cryptoki.dll
+  slots:
+    - slot: 0
+      pin_env: VERA_HSM_PIN               # export VERA_HSM_PIN=...
+      label: PAYMENT-HSM-01
+
+
+# ---------------------------------------------------------------------------
+# 5. KMIP key manager — needs `pip install PyKMIP`
+# ---------------------------------------------------------------------------
+kmip:
+  enabled: false
+  host: keymanager.example.internal
+  port: 5696
+  cert: /etc/vera/kmip-client.crt
+  key: /etc/vera/kmip-client.key
+  ca: /etc/vera/kmip-ca.crt
+
+
+# ---------------------------------------------------------------------------
+# 6. CLOUD KMS — needs the matching SDK
+#     aws:   pip install boto3
+#     azure: pip install azure-keyvault-keys azure-identity
+#     gcp:   pip install google-cloud-kms
+#
+# Credentials come from the provider's own default chain (env, profile, managed
+# identity). VERA never asks for a secret here. Read-only permissions are
+# enough: kms:ListKeys + kms:DescribeKey, Key Vault "Key List/Get", or
+# cloudkms.cryptoKeyVersions.list.
+# ---------------------------------------------------------------------------
+cloud_kms:
+  aws:
+    enabled: false
+    region: ap-south-1
+  azure:
+    enabled: false
+    vault_url: https://your-vault.vault.azure.net
+  gcp:
+    enabled: false
+    project: your-project
+    location: asia-south1
+
+
+# ---------------------------------------------------------------------------
+# Output
+# ---------------------------------------------------------------------------
+output:
+  directory: demo/live/out
+  # Refuse to write if a collected record somehow contains key material.
+  # Leave this on.
+  assert_no_key_material: true

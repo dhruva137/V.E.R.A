@@ -1,0 +1,290 @@
+{
+  "aes_tiny_x86_64": {
+    "contains_crypto": true,
+    "train_overlap": true,
+    "ok": true,
+    "error": ""
+  },
+  "aes_tiny_aarch64": {
+    "contains_crypto": true,
+    "train_overlap": true,
+    "ok": true,
+    "error": ""
+  },
+  "sha256_bcon_x86_64": {
+    "contains_crypto": true,
+    "train_overlap": true,
+    "ok": true,
+    "error": ""
+  },
+  "sha256_bcon_aarch64": {
+    "contains_crypto": true,
+    "train_overlap": true,
+    "ok": true,
+    "error": ""
+  },
+  "md5_bcon_x86_64": {
+    "contains_crypto": true,
+    "train_overlap": true,
+    "ok": true,
+    "error": ""
+  },
+  "md5_bcon_aarch64": {
+    "contains_crypto": true,
+    "train_overlap": true,
+    "ok": true,
+    "error": ""
+  },
+  "des_bcon_x86_64": {
+    "contains_crypto": true,
+    "train_overlap": true,
+    "ok": true,
+    "error": ""
+  },
+  "des_bcon_aarch64": {
+    "contains_crypto": true,
+    "train_overlap": true,
+    "ok": true,
+    "error": ""
+  },
+  "rc4_bcon_x86_64": {
+    "contains_crypto": true,
+    "train_overlap": true,
+    "ok": true,
+    "error": ""
+  },
+  "rc4_bcon_aarch64": {
+    "contains_crypto": true,
+    "train_overlap": true,
+    "ok": true,
+    "error": ""
+  },
+  "blowfish_bcon_x86_64": {
+    "contains_crypto": true,
+    "train_overlap": true,
+    "ok": true,
+    "error": ""
+  },
+  "blowfish_bcon_aarch64": {
+    "contains_crypto": true,
+    "train_overlap": true,
+    "ok": true,
+    "error": ""
+  },
+  "monocypher_x86_64": {
+    "contains_crypto": true,
+    "train_overlap": false,
+    "ok": true,
+    "error": ""
+  },
+  "monocypher_aarch64": {
+    "contains_crypto": true,
+    "train_overlap": false,
+    "ok": true,
+    "error": ""
+  },
+  "tweetnacl_x86_64": {
+    "contains_crypto": true,
+    "train_overlap": false,
+    "ok": true,
+    "error": ""
+  },
+  "tweetnacl_aarch64": {
+    "contains_crypto": true,
+    "train_overlap": false,
+    "ok": true,
+    "error": ""
+  },
+  "microecc_x86_64": {
+    "contains_crypto": true,
+    "train_overlap": false,
+    "ok": true,
+    "error": ""
+  },
+  "microecc_aarch64": {
+    "contains_crypto": true,
+    "train_overlap": false,
+    "ok": true,
+    "error": ""
+  },
+  "siphash_x86_64": {
+    "contains_crypto": true,
+    "train_overlap": false,
+    "ok": true,
+    "error": ""
+  },
+  "siphash_aarch64": {
+    "contains_crypto": true,
+    "train_overlap": false,
+    "ok": true,
+    "error": ""
+  },
+  "mlkem768_x86_64": {
+    "contains_crypto": true,
+    "train_overlap": false,
+    "ok": true,
+    "error": ""
+  },
+  "mlkem768_aarch64": {
+    "contains_crypto": true,
+    "train_overlap": false,
+    "ok": true,
+    "error": ""
+  },
+  "mldsa44_x86_64": {
+    "contains_crypto": true,
+    "train_overlap": false,
+    "ok": true,
+    "error": ""
+  },
+  "mldsa44_aarch64": {
+    "contains_crypto": true,
+    "train_overlap": false,
+    "ok": true,
+    "error": ""
+  },
+  "proprietary_arx_x86_64": {
+    "contains_crypto": true,
+    "train_overlap": false,
+    "ok": true,
+    "error": ""
+  },
+  "proprietary_arx_aarch64": {
+    "contains_crypto": true,
+    "train_overlap": false,
+    "ok": true,
+    "error": ""
+  },
+  "sqlite_chacha_x86_64": {
+    "contains_crypto": true,
+    "train_overlap": false,
+    "ok": true,
+    "error": ""
+  },
+  "sqlite_chacha_aarch64": {
+    "contains_crypto": true,
+    "train_overlap": false,
+    "ok": true,
+    "error": ""
+  },
+  "zlib_x86_64": {
+    "contains_crypto": false,
+    "train_overlap": true,
+    "ok": true,
+    "error": ""
+  },
+  "zlib_aarch64": {
+    "contains_crypto": false,
+    "train_overlap": true,
+    "ok": true,
+    "error": ""
+  },
+  "lz4_x86_64": {
+    "contains_crypto": false,
+    "train_overlap": false,
+    "ok": true,
+    "error": ""
+  },
+  "lz4_aarch64": {
+    "contains_crypto": false,
+    "train_overlap": false,
+    "ok": true,
+    "error": ""
+  },
+  "cjson_x86_64": {
+    "contains_crypto": false,
+    "train_overlap": true,
+    "ok": true,
+    "error": ""
+  },
+  "cjson_aarch64": {
+    "contains_crypto": false,
+    "train_overlap": true,
+    "ok": true,
+    "error": ""
+  },
+  "xxhash_x86_64": {
+    "contains_crypto": false,
+    "train_overlap": false,
+    "ok": true,
+    "error": ""
+  },
+  "xxhash_aarch64": {
+    "contains_crypto": false,
+    "train_overlap": false,
+    "ok": true,
+    "error": ""
+  },
+  "kissfft_x86_64": {
+    "contains_crypto": false,
+    "train_overlap": false,
+    "ok": true,
+    "error": ""
+  },
+  "kissfft_aarch64": {
+    "contains_crypto": false,
+    "train_overlap": false,
+    "ok": true,
+    "error": ""
+  },
+  "miniz_x86_64": {
+    "contains_crypto": false,
+    "train_overlap": false,
+    "ok": true,
+    "error": ""
+  },
+  "miniz_aarch64": {
+    "contains_crypto": false,
+    "train_overlap": false,
+    "ok": true,
+    "error": ""
+  },
+  "yyjson_x86_64": {
+    "contains_crypto": false,
+    "train_overlap": false,
+    "ok": true,
+    "error": ""
+  },
+  "yyjson_aarch64": {
+    "contains_crypto": false,
+    "train_overlap": false,
+    "ok": true,
+    "error": ""
+  },
+  "lodepng_x86_64": {
+    "contains_crypto": false,
+    "train_overlap": false,
+    "ok": true,
+    "error": ""
+  },
+  "lodepng_aarch64": {
+    "contains_crypto": false,
+    "train_overlap": false,
+    "ok": true,
+    "error": ""
+  },
+  "stb_image_x86_64": {
+    "contains_crypto": false,
+    "train_overlap": false,
+    "ok": true,
+    "error": ""
+  },
+  "stb_image_aarch64": {
+    "contains_crypto": false,
+    "train_overlap": false,
+    "ok": true,
+    "error": ""
+  },
+  "lua_x86_64": {
+    "contains_crypto": false,
+    "train_overlap": true,
+    "ok": true,
+    "error": ""
+  },
+  "lua_aarch64": {
+    "contains_crypto": false,
+    "train_overlap": true,
+    "ok": true,
+    "error": ""
+  }
+}

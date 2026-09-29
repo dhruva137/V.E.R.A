@@ -1,0 +1,388 @@
+{
+  "commit": "2fb8ca9",
+  "seed": 20260928,
+  "rows": {
+    "dev": 13742,
+    "sealed": 16283,
+    "sealed_b": 43114,
+    "sealed_c": 561,
+    "train": 40920
+  },
+  "declared": "neural = mean of seeds; select on dev PR-AUC; ship rule unchanged",
+  "candidates": {
+    "v1_shipped": {
+      "dev_pr_auc": 0.7898,
+      "dev_roc_auc": 0.8025,
+      "cpu_functions_per_s": 77239,
+      "sealed_O0_O2_pr_auc": 0.7371,
+      "all_sealed_pr_auc": 0.662,
+      "all_sealed_roc_auc": 0.8196
+    },
+    "hgb_allopt": {
+      "dev_pr_auc": 0.801,
+      "dev_roc_auc": 0.8155,
+      "cpu_functions_per_s": 77239,
+      "sealed_O0_O2_pr_auc": 0.7405,
+      "all_sealed_pr_auc": 0.6708,
+      "all_sealed_roc_auc": 0.8257
+    },
+    "hgb_loops_allopt": {
+      "dev_pr_auc": 0.8038,
+      "dev_roc_auc": 0.8131,
+      "cpu_functions_per_s": 2135,
+      "sealed_O0_O2_pr_auc": 0.7475,
+      "all_sealed_pr_auc": 0.6792,
+      "all_sealed_roc_auc": 0.8294
+    },
+    "gnn_cfg_hybrid": {
+      "dev_pr_auc": 0.8547,
+      "dev_roc_auc": 0.8652,
+      "cpu_functions_per_s": 13354,
+      "sealed_O0_O2_pr_auc": 0.7682,
+      "all_sealed_pr_auc": 0.7343,
+      "all_sealed_roc_auc": 0.8704
+    },
+    "avg_hgb_gnn_cfg_hybrid": {
+      "dev_pr_auc": 0.8526,
+      "dev_roc_auc": 0.8623,
+      "cpu_functions_per_s": 11386,
+      "sealed_O0_O2_pr_auc": 0.7773,
+      "all_sealed_pr_auc": 0.7368,
+      "all_sealed_roc_auc": 0.8667
+    },
+    "sage_cfg_hybrid": {
+      "dev_pr_auc": 0.8547,
+      "dev_roc_auc": 0.8647,
+      "cpu_functions_per_s": 15626,
+      "sealed_O0_O2_pr_auc": 0.7643,
+      "all_sealed_pr_auc": 0.7335,
+      "all_sealed_roc_auc": 0.8713
+    },
+    "avg_hgb_sage_cfg_hybrid": {
+      "dev_pr_auc": 0.8518,
+      "dev_roc_auc": 0.8601,
+      "cpu_functions_per_s": 12997,
+      "sealed_O0_O2_pr_auc": 0.776,
+      "all_sealed_pr_auc": 0.7356,
+      "all_sealed_roc_auc": 0.8637
+    },
+    "gat_cfg_hybrid": {
+      "dev_pr_auc": 0.8549,
+      "dev_roc_auc": 0.8649,
+      "cpu_functions_per_s": 8206,
+      "sealed_O0_O2_pr_auc": 0.7648,
+      "all_sealed_pr_auc": 0.7362,
+      "all_sealed_roc_auc": 0.8729
+    },
+    "avg_hgb_gat_cfg_hybrid": {
+      "dev_pr_auc": 0.8481,
+      "dev_roc_auc": 0.8592,
+      "cpu_functions_per_s": 7418,
+      "sealed_O0_O2_pr_auc": 0.7728,
+      "all_sealed_pr_auc": 0.7352,
+      "all_sealed_roc_auc": 0.8659
+    }
+  },
+  "selected_on_dev": "gat_cfg_hybrid",
+  "ship_rule": {
+    "v1_sealed_pr_auc": 0.7371,
+    "selected_sealed_pr_auc": 0.7648,
+    "gain": 0.0277,
+    "cpu_functions_per_s": 8206,
+    "ship": false
+  },
+  "certified": {
+    "prev=0.05": {
+      "v1_shipped": {
+        "fdr": 0.01,
+        "fdr_ci99": [
+          -0.0035,
+          0.0235
+        ],
+        "power": 0.058,
+        "binaries": 300
+      },
+      "hgb_allopt": {
+        "fdr": 0.0117,
+        "fdr_ci99": [
+          -0.0025,
+          0.0258
+        ],
+        "power": 0.056,
+        "binaries": 300
+      },
+      "hgb_loops_allopt": {
+        "fdr": 0.0206,
+        "fdr_ci99": [
+          0.0027,
+          0.0385
+        ],
+        "power": 0.0667,
+        "binaries": 300
+      },
+      "gnn_cfg_hybrid": {
+        "fdr": 0.0067,
+        "fdr_ci99": [
+          -0.0054,
+          0.0188
+        ],
+        "power": 0.074,
+        "binaries": 300
+      },
+      "avg_hgb_gnn_cfg_hybrid": {
+        "fdr": 0.0122,
+        "fdr_ci99": [
+          -0.0018,
+          0.0263
+        ],
+        "power": 0.062,
+        "binaries": 300
+      },
+      "sage_cfg_hybrid": {
+        "fdr": 0.01,
+        "fdr_ci99": [
+          0.0002,
+          0.0198
+        ],
+        "power": 0.086,
+        "binaries": 300
+      },
+      "avg_hgb_sage_cfg_hybrid": {
+        "fdr": 0.0,
+        "fdr_ci99": [
+          0.0,
+          0.0
+        ],
+        "power": 0.0607,
+        "binaries": 300
+      },
+      "gat_cfg_hybrid": {
+        "fdr": 0.0017,
+        "fdr_ci99": [
+          -0.0026,
+          0.006
+        ],
+        "power": 0.0673,
+        "binaries": 300
+      },
+      "avg_hgb_gat_cfg_hybrid": {
+        "fdr": 0.0,
+        "fdr_ci99": [
+          0.0,
+          0.0
+        ],
+        "power": 0.05,
+        "binaries": 300
+      }
+    },
+    "prev=0.01": {
+      "v1_shipped": {
+        "fdr": 0.0133,
+        "fdr_ci99": [
+          -0.0037,
+          0.0304
+        ],
+        "power": 0.07,
+        "binaries": 300
+      },
+      "hgb_allopt": {
+        "fdr": 0.015,
+        "fdr_ci99": [
+          -0.0026,
+          0.0326
+        ],
+        "power": 0.0633,
+        "binaries": 300
+      },
+      "hgb_loops_allopt": {
+        "fdr": 0.0167,
+        "fdr_ci99": [
+          -0.0014,
+          0.0347
+        ],
+        "power": 0.0667,
+        "binaries": 300
+      },
+      "gnn_cfg_hybrid": {
+        "fdr": 0.0033,
+        "fdr_ci99": [
+          -0.0052,
+          0.0119
+        ],
+        "power": 0.0833,
+        "binaries": 300
+      },
+      "avg_hgb_gnn_cfg_hybrid": {
+        "fdr": 0.0133,
+        "fdr_ci99": [
+          -0.0037,
+          0.0304
+        ],
+        "power": 0.06,
+        "binaries": 300
+      },
+      "sage_cfg_hybrid": {
+        "fdr": 0.0017,
+        "fdr_ci99": [
+          -0.0026,
+          0.006
+        ],
+        "power": 0.09,
+        "binaries": 300
+      },
+      "avg_hgb_sage_cfg_hybrid": {
+        "fdr": 0.0,
+        "fdr_ci99": [
+          0.0,
+          0.0
+        ],
+        "power": 0.06,
+        "binaries": 300
+      },
+      "gat_cfg_hybrid": {
+        "fdr": 0.0033,
+        "fdr_ci99": [
+          -0.0052,
+          0.0119
+        ],
+        "power": 0.0733,
+        "binaries": 300
+      },
+      "avg_hgb_gat_cfg_hybrid": {
+        "fdr": 0.0,
+        "fdr_ci99": [
+          0.0,
+          0.0
+        ],
+        "power": 0.06,
+        "binaries": 300
+      }
+    }
+  },
+  "fusion": {
+    "combiner_coef": {
+      "learned": 0.526,
+      "loops": 0.145,
+      "findcrypt": 2.317,
+      "ntt": 1.886
+    },
+    "coverage_test": {
+      "findcrypt_on_crypto": 0.03,
+      "findcrypt_on_noncrypto": 0.0235,
+      "ntt_on_crypto": 0.0092
+    },
+    "prev=0.05": {
+      "learned": {
+        "fdr": 0.0,
+        "fdr_ci99": [
+          0.0,
+          0.0
+        ],
+        "power": 0.066,
+        "binaries": 300
+      },
+      "loops": {
+        "fdr": 0.0394,
+        "fdr_ci99": [
+          0.0131,
+          0.0658
+        ],
+        "power": 0.07,
+        "binaries": 300
+      },
+      "findcrypt_crypto_rules": {
+        "fdr": 0.7711,
+        "fdr_ci99": [
+          0.7125,
+          0.8297
+        ],
+        "power": 0.0313,
+        "binaries": 300
+      },
+      "ntt": {
+        "fdr": 0.0,
+        "fdr_ci99": [
+          0.0,
+          0.0
+        ],
+        "power": 0.01,
+        "binaries": 300
+      },
+      "stacked_fusion": {
+        "fdr": 0.0,
+        "fdr_ci99": [
+          0.0,
+          0.0
+        ],
+        "power": 0.0687,
+        "binaries": 300
+      },
+      "evalue_average": {
+        "fdr": 0.5602,
+        "fdr_ci99": [
+          0.4951,
+          0.6254
+        ],
+        "power": 0.0773,
+        "binaries": 300
+      }
+    },
+    "prev=0.01": {
+      "learned": {
+        "fdr": 0.0,
+        "fdr_ci99": [
+          0.0,
+          0.0
+        ],
+        "power": 0.0467,
+        "binaries": 300
+      },
+      "loops": {
+        "fdr": 0.0422,
+        "fdr_ci99": [
+          0.0132,
+          0.0712
+        ],
+        "power": 0.0567,
+        "binaries": 300
+      },
+      "findcrypt_crypto_rules": {
+        "fdr": 0.7531,
+        "fdr_ci99": [
+          0.6894,
+          0.8167
+        ],
+        "power": 0.0167,
+        "binaries": 300
+      },
+      "ntt": {
+        "fdr": 0.0,
+        "fdr_ci99": [
+          0.0,
+          0.0
+        ],
+        "power": 0.0033,
+        "binaries": 300
+      },
+      "stacked_fusion": {
+        "fdr": 0.0,
+        "fdr_ci99": [
+          0.0,
+          0.0
+        ],
+        "power": 0.0467,
+        "binaries": 300
+      },
+      "evalue_average": {
+        "fdr": 0.5728,
+        "fdr_ci99": [
+          0.5009,
+          0.6447
+        ],
+        "power": 0.0533,
+        "binaries": 300
+      }
+    }
+  },
+  "minutes": 13.2
+}

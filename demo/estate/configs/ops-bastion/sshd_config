@@ -1,0 +1,6 @@
+Port 22
+ListenAddress 10.20.0.5
+KexAlgorithms mlkem768x25519-sha256,curve25519-sha256,diffie-hellman-group14-sha256
+HostKeyAlgorithms ssh-ed25519,rsa-sha2-512
+Ciphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com
+MACs hmac-sha2-256-etm@openssh.com

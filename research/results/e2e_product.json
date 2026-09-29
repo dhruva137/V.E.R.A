@@ -1,0 +1,639 @@
+{
+  "commit": "1e8639e",
+  "path": "collectors.binary_scanner.scan_blob (shipped model + calibration)",
+  "programs": {
+    "aes_tiny_aarch64": {
+      "contains_crypto": true,
+      "train_overlap": true,
+      "flagged": true,
+      "layers": [
+        "constant"
+      ],
+      "algorithms": [
+        "AES"
+      ],
+      "learned_q": null,
+      "functions_scored": 0,
+      "failures": [],
+      "seconds": 0.12
+    },
+    "aes_tiny_x86_64": {
+      "contains_crypto": true,
+      "train_overlap": true,
+      "flagged": true,
+      "layers": [
+        "constant"
+      ],
+      "algorithms": [
+        "AES"
+      ],
+      "learned_q": null,
+      "functions_scored": 0,
+      "failures": [],
+      "seconds": 0.01
+    },
+    "blowfish_bcon_aarch64": {
+      "contains_crypto": true,
+      "train_overlap": true,
+      "flagged": true,
+      "layers": [
+        "constant"
+      ],
+      "algorithms": [
+        "Blowfish"
+      ],
+      "learned_q": null,
+      "functions_scored": 0,
+      "failures": [],
+      "seconds": 0.01
+    },
+    "blowfish_bcon_x86_64": {
+      "contains_crypto": true,
+      "train_overlap": true,
+      "flagged": true,
+      "layers": [
+        "constant"
+      ],
+      "algorithms": [
+        "Blowfish"
+      ],
+      "learned_q": null,
+      "functions_scored": 0,
+      "failures": [],
+      "seconds": 0.01
+    },
+    "cjson_aarch64": {
+      "contains_crypto": false,
+      "train_overlap": true,
+      "flagged": false,
+      "layers": [],
+      "algorithms": [],
+      "learned_q": null,
+      "functions_scored": 100,
+      "failures": [],
+      "seconds": 9.64
+    },
+    "cjson_x86_64": {
+      "contains_crypto": false,
+      "train_overlap": true,
+      "flagged": false,
+      "layers": [],
+      "algorithms": [],
+      "learned_q": null,
+      "functions_scored": 83,
+      "failures": [],
+      "seconds": 1.19
+    },
+    "des_bcon_aarch64": {
+      "contains_crypto": true,
+      "train_overlap": true,
+      "flagged": true,
+      "layers": [
+        "constant"
+      ],
+      "algorithms": [
+        "DES"
+      ],
+      "learned_q": null,
+      "functions_scored": 0,
+      "failures": [],
+      "seconds": 0.01
+    },
+    "des_bcon_x86_64": {
+      "contains_crypto": true,
+      "train_overlap": true,
+      "flagged": true,
+      "layers": [
+        "constant"
+      ],
+      "algorithms": [
+        "DES"
+      ],
+      "learned_q": null,
+      "functions_scored": 0,
+      "failures": [],
+      "seconds": 0.01
+    },
+    "kissfft_aarch64": {
+      "contains_crypto": false,
+      "train_overlap": false,
+      "flagged": false,
+      "layers": [],
+      "algorithms": [],
+      "learned_q": null,
+      "functions_scored": 59,
+      "failures": [],
+      "seconds": 0.68
+    },
+    "kissfft_x86_64": {
+      "contains_crypto": false,
+      "train_overlap": false,
+      "flagged": false,
+      "layers": [],
+      "algorithms": [],
+      "learned_q": null,
+      "functions_scored": 48,
+      "failures": [],
+      "seconds": 0.49
+    },
+    "lodepng_aarch64": {
+      "contains_crypto": false,
+      "train_overlap": false,
+      "flagged": false,
+      "layers": [],
+      "algorithms": [],
+      "learned_q": null,
+      "functions_scored": 110,
+      "failures": [],
+      "seconds": 1.48
+    },
+    "lodepng_x86_64": {
+      "contains_crypto": false,
+      "train_overlap": false,
+      "flagged": false,
+      "layers": [],
+      "algorithms": [],
+      "learned_q": null,
+      "functions_scored": 104,
+      "failures": [],
+      "seconds": 1.67
+    },
+    "lua_aarch64": {
+      "contains_crypto": false,
+      "train_overlap": true,
+      "flagged": false,
+      "layers": [],
+      "algorithms": [],
+      "learned_q": null,
+      "functions_scored": 245,
+      "failures": [],
+      "seconds": 3.08
+    },
+    "lua_x86_64": {
+      "contains_crypto": false,
+      "train_overlap": true,
+      "flagged": false,
+      "layers": [],
+      "algorithms": [],
+      "learned_q": null,
+      "functions_scored": 231,
+      "failures": [],
+      "seconds": 3.13
+    },
+    "lz4_aarch64": {
+      "contains_crypto": false,
+      "train_overlap": false,
+      "flagged": false,
+      "layers": [],
+      "algorithms": [],
+      "learned_q": null,
+      "functions_scored": 61,
+      "failures": [],
+      "seconds": 1.31
+    },
+    "lz4_x86_64": {
+      "contains_crypto": false,
+      "train_overlap": false,
+      "flagged": false,
+      "layers": [],
+      "algorithms": [],
+      "learned_q": null,
+      "functions_scored": 34,
+      "failures": [],
+      "seconds": 1.44
+    },
+    "md5_bcon_aarch64": {
+      "contains_crypto": true,
+      "train_overlap": true,
+      "flagged": true,
+      "layers": [
+        "learned_function"
+      ],
+      "algorithms": [],
+      "learned_q": 0.017234625930278104,
+      "functions_scored": 44,
+      "failures": [],
+      "seconds": 0.42
+    },
+    "md5_bcon_x86_64": {
+      "contains_crypto": true,
+      "train_overlap": true,
+      "flagged": true,
+      "layers": [
+        "learned_function"
+      ],
+      "algorithms": [],
+      "learned_q": 0.006929740134744947,
+      "functions_scored": 36,
+      "failures": [],
+      "seconds": 0.33
+    },
+    "microecc_aarch64": {
+      "contains_crypto": true,
+      "train_overlap": false,
+      "flagged": true,
+      "layers": [
+        "constant"
+      ],
+      "algorithms": [
+        "ECDSA"
+      ],
+      "learned_q": null,
+      "functions_scored": 0,
+      "failures": [],
+      "seconds": 0.02
+    },
+    "microecc_x86_64": {
+      "contains_crypto": true,
+      "train_overlap": false,
+      "flagged": true,
+      "layers": [
+        "constant"
+      ],
+      "algorithms": [
+        "ECDSA"
+      ],
+      "learned_q": null,
+      "functions_scored": 0,
+      "failures": [],
+      "seconds": 0.02
+    },
+    "miniz_aarch64": {
+      "contains_crypto": false,
+      "train_overlap": false,
+      "flagged": false,
+      "layers": [],
+      "algorithms": [],
+      "learned_q": null,
+      "functions_scored": 72,
+      "failures": [],
+      "seconds": 0.78
+    },
+    "miniz_x86_64": {
+      "contains_crypto": false,
+      "train_overlap": false,
+      "flagged": false,
+      "layers": [],
+      "algorithms": [],
+      "learned_q": null,
+      "functions_scored": 61,
+      "failures": [],
+      "seconds": 0.79
+    },
+    "mldsa44_aarch64": {
+      "contains_crypto": true,
+      "train_overlap": false,
+      "flagged": true,
+      "layers": [
+        "pqc_table"
+      ],
+      "algorithms": [
+        "ML-DSA"
+      ],
+      "learned_q": null,
+      "functions_scored": 0,
+      "failures": [],
+      "seconds": 0.02
+    },
+    "mldsa44_x86_64": {
+      "contains_crypto": true,
+      "train_overlap": false,
+      "flagged": true,
+      "layers": [
+        "pqc_table"
+      ],
+      "algorithms": [
+        "ML-DSA"
+      ],
+      "learned_q": null,
+      "functions_scored": 0,
+      "failures": [],
+      "seconds": 0.02
+    },
+    "mlkem768_aarch64": {
+      "contains_crypto": true,
+      "train_overlap": false,
+      "flagged": true,
+      "layers": [
+        "pqc_table"
+      ],
+      "algorithms": [
+        "ML-KEM"
+      ],
+      "learned_q": null,
+      "functions_scored": 0,
+      "failures": [],
+      "seconds": 0.02
+    },
+    "mlkem768_x86_64": {
+      "contains_crypto": true,
+      "train_overlap": false,
+      "flagged": true,
+      "layers": [
+        "pqc_table"
+      ],
+      "algorithms": [
+        "ML-KEM"
+      ],
+      "learned_q": null,
+      "functions_scored": 0,
+      "failures": [],
+      "seconds": 0.02
+    },
+    "monocypher_aarch64": {
+      "contains_crypto": true,
+      "train_overlap": false,
+      "flagged": true,
+      "layers": [
+        "constant"
+      ],
+      "algorithms": [
+        "ChaCha20"
+      ],
+      "learned_q": null,
+      "functions_scored": 0,
+      "failures": [],
+      "seconds": 0.02
+    },
+    "monocypher_x86_64": {
+      "contains_crypto": true,
+      "train_overlap": false,
+      "flagged": true,
+      "layers": [
+        "constant"
+      ],
+      "algorithms": [
+        "ChaCha20"
+      ],
+      "learned_q": null,
+      "functions_scored": 0,
+      "failures": [],
+      "seconds": 0.02
+    },
+    "proprietary_arx_aarch64": {
+      "contains_crypto": true,
+      "train_overlap": false,
+      "flagged": false,
+      "layers": [],
+      "algorithms": [],
+      "learned_q": null,
+      "functions_scored": 43,
+      "failures": [],
+      "seconds": 0.36
+    },
+    "proprietary_arx_x86_64": {
+      "contains_crypto": true,
+      "train_overlap": false,
+      "flagged": false,
+      "layers": [],
+      "algorithms": [],
+      "learned_q": null,
+      "functions_scored": 34,
+      "failures": [],
+      "seconds": 0.29
+    },
+    "rc4_bcon_aarch64": {
+      "contains_crypto": true,
+      "train_overlap": true,
+      "flagged": false,
+      "layers": [],
+      "algorithms": [],
+      "learned_q": null,
+      "functions_scored": 43,
+      "failures": [],
+      "seconds": 0.35
+    },
+    "rc4_bcon_x86_64": {
+      "contains_crypto": true,
+      "train_overlap": true,
+      "flagged": false,
+      "layers": [],
+      "algorithms": [],
+      "learned_q": null,
+      "functions_scored": 34,
+      "failures": [],
+      "seconds": 0.28
+    },
+    "sha256_bcon_aarch64": {
+      "contains_crypto": true,
+      "train_overlap": true,
+      "flagged": true,
+      "layers": [
+        "constant"
+      ],
+      "algorithms": [
+        "SHA-256"
+      ],
+      "learned_q": null,
+      "functions_scored": 0,
+      "failures": [],
+      "seconds": 0.01
+    },
+    "sha256_bcon_x86_64": {
+      "contains_crypto": true,
+      "train_overlap": true,
+      "flagged": true,
+      "layers": [
+        "constant"
+      ],
+      "algorithms": [
+        "SHA-256"
+      ],
+      "learned_q": null,
+      "functions_scored": 0,
+      "failures": [],
+      "seconds": 0.01
+    },
+    "siphash_aarch64": {
+      "contains_crypto": true,
+      "train_overlap": false,
+      "flagged": true,
+      "layers": [
+        "learned_function"
+      ],
+      "algorithms": [],
+      "learned_q": 0.09870740305522914,
+      "functions_scored": 42,
+      "failures": [],
+      "seconds": 0.35
+    },
+    "siphash_x86_64": {
+      "contains_crypto": true,
+      "train_overlap": false,
+      "flagged": true,
+      "layers": [
+        "learned_function"
+      ],
+      "algorithms": [],
+      "learned_q": 0.03926852743022137,
+      "functions_scored": 34,
+      "failures": [],
+      "seconds": 0.36
+    },
+    "sqlite_chacha_aarch64": {
+      "contains_crypto": true,
+      "train_overlap": false,
+      "flagged": true,
+      "layers": [
+        "constant"
+      ],
+      "algorithms": [
+        "ChaCha20"
+      ],
+      "learned_q": null,
+      "functions_scored": 0,
+      "failures": [],
+      "seconds": 0.27
+    },
+    "sqlite_chacha_x86_64": {
+      "contains_crypto": true,
+      "train_overlap": false,
+      "flagged": true,
+      "layers": [
+        "constant"
+      ],
+      "algorithms": [
+        "ChaCha20"
+      ],
+      "learned_q": null,
+      "functions_scored": 0,
+      "failures": [],
+      "seconds": 0.22
+    },
+    "stb_image_aarch64": {
+      "contains_crypto": false,
+      "train_overlap": false,
+      "flagged": false,
+      "layers": [],
+      "algorithms": [],
+      "learned_q": null,
+      "functions_scored": 75,
+      "failures": [],
+      "seconds": 1.56
+    },
+    "stb_image_x86_64": {
+      "contains_crypto": false,
+      "train_overlap": false,
+      "flagged": false,
+      "layers": [],
+      "algorithms": [],
+      "learned_q": null,
+      "functions_scored": 74,
+      "failures": [],
+      "seconds": 1.65
+    },
+    "tweetnacl_aarch64": {
+      "contains_crypto": true,
+      "train_overlap": false,
+      "flagged": true,
+      "layers": [
+        "constant"
+      ],
+      "algorithms": [
+        "ChaCha20"
+      ],
+      "learned_q": null,
+      "functions_scored": 0,
+      "failures": [],
+      "seconds": 0.02
+    },
+    "tweetnacl_x86_64": {
+      "contains_crypto": true,
+      "train_overlap": false,
+      "flagged": true,
+      "layers": [
+        "constant"
+      ],
+      "algorithms": [
+        "ChaCha20"
+      ],
+      "learned_q": null,
+      "functions_scored": 0,
+      "failures": [],
+      "seconds": 0.02
+    },
+    "xxhash_aarch64": {
+      "contains_crypto": false,
+      "train_overlap": false,
+      "flagged": false,
+      "layers": [],
+      "algorithms": [],
+      "learned_q": null,
+      "functions_scored": 56,
+      "failures": [],
+      "seconds": 0.84
+    },
+    "xxhash_x86_64": {
+      "contains_crypto": false,
+      "train_overlap": false,
+      "flagged": false,
+      "layers": [],
+      "algorithms": [],
+      "learned_q": null,
+      "functions_scored": 45,
+      "failures": [],
+      "seconds": 0.76
+    },
+    "yyjson_aarch64": {
+      "contains_crypto": false,
+      "train_overlap": false,
+      "flagged": false,
+      "layers": [],
+      "algorithms": [],
+      "learned_q": null,
+      "functions_scored": 27,
+      "failures": [],
+      "seconds": 2.43
+    },
+    "yyjson_x86_64": {
+      "contains_crypto": false,
+      "train_overlap": false,
+      "flagged": false,
+      "layers": [],
+      "algorithms": [],
+      "learned_q": null,
+      "functions_scored": 27,
+      "failures": [],
+      "seconds": 2.33
+    },
+    "zlib_aarch64": {
+      "contains_crypto": false,
+      "train_overlap": true,
+      "flagged": false,
+      "layers": [],
+      "algorithms": [],
+      "learned_q": null,
+      "functions_scored": 73,
+      "failures": [],
+      "seconds": 0.94
+    },
+    "zlib_x86_64": {
+      "contains_crypto": false,
+      "train_overlap": true,
+      "flagged": false,
+      "layers": [],
+      "algorithms": [],
+      "learned_q": null,
+      "functions_scored": 63,
+      "failures": [],
+      "seconds": 0.78
+    }
+  },
+  "summary_independent": {
+    "detected": 14,
+    "positives": 16,
+    "false_alarms": 0,
+    "negatives": 14,
+    "found_only_by_learned_layer": 2,
+    "median_seconds_per_binary": 0.36
+  },
+  "summary_all": {
+    "detected": 24,
+    "positives": 28,
+    "false_alarms": 0,
+    "negatives": 20,
+    "found_only_by_learned_layer": 4,
+    "median_seconds_per_binary": 0.35
+  },
+  "minutes": 0.7
+}

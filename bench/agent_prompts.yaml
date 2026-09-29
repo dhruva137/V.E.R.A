@@ -1,0 +1,156 @@
+# Thirty labelled prompts for the agent benchmark (bench/agent_bench.py).
+#
+# Run against the demo estate (demo/estate/estate.yaml). Each prompt says which
+# tool a correct turn calls first:
+#
+#   expect   acceptable first tools; "none" = answer without a tool,
+#            "clarify" = ask the user which asset was meant
+#   asset    (optional) the asset the call must be about: a substring of its
+#            name, or rank: N for the asset at priority rank N
+#
+# Caveat, stated in the results too: these prompts were written by the same
+# people who wrote the router's patterns. They are not a held-out set, and the
+# natural phrasings the router misses (group "natural") are included on purpose.
+
+prompts:
+  # --- an explicit verb and a named asset --------------------------------
+  - id: migrate-jar
+    group: verb_asset
+    text: "Migrate the RSA in payments-gateway.jar"
+    expect: [migrate_asset]
+    asset: "RSA in payments-gateway.jar"
+  - id: migrate-signing-key
+    group: verb_asset
+    text: "migrate signing.key to hybrid"
+    expect: [migrate_asset]
+    asset: "signing.key"
+  - id: upgrade-jwt
+    group: verb_asset
+    text: "upgrade jwt.sign in auth.ts to ML-DSA"
+    expect: [migrate_asset]
+    asset: "jwt.sign (auth.ts:6)"
+  - id: why-jar
+    group: verb_asset
+    text: "Why is RSA in payments-gateway.jar ranked so high?"
+    expect: [explain_asset, explain_evidence, explain_mosca]
+    asset: "RSA in payments-gateway.jar"
+  - id: explain-reconcile
+    group: verb_asset
+    text: "explain rsa.generate_private_key in reconcile.py"
+    expect: [explain_asset, get_asset]
+    asset: "rsa.generate_private_key (reconcile.py"
+  - id: explain-top
+    group: verb_asset
+    text: "Explain the top-ranked asset"
+    expect: [explain_asset, get_asset]
+    asset: {rank: 1}
+  - id: mosca-signing-key
+    group: verb_asset
+    text: "Explain the Mosca reading for signing.key"
+    expect: [explain_mosca]
+    asset: "signing.key"
+  - id: when-jwt
+    group: verb_asset
+    text: "When does jwt.sign in auth.ts become vulnerable?"
+    expect: [explain_mosca]
+    asset: "jwt.sign (auth.ts:6)"
+  - id: recommend-jar
+    group: verb_asset
+    text: "Recommend a replacement for the RSA in payments-gateway.jar"
+    expect: [recommend]
+    asset: "RSA in payments-gateway.jar"
+  - id: preview-lib-rs
+    group: verb_asset
+    text: "Preview migrating the ECDSA in lib.rs"
+    expect: [preview_migration]
+    asset: "lib.rs"
+  - id: migrate-200
+    group: verb_asset
+    text: "migrate 200 assets"
+    expect: [migrate_asset]
+
+  # --- estate-wide questions ----------------------------------------------
+  - id: count-assets
+    group: estate
+    text: "How many assets do we have?"
+    expect: [get_estate_summary]
+  - id: overview
+    group: estate
+    text: "Give me an overview of the estate"
+    expect: [get_estate_summary]
+  - id: show-drift
+    group: estate
+    text: "Show me the drift findings"
+    expect: [list_drift]
+  - id: vendor-blocked
+    group: estate
+    text: "What is blocked on vendors?"
+    expect: [list_vendor_gated]
+  - id: providers-roadmap
+    group: estate
+    text: "Which HSM vendors or cloud providers do we need a PQC roadmap from?"
+    expect: [list_vendor_gated]
+  - id: what-changed
+    group: estate
+    text: "What changed since the last scan?"
+    expect: [compare_scans]
+  - id: verify-manifest
+    group: estate
+    text: "Verify the signed manifest"
+    expect: [verify_manifest]
+  - id: audit-tamper
+    group: estate
+    text: "Has anyone tampered with the audit log?"
+    expect: [verify_manifest]
+  - id: rescan-configs
+    group: estate
+    text: "Run a fresh scan of the configs"
+    expect: [run_scan]
+
+  # --- natural phrasings the router's patterns do not cover ---------------
+  - id: policy-violated
+    group: natural
+    text: "Is the declared TLS policy being violated anywhere?"
+    expect: [list_drift]
+  - id: double-check
+    group: natural
+    text: "Which findings should we double-check first?"
+    expect: [list_flagged]
+  - id: sure-signing-key
+    group: natural
+    text: "How sure are you about the signing.key finding?"
+    expect: [explain_evidence]
+    asset: "signing.key"
+  - id: migrate-first
+    group: natural
+    text: "What should I migrate first?"
+    expect: [list_assets, get_estate_summary, get_roadmap]
+  - id: blast-signing-key
+    group: natural
+    text: "What breaks if we rotate the key in signing.key?"
+    expect: [get_blast_radius]
+    asset: "signing.key"
+  - id: biggest-hub
+    group: natural
+    text: "Which asset is the biggest dependency hub?"
+    expect: [list_most_depended_on]
+  - id: open-inventory
+    group: natural
+    text: "Take me to the inventory page"
+    expect: [open_page]
+
+  # --- no tool is the right answer ------------------------------------------
+  - id: what-are-you
+    group: conversational
+    text: "What are you?"
+    expect: [none]
+  - id: hello
+    group: conversational
+    text: "hi there"
+    expect: [none]
+
+  # --- ambiguous: the right move is to ask ----------------------------------
+  - id: ambiguous-cardvault
+    group: ambiguous
+    text: "Migrate CardVault.java"
+    expect: [clarify, list_assets]

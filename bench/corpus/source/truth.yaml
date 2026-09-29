@@ -1,0 +1,454 @@
+surface: source
+holdout_percent: 30
+cases:
+- id: source/python/hashlib-md5
+  language: python
+  split: holdout
+  path: source/python/hashlib-md5
+  expect:
+  - file: fingerprint.py
+    line: 5
+    name: MD5
+- id: source/python/hashlib-new-sha1
+  language: python
+  split: tune
+  path: source/python/hashlib-new-sha1
+  expect:
+  - file: legacy.py
+    line: 3
+    name: SHA-1
+- id: source/python/rsa-keygen
+  language: python
+  split: tune
+  path: source/python/rsa-keygen
+  expect:
+  - file: keys.py
+    line: 3
+    name: RSA
+- id: source/python/ec-p256
+  language: python
+  split: tune
+  path: source/python/ec-p256
+  expect:
+  - file: sign.py
+    line: 3
+    name: ECDSA
+- id: source/python/aesgcm
+  language: python
+  split: tune
+  path: source/python/aesgcm
+  expect:
+  - file: vault.py
+    line: 5
+    name: AES
+- id: source/python/pycryptodome-des3
+  language: python
+  split: holdout
+  path: source/python/pycryptodome-des3
+  expect:
+  - file: mainframe.py
+    line: 5
+    name: 3DES
+- id: source/python/jwt-rs256
+  language: python
+  split: holdout
+  path: source/python/jwt-rs256
+  expect:
+  - file: tokens.py
+    line: 5
+    name: RS256
+- id: source/python/cipher-aes-cbc
+  language: python
+  split: tune
+  path: source/python/cipher-aes-cbc
+  expect:
+  - file: storage.py
+    line: 5
+    name: AES
+- id: source/python/bare-sha256-import
+  language: python
+  split: tune
+  path: source/python/bare-sha256-import
+  expect:
+  - file: checksum.py
+    line: 5
+    name: SHA-256
+- id: source/python/ssl-tlsv1
+  language: python
+  split: holdout
+  path: source/python/ssl-tlsv1
+  expect:
+  - file: client.py
+    line: 3
+    name: TLSv1
+- id: source/python/decoy-comment-and-log
+  language: python
+  split: tune
+  path: source/python/decoy-comment-and-log
+  expect: []
+- id: source/python/decoy-identifiers
+  language: python
+  split: tune
+  path: source/python/decoy-identifiers
+  expect: []
+- id: source/java/messagedigest-md5
+  language: java
+  split: holdout
+  path: source/java/messagedigest-md5
+  expect:
+  - file: Checksum.java
+    line: 5
+    name: MD5
+- id: source/java/rsa-keypairgenerator
+  language: java
+  split: tune
+  path: source/java/rsa-keypairgenerator
+  expect:
+  - file: Keys.java
+    line: 5
+    name: RSA
+- id: source/java/cipher-aes-gcm
+  language: java
+  split: holdout
+  path: source/java/cipher-aes-gcm
+  expect:
+  - file: Seal.java
+    line: 5
+    name: AES
+- id: source/java/cipher-desede
+  language: java
+  split: holdout
+  path: source/java/cipher-desede
+  expect:
+  - file: Legacy.java
+    line: 5
+    name: 3DES
+- id: source/java/signature-sha1withrsa
+  language: java
+  split: tune
+  path: source/java/signature-sha1withrsa
+  expect:
+  - file: Signer.java
+    line: 5
+    name: RSA
+- id: source/java/ec-keypair
+  language: java
+  split: tune
+  path: source/java/ec-keypair
+  expect:
+  - file: EcKeys.java
+    line: 6
+    name: EC
+- id: source/java/sslcontext-tlsv1
+  language: java
+  split: tune
+  path: source/java/sslcontext-tlsv1
+  expect:
+  - file: Client.java
+    line: 5
+    name: TLSv1
+- id: source/java/mac-hmacsha256
+  language: java
+  split: tune
+  path: source/java/mac-hmacsha256
+  expect:
+  - file: Hmac.java
+    line: 5
+    name: HmacSHA256
+- id: source/java/decoy-strings
+  language: java
+  split: tune
+  path: source/java/decoy-strings
+  expect: []
+- id: source/go/md5-sum
+  language: go
+  split: tune
+  path: source/go/md5-sum
+  expect:
+  - file: sum.go
+    line: 6
+    name: MD5
+- id: source/go/rsa-generatekey
+  language: go
+  split: tune
+  path: source/go/rsa-generatekey
+  expect:
+  - file: keys.go
+    line: 9
+    name: RSA
+- id: source/go/ecdsa-p256
+  language: go
+  split: holdout
+  path: source/go/ecdsa-p256
+  expect:
+  - file: ec.go
+    line: 10
+    name: ECDSA
+- id: source/go/aes-newcipher
+  language: go
+  split: tune
+  path: source/go/aes-newcipher
+  expect:
+  - file: box.go
+    line: 6
+    name: AES
+- id: source/go/sha1-new
+  language: go
+  split: tune
+  path: source/go/sha1-new
+  expect:
+  - file: hash.go
+    line: 6
+    name: SHA-1
+- id: source/go/tls-minversion-10
+  language: go
+  split: tune
+  path: source/go/tls-minversion-10
+  expect:
+  - file: server.go
+    line: 6
+    name: TLS1.0
+- id: source/go/tripledes
+  language: go
+  split: tune
+  path: source/go/tripledes
+  expect:
+  - file: old.go
+    line: 6
+    name: 3DES
+- id: source/go/ed25519
+  language: go
+  split: holdout
+  path: source/go/ed25519
+  expect:
+  - file: sig.go
+    line: 9
+    name: Ed25519
+- id: source/go/decoy-comment
+  language: go
+  split: tune
+  path: source/go/decoy-comment
+  expect: []
+- id: source/c/rsa-generate
+  language: c
+  split: tune
+  path: source/c/rsa-generate
+  expect:
+  - file: keys.c
+    line: 4
+    name: RSA
+  - file: keys.c
+    line: 5
+    name: RSA
+- id: source/c/md5-oneshot
+  language: c
+  split: tune
+  path: source/c/md5-oneshot
+  expect:
+  - file: digest.c
+    line: 4
+    name: MD5
+- id: source/c/evp-aes-gcm
+  language: c
+  split: holdout
+  path: source/c/evp-aes-gcm
+  expect:
+  - file: seal.c
+    line: 4
+    name: AES
+- id: source/c/evp-3des
+  language: c
+  split: holdout
+  path: source/c/evp-3des
+  expect:
+  - file: legacy.c
+    line: 4
+    name: 3DES
+- id: source/c/cipher-list-rc4
+  language: c
+  split: tune
+  path: source/c/cipher-list-rc4
+  expect:
+  - file: tls.c
+    line: 4
+    name: RC4
+- id: source/c/ec-p256
+  language: c
+  split: tune
+  path: source/c/ec-p256
+  expect:
+  - file: ec.c
+    line: 5
+    name: EC
+- id: source/c/sha1-oneshot
+  language: c
+  split: holdout
+  path: source/c/sha1-oneshot
+  expect:
+  - file: sha.c
+    line: 4
+    name: SHA-1
+- id: source/c/decoy-comment-printf
+  language: c
+  split: tune
+  path: source/c/decoy-comment-printf
+  expect: []
+- id: source/javascript/createhash-md5
+  language: javascript
+  split: tune
+  path: source/javascript/createhash-md5
+  expect:
+  - file: etag.js
+    line: 4
+    name: MD5
+- id: source/javascript/rsa-keypair
+  language: javascript
+  split: tune
+  path: source/javascript/rsa-keypair
+  expect:
+  - file: keys.js
+    line: 3
+    name: RSA
+- id: source/javascript/cipheriv-3des
+  language: javascript
+  split: tune
+  path: source/javascript/cipheriv-3des
+  expect:
+  - file: legacy.js
+    line: 4
+    name: 3DES
+- id: source/javascript/jwt-hs256
+  language: javascript
+  split: holdout
+  path: source/javascript/jwt-hs256
+  expect:
+  - file: session.ts
+    line: 4
+    name: HS256
+- id: source/javascript/webcrypto-ecdsa
+  language: javascript
+  split: tune
+  path: source/javascript/webcrypto-ecdsa
+  expect:
+  - file: sign.ts
+    line: 2
+    name: ECDSA
+- id: source/javascript/cipheriv-aes-gcm
+  language: javascript
+  split: tune
+  path: source/javascript/cipheriv-aes-gcm
+  expect:
+  - file: seal.js
+    line: 4
+    name: AES
+- id: source/javascript/named-import-sha1
+  language: javascript
+  split: holdout
+  path: source/javascript/named-import-sha1
+  expect:
+  - file: hash.ts
+    line: 3
+    name: SHA-1
+- id: source/javascript/decoy-strings
+  language: javascript
+  split: tune
+  path: source/javascript/decoy-strings
+  expect: []
+- id: source/rust/ring-ecdsa
+  language: rust
+  split: tune
+  path: source/rust/ring-ecdsa
+  expect:
+  - file: sign.rs
+    line: 4
+    name: ECDSA
+- id: source/rust/rsa-crate
+  language: rust
+  split: tune
+  path: source/rust/rsa-crate
+  expect:
+  - file: keys.rs
+    line: 4
+    name: RSA
+- id: source/rust/md5-compute
+  language: rust
+  split: tune
+  path: source/rust/md5-compute
+  expect:
+  - file: etag.rs
+    line: 2
+    name: MD5
+- id: source/rust/sha1-new
+  language: rust
+  split: holdout
+  path: source/rust/sha1-new
+  expect:
+  - file: hash.rs
+    line: 4
+    name: SHA-1
+- id: source/rust/aes-gcm
+  language: rust
+  split: holdout
+  path: source/rust/aes-gcm
+  expect:
+  - file: seal.rs
+    line: 4
+    name: AES
+- id: source/rust/decoy-comment
+  language: rust
+  split: holdout
+  path: source/rust/decoy-comment
+  expect: []
+- id: source/csharp/md5-create
+  language: csharp
+  split: tune
+  path: source/csharp/md5-create
+  expect:
+  - file: Etag.cs
+    line: 4
+    name: MD5
+- id: source/csharp/rsa-create
+  language: csharp
+  split: tune
+  path: source/csharp/rsa-create
+  expect:
+  - file: Keys.cs
+    line: 4
+    name: RSA
+- id: source/csharp/sha1-create
+  language: csharp
+  split: holdout
+  path: source/csharp/sha1-create
+  expect:
+  - file: Hash.cs
+    line: 4
+    name: SHA-1
+- id: source/csharp/aes-create
+  language: csharp
+  split: holdout
+  path: source/csharp/aes-create
+  expect:
+  - file: Seal.cs
+    line: 4
+    name: AES
+- id: source/csharp/tripledes-create
+  language: csharp
+  split: tune
+  path: source/csharp/tripledes-create
+  expect:
+  - file: Legacy.cs
+    line: 4
+    name: 3DES
+- id: source/csharp/ecdsa-p256
+  language: csharp
+  split: tune
+  path: source/csharp/ecdsa-p256
+  expect:
+  - file: Sign.cs
+    line: 4
+    name: ECDSA
+- id: source/csharp/decoy-string
+  language: csharp
+  split: tune
+  path: source/csharp/decoy-string
+  expect: []

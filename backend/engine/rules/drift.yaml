@@ -1,0 +1,91 @@
+# Drift rules (engine/drift.py). Each compares what one plane says with what
+# another shows. Text and parameters are data; the matching logic is code,
+# one function per rule id. `explain` is shown in the UI with {placeholders}
+# filled from the two pieces of evidence.
+
+deprecated_protocols: [SSLv2, SSLv3, TLSv1.0, TLSv1.1]
+weak_cipher_markers: ['3DES', 'DES-CBC3', '_DES_', 'RC4', 'NULL', 'EXPORT']
+pq_hybrid_kex: [mlkem768x25519-sha256, sntrup761x25519-sha512, sntrup761x25519-sha512@openssh.com,
+                mlkem768nistp256-sha256, mlkem1024nistp384-sha384]
+retired_key_states: [Deactivated, Compromised, Destroyed, Destroyed Compromised, Disabled, PendingDeletion,
+                     PENDING_DELETION, DISABLED]
+
+rules:
+  - id: D1
+    title: Deprecated TLS version on the wire, forbidden in config
+    severity: high
+    declared: Config allows only {declared}
+    observed: Live handshake negotiated {observed}
+    explain: >-
+      The reviewed configuration for {host} allows only {declared}, but a live handshake
+      negotiated {observed}. The running service is not using the configuration that was
+      reviewed: another listener, an old deployment, or a proxy in front answered.
+
+  - id: D2
+    title: Weak cipher served, excluded in config
+    severity: high
+    declared: Cipher list has no 3DES/RC4 ({declared})
+    observed: Live endpoint negotiated {observed}
+    explain: >-
+      The cipher list configured for {host} does not enable 3DES or RC4, yet the live
+      endpoint negotiated {observed}. Something between the config and the wire (a load
+      balancer, a default virtual host, a stale process) still offers it.
+
+  - id: D3
+    title: Library version in the build differs from the shipped binary
+    severity: high
+    declared: Dependency declares {declared}
+    observed: Binary banner shows {observed}
+    explain: >-
+      The dependency manifest for {scope} declares {declared}, but the binary that actually
+      ships reports {observed}. Upgrading the manifest did not upgrade what runs; PQC
+      support follows the binary, not the lockfile.
+
+  - id: D4
+    title: Deployed key weaker than the code asks for
+    severity: medium
+    declared: Source generates {declared}
+    observed: Deployed certificate uses {observed}
+    explain: >-
+      Code in {scope} generates {declared}, but the certificate deployed for the same
+      system uses {observed}. Key generation policy and what is deployed have diverged.
+
+  - id: D5
+    title: Retired key still serving traffic
+    severity: high
+    declared: Key manager marks the key {declared}
+    observed: Its public key is served live at {observed}
+    explain: >-
+      The key manager records {key} as {declared}, but a live endpoint ({observed}) still
+      presents a certificate for the same public key. Either the lifecycle record is wrong
+      or a retired key is in service.
+
+  - id: D6
+    title: Expired certificate still served
+    severity: critical
+    declared: Held certificate expired {declared}
+    observed: Still presented live at {observed}
+    explain: >-
+      The certificate {subject} expired on {declared} according to the store that holds it,
+      and it is still presented by {observed}. Clients that check validity already fail;
+      clients that do not are trusting an expired identity.
+
+  - id: D7
+    title: PQ-hybrid SSH key exchange configured but not offered
+    severity: medium
+    declared: sshd_config lists {declared}
+    observed: Live KEXINIT offers {observed}
+    explain: >-
+      The SSH configuration for {host} lists the post-quantum hybrid {declared}, but the
+      live server's KEXINIT does not offer it. The daemon was not restarted, the build is
+      too old to support it, or the config is not the one in use.
+
+  - id: D8
+    title: Declared internal, observed on a public address
+    severity: high
+    declared: Declared {declared}
+    observed: Answered on public address {observed}
+    explain: >-
+      {host} is declared internal-only, but it answered on the public address {observed}.
+      Its traffic is interceptable from outside, which changes its harvest-now-decrypt-later
+      exposure.

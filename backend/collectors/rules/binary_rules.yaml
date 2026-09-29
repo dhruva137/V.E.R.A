@@ -1,0 +1,184 @@
+# Binary scanner rules (collectors/binary_scanner.py). Data, not code: add a
+# rule here and the scanner picks it up. Confidence per layer is set in
+# `layers`; each layer's weight reflects how specific its evidence is.
+
+layers:
+  linked_library: 0.80     # DT_NEEDED / PE import / Mach-O dylib names
+  symbol: 0.85             # imported or exported function names
+  version_banner: 0.70     # "OpenSSL 3.0.18" etc. in read-only data
+  cng_algorithm_id: 0.70   # UTF-16 CNG algorithm ids next to BCrypt imports
+  constant: 0.60           # byte-exact tables; data can look like code
+  jar_constant_pool: 0.75  # algorithm strings in .class files that call a JCA API
+  embedded_certificate: 0.90  # a parsed X.509 certificate
+  embedded_private_key: 0.70  # a PEM private-key marker (body never read)
+  pqc_table: 0.90          # ML-KEM / ML-DSA NTT twiddle table, derived from FIPS 203/204 parameters
+
+# Imported/exported names. First matching rule wins, so specific before general.
+# `library` links the symbol to a crypto_libraries.yaml entry.
+symbols:
+  # Randomness only: not a cryptographic-algorithm finding.
+  - {pattern: '^(BCryptGenRandom|RAND_bytes|RAND_poll|randombytes_buf)$', algorithm: null, library: null}
+  - {pattern: '^EVP_des_ede3', algorithm: 3DES, library: openssl}
+  - {pattern: '^EVP_des_', algorithm: DES, library: openssl}
+  - {pattern: '^EVP_md5$', algorithm: MD5, library: openssl}
+  - {pattern: '^EVP_sha1$', algorithm: SHA-1, library: openssl}
+  - {pattern: '^EVP_rc4', algorithm: RC4, library: openssl}
+  - {pattern: '^EVP_bf_', algorithm: Blowfish, library: openssl}
+  - {pattern: '^EVP_aes_128_', algorithm: AES-128, library: openssl}
+  - {pattern: '^EVP_aes_256_', algorithm: AES-256, library: openssl}
+  - {pattern: '^EVP_chacha20', algorithm: ChaCha20, library: openssl}
+  - {pattern: '^(RSA_|EVP_PKEY_get1_RSA|EVP_PKEY_assign_RSA|PEM_read_bio_RSA)', algorithm: RSA, library: openssl}
+  - {pattern: '^(ECDSA_|EC_KEY_|EVP_PKEY_get1_EC_KEY)', algorithm: ECDSA, library: openssl}
+  - {pattern: '^ECDH_', algorithm: ECDH, library: openssl}
+  - {pattern: '^DH_', algorithm: DH, library: openssl}
+  - {pattern: '^DSA_', algorithm: DSA, library: openssl}
+  - {pattern: '^DES_', algorithm: DES, library: openssl}
+  - {pattern: '^MD5(_|$)', algorithm: MD5, library: openssl}
+  - {pattern: '^SHA1(_|$)', algorithm: SHA-1, library: openssl}
+  - {pattern: '^RC4(_|$)', algorithm: RC4, library: openssl}
+  - {pattern: '^(SSL_|TLS_|EVP_|X509_|PEM_|OPENSSL_)', algorithm: null, library: openssl}
+  - {pattern: '^mbedtls_rsa_', algorithm: RSA, library: mbedtls}
+  - {pattern: '^mbedtls_ecdsa_', algorithm: ECDSA, library: mbedtls}
+  - {pattern: '^mbedtls_ecdh_', algorithm: ECDH, library: mbedtls}
+  - {pattern: '^mbedtls_des3_', algorithm: 3DES, library: mbedtls}
+  - {pattern: '^mbedtls_des_', algorithm: DES, library: mbedtls}
+  - {pattern: '^mbedtls_md5', algorithm: MD5, library: mbedtls}
+  - {pattern: '^mbedtls_sha1', algorithm: SHA-1, library: mbedtls}
+  - {pattern: '^mbedtls_', algorithm: null, library: mbedtls}
+  - {pattern: '^wc_(Rsa|MakeRsaKey|InitRsaKey)', algorithm: RSA, library: wolfssl}
+  - {pattern: '^wc_ecc_', algorithm: ECDSA, library: wolfssl}
+  - {pattern: '^wc_Des3_', algorithm: 3DES, library: wolfssl}
+  - {pattern: '^wc_Des_', algorithm: DES, library: wolfssl}
+  - {pattern: '^wc_(InitMd5|Md5)', algorithm: MD5, library: wolfssl}
+  - {pattern: '^wc_(InitSha|Sha)(Update|Final)?$', algorithm: SHA-1, library: wolfssl}
+  - {pattern: '^wc_(MlKem|KyberKey)', algorithm: ML-KEM-768, library: wolfssl}
+  - {pattern: '^(wc_|wolfSSL_)', algorithm: null, library: wolfssl}
+  - {pattern: '^crypto_(box|kx|scalarmult)', algorithm: X25519, library: libsodium}
+  - {pattern: '^crypto_sign', algorithm: Ed25519, library: libsodium}
+  - {pattern: '^(sodium_|crypto_)', algorithm: null, library: libsodium}
+  - {pattern: '^gnutls_', algorithm: null, library: gnutls}
+  - {pattern: '^OQS_', algorithm: null, library: liboqs}
+  - {pattern: '^(BCrypt|NCrypt)', algorithm: null, library: windows-cng}
+  - {pattern: '^Crypt(AcquireContext|GenKey|Encrypt|Decrypt|SignHash|CreateHash|ImportKey|ExportKey|DeriveKey)', algorithm: null, library: windows-capi}
+  - {pattern: '^(SecKey|SecCertificate|SecTrust)', algorithm: null, library: apple-security}
+  - {pattern: '^CC(Crypt|_MD5|_SHA1|Hmac)', algorithm: null, library: apple-security}
+
+# Library file names that only count when a crypto symbol is actually imported
+# from them. advapi32 and crypt32 are linked by almost every Windows program.
+require_symbol_for: [advapi32.dll, crypt32.dll, bcrypt.dll, ncrypt.dll]
+
+# Go binaries keep package-qualified function names even when stripped.
+go_packages:
+  - {pattern: 'crypto/rsa\.', algorithm: RSA}
+  - {pattern: 'crypto/ecdsa\.', algorithm: ECDSA}
+  - {pattern: 'crypto/ecdh\.', algorithm: ECDH}
+  - {pattern: 'crypto/ed25519\.', algorithm: Ed25519}
+  - {pattern: 'crypto/dsa\.', algorithm: DSA}
+  - {pattern: 'crypto/des\.', algorithm: DES}
+  - {pattern: 'crypto/rc4\.', algorithm: RC4}
+  - {pattern: 'crypto/md5\.', algorithm: MD5}
+  - {pattern: 'crypto/sha1\.', algorithm: SHA-1}
+  - {pattern: 'crypto/mlkem\.', algorithm: ML-KEM-768}
+
+# CNG algorithm identifiers (UTF-16LE in the binary). Only read when the binary
+# imports BCrypt*/NCrypt*, because short UTF-16 strings are common elsewhere.
+cng_algorithm_ids:
+  - {id: 'ECDSA_P256', algorithm: ECDSA}
+  - {id: 'ECDSA_P384', algorithm: ECDSA}
+  - {id: 'ECDH_P256', algorithm: ECDH}
+  - {id: 'ECDH_P384', algorithm: ECDH}
+  - {id: 'RSA_SIGN', algorithm: RSA}
+  - {id: '3DES', algorithm: 3DES}
+  - {id: 'ML-KEM', algorithm: ML-KEM-768}
+  - {id: 'ML-DSA', algorithm: ML-DSA-65}
+
+# IANA TLS cipher-suite names found as strings in application binaries.
+cipher_suite_pattern: 'TLS_[A-Z0-9]+(?:_[A-Z0-9]+)*_WITH_[A-Z0-9]+(?:_[A-Z0-9]+)*'
+
+# JCA algorithm strings. Matched only in classes that reference a JCA API class.
+jca_api_classes:
+  - javax/crypto/Cipher
+  - javax/crypto/KeyAgreement
+  - javax/crypto/KeyGenerator
+  - javax/crypto/Mac
+  - javax/crypto/SecretKeyFactory
+  - java/security/KeyPairGenerator
+  - java/security/KeyFactory
+  - java/security/Signature
+  - java/security/MessageDigest
+jca_strings:
+  - {pattern: '^(AES|DES|DESede|TripleDES|Blowfish|RC4|ARCFOUR|ChaCha20|RSA)(/([A-Za-z0-9]+)/([A-Za-z0-9]+))?$', kind: transformation}
+  - {pattern: '^(MD5|SHA1|SHA256|SHA384|SHA512)with(RSA|ECDSA|DSA)$', kind: signature}
+  - {pattern: '^(RSASSA-PSS|Ed25519|Ed448|EdDSA|ECDSA|DSA)$', kind: signature}
+  - {pattern: '^(EC|ECDH|DH|DiffieHellman|X25519|X448|XDH)$', kind: key_agreement}
+  - {pattern: '^(MD5|SHA-1|SHA1|SHA-256|SHA-512)$', kind: digest}
+  - {pattern: '^(ML-KEM(-512|-768|-1024)?|ML-DSA(-44|-65|-87)?|SLH-DSA.*|Kyber\d*|Dilithium\d*)$', kind: pqc}
+
+# PEM markers. Certificates are parsed (public data); private keys never are.
+pem_certificate: '-----BEGIN CERTIFICATE-----'
+pem_private_key: '-----BEGIN ((?:RSA|EC|DSA|ENCRYPTED|OPENSSH) )?PRIVATE KEY-----'
+
+# Byte-exact constant tables, each in the byte orders implementations use.
+constants:
+  - id: aes_sbox
+    algorithm: AES
+    note: "AES forward S-box (256 bytes)"
+    hex:
+      - "637c777bf26b6fc53001672bfed7ab76ca82c97dfa5947f0add4a2af9ca472c0b7fd9326363ff7cc34a5e5f171d8311504c723c31896059a071280e2eb27b27509832c1a1b6e5aa0523bd6b329e32f8453d100ed20fcb15b6acbbe394a4c58cfd0efaafb434d338545f9027f503c9fa851a3408f929d38f5bcb6da2110fff3d2cd0c13ec5f974417c4a77e3d645d197360814fdc222a908846eeb814de5e0bdbe0323a0a4906245cc2d3ac629195e479e7c8376d8dd54ea96c56f4ea657aae08ba78252e1ca6b4c6e8dd741f4bbd8b8a703eb5664803f60e613557b986c11d9ee1f8981169d98e949b1e87e9ce5528df8ca1890dbfe6426841992d0fb054bb16"
+  - id: aes_inv_sbox
+    algorithm: AES
+    note: "AES inverse S-box (256 bytes)"
+    hex:
+      - "52096ad53036a538bf40a39e81f3d7fb7ce339829b2fff87348e4344c4dee9cb547b9432a6c2233dee4c950b42fac34e082ea16628d924b2765ba2496d8bd12572f8f66486689816d4a45ccc5d65b6926c704850fdedb9da5e154657a78d9d8490d8ab008cbcd30af7e45805b8b34506d02c1e8fca3f0f02c1afbd0301138a6b3a9111414f67dcea97f2cfcef0b4e67396ac7422e7ad3585e2f937e81c75df6e47f11a711d29c5896fb7620eaa18be1bfc563e4bc6d279209adbc0fe78cd5af41fdda8338807c731b11210592780ec5f60517fa919b54a0d2de57a9f93c99cefa0e03b4dae2af5b0c8ebbb3c83539961172b047eba77d626e169146355210c7d"
+  - id: aes_te0
+    algorithm: AES
+    note: "AES T-table Te0, first 8 words"
+    hex:
+      - "c66363a5f87c7c84ee777799f67b7b8dfff2f20dd66b6bbdde6f6fb191c5c554"
+      - "a56363c6847c7cf8997777ee8d7b7bf60df2f2ffbd6b6bd6b16f6fde54c5c591"
+  - id: sha256_k
+    algorithm: SHA-256
+    note: "SHA-256 round constants K[0..7]"
+    hex:
+      - "428a2f9871374491b5c0fbcfe9b5dba53956c25b59f111f1923f82a4ab1c5ed5"
+      - "982f8a4291443771cffbc0b5a5dbb5e95bc25639f111f159a4823f92d55e1cab"
+  - id: sha1_iv
+    algorithm: SHA-1
+    note: "SHA-1 initial hash value H0..H4"
+    hex:
+      - "67452301efcdab8998badcfe10325476c3d2e1f0"
+      - "0123456789abcdeffedcba9876543210f0e1d2c3"
+  - id: md5_t
+    algorithm: MD5
+    note: "MD5 sine table T[1..8]"
+    hex:
+      - "d76aa478e8c7b756242070dbc1bdceeef57c0faf4787c62aa8304613fd469501"
+      - "78a46ad756b7c7e8db702024eecebdc1af0f7cf52ac68747134630a8019546fd"
+  - id: des_s1
+    algorithm: DES
+    note: "DES S-box S1 as bytes"
+    hex:
+      - "0e040d01020f0b08030a060c05090007000f07040e020d010a060c0b0905030804010e080d06020b0f0c0907030a05000f0c080204090107050b030e0a00060d"
+  - id: blowfish_p
+    algorithm: Blowfish
+    note: "Blowfish P-array P[0..5] (hex digits of pi)"
+    hex:
+      - "243f6a8885a308d313198a2e03707344a4093822299f31d0"
+      - "886a3f24d308a3852e8a191344737003223809a4d0319f29"
+  - id: chacha_sigma
+    algorithm: ChaCha20
+    note: "ChaCha20 / Salsa20 constant 'expand 32-byte k'"
+    hex:
+      - "657870616e642033322d62797465206b"
+  - id: p256_prime
+    algorithm: ECDSA
+    note: "NIST P-256 field prime"
+    hex:
+      - "ffffffff00000001000000000000000000000000ffffffffffffffffffffffff"
+      - "ffffffffffffffffffffffff00000000000000000000000001000000ffffffff"
+  - id: p256_order
+    algorithm: ECDSA
+    note: "NIST P-256 group order"
+    hex:
+      - "ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551"
+      - "512563fcc2cab9f3849e17a7adfae6bcffffffffffffffff00000000ffffffff"

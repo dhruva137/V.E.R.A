@@ -1,0 +1,8 @@
+{
+  "train_seconds_cpu": 9.9,
+  "model_bytes_pickle": 1557557,
+  "inference_functions_per_sec": 83466,
+  "extract_functions_per_sec_1core": 236,
+  "extract_insns_per_sec_1core": 30072,
+  "gpu_used": false
+}

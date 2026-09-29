@@ -1,0 +1,32 @@
+surface: binary
+holdout_percent: 30
+cases:
+- id: binary/openssl-banner
+  split: tune
+  path: binary/openssl-banner
+  expect:
+  - name: OpenSSL
+- id: binary/aes-sbox
+  split: holdout
+  path: binary/aes-sbox
+  expect:
+  - name: AES
+- id: binary/sha256-constants
+  split: tune
+  path: binary/sha256-constants
+  expect:
+  - name: SHA-256
+- id: binary/embedded-certificate
+  split: holdout
+  path: binary/embedded-certificate
+  expect:
+  - name: RSA
+- id: binary/jar-keypairgenerator
+  split: tune
+  path: binary/jar-keypairgenerator
+  expect:
+  - name: RSA
+- id: binary/decoy-plain-elf
+  split: holdout
+  path: binary/decoy-plain-elf
+  expect: []

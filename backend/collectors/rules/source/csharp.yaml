@@ -1,0 +1,32 @@
+# Source rules: C# (.NET System.Security.Cryptography, including the .NET 10 PQC types).
+language: csharp
+grammars: {.cs: csharp}
+strings: [string_literal, verbatim_string_literal, raw_string_literal]
+queries:
+  call: '(invocation_expression function: (_) @callee arguments: (argument_list) @args) @site'
+  new: '(object_creation_expression type: (_) @callee arguments: (argument_list)? @args) @site'
+  reference: '(member_access_expression) @site'
+rules:
+  - {id: cs-rsa-create, kind: call, match: '(?:^|\.)RSA\.Create$', algorithm: RSA, usage: signing, key_size: {arg: 0}}
+  - {id: cs-ecdsa-create, kind: call, match: '(?:^|\.)ECDsa\.Create$', algorithm: ECDSA, usage: signing, key_size: {arg: 0, pattern: 'nistP(\d{3})'}}
+  - {id: cs-ecdh-create, kind: call, match: '(?:^|\.)ECDiffieHellman\.Create$', algorithm: ECDH, usage: key_exchange, key_size: {arg: 0, pattern: 'nistP(\d{3})'}}
+  - {id: cs-dsa-create, kind: call, match: '(?:^|\.)DSA\.Create$', algorithm: DSA, usage: signing}
+  - {id: cs-md5, kind: call, match: '(?:^|\.)MD5\.(Create|HashData)$', algorithm: MD5, usage: hashing}
+  - {id: cs-sha1, kind: call, match: '(?:^|\.)SHA1\.(Create|HashData)$', algorithm: SHA-1, usage: hashing}
+  - {id: cs-des, kind: call, match: '(?:^|\.)DES\.Create$', algorithm: DES, usage: encryption}
+  - {id: cs-3des, kind: call, match: '(?:^|\.)TripleDES\.Create$', algorithm: 3DES, usage: encryption}
+  - {id: cs-aes, kind: call, match: '(?:^|\.)Aes\.Create$', algorithm: AES, usage: encryption}
+  - {id: cs-mlkem, kind: call, match: '(?:^|\.)MLKem\.GenerateKey$', algorithm: ML-KEM-768, usage: key_exchange}
+  - {id: cs-mldsa, kind: call, match: '(?:^|\.)MLDsa\.GenerateKey$', algorithm: ML-DSA-65, usage: signing}
+  - {id: cs-slhdsa, kind: call, match: '(?:^|\.)SlhDsa\.GenerateKey$', algorithm: SLH-DSA, usage: signing}
+  - {id: cs-rsa-csp, kind: new, match: '^RSACryptoServiceProvider$', algorithm: RSA, usage: signing, key_size: {arg: 0}}
+  - {id: cs-dsa-csp, kind: new, match: '^DSACryptoServiceProvider$', algorithm: DSA, usage: signing}
+  - {id: cs-md5-csp, kind: new, match: '^MD5CryptoServiceProvider$', algorithm: MD5, usage: hashing}
+  - {id: cs-sha1-csp, kind: new, match: '^SHA1(CryptoServiceProvider|Managed)$', algorithm: SHA-1, usage: hashing}
+  - {id: cs-des-csp, kind: new, match: '^DESCryptoServiceProvider$', algorithm: DES, usage: encryption}
+  - {id: cs-3des-csp, kind: new, match: '^TripleDESCryptoServiceProvider$', algorithm: 3DES, usage: encryption}
+  - {id: cs-aes-legacy, kind: new, match: '^(RijndaelManaged|AesManaged|AesCryptoServiceProvider)$', algorithm: AES, usage: encryption}
+  - {id: cs-ssl-protocols, kind: reference, match: '^SslProtocols\.(Ssl2|Ssl3|Tls|Tls11)$', protocol: '{1}', usage: encryption}
+  - {id: cs-hashname, kind: reference, match: '^HashAlgorithmName\.(MD5|SHA1)$', algorithm: '{1}', usage: hashing}
+  - {id: cs-secalg-rsa, kind: reference, match: '^SecurityAlgorithms\.Rsa(Sha|SsaPssSha)(256|384|512)$', algorithm: RSA, usage: signing}
+  - {id: cs-secalg-ec, kind: reference, match: '^SecurityAlgorithms\.EcdsaSha(256|384|512)$', algorithm: ECDSA, usage: signing}

@@ -1,0 +1,95 @@
+{
+  "commit": "b95c5bb",
+  "images": {
+    "alpine_3.20.oci.tar": {
+      "status": "done",
+      "seconds": 13.11,
+      "assets": 8,
+      "by_class": {
+        "Cryptography compiled into a binary": 6,
+        "Cryptographic library": 1,
+        "Certificate trust store": 1
+      },
+      "algorithms": [
+        "ECDSA",
+        "MD5",
+        "RSA",
+        "SHA-1"
+      ],
+      "cbom_components": 8,
+      "cbom_crypto_assets": 7,
+      "cbom_asset_types": {
+        "algorithm": 7
+      },
+      "cbom_valid": true,
+      "cbom_violations": 0,
+      "spec": "1.7",
+      "libraries": [
+        [
+          "OpenSSL",
+          "3.3.7"
+        ]
+      ],
+      "certin": {
+        "certin_present": 35,
+        "certin_required": 42,
+        "certin_percent": 83.3,
+        "mode_present_applicable": [
+          0,
+          0
+        ],
+        "oid_present_applicable": [
+          6,
+          7
+        ]
+      }
+    },
+    "nginx_1.27-alpine.oci.tar": {
+      "status": "done",
+      "seconds": 3.57,
+      "assets": 38,
+      "by_class": {
+        "Cryptography compiled into a binary": 36,
+        "Cryptographic library": 1,
+        "Certificate trust store": 1
+      },
+      "algorithms": [
+        "AES-128",
+        "AES-256",
+        "ChaCha20",
+        "DH",
+        "ECDSA",
+        "MD5",
+        "RSA",
+        "SHA-1"
+      ],
+      "cbom_components": 38,
+      "cbom_crypto_assets": 37,
+      "cbom_asset_types": {
+        "algorithm": 37
+      },
+      "cbom_valid": true,
+      "cbom_violations": 0,
+      "spec": "1.7",
+      "libraries": [
+        [
+          "OpenSSL",
+          "3.3.3"
+        ]
+      ],
+      "certin": {
+        "certin_present": 227,
+        "certin_required": 236,
+        "certin_percent": 96.2,
+        "mode_present_applicable": [
+          20,
+          20
+        ],
+        "oid_present_applicable": [
+          30,
+          31
+        ]
+      }
+    }
+  }
+}

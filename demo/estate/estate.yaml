@@ -1,0 +1,96 @@
+# Tejomaya Bank estate register (synthetic demo).
+#
+# The organisation's own declaration of its systems: where they run, whether
+# they face the internet, how critical they are, and what data they hold.
+# VERA cannot read these from a file; the bank declares them, and the scan
+# checks the declaration against what it finds (drift rule D8, WP7 Mosca X).
+# Regenerate the scanned material with: python demo/estate/make_estate.py
+
+name: Tejomaya Bank (demo estate)
+synthetic: true
+
+systems:
+  - name: payments-gateway
+    owner: Payments Engineering
+    exposure: internet
+    criticality: critical
+    data_classes: [payment_card, customer_pii]
+    hosts: [pay.tejomaya.example:443]
+    repo: repos/payments-gateway
+    configs: [{path: configs/payments-gateway, host: pay.tejomaya.example:443}]
+    images: [images/payments-gateway.oci.tar#base_layers=1]
+
+  - name: core-ledger
+    owner: Core Banking
+    exposure: internal
+    criticality: critical
+    data_classes: [financial_records, customer_pii]
+    hosts: [ledger-core.tejomaya.internal:443]
+    repo: repos/core-ledger
+    configs: [configs/core-ledger]
+    images: [images/core-ledger.oci.tar#base_layers=1]
+
+  - name: mobile-api
+    owner: Digital Channels
+    exposure: internet
+    criticality: high
+    data_classes: [customer_pii, authentication]
+    hosts: [mobile-api.tejomaya.example:443]
+    repo: repos/mobile-api
+    configs: [configs/mobile-api]
+
+  - name: customer-portal
+    owner: Digital Channels
+    exposure: internet
+    criticality: high
+    data_classes: [customer_pii]
+    hosts: [portal.tejomaya.example:443]
+    repo: repos/customer-portal
+
+  - name: ops-bastion
+    owner: Infrastructure
+    exposure: internal
+    criticality: high
+    data_classes: [authentication]
+    hosts: [10.20.0.5:22]
+    configs: [configs/ops-bastion]
+
+  - name: branch-vpn
+    owner: Network
+    exposure: internal
+    criticality: critical
+    data_classes: [payment_card, financial_records]
+    hosts: [vpn.tejomaya.internal:500]
+    configs: [configs/branch-vpn]
+
+  - name: messaging
+    owner: Integration
+    exposure: internal
+    criticality: high
+    data_classes: [financial_records]
+    hosts: [mq-broker.tejomaya.internal:5671]
+
+  - name: corebank-api
+    owner: Core Banking
+    exposure: internal
+    criticality: critical
+    data_classes: [financial_records, customer_pii]
+    hosts: [corebank-api.tejomaya.internal:8443, upi-switch.tejomaya.internal:443]
+
+  - name: partner-gateway
+    owner: Integration
+    exposure: internal
+    criticality: high
+    data_classes: [financial_records]
+    hosts: [partner-gateway.tejomaya.internal:443]
+
+captures: [captures/tls.json, captures/ssh.json]
+vaults: [../vault, keymanager]
+
+# Planning assumptions for the migration cost view. The bank declares its own
+# blended day rate; the per-need effort uses VERA's defaults unless listed here.
+cost:
+  currency: INR
+  day_rate: 18000
+  effort_days:
+    signature_long_lived: 20   # two root CAs and a firmware key: the bank budgets a full ceremony each

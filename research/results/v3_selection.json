@@ -1,0 +1,16 @@
+{
+  "selected": "gat_cfg_hybrid",
+  "dev": {
+    "v1_shipped": 0.7898,
+    "hgb_allopt": 0.801,
+    "hgb_loops_allopt": 0.8038,
+    "gnn_cfg_hybrid": 0.8547,
+    "avg_hgb_gnn_cfg_hybrid": 0.8526,
+    "sage_cfg_hybrid": 0.8547,
+    "avg_hgb_sage_cfg_hybrid": 0.8518,
+    "gat_cfg_hybrid": 0.8549,
+    "avg_hgb_gat_cfg_hybrid": 0.8481
+  },
+  "commit": "2fb8ca9",
+  "time": "2026-09-28T13:57:39"
+}

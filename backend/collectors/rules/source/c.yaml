@@ -1,0 +1,59 @@
+# Source rules: C and C++ (OpenSSL, Mbed TLS, wolfSSL, libsodium, liboqs, Windows CNG).
+language: c
+grammars: {.c: c, .h: c, .cc: cpp, .cpp: cpp, .cxx: cpp, .hpp: cpp, .hh: cpp}
+strings: [string_literal, raw_string_literal]
+queries:
+  call: '(call_expression function: (_) @callee arguments: (argument_list) @args) @site'
+  import: '(preproc_include path: (_) @path) @site'
+rules:
+  # OpenSSL
+  - {id: c-rsa-gen-ex, kind: call, match: '^RSA_generate_key_ex$', algorithm: RSA, usage: signing, key_size: {arg: 1}}
+  - {id: c-rsa-gen, kind: call, match: '^RSA_generate_key$', algorithm: RSA, usage: signing, key_size: {arg: 0}}
+  - {id: c-rsa-ops, kind: call, match: '^RSA_(public_encrypt|private_decrypt|private_encrypt|public_decrypt|sign|verify|new)$', algorithm: RSA, usage: signing}
+  - {id: c-ec-curve, kind: call, match: '^EC_KEY_new_by_curve_name$', algorithm: ECDSA, usage: signing, key_size: {arg: 0, pattern: '(?:prime|secp)(\d{3})'}}
+  - {id: c-ecdsa, kind: call, match: '^ECDSA_(sign|verify|do_sign|do_verify)$', algorithm: ECDSA, usage: signing}
+  - {id: c-ecdh, kind: call, match: '^ECDH_compute_key$', algorithm: ECDH, usage: key_exchange}
+  - {id: c-dh, kind: call, match: '^DH_(new|generate_key|compute_key|generate_parameters_ex)$', algorithm: DH, usage: key_exchange}
+  - {id: c-dsa, kind: call, match: '^DSA_(new|sign|verify|generate_key|generate_parameters_ex)$', algorithm: DSA, usage: signing}
+  - {id: c-evp-md5, kind: call, match: '^EVP_md5$', algorithm: MD5, usage: hashing}
+  - {id: c-evp-sha1, kind: call, match: '^EVP_sha1$', algorithm: SHA-1, usage: hashing}
+  - {id: c-md5, kind: call, match: '^MD5(_Init|_Update|_Final)?$', algorithm: MD5, usage: hashing}
+  - {id: c-sha1, kind: call, match: '^SHA1(_Init|_Update|_Final)?$', algorithm: SHA-1, usage: hashing}
+  - {id: c-evp-3des, kind: call, match: '^EVP_des_ede3', algorithm: 3DES, usage: encryption}
+  - {id: c-evp-des, kind: call, match: '^EVP_des_', algorithm: DES, usage: encryption}
+  - {id: c-evp-rc4, kind: call, match: '^EVP_rc4', algorithm: RC4, usage: encryption}
+  - {id: c-evp-bf, kind: call, match: '^EVP_bf_', algorithm: Blowfish, usage: encryption}
+  - {id: c-evp-aes, kind: call, match: '^EVP_aes_(128|192|256)_(\w+)$', algorithm: 'AES-{1}', usage: encryption, mode: {template: '{2}'}}
+  - {id: c-evp-chacha, kind: call, match: '^EVP_chacha20', algorithm: ChaCha20, usage: encryption}
+  - {id: c-des-legacy, kind: call, match: '^DES_(set_key|set_key_checked|ecb_encrypt|ncbc_encrypt)$', algorithm: DES, usage: encryption}
+  - {id: c-des3-legacy, kind: call, match: '^DES_ede3_(cbc|ecb)_encrypt$', algorithm: 3DES, usage: encryption}
+  - {id: c-evp-q-keygen, kind: call, match: '^EVP_PKEY_Q_keygen$', algorithm_from: {arg: 2}, usage: signing, key_size: {arg: 3, pattern: '(\d{3,5})'}}
+  - {id: c-evp-from-name, kind: call, match: '^EVP_PKEY_CTX_new_from_name$', algorithm_from: {arg: 1}, usage: signing}
+  - {id: c-evp-new-id, kind: call, match: '^EVP_PKEY_CTX_new_id$', algorithm_from: {arg: 0, pattern: 'EVP_PKEY_(\w+)'}, usage: signing}
+  - {id: c-evp-rsa-bits, kind: call, match: '^EVP_PKEY_CTX_set_rsa_keygen_bits$', algorithm: RSA, usage: signing, key_size: {arg: 1}}
+  - {id: c-ssl-min-proto, kind: call, match: '^SSL_CTX_set_min_proto_version$', protocol_from: {arg: 1, pattern: '(SSL3|TLS1(?:_1)?)_VERSION'}, usage: encryption}
+  - {id: c-ssl-ciphers, kind: call, match: '^SSL_CTX_set_cipher_list$', cipher_suite_from: {arg: 1}, usage: encryption}
+  # liboqs
+  - {id: c-oqs-kem, kind: call, match: '^OQS_KEM_new$', algorithm_from: {arg: 0, pattern: '(ml_kem_\d+|ML-KEM-\d+|kyber_\d+)'}, usage: key_exchange}
+  - {id: c-oqs-sig, kind: call, match: '^OQS_SIG_new$', algorithm_from: {arg: 0, pattern: '(ml_dsa_\d+|ML-DSA-\d+|dilithium_\d)'}, usage: signing}
+  # Mbed TLS, wolfSSL, libsodium
+  - {id: c-mbed-rsa, kind: call, match: '^mbedtls_rsa_gen_key$', algorithm: RSA, usage: signing, key_size: {arg: 3}}
+  - {id: c-mbed-ecdsa, kind: call, match: '^mbedtls_ecdsa_genkey$', algorithm: ECDSA, usage: signing}
+  - {id: c-mbed-md5, kind: call, match: '^mbedtls_md5', algorithm: MD5, usage: hashing}
+  - {id: c-mbed-sha1, kind: call, match: '^mbedtls_sha1', algorithm: SHA-1, usage: hashing}
+  - {id: c-mbed-des3, kind: call, match: '^mbedtls_des3_', algorithm: 3DES, usage: encryption}
+  - {id: c-mbed-des, kind: call, match: '^mbedtls_des_', algorithm: DES, usage: encryption}
+  - {id: c-wolf-rsa, kind: call, match: '^wc_MakeRsaKey$', algorithm: RSA, usage: signing, key_size: {arg: 1}}
+  - {id: c-wolf-ecc, kind: call, match: '^wc_ecc_make_key(_ex)?$', algorithm: ECDSA, usage: signing}
+  - {id: c-wolf-md5, kind: call, match: '^wc_InitMd5', algorithm: MD5, usage: hashing}
+  - {id: c-sodium-box, kind: call, match: '^crypto_(box|kx)_keypair$', algorithm: X25519, usage: key_exchange}
+  - {id: c-sodium-sign, kind: call, match: '^crypto_sign_keypair$', algorithm: Ed25519, usage: signing}
+  # Windows CNG
+  - {id: c-cng-open, kind: call, match: '^BCryptOpenAlgorithmProvider$', algorithm_from: {arg: 1, pattern: 'BCRYPT_(\w+?)_ALGORITHM'}, usage: encryption}
+  # headers
+  - {id: c-inc-md5, kind: import, match: '<openssl/md5\.h>', algorithm: MD5, usage: hashing}
+  - {id: c-inc-des, kind: import, match: '<openssl/des\.h>', algorithm: DES, usage: encryption}
+  - {id: c-inc-rc4, kind: import, match: '<openssl/rc4\.h>', algorithm: RC4, usage: encryption}
+  - {id: c-inc-rsa, kind: import, match: '<openssl/rsa\.h>', algorithm: RSA, usage: signing}
+  - {id: c-inc-ec, kind: import, match: '<openssl/(ec|ecdsa)\.h>', algorithm: ECDSA, usage: signing}
+  - {id: c-inc-dh, kind: import, match: '<openssl/dh\.h>', algorithm: DH, usage: key_exchange}

@@ -1,0 +1,294 @@
+{
+  "source": "tls",
+  "collected_at": "2026-08-30T17:55:29.653061+00:00",
+  "note": "Observed on the wire by a real handshake.",
+  "findings": [
+    {
+      "id": "8c7996bc-2710-4e85-9bda-4b64a6d3cef4",
+      "source_type": "tls",
+      "source_location": "cloudflare.com:443",
+      "asset_class": "tls_certificate",
+      "algorithm": "ECDSA",
+      "key_size": 256,
+      "protocol": "TLSv1.3",
+      "cipher_suite": null,
+      "key_exchange": null,
+      "signature_algorithm": "ecdsa-with-SHA256",
+      "cert_subject": "CN=cloudflare.com",
+      "cert_issuer": "CN=WE1,O=Google Trust Services,C=US",
+      "cert_validity_start": "2026-07-08T21:47:39+00:00",
+      "cert_validity_end": "2026-10-06T22:47:27+00:00",
+      "cert_serial": "121878473151716987665204483045889563947",
+      "usage": "signing",
+      "tags": [
+        "live-scan"
+      ],
+      "owner": null,
+      "environment": "production",
+      "raw_details": {
+        "type": "certificate",
+        "curve": "secp256r1",
+        "chain_trusted": true,
+        "trust_error": null,
+        "days_until_expiry": 37
+      }
+    },
+    {
+      "id": "c613e7d0-922b-45cf-b2d9-9e168c0201bb",
+      "source_type": "tls",
+      "source_location": "cloudflare.com:443",
+      "asset_class": "tls_cipher_suite",
+      "algorithm": null,
+      "key_size": null,
+      "protocol": "TLSv1.3",
+      "cipher_suite": "TLS_AES_256_GCM_SHA384",
+      "key_exchange": null,
+      "signature_algorithm": null,
+      "cert_subject": null,
+      "cert_issuer": null,
+      "cert_validity_start": null,
+      "cert_validity_end": null,
+      "cert_serial": null,
+      "usage": "encryption",
+      "tags": [
+        "live-scan"
+      ],
+      "owner": null,
+      "environment": "production",
+      "raw_details": {
+        "type": "cipher_suite",
+        "bits": 256
+      }
+    },
+    {
+      "id": "d4153665-15a3-4119-ba7f-0642c1145ef3",
+      "source_type": "tls",
+      "source_location": "cloudflare.com:443",
+      "asset_class": "tls_key_exchange",
+      "algorithm": null,
+      "key_size": null,
+      "protocol": "TLSv1.3",
+      "cipher_suite": null,
+      "key_exchange": "X25519",
+      "signature_algorithm": null,
+      "cert_subject": null,
+      "cert_issuer": null,
+      "cert_validity_start": null,
+      "cert_validity_end": null,
+      "cert_serial": null,
+      "usage": "key_exchange",
+      "tags": [
+        "live-scan"
+      ],
+      "owner": null,
+      "environment": "production",
+      "raw_details": {
+        "type": "key_exchange",
+        "negotiated_group": null,
+        "source": "single-group handshake probe",
+        "groups_supported": [
+          "P-256",
+          "P-384",
+          "P-521",
+          "X25519"
+        ],
+        "hybrid_status": "unknown",
+        "hybrid_note": "Hybrid groups could not be tested: the local OpenSSL (OpenSSL 3.0.18 30 Sep 2025) predates ML-KEM support, which landed in 3.5. This is a limitation of the scanning host, not a finding about the server.",
+        "untestable_locally": [
+          "X25519MLKEM768",
+          "SecP256r1MLKEM768"
+        ]
+      }
+    },
+    {
+      "id": "b8f4686d-3f10-434f-9385-4e2a67fe6542",
+      "source_type": "tls",
+      "source_location": "www.google.com:443",
+      "asset_class": "tls_certificate",
+      "algorithm": "ECDSA",
+      "key_size": 256,
+      "protocol": "TLSv1.3",
+      "cipher_suite": null,
+      "key_exchange": null,
+      "signature_algorithm": "ecdsa-with-SHA256",
+      "cert_subject": "CN=www.google.com",
+      "cert_issuer": "CN=WE2,O=Google Trust Services,C=US",
+      "cert_validity_start": "2026-08-10T08:39:55+00:00",
+      "cert_validity_end": "2026-11-02T08:39:54+00:00",
+      "cert_serial": "314462678657229765283556630388743422907",
+      "usage": "signing",
+      "tags": [
+        "live-scan"
+      ],
+      "owner": null,
+      "environment": "production",
+      "raw_details": {
+        "type": "certificate",
+        "curve": "secp256r1",
+        "chain_trusted": true,
+        "trust_error": null,
+        "days_until_expiry": 63
+      }
+    },
+    {
+      "id": "b75bd9b0-69de-4f4a-b8a7-1690baf0b1d6",
+      "source_type": "tls",
+      "source_location": "www.google.com:443",
+      "asset_class": "tls_cipher_suite",
+      "algorithm": null,
+      "key_size": null,
+      "protocol": "TLSv1.3",
+      "cipher_suite": "TLS_AES_256_GCM_SHA384",
+      "key_exchange": null,
+      "signature_algorithm": null,
+      "cert_subject": null,
+      "cert_issuer": null,
+      "cert_validity_start": null,
+      "cert_validity_end": null,
+      "cert_serial": null,
+      "usage": "encryption",
+      "tags": [
+        "live-scan"
+      ],
+      "owner": null,
+      "environment": "production",
+      "raw_details": {
+        "type": "cipher_suite",
+        "bits": 256
+      }
+    },
+    {
+      "id": "90a084bd-b693-4548-a473-e4ca78527f24",
+      "source_type": "tls",
+      "source_location": "www.google.com:443",
+      "asset_class": "tls_key_exchange",
+      "algorithm": null,
+      "key_size": null,
+      "protocol": "TLSv1.3",
+      "cipher_suite": null,
+      "key_exchange": "X25519",
+      "signature_algorithm": null,
+      "cert_subject": null,
+      "cert_issuer": null,
+      "cert_validity_start": null,
+      "cert_validity_end": null,
+      "cert_serial": null,
+      "usage": "key_exchange",
+      "tags": [
+        "live-scan"
+      ],
+      "owner": null,
+      "environment": "production",
+      "raw_details": {
+        "type": "key_exchange",
+        "negotiated_group": null,
+        "source": "single-group handshake probe",
+        "groups_supported": [
+          "P-256",
+          "X25519"
+        ],
+        "hybrid_status": "unknown",
+        "hybrid_note": "Hybrid groups could not be tested: the local OpenSSL (OpenSSL 3.0.18 30 Sep 2025) predates ML-KEM support, which landed in 3.5. This is a limitation of the scanning host, not a finding about the server.",
+        "untestable_locally": [
+          "X25519MLKEM768",
+          "SecP256r1MLKEM768"
+        ]
+      }
+    },
+    {
+      "id": "915cfe52-bf3b-4932-84c4-05f4928d8ca2",
+      "source_type": "tls",
+      "source_location": "github.com:443",
+      "asset_class": "tls_certificate",
+      "algorithm": "ECDSA",
+      "key_size": 256,
+      "protocol": "TLSv1.3",
+      "cipher_suite": null,
+      "key_exchange": null,
+      "signature_algorithm": "ecdsa-with-SHA256",
+      "cert_subject": "CN=github.com",
+      "cert_issuer": "CN=Sectigo Public Server Authentication CA DV E36,O=Sectigo Limited,C=GB",
+      "cert_validity_start": "2026-07-03T00:00:00+00:00",
+      "cert_validity_end": "2026-09-30T23:59:59+00:00",
+      "cert_serial": "151537468083466144627263410141412137206",
+      "usage": "signing",
+      "tags": [
+        "live-scan"
+      ],
+      "owner": null,
+      "environment": "production",
+      "raw_details": {
+        "type": "certificate",
+        "curve": "secp256r1",
+        "chain_trusted": true,
+        "trust_error": null,
+        "days_until_expiry": 31
+      }
+    },
+    {
+      "id": "87b1e80c-063c-44b0-84fb-8f9ec8ab63ad",
+      "source_type": "tls",
+      "source_location": "github.com:443",
+      "asset_class": "tls_cipher_suite",
+      "algorithm": null,
+      "key_size": null,
+      "protocol": "TLSv1.3",
+      "cipher_suite": "TLS_AES_128_GCM_SHA256",
+      "key_exchange": null,
+      "signature_algorithm": null,
+      "cert_subject": null,
+      "cert_issuer": null,
+      "cert_validity_start": null,
+      "cert_validity_end": null,
+      "cert_serial": null,
+      "usage": "encryption",
+      "tags": [
+        "live-scan"
+      ],
+      "owner": null,
+      "environment": "production",
+      "raw_details": {
+        "type": "cipher_suite",
+        "bits": 128
+      }
+    },
+    {
+      "id": "181125da-8812-4fa7-8f13-355f6c01556a",
+      "source_type": "tls",
+      "source_location": "github.com:443",
+      "asset_class": "tls_key_exchange",
+      "algorithm": null,
+      "key_size": null,
+      "protocol": "TLSv1.3",
+      "cipher_suite": null,
+      "key_exchange": "X25519",
+      "signature_algorithm": null,
+      "cert_subject": null,
+      "cert_issuer": null,
+      "cert_validity_start": null,
+      "cert_validity_end": null,
+      "cert_serial": null,
+      "usage": "key_exchange",
+      "tags": [
+        "live-scan"
+      ],
+      "owner": null,
+      "environment": "production",
+      "raw_details": {
+        "type": "key_exchange",
+        "negotiated_group": null,
+        "source": "single-group handshake probe",
+        "groups_supported": [
+          "P-256",
+          "X25519"
+        ],
+        "hybrid_status": "unknown",
+        "hybrid_note": "Hybrid groups could not be tested: the local OpenSSL (OpenSSL 3.0.18 30 Sep 2025) predates ML-KEM support, which landed in 3.5. This is a limitation of the scanning host, not a finding about the server.",
+        "untestable_locally": [
+          "X25519MLKEM768",
+          "SecP256r1MLKEM768"
+        ]
+      }
+    }
+  ]
+}

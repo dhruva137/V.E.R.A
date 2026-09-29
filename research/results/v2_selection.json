@@ -1,0 +1,16 @@
+{
+  "selected": "gnn_cfg_hybrid",
+  "mean_dev_pr_auc": {
+    "hgb_v1": 0.7711,
+    "hgb_loops": 0.7687,
+    "gnn_cfg": 0.8209333333333332,
+    "gnn_dfg": 0.8044333333333333,
+    "gnn_both": 0.8112666666666666,
+    "gnn_cfg_hybrid": 0.8248333333333333,
+    "gnn_both_hybrid": 0.8169,
+    "seq": 0.7291666666666666,
+    "seq_hybrid": 0.7713
+  },
+  "commit": "2fb8ca9",
+  "time": "2026-09-28T13:37:23"
+}

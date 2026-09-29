@@ -1,0 +1,401 @@
+name,asset_class,algorithm,key_size,source_type,hostname,environment,owner,department
+ems-0000.energy.internal,device_identity,ECDSA,256,keystore,ems-0000.energy.internal,production,Data Platform,Energy
+rtu-gw-0001.energy.internal,device_identity,ECDSA,256,keystore,rtu-gw-0001.energy.internal,production,PKI Team,Energy
+substation-0002.energy.internal,config,RSA,2048,config,substation-0002.energy.internal,production,,Energy
+scada-0003.energy.internal,config,RSA,2048,config,scada-0003.energy.internal,production,Data Platform,Energy
+scada-0004.energy.internal,device_identity,ECDSA,256,keystore,scada-0004.energy.internal,production,Data Platform,Energy
+meter-hub-0005.energy.internal,backup_encryption,RSA,2048,keystore,meter-hub-0005.energy.internal,production,Payments Ops,Energy
+ems-0006.energy.internal,root_ca,ECDSA,384,keystore,ems-0006.energy.internal,production,Infrastructure,Energy
+scada-0007.energy.internal,tls_certificate,ECDSA,256,tls,scada-0007.energy.internal,staging,Platform Engineering,Energy
+rtu-gw-0008.energy.internal,config,ECDHE,256,config,rtu-gw-0008.energy.internal,dr,Platform Engineering,Energy
+rtu-gw-0009.energy.internal,tls_certificate,RSA,2048,tls,rtu-gw-0009.energy.internal,production,Payments Ops,Energy
+substation-0010.energy.internal,tls_certificate,ECDSA,256,tls,substation-0010.energy.internal,production,Application Security,Energy
+substation-0011.energy.internal,vpn_ipsec,ECDHE,256,keystore,substation-0011.energy.internal,production,Payments Ops,Energy
+rtu-gw-0012.energy.internal,device_identity,RSA,2048,keystore,rtu-gw-0012.energy.internal,production,,Energy
+scada-0013.energy.internal,tls_certificate,RSA,2048,tls,scada-0013.energy.internal,production,Platform Engineering,Energy
+substation-0014.energy.internal,tls_certificate,RSA,2048,tls,substation-0014.energy.internal,production,,Energy
+ems-0015.energy.internal,vpn_ipsec,DH,2048,keystore,ems-0015.energy.internal,production,Application Security,Energy
+substation-0016.energy.internal,root_ca,RSA,4096,keystore,substation-0016.energy.internal,staging,,Energy
+meter-hub-0017.energy.internal,backup_encryption,AES,256,keystore,meter-hub-0017.energy.internal,production,PKI Team,Energy
+ems-0018.energy.internal,tls_certificate,RSA,2048,tls,ems-0018.energy.internal,production,Infrastructure,Energy
+ems-0019.energy.internal,tls_certificate,ML-DSA-65,,tls,ems-0019.energy.internal,production,Data Platform,Energy
+ems-0020.energy.internal,firmware_signing,ECDSA,256,keystore,ems-0020.energy.internal,production,Platform Engineering,Energy
+ems-0021.energy.internal,firmware_signing,RSA,2048,keystore,ems-0021.energy.internal,production,Infrastructure,Energy
+substation-0022.energy.internal,device_identity,ECDSA,256,keystore,substation-0022.energy.internal,dr,Application Security,Energy
+scada-0023.energy.internal,device_identity,ECDSA,256,keystore,scada-0023.energy.internal,dr,Application Security,Energy
+substation-0024.energy.internal,device_identity,RSA,2048,keystore,substation-0024.energy.internal,production,Application Security,Energy
+ems-0025.energy.internal,firmware_signing,RSA,2048,keystore,ems-0025.energy.internal,staging,,Energy
+substation-0026.energy.internal,device_identity,RSA,2048,keystore,substation-0026.energy.internal,production,Platform Engineering,Energy
+scada-0027.energy.internal,device_identity,ECDSA,256,keystore,scada-0027.energy.internal,production,PKI Team,Energy
+substation-0028.energy.internal,device_identity,ECDSA,256,keystore,substation-0028.energy.internal,production,Data Platform,Energy
+ems-0029.energy.internal,config,RSA,2048,config,ems-0029.energy.internal,production,Infrastructure,Energy
+scada-0030.energy.internal,vpn_ipsec,DH,2048,keystore,scada-0030.energy.internal,production,,Energy
+meter-hub-0031.energy.internal,config,RSA,2048,config,meter-hub-0031.energy.internal,production,Infrastructure,Energy
+scada-0032.energy.internal,vpn_ipsec,DH,2048,keystore,scada-0032.energy.internal,staging,Application Security,Energy
+meter-hub-0033.energy.internal,device_identity,ECDSA,256,keystore,meter-hub-0033.energy.internal,production,Infrastructure,Energy
+rtu-gw-0034.energy.internal,tls_certificate,RSA,2048,tls,rtu-gw-0034.energy.internal,production,Data Platform,Energy
+meter-hub-0035.energy.internal,tls_certificate,RSA,2048,tls,meter-hub-0035.energy.internal,production,,Energy
+rtu-gw-0036.energy.internal,device_identity,ECDSA,256,keystore,rtu-gw-0036.energy.internal,production,,Energy
+substation-0037.energy.internal,tls_certificate,ECDSA,256,tls,substation-0037.energy.internal,production,Application Security,Energy
+ems-0038.energy.internal,config,ECDHE,256,config,ems-0038.energy.internal,staging,Platform Engineering,Energy
+scada-0039.energy.internal,config,RSA,2048,config,scada-0039.energy.internal,production,Infrastructure,Energy
+ems-0040.energy.internal,device_identity,RSA,2048,keystore,ems-0040.energy.internal,production,Payments Ops,Energy
+ems-0041.energy.internal,firmware_signing,ECDSA,256,keystore,ems-0041.energy.internal,production,Data Platform,Energy
+scada-0042.energy.internal,tls_certificate,RSA,2048,tls,scada-0042.energy.internal,production,Infrastructure,Energy
+scada-0043.energy.internal,vpn_ipsec,ECDHE,256,keystore,scada-0043.energy.internal,production,Infrastructure,Energy
+rtu-gw-0044.energy.internal,config,ECDHE,256,config,rtu-gw-0044.energy.internal,production,PKI Team,Energy
+substation-0045.energy.internal,device_identity,RSA,2048,keystore,substation-0045.energy.internal,dr,Platform Engineering,Energy
+substation-0046.energy.internal,vpn_ipsec,ECDHE,256,keystore,substation-0046.energy.internal,staging,PKI Team,Energy
+substation-0047.energy.internal,tls_certificate,RSA,2048,tls,substation-0047.energy.internal,staging,Payments Ops,Energy
+scada-0048.energy.internal,config,ECDHE,256,config,scada-0048.energy.internal,production,Infrastructure,Energy
+substation-0049.energy.internal,config,RSA,2048,config,substation-0049.energy.internal,production,Application Security,Energy
+substation-0050.energy.internal,tls_certificate,ML-DSA-65,,tls,substation-0050.energy.internal,dr,Data Platform,Energy
+meter-hub-0051.energy.internal,config,RSA,2048,config,meter-hub-0051.energy.internal,production,,Energy
+rtu-gw-0052.energy.internal,tls_certificate,ML-DSA-65,,tls,rtu-gw-0052.energy.internal,production,Infrastructure,Energy
+substation-0053.energy.internal,backup_encryption,RSA,2048,keystore,substation-0053.energy.internal,production,Platform Engineering,Energy
+rtu-gw-0054.energy.internal,vpn_ipsec,ECDHE,256,keystore,rtu-gw-0054.energy.internal,dr,PKI Team,Energy
+meter-hub-0055.energy.internal,config,ECDHE,256,config,meter-hub-0055.energy.internal,production,Network Ops,Energy
+ems-0056.energy.internal,device_identity,ECDSA,256,keystore,ems-0056.energy.internal,staging,,Energy
+meter-hub-0057.energy.internal,config,ECDHE,256,config,meter-hub-0057.energy.internal,production,Application Security,Energy
+ems-0058.energy.internal,device_identity,ECDSA,256,keystore,ems-0058.energy.internal,production,Application Security,Energy
+scada-0059.energy.internal,config,RSA,2048,config,scada-0059.energy.internal,production,PKI Team,Energy
+rtu-gw-0060.energy.internal,device_identity,RSA,2048,keystore,rtu-gw-0060.energy.internal,staging,Application Security,Energy
+rtu-gw-0061.energy.internal,tls_certificate,ECDSA,256,tls,rtu-gw-0061.energy.internal,production,,Energy
+meter-hub-0062.energy.internal,config,ECDHE,256,config,meter-hub-0062.energy.internal,production,Infrastructure,Energy
+scada-0063.energy.internal,device_identity,ECDSA,256,keystore,scada-0063.energy.internal,production,Application Security,Energy
+substation-0064.energy.internal,config,RSA,2048,config,substation-0064.energy.internal,dr,Payments Ops,Energy
+meter-hub-0065.energy.internal,device_identity,ECDSA,256,keystore,meter-hub-0065.energy.internal,dr,Platform Engineering,Energy
+rtu-gw-0066.energy.internal,device_identity,RSA,2048,keystore,rtu-gw-0066.energy.internal,production,,Energy
+substation-0067.energy.internal,device_identity,ECDSA,256,keystore,substation-0067.energy.internal,production,Application Security,Energy
+ems-0068.energy.internal,config,ECDHE,256,config,ems-0068.energy.internal,production,Infrastructure,Energy
+scada-0069.energy.internal,vpn_ipsec,ECDHE,256,keystore,scada-0069.energy.internal,production,Data Platform,Energy
+substation-0070.energy.internal,firmware_signing,ECDSA,256,keystore,substation-0070.energy.internal,dr,Infrastructure,Energy
+rtu-gw-0071.energy.internal,tls_certificate,ECDSA,256,tls,rtu-gw-0071.energy.internal,staging,Network Ops,Energy
+ems-0072.energy.internal,firmware_signing,RSA,2048,keystore,ems-0072.energy.internal,staging,,Energy
+meter-hub-0073.energy.internal,firmware_signing,ECDSA,256,keystore,meter-hub-0073.energy.internal,production,Application Security,Energy
+substation-0074.energy.internal,device_identity,ECDSA,256,keystore,substation-0074.energy.internal,production,Platform Engineering,Energy
+ems-0075.energy.internal,vpn_ipsec,ECDHE,256,keystore,ems-0075.energy.internal,staging,,Energy
+scada-0076.energy.internal,backup_encryption,RSA,2048,keystore,scada-0076.energy.internal,production,Network Ops,Energy
+ems-0077.energy.internal,config,RSA,2048,config,ems-0077.energy.internal,production,Data Platform,Energy
+scada-0078.energy.internal,tls_certificate,RSA,2048,tls,scada-0078.energy.internal,staging,Payments Ops,Energy
+rtu-gw-0079.energy.internal,tls_certificate,ECDSA,256,tls,rtu-gw-0079.energy.internal,staging,Infrastructure,Energy
+rtu-gw-0080.energy.internal,device_identity,ECDSA,256,keystore,rtu-gw-0080.energy.internal,production,Network Ops,Energy
+ems-0081.energy.internal,device_identity,RSA,2048,keystore,ems-0081.energy.internal,production,Platform Engineering,Energy
+substation-0082.energy.internal,vpn_ipsec,ECDHE,256,keystore,substation-0082.energy.internal,production,Infrastructure,Energy
+meter-hub-0083.energy.internal,tls_certificate,RSA,2048,tls,meter-hub-0083.energy.internal,staging,Network Ops,Energy
+meter-hub-0084.energy.internal,tls_certificate,ML-DSA-65,,tls,meter-hub-0084.energy.internal,staging,Infrastructure,Energy
+scada-0085.energy.internal,tls_certificate,RSA,2048,tls,scada-0085.energy.internal,dr,Infrastructure,Energy
+meter-hub-0086.energy.internal,tls_certificate,ECDSA,256,tls,meter-hub-0086.energy.internal,production,Platform Engineering,Energy
+substation-0087.energy.internal,vpn_ipsec,ECDHE,256,keystore,substation-0087.energy.internal,staging,Infrastructure,Energy
+meter-hub-0088.energy.internal,device_identity,ECDSA,256,keystore,meter-hub-0088.energy.internal,dr,Platform Engineering,Energy
+scada-0089.energy.internal,device_identity,ECDSA,256,keystore,scada-0089.energy.internal,staging,Application Security,Energy
+substation-0090.energy.internal,device_identity,RSA,2048,keystore,substation-0090.energy.internal,staging,Application Security,Energy
+ems-0091.energy.internal,device_identity,ECDSA,256,keystore,ems-0091.energy.internal,production,Data Platform,Energy
+ems-0092.energy.internal,tls_certificate,ECDSA,256,tls,ems-0092.energy.internal,dr,Infrastructure,Energy
+scada-0093.energy.internal,root_ca,RSA,4096,keystore,scada-0093.energy.internal,production,Network Ops,Energy
+meter-hub-0094.energy.internal,device_identity,ECDSA,256,keystore,meter-hub-0094.energy.internal,production,Payments Ops,Energy
+rtu-gw-0095.energy.internal,backup_encryption,RSA,2048,keystore,rtu-gw-0095.energy.internal,production,Network Ops,Energy
+ems-0096.energy.internal,tls_certificate,ML-DSA-65,,tls,ems-0096.energy.internal,production,Network Ops,Energy
+scada-0097.energy.internal,vpn_ipsec,ECDHE,256,keystore,scada-0097.energy.internal,production,Application Security,Energy
+meter-hub-0098.energy.internal,device_identity,RSA,2048,keystore,meter-hub-0098.energy.internal,staging,,Energy
+substation-0099.energy.internal,root_ca,ECDSA,384,keystore,substation-0099.energy.internal,production,Platform Engineering,Energy
+scada-0100.energy.internal,backup_encryption,RSA,2048,keystore,scada-0100.energy.internal,production,PKI Team,Energy
+rtu-gw-0101.energy.internal,config,ECDHE,256,config,rtu-gw-0101.energy.internal,dr,Network Ops,Energy
+meter-hub-0102.energy.internal,tls_certificate,RSA,2048,tls,meter-hub-0102.energy.internal,production,PKI Team,Energy
+substation-0103.energy.internal,device_identity,ECDSA,256,keystore,substation-0103.energy.internal,production,Infrastructure,Energy
+scada-0104.energy.internal,backup_encryption,RSA,2048,keystore,scada-0104.energy.internal,production,Application Security,Energy
+meter-hub-0105.energy.internal,device_identity,ECDSA,256,keystore,meter-hub-0105.energy.internal,production,Platform Engineering,Energy
+rtu-gw-0106.energy.internal,config,ECDHE,256,config,rtu-gw-0106.energy.internal,production,Network Ops,Energy
+meter-hub-0107.energy.internal,tls_certificate,RSA,2048,tls,meter-hub-0107.energy.internal,production,Application Security,Energy
+substation-0108.energy.internal,config,RSA,2048,config,substation-0108.energy.internal,production,Platform Engineering,Energy
+meter-hub-0109.energy.internal,tls_certificate,ECDSA,256,tls,meter-hub-0109.energy.internal,production,Network Ops,Energy
+ems-0110.energy.internal,vpn_ipsec,ECDHE,256,keystore,ems-0110.energy.internal,dr,Network Ops,Energy
+substation-0111.energy.internal,firmware_signing,RSA,2048,keystore,substation-0111.energy.internal,production,Application Security,Energy
+rtu-gw-0112.energy.internal,tls_certificate,ECDSA,256,tls,rtu-gw-0112.energy.internal,production,Data Platform,Energy
+substation-0113.energy.internal,config,ECDHE,256,config,substation-0113.energy.internal,production,Data Platform,Energy
+rtu-gw-0114.energy.internal,vpn_ipsec,ECDHE,256,keystore,rtu-gw-0114.energy.internal,staging,Application Security,Energy
+rtu-gw-0115.energy.internal,config,RSA,2048,config,rtu-gw-0115.energy.internal,production,Application Security,Energy
+ems-0116.energy.internal,tls_certificate,ECDSA,256,tls,ems-0116.energy.internal,staging,Infrastructure,Energy
+substation-0117.energy.internal,config,ECDHE,256,config,substation-0117.energy.internal,dr,Data Platform,Energy
+rtu-gw-0118.energy.internal,tls_certificate,RSA,2048,tls,rtu-gw-0118.energy.internal,production,Platform Engineering,Energy
+rtu-gw-0119.energy.internal,device_identity,RSA,2048,keystore,rtu-gw-0119.energy.internal,production,Data Platform,Energy
+scada-0120.energy.internal,device_identity,ECDSA,256,keystore,scada-0120.energy.internal,dr,Data Platform,Energy
+ems-0121.energy.internal,config,RSA,2048,config,ems-0121.energy.internal,production,PKI Team,Energy
+ems-0122.energy.internal,config,ECDHE,256,config,ems-0122.energy.internal,staging,PKI Team,Energy
+meter-hub-0123.energy.internal,config,RSA,2048,config,meter-hub-0123.energy.internal,production,Application Security,Energy
+scada-0124.energy.internal,config,RSA,2048,config,scada-0124.energy.internal,dr,Platform Engineering,Energy
+meter-hub-0125.energy.internal,device_identity,ECDSA,256,keystore,meter-hub-0125.energy.internal,staging,Platform Engineering,Energy
+meter-hub-0126.energy.internal,device_identity,ECDSA,256,keystore,meter-hub-0126.energy.internal,production,Platform Engineering,Energy
+scada-0127.energy.internal,tls_certificate,ML-DSA-65,,tls,scada-0127.energy.internal,production,PKI Team,Energy
+meter-hub-0128.energy.internal,tls_certificate,ECDSA,256,tls,meter-hub-0128.energy.internal,production,Platform Engineering,Energy
+meter-hub-0129.energy.internal,firmware_signing,ECDSA,256,keystore,meter-hub-0129.energy.internal,staging,Application Security,Energy
+scada-0130.energy.internal,vpn_ipsec,DH,2048,keystore,scada-0130.energy.internal,dr,Application Security,Energy
+scada-0131.energy.internal,vpn_ipsec,ECDHE,256,keystore,scada-0131.energy.internal,production,Platform Engineering,Energy
+rtu-gw-0132.energy.internal,backup_encryption,RSA,2048,keystore,rtu-gw-0132.energy.internal,production,PKI Team,Energy
+substation-0133.energy.internal,root_ca,RSA,4096,keystore,substation-0133.energy.internal,production,Platform Engineering,Energy
+rtu-gw-0134.energy.internal,device_identity,ECDSA,256,keystore,rtu-gw-0134.energy.internal,production,Network Ops,Energy
+meter-hub-0135.energy.internal,firmware_signing,RSA,2048,keystore,meter-hub-0135.energy.internal,staging,Data Platform,Energy
+scada-0136.energy.internal,config,RSA,2048,config,scada-0136.energy.internal,production,Network Ops,Energy
+scada-0137.energy.internal,device_identity,RSA,2048,keystore,scada-0137.energy.internal,staging,Platform Engineering,Energy
+substation-0138.energy.internal,tls_certificate,ECDSA,256,tls,substation-0138.energy.internal,production,Infrastructure,Energy
+scada-0139.energy.internal,device_identity,RSA,2048,keystore,scada-0139.energy.internal,dr,Data Platform,Energy
+scada-0140.energy.internal,config,ECDHE,256,config,scada-0140.energy.internal,staging,Application Security,Energy
+meter-hub-0141.energy.internal,device_identity,ECDSA,256,keystore,meter-hub-0141.energy.internal,production,Platform Engineering,Energy
+rtu-gw-0142.energy.internal,vpn_ipsec,ECDHE,256,keystore,rtu-gw-0142.energy.internal,production,Data Platform,Energy
+rtu-gw-0143.energy.internal,device_identity,ECDSA,256,keystore,rtu-gw-0143.energy.internal,staging,PKI Team,Energy
+meter-hub-0144.energy.internal,device_identity,RSA,2048,keystore,meter-hub-0144.energy.internal,production,,Energy
+meter-hub-0145.energy.internal,device_identity,RSA,2048,keystore,meter-hub-0145.energy.internal,production,PKI Team,Energy
+meter-hub-0146.energy.internal,device_identity,RSA,2048,keystore,meter-hub-0146.energy.internal,staging,Platform Engineering,Energy
+scada-0147.energy.internal,device_identity,ECDSA,256,keystore,scada-0147.energy.internal,production,,Energy
+rtu-gw-0148.energy.internal,config,RSA,2048,config,rtu-gw-0148.energy.internal,production,Platform Engineering,Energy
+rtu-gw-0149.energy.internal,device_identity,RSA,2048,keystore,rtu-gw-0149.energy.internal,production,Platform Engineering,Energy
+rtu-gw-0150.energy.internal,device_identity,ECDSA,256,keystore,rtu-gw-0150.energy.internal,production,Application Security,Energy
+ems-0151.energy.internal,config,RSA,2048,config,ems-0151.energy.internal,production,Infrastructure,Energy
+scada-0152.energy.internal,device_identity,ECDSA,256,keystore,scada-0152.energy.internal,production,Platform Engineering,Energy
+meter-hub-0153.energy.internal,tls_certificate,ECDSA,256,tls,meter-hub-0153.energy.internal,production,Network Ops,Energy
+substation-0154.energy.internal,config,RSA,2048,config,substation-0154.energy.internal,production,PKI Team,Energy
+ems-0155.energy.internal,tls_certificate,ECDSA,256,tls,ems-0155.energy.internal,staging,,Energy
+ems-0156.energy.internal,device_identity,ECDSA,256,keystore,ems-0156.energy.internal,production,PKI Team,Energy
+scada-0157.energy.internal,config,ECDHE,256,config,scada-0157.energy.internal,production,PKI Team,Energy
+substation-0158.energy.internal,root_ca,ECDSA,384,keystore,substation-0158.energy.internal,dr,Infrastructure,Energy
+scada-0159.energy.internal,config,ECDHE,256,config,scada-0159.energy.internal,production,Infrastructure,Energy
+substation-0160.energy.internal,config,ECDHE,256,config,substation-0160.energy.internal,production,Data Platform,Energy
+rtu-gw-0161.energy.internal,config,ECDHE,256,config,rtu-gw-0161.energy.internal,production,Payments Ops,Energy
+ems-0162.energy.internal,firmware_signing,RSA,2048,keystore,ems-0162.energy.internal,production,PKI Team,Energy
+scada-0163.energy.internal,config,ECDHE,256,config,scada-0163.energy.internal,production,Network Ops,Energy
+ems-0164.energy.internal,config,RSA,2048,config,ems-0164.energy.internal,staging,Data Platform,Energy
+scada-0165.energy.internal,config,RSA,2048,config,scada-0165.energy.internal,production,Network Ops,Energy
+ems-0166.energy.internal,device_identity,ECDSA,256,keystore,ems-0166.energy.internal,staging,Data Platform,Energy
+meter-hub-0167.energy.internal,device_identity,ECDSA,256,keystore,meter-hub-0167.energy.internal,production,Application Security,Energy
+rtu-gw-0168.energy.internal,root_ca,RSA,4096,keystore,rtu-gw-0168.energy.internal,staging,Platform Engineering,Energy
+ems-0169.energy.internal,device_identity,RSA,2048,keystore,ems-0169.energy.internal,dr,Platform Engineering,Energy
+substation-0170.energy.internal,config,ECDHE,256,config,substation-0170.energy.internal,dr,Data Platform,Energy
+ems-0171.energy.internal,device_identity,RSA,2048,keystore,ems-0171.energy.internal,staging,Application Security,Energy
+ems-0172.energy.internal,device_identity,ECDSA,256,keystore,ems-0172.energy.internal,staging,Network Ops,Energy
+meter-hub-0173.energy.internal,firmware_signing,ECDSA,256,keystore,meter-hub-0173.energy.internal,production,Network Ops,Energy
+scada-0174.energy.internal,vpn_ipsec,DH,2048,keystore,scada-0174.energy.internal,production,Application Security,Energy
+scada-0175.energy.internal,vpn_ipsec,DH,2048,keystore,scada-0175.energy.internal,production,PKI Team,Energy
+ems-0176.energy.internal,device_identity,ECDSA,256,keystore,ems-0176.energy.internal,staging,Application Security,Energy
+ems-0177.energy.internal,device_identity,RSA,2048,keystore,ems-0177.energy.internal,production,Application Security,Energy
+scada-0178.energy.internal,vpn_ipsec,DH,2048,keystore,scada-0178.energy.internal,production,Payments Ops,Energy
+ems-0179.energy.internal,firmware_signing,ECDSA,256,keystore,ems-0179.energy.internal,production,,Energy
+scada-0180.energy.internal,config,RSA,2048,config,scada-0180.energy.internal,dr,Network Ops,Energy
+substation-0181.energy.internal,tls_certificate,RSA,2048,tls,substation-0181.energy.internal,dr,Platform Engineering,Energy
+ems-0182.energy.internal,config,RSA,2048,config,ems-0182.energy.internal,dr,Payments Ops,Energy
+meter-hub-0183.energy.internal,backup_encryption,AES,256,keystore,meter-hub-0183.energy.internal,production,Network Ops,Energy
+rtu-gw-0184.energy.internal,config,ECDHE,256,config,rtu-gw-0184.energy.internal,production,Network Ops,Energy
+ems-0185.energy.internal,device_identity,ECDSA,256,keystore,ems-0185.energy.internal,production,Application Security,Energy
+substation-0186.energy.internal,firmware_signing,ECDSA,256,keystore,substation-0186.energy.internal,staging,Infrastructure,Energy
+scada-0187.energy.internal,backup_encryption,RSA,2048,keystore,scada-0187.energy.internal,production,Network Ops,Energy
+substation-0188.energy.internal,device_identity,RSA,2048,keystore,substation-0188.energy.internal,production,Infrastructure,Energy
+meter-hub-0189.energy.internal,tls_certificate,RSA,2048,tls,meter-hub-0189.energy.internal,production,Payments Ops,Energy
+ems-0190.energy.internal,firmware_signing,ECDSA,256,keystore,ems-0190.energy.internal,dr,Network Ops,Energy
+ems-0191.energy.internal,backup_encryption,RSA,2048,keystore,ems-0191.energy.internal,staging,PKI Team,Energy
+ems-0192.energy.internal,config,RSA,2048,config,ems-0192.energy.internal,production,Platform Engineering,Energy
+rtu-gw-0193.energy.internal,tls_certificate,ECDSA,256,tls,rtu-gw-0193.energy.internal,production,Infrastructure,Energy
+scada-0194.energy.internal,config,RSA,2048,config,scada-0194.energy.internal,production,Infrastructure,Energy
+scada-0195.energy.internal,tls_certificate,RSA,2048,tls,scada-0195.energy.internal,production,Payments Ops,Energy
+rtu-gw-0196.energy.internal,firmware_signing,RSA,2048,keystore,rtu-gw-0196.energy.internal,staging,PKI Team,Energy
+scada-0197.energy.internal,firmware_signing,ECDSA,256,keystore,scada-0197.energy.internal,production,Data Platform,Energy
+ems-0198.energy.internal,firmware_signing,RSA,2048,keystore,ems-0198.energy.internal,production,Infrastructure,Energy
+meter-hub-0199.energy.internal,vpn_ipsec,DH,2048,keystore,meter-hub-0199.energy.internal,dr,Payments Ops,Energy
+ems-0200.energy.internal,device_identity,ECDSA,256,keystore,ems-0200.energy.internal,production,PKI Team,Energy
+meter-hub-0201.energy.internal,device_identity,ECDSA,256,keystore,meter-hub-0201.energy.internal,production,PKI Team,Energy
+substation-0202.energy.internal,device_identity,ECDSA,256,keystore,substation-0202.energy.internal,production,Platform Engineering,Energy
+rtu-gw-0203.energy.internal,firmware_signing,RSA,2048,keystore,rtu-gw-0203.energy.internal,production,,Energy
+substation-0204.energy.internal,backup_encryption,AES,256,keystore,substation-0204.energy.internal,staging,Network Ops,Energy
+substation-0205.energy.internal,vpn_ipsec,DH,2048,keystore,substation-0205.energy.internal,production,Payments Ops,Energy
+ems-0206.energy.internal,device_identity,ECDSA,256,keystore,ems-0206.energy.internal,staging,PKI Team,Energy
+substation-0207.energy.internal,firmware_signing,RSA,2048,keystore,substation-0207.energy.internal,staging,Application Security,Energy
+rtu-gw-0208.energy.internal,config,ECDHE,256,config,rtu-gw-0208.energy.internal,production,Payments Ops,Energy
+ems-0209.energy.internal,tls_certificate,RSA,2048,tls,ems-0209.energy.internal,production,PKI Team,Energy
+rtu-gw-0210.energy.internal,tls_certificate,ECDSA,256,tls,rtu-gw-0210.energy.internal,production,PKI Team,Energy
+rtu-gw-0211.energy.internal,tls_certificate,RSA,2048,tls,rtu-gw-0211.energy.internal,staging,PKI Team,Energy
+meter-hub-0212.energy.internal,config,ECDHE,256,config,meter-hub-0212.energy.internal,staging,Platform Engineering,Energy
+rtu-gw-0213.energy.internal,device_identity,ECDSA,256,keystore,rtu-gw-0213.energy.internal,staging,Data Platform,Energy
+ems-0214.energy.internal,vpn_ipsec,ECDHE,256,keystore,ems-0214.energy.internal,staging,Data Platform,Energy
+substation-0215.energy.internal,device_identity,ECDSA,256,keystore,substation-0215.energy.internal,production,Payments Ops,Energy
+substation-0216.energy.internal,config,ECDHE,256,config,substation-0216.energy.internal,production,,Energy
+ems-0217.energy.internal,device_identity,RSA,2048,keystore,ems-0217.energy.internal,production,Infrastructure,Energy
+scada-0218.energy.internal,device_identity,RSA,2048,keystore,scada-0218.energy.internal,production,Infrastructure,Energy
+scada-0219.energy.internal,config,RSA,2048,config,scada-0219.energy.internal,production,Network Ops,Energy
+scada-0220.energy.internal,backup_encryption,RSA,2048,keystore,scada-0220.energy.internal,staging,Application Security,Energy
+meter-hub-0221.energy.internal,firmware_signing,RSA,2048,keystore,meter-hub-0221.energy.internal,production,Platform Engineering,Energy
+meter-hub-0222.energy.internal,tls_certificate,RSA,2048,tls,meter-hub-0222.energy.internal,staging,Application Security,Energy
+rtu-gw-0223.energy.internal,firmware_signing,RSA,2048,keystore,rtu-gw-0223.energy.internal,production,Network Ops,Energy
+substation-0224.energy.internal,config,ECDHE,256,config,substation-0224.energy.internal,production,,Energy
+scada-0225.energy.internal,tls_certificate,RSA,2048,tls,scada-0225.energy.internal,production,PKI Team,Energy
+rtu-gw-0226.energy.internal,device_identity,RSA,2048,keystore,rtu-gw-0226.energy.internal,production,Payments Ops,Energy
+scada-0227.energy.internal,backup_encryption,RSA,2048,keystore,scada-0227.energy.internal,staging,Payments Ops,Energy
+ems-0228.energy.internal,tls_certificate,RSA,2048,tls,ems-0228.energy.internal,production,Platform Engineering,Energy
+ems-0229.energy.internal,device_identity,RSA,2048,keystore,ems-0229.energy.internal,production,Platform Engineering,Energy
+substation-0230.energy.internal,tls_certificate,ECDSA,256,tls,substation-0230.energy.internal,production,Network Ops,Energy
+rtu-gw-0231.energy.internal,device_identity,ECDSA,256,keystore,rtu-gw-0231.energy.internal,production,,Energy
+ems-0232.energy.internal,tls_certificate,ECDSA,256,tls,ems-0232.energy.internal,production,Infrastructure,Energy
+ems-0233.energy.internal,config,RSA,2048,config,ems-0233.energy.internal,production,PKI Team,Energy
+meter-hub-0234.energy.internal,config,RSA,2048,config,meter-hub-0234.energy.internal,staging,Infrastructure,Energy
+meter-hub-0235.energy.internal,config,ECDHE,256,config,meter-hub-0235.energy.internal,staging,PKI Team,Energy
+scada-0236.energy.internal,config,RSA,2048,config,scada-0236.energy.internal,production,PKI Team,Energy
+rtu-gw-0237.energy.internal,device_identity,ECDSA,256,keystore,rtu-gw-0237.energy.internal,dr,Application Security,Energy
+rtu-gw-0238.energy.internal,firmware_signing,RSA,2048,keystore,rtu-gw-0238.energy.internal,production,Data Platform,Energy
+ems-0239.energy.internal,device_identity,ECDSA,256,keystore,ems-0239.energy.internal,production,Data Platform,Energy
+rtu-gw-0240.energy.internal,backup_encryption,AES,256,keystore,rtu-gw-0240.energy.internal,production,Application Security,Energy
+meter-hub-0241.energy.internal,device_identity,RSA,2048,keystore,meter-hub-0241.energy.internal,production,,Energy
+substation-0242.energy.internal,tls_certificate,RSA,2048,tls,substation-0242.energy.internal,production,Data Platform,Energy
+substation-0243.energy.internal,tls_certificate,ECDSA,256,tls,substation-0243.energy.internal,production,PKI Team,Energy
+scada-0244.energy.internal,tls_certificate,ECDSA,256,tls,scada-0244.energy.internal,production,Infrastructure,Energy
+meter-hub-0245.energy.internal,device_identity,ECDSA,256,keystore,meter-hub-0245.energy.internal,production,Network Ops,Energy
+substation-0246.energy.internal,config,RSA,2048,config,substation-0246.energy.internal,production,Platform Engineering,Energy
+meter-hub-0247.energy.internal,firmware_signing,RSA,2048,keystore,meter-hub-0247.energy.internal,production,Data Platform,Energy
+scada-0248.energy.internal,backup_encryption,AES,256,keystore,scada-0248.energy.internal,production,Platform Engineering,Energy
+meter-hub-0249.energy.internal,root_ca,RSA,4096,keystore,meter-hub-0249.energy.internal,staging,PKI Team,Energy
+substation-0250.energy.internal,vpn_ipsec,DH,2048,keystore,substation-0250.energy.internal,staging,Payments Ops,Energy
+substation-0251.energy.internal,device_identity,RSA,2048,keystore,substation-0251.energy.internal,production,,Energy
+rtu-gw-0252.energy.internal,device_identity,RSA,2048,keystore,rtu-gw-0252.energy.internal,production,Infrastructure,Energy
+ems-0253.energy.internal,firmware_signing,ECDSA,256,keystore,ems-0253.energy.internal,production,Platform Engineering,Energy
+scada-0254.energy.internal,device_identity,RSA,2048,keystore,scada-0254.energy.internal,staging,Network Ops,Energy
+meter-hub-0255.energy.internal,config,ECDHE,256,config,meter-hub-0255.energy.internal,production,Payments Ops,Energy
+rtu-gw-0256.energy.internal,backup_encryption,RSA,2048,keystore,rtu-gw-0256.energy.internal,staging,PKI Team,Energy
+rtu-gw-0257.energy.internal,device_identity,RSA,2048,keystore,rtu-gw-0257.energy.internal,production,,Energy
+meter-hub-0258.energy.internal,device_identity,RSA,2048,keystore,meter-hub-0258.energy.internal,dr,Payments Ops,Energy
+scada-0259.energy.internal,config,RSA,2048,config,scada-0259.energy.internal,production,Network Ops,Energy
+substation-0260.energy.internal,device_identity,RSA,2048,keystore,substation-0260.energy.internal,dr,Payments Ops,Energy
+substation-0261.energy.internal,config,ECDHE,256,config,substation-0261.energy.internal,dr,Payments Ops,Energy
+rtu-gw-0262.energy.internal,vpn_ipsec,DH,2048,keystore,rtu-gw-0262.energy.internal,production,,Energy
+substation-0263.energy.internal,tls_certificate,ECDSA,256,tls,substation-0263.energy.internal,production,Payments Ops,Energy
+substation-0264.energy.internal,config,RSA,2048,config,substation-0264.energy.internal,production,Application Security,Energy
+rtu-gw-0265.energy.internal,vpn_ipsec,DH,2048,keystore,rtu-gw-0265.energy.internal,production,Application Security,Energy
+ems-0266.energy.internal,config,RSA,2048,config,ems-0266.energy.internal,staging,Network Ops,Energy
+scada-0267.energy.internal,device_identity,RSA,2048,keystore,scada-0267.energy.internal,production,Application Security,Energy
+substation-0268.energy.internal,tls_certificate,RSA,2048,tls,substation-0268.energy.internal,dr,Data Platform,Energy
+substation-0269.energy.internal,config,ECDHE,256,config,substation-0269.energy.internal,production,Application Security,Energy
+substation-0270.energy.internal,firmware_signing,RSA,2048,keystore,substation-0270.energy.internal,production,Platform Engineering,Energy
+meter-hub-0271.energy.internal,tls_certificate,ECDSA,256,tls,meter-hub-0271.energy.internal,production,Infrastructure,Energy
+meter-hub-0272.energy.internal,device_identity,RSA,2048,keystore,meter-hub-0272.energy.internal,production,,Energy
+substation-0273.energy.internal,config,RSA,2048,config,substation-0273.energy.internal,dr,Data Platform,Energy
+meter-hub-0274.energy.internal,config,ECDHE,256,config,meter-hub-0274.energy.internal,production,Payments Ops,Energy
+ems-0275.energy.internal,tls_certificate,RSA,2048,tls,ems-0275.energy.internal,production,Payments Ops,Energy
+substation-0276.energy.internal,config,ECDHE,256,config,substation-0276.energy.internal,staging,Payments Ops,Energy
+meter-hub-0277.energy.internal,config,ECDHE,256,config,meter-hub-0277.energy.internal,production,,Energy
+scada-0278.energy.internal,config,ECDHE,256,config,scada-0278.energy.internal,production,Payments Ops,Energy
+substation-0279.energy.internal,config,RSA,2048,config,substation-0279.energy.internal,dr,,Energy
+scada-0280.energy.internal,tls_certificate,RSA,2048,tls,scada-0280.energy.internal,dr,Application Security,Energy
+substation-0281.energy.internal,tls_certificate,RSA,2048,tls,substation-0281.energy.internal,production,Payments Ops,Energy
+rtu-gw-0282.energy.internal,vpn_ipsec,ECDHE,256,keystore,rtu-gw-0282.energy.internal,production,Platform Engineering,Energy
+rtu-gw-0283.energy.internal,firmware_signing,ECDSA,256,keystore,rtu-gw-0283.energy.internal,production,Payments Ops,Energy
+ems-0284.energy.internal,tls_certificate,RSA,2048,tls,ems-0284.energy.internal,production,PKI Team,Energy
+ems-0285.energy.internal,tls_certificate,RSA,2048,tls,ems-0285.energy.internal,production,Platform Engineering,Energy
+scada-0286.energy.internal,device_identity,ECDSA,256,keystore,scada-0286.energy.internal,production,Network Ops,Energy
+rtu-gw-0287.energy.internal,tls_certificate,RSA,2048,tls,rtu-gw-0287.energy.internal,production,Data Platform,Energy
+rtu-gw-0288.energy.internal,root_ca,RSA,4096,keystore,rtu-gw-0288.energy.internal,staging,Infrastructure,Energy
+ems-0289.energy.internal,device_identity,ECDSA,256,keystore,ems-0289.energy.internal,production,Data Platform,Energy
+rtu-gw-0290.energy.internal,firmware_signing,RSA,2048,keystore,rtu-gw-0290.energy.internal,production,Data Platform,Energy
+meter-hub-0291.energy.internal,tls_certificate,RSA,2048,tls,meter-hub-0291.energy.internal,production,Network Ops,Energy
+rtu-gw-0292.energy.internal,config,ECDHE,256,config,rtu-gw-0292.energy.internal,production,Application Security,Energy
+scada-0293.energy.internal,device_identity,ECDSA,256,keystore,scada-0293.energy.internal,production,Infrastructure,Energy
+ems-0294.energy.internal,device_identity,ECDSA,256,keystore,ems-0294.energy.internal,production,Application Security,Energy
+scada-0295.energy.internal,device_identity,RSA,2048,keystore,scada-0295.energy.internal,dr,PKI Team,Energy
+scada-0296.energy.internal,config,RSA,2048,config,scada-0296.energy.internal,production,Application Security,Energy
+scada-0297.energy.internal,tls_certificate,ECDSA,256,tls,scada-0297.energy.internal,staging,,Energy
+substation-0298.energy.internal,vpn_ipsec,DH,2048,keystore,substation-0298.energy.internal,production,Payments Ops,Energy
+rtu-gw-0299.energy.internal,vpn_ipsec,DH,2048,keystore,rtu-gw-0299.energy.internal,production,Network Ops,Energy
+substation-0300.energy.internal,config,RSA,2048,config,substation-0300.energy.internal,production,Data Platform,Energy
+meter-hub-0301.energy.internal,vpn_ipsec,DH,2048,keystore,meter-hub-0301.energy.internal,staging,Payments Ops,Energy
+substation-0302.energy.internal,device_identity,RSA,2048,keystore,substation-0302.energy.internal,production,Payments Ops,Energy
+scada-0303.energy.internal,device_identity,ECDSA,256,keystore,scada-0303.energy.internal,production,PKI Team,Energy
+rtu-gw-0304.energy.internal,device_identity,ECDSA,256,keystore,rtu-gw-0304.energy.internal,production,,Energy
+meter-hub-0305.energy.internal,config,ECDHE,256,config,meter-hub-0305.energy.internal,dr,Data Platform,Energy
+meter-hub-0306.energy.internal,config,RSA,2048,config,meter-hub-0306.energy.internal,staging,,Energy
+substation-0307.energy.internal,device_identity,ECDSA,256,keystore,substation-0307.energy.internal,production,Data Platform,Energy
+substation-0308.energy.internal,tls_certificate,RSA,2048,tls,substation-0308.energy.internal,production,,Energy
+substation-0309.energy.internal,config,ECDHE,256,config,substation-0309.energy.internal,production,PKI Team,Energy
+meter-hub-0310.energy.internal,firmware_signing,ECDSA,256,keystore,meter-hub-0310.energy.internal,production,Infrastructure,Energy
+ems-0311.energy.internal,tls_certificate,ECDSA,256,tls,ems-0311.energy.internal,production,PKI Team,Energy
+substation-0312.energy.internal,device_identity,ECDSA,256,keystore,substation-0312.energy.internal,production,Network Ops,Energy
+rtu-gw-0313.energy.internal,config,RSA,2048,config,rtu-gw-0313.energy.internal,production,Network Ops,Energy
+rtu-gw-0314.energy.internal,device_identity,RSA,2048,keystore,rtu-gw-0314.energy.internal,production,,Energy
+ems-0315.energy.internal,tls_certificate,RSA,2048,tls,ems-0315.energy.internal,production,Infrastructure,Energy
+rtu-gw-0316.energy.internal,backup_encryption,AES,256,keystore,rtu-gw-0316.energy.internal,production,Infrastructure,Energy
+meter-hub-0317.energy.internal,config,ECDHE,256,config,meter-hub-0317.energy.internal,production,,Energy
+rtu-gw-0318.energy.internal,device_identity,ECDSA,256,keystore,rtu-gw-0318.energy.internal,production,Infrastructure,Energy
+rtu-gw-0319.energy.internal,config,RSA,2048,config,rtu-gw-0319.energy.internal,production,,Energy
+ems-0320.energy.internal,config,ECDHE,256,config,ems-0320.energy.internal,production,PKI Team,Energy
+substation-0321.energy.internal,backup_encryption,AES,256,keystore,substation-0321.energy.internal,dr,Network Ops,Energy
+ems-0322.energy.internal,tls_certificate,ML-DSA-65,,tls,ems-0322.energy.internal,production,Application Security,Energy
+meter-hub-0323.energy.internal,device_identity,ECDSA,256,keystore,meter-hub-0323.energy.internal,staging,Infrastructure,Energy
+substation-0324.energy.internal,backup_encryption,AES,256,keystore,substation-0324.energy.internal,production,Payments Ops,Energy
+substation-0325.energy.internal,device_identity,RSA,2048,keystore,substation-0325.energy.internal,production,Application Security,Energy
+scada-0326.energy.internal,tls_certificate,ECDSA,256,tls,scada-0326.energy.internal,production,Infrastructure,Energy
+meter-hub-0327.energy.internal,device_identity,RSA,2048,keystore,meter-hub-0327.energy.internal,production,Data Platform,Energy
+substation-0328.energy.internal,device_identity,RSA,2048,keystore,substation-0328.energy.internal,production,Application Security,Energy
+substation-0329.energy.internal,device_identity,RSA,2048,keystore,substation-0329.energy.internal,production,,Energy
+rtu-gw-0330.energy.internal,device_identity,ECDSA,256,keystore,rtu-gw-0330.energy.internal,production,Network Ops,Energy
+ems-0331.energy.internal,vpn_ipsec,ECDHE,256,keystore,ems-0331.energy.internal,production,PKI Team,Energy
+substation-0332.energy.internal,vpn_ipsec,DH,2048,keystore,substation-0332.energy.internal,production,Payments Ops,Energy
+substation-0333.energy.internal,vpn_ipsec,ECDHE,256,keystore,substation-0333.energy.internal,production,PKI Team,Energy
+ems-0334.energy.internal,backup_encryption,AES,256,keystore,ems-0334.energy.internal,staging,Payments Ops,Energy
+ems-0335.energy.internal,config,RSA,2048,config,ems-0335.energy.internal,production,Network Ops,Energy
+ems-0336.energy.internal,config,ECDHE,256,config,ems-0336.energy.internal,staging,,Energy
+ems-0337.energy.internal,device_identity,ECDSA,256,keystore,ems-0337.energy.internal,production,PKI Team,Energy
+scada-0338.energy.internal,backup_encryption,RSA,2048,keystore,scada-0338.energy.internal,dr,Data Platform,Energy
+substation-0339.energy.internal,firmware_signing,RSA,2048,keystore,substation-0339.energy.internal,production,Application Security,Energy
+rtu-gw-0340.energy.internal,device_identity,ECDSA,256,keystore,rtu-gw-0340.energy.internal,production,Application Security,Energy
+meter-hub-0341.energy.internal,device_identity,RSA,2048,keystore,meter-hub-0341.energy.internal,staging,Infrastructure,Energy
+meter-hub-0342.energy.internal,firmware_signing,RSA,2048,keystore,meter-hub-0342.energy.internal,dr,Payments Ops,Energy
+rtu-gw-0343.energy.internal,backup_encryption,AES,256,keystore,rtu-gw-0343.energy.internal,production,PKI Team,Energy
+ems-0344.energy.internal,tls_certificate,ECDSA,256,tls,ems-0344.energy.internal,dr,Data Platform,Energy
+meter-hub-0345.energy.internal,config,RSA,2048,config,meter-hub-0345.energy.internal,production,Infrastructure,Energy
+ems-0346.energy.internal,device_identity,ECDSA,256,keystore,ems-0346.energy.internal,production,Infrastructure,Energy
+scada-0347.energy.internal,firmware_signing,ECDSA,256,keystore,scada-0347.energy.internal,production,,Energy
+scada-0348.energy.internal,device_identity,ECDSA,256,keystore,scada-0348.energy.internal,production,PKI Team,Energy
+ems-0349.energy.internal,config,RSA,2048,config,ems-0349.energy.internal,staging,Network Ops,Energy
+substation-0350.energy.internal,tls_certificate,RSA,2048,tls,substation-0350.energy.internal,staging,Infrastructure,Energy
+scada-0351.energy.internal,device_identity,ECDSA,256,keystore,scada-0351.energy.internal,production,Platform Engineering,Energy
+scada-0352.energy.internal,device_identity,ECDSA,256,keystore,scada-0352.energy.internal,production,,Energy
+ems-0353.energy.internal,tls_certificate,ECDSA,256,tls,ems-0353.energy.internal,staging,Application Security,Energy
+meter-hub-0354.energy.internal,firmware_signing,ECDSA,256,keystore,meter-hub-0354.energy.internal,production,,Energy
+meter-hub-0355.energy.internal,vpn_ipsec,ECDHE,256,keystore,meter-hub-0355.energy.internal,production,,Energy
+substation-0356.energy.internal,tls_certificate,ECDSA,256,tls,substation-0356.energy.internal,staging,,Energy
+meter-hub-0357.energy.internal,config,RSA,2048,config,meter-hub-0357.energy.internal,production,Infrastructure,Energy
+meter-hub-0358.energy.internal,firmware_signing,RSA,2048,keystore,meter-hub-0358.energy.internal,production,PKI Team,Energy
+scada-0359.energy.internal,device_identity,RSA,2048,keystore,scada-0359.energy.internal,dr,Application Security,Energy
+ems-0360.energy.internal,config,ECDHE,256,config,ems-0360.energy.internal,production,Payments Ops,Energy
+ems-0361.energy.internal,vpn_ipsec,DH,2048,keystore,ems-0361.energy.internal,production,,Energy
+scada-0362.energy.internal,config,RSA,2048,config,scada-0362.energy.internal,production,Infrastructure,Energy
+scada-0363.energy.internal,device_identity,RSA,2048,keystore,scada-0363.energy.internal,production,PKI Team,Energy
+rtu-gw-0364.energy.internal,tls_certificate,ECDSA,256,tls,rtu-gw-0364.energy.internal,production,PKI Team,Energy
+substation-0365.energy.internal,firmware_signing,ECDSA,256,keystore,substation-0365.energy.internal,staging,PKI Team,Energy
+substation-0366.energy.internal,device_identity,ECDSA,256,keystore,substation-0366.energy.internal,staging,,Energy
+substation-0367.energy.internal,firmware_signing,ECDSA,256,keystore,substation-0367.energy.internal,production,Data Platform,Energy
+meter-hub-0368.energy.internal,device_identity,RSA,2048,keystore,meter-hub-0368.energy.internal,production,,Energy
+rtu-gw-0369.energy.internal,device_identity,ECDSA,256,keystore,rtu-gw-0369.energy.internal,dr,PKI Team,Energy
+ems-0370.energy.internal,firmware_signing,ECDSA,256,keystore,ems-0370.energy.internal,production,Data Platform,Energy
+substation-0371.energy.internal,vpn_ipsec,DH,2048,keystore,substation-0371.energy.internal,dr,PKI Team,Energy
+scada-0372.energy.internal,tls_certificate,RSA,2048,tls,scada-0372.energy.internal,production,Platform Engineering,Energy
+scada-0373.energy.internal,device_identity,ECDSA,256,keystore,scada-0373.energy.internal,production,PKI Team,Energy
+meter-hub-0374.energy.internal,device_identity,ECDSA,256,keystore,meter-hub-0374.energy.internal,production,Payments Ops,Energy
+scada-0375.energy.internal,config,RSA,2048,config,scada-0375.energy.internal,staging,Infrastructure,Energy
+scada-0376.energy.internal,firmware_signing,RSA,2048,keystore,scada-0376.energy.internal,production,,Energy
+meter-hub-0377.energy.internal,firmware_signing,RSA,2048,keystore,meter-hub-0377.energy.internal,production,PKI Team,Energy
+meter-hub-0378.energy.internal,device_identity,ECDSA,256,keystore,meter-hub-0378.energy.internal,production,,Energy
+substation-0379.energy.internal,device_identity,ECDSA,256,keystore,substation-0379.energy.internal,dr,Payments Ops,Energy
+ems-0380.energy.internal,vpn_ipsec,ECDHE,256,keystore,ems-0380.energy.internal,production,Data Platform,Energy
+scada-0381.energy.internal,backup_encryption,AES,256,keystore,scada-0381.energy.internal,production,,Energy
+ems-0382.energy.internal,firmware_signing,RSA,2048,keystore,ems-0382.energy.internal,production,Platform Engineering,Energy
+scada-0383.energy.internal,config,RSA,2048,config,scada-0383.energy.internal,staging,Application Security,Energy
+meter-hub-0384.energy.internal,vpn_ipsec,DH,2048,keystore,meter-hub-0384.energy.internal,production,PKI Team,Energy
+ems-0385.energy.internal,vpn_ipsec,DH,2048,keystore,ems-0385.energy.internal,staging,Payments Ops,Energy
+ems-0386.energy.internal,tls_certificate,RSA,2048,tls,ems-0386.energy.internal,dr,Data Platform,Energy
+substation-0387.energy.internal,tls_certificate,ECDSA,256,tls,substation-0387.energy.internal,production,PKI Team,Energy
+scada-0388.energy.internal,tls_certificate,ECDSA,256,tls,scada-0388.energy.internal,production,PKI Team,Energy
+meter-hub-0389.energy.internal,tls_certificate,RSA,2048,tls,meter-hub-0389.energy.internal,production,Data Platform,Energy
+rtu-gw-0390.energy.internal,tls_certificate,RSA,2048,tls,rtu-gw-0390.energy.internal,production,Network Ops,Energy
+substation-0391.energy.internal,device_identity,ECDSA,256,keystore,substation-0391.energy.internal,production,Network Ops,Energy
+rtu-gw-0392.energy.internal,firmware_signing,ECDSA,256,keystore,rtu-gw-0392.energy.internal,staging,Platform Engineering,Energy
+meter-hub-0393.energy.internal,tls_certificate,ECDSA,256,tls,meter-hub-0393.energy.internal,production,Network Ops,Energy
+substation-0394.energy.internal,config,ECDHE,256,config,substation-0394.energy.internal,dr,,Energy
+meter-hub-0395.energy.internal,vpn_ipsec,DH,2048,keystore,meter-hub-0395.energy.internal,production,Network Ops,Energy
+ems-0396.energy.internal,device_identity,RSA,2048,keystore,ems-0396.energy.internal,production,PKI Team,Energy
+meter-hub-0397.energy.internal,vpn_ipsec,DH,2048,keystore,meter-hub-0397.energy.internal,dr,Data Platform,Energy
+ems-0398.energy.internal,device_identity,RSA,2048,keystore,ems-0398.energy.internal,production,Network Ops,Energy
+rtu-gw-0399.energy.internal,root_ca,RSA,4096,keystore,rtu-gw-0399.energy.internal,staging,,Energy

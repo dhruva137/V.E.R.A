@@ -1,0 +1,17 @@
+surface: ssh
+holdout_percent: 30
+cases:
+- id: ssh/ssh-legacy-kex
+  split: tune
+  path: ssh/ssh-legacy-kex/ssh.json
+  expect:
+  - name: DH
+  - name: DH
+  - name: RSA
+- id: ssh/ssh-modern
+  split: holdout
+  path: ssh/ssh-modern/ssh.json
+  expect:
+  - name: ML-KEM
+  - name: X25519
+  - name: Ed25519

@@ -1,0 +1,254 @@
+{
+  "measured_at": "2026-09-24T09:07:11+00:00",
+  "host": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "machine": "AMD64",
+    "processor": "AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD",
+    "cpu_count": 16,
+    "python": "3.13.11"
+  },
+  "results": [
+    {
+      "algorithm": "RSA-2048",
+      "operation": "sign",
+      "per_second": 2664.5,
+      "microseconds": 375.3,
+      "method": "openssl speed",
+      "command": "speed -seconds 1 ML-KEM-512 ML-KEM-768 ML-KEM-1024 ecdhx25519 ecdhp256 ecdsap256 ed25519 rsa2048"
+    },
+    {
+      "algorithm": "RSA-2048",
+      "operation": "verify",
+      "per_second": 37100.4,
+      "microseconds": 26.95,
+      "method": "openssl speed",
+      "command": "speed -seconds 1 ML-KEM-512 ML-KEM-768 ML-KEM-1024 ecdhx25519 ecdhp256 ecdsap256 ed25519 rsa2048"
+    },
+    {
+      "algorithm": "ECDSA P-256",
+      "operation": "sign",
+      "per_second": 30735.5,
+      "microseconds": 32.54,
+      "method": "openssl speed",
+      "command": "speed -seconds 1 ML-KEM-512 ML-KEM-768 ML-KEM-1024 ecdhx25519 ecdhp256 ecdsap256 ed25519 rsa2048"
+    },
+    {
+      "algorithm": "ECDSA P-256",
+      "operation": "verify",
+      "per_second": 10851.3,
+      "microseconds": 92.15,
+      "method": "openssl speed",
+      "command": "speed -seconds 1 ML-KEM-512 ML-KEM-768 ML-KEM-1024 ecdhx25519 ecdhp256 ecdsap256 ed25519 rsa2048"
+    },
+    {
+      "algorithm": "ECDH P-256",
+      "operation": "derive",
+      "per_second": 13948.9,
+      "microseconds": 71.69,
+      "method": "openssl speed",
+      "command": "speed -seconds 1 ML-KEM-512 ML-KEM-768 ML-KEM-1024 ecdhx25519 ecdhp256 ecdsap256 ed25519 rsa2048"
+    },
+    {
+      "algorithm": "X25519",
+      "operation": "derive",
+      "per_second": 19899.9,
+      "microseconds": 50.25,
+      "method": "openssl speed",
+      "command": "speed -seconds 1 ML-KEM-512 ML-KEM-768 ML-KEM-1024 ecdhx25519 ecdhp256 ecdsap256 ed25519 rsa2048"
+    },
+    {
+      "algorithm": "Ed25519",
+      "operation": "sign",
+      "per_second": 20539.0,
+      "microseconds": 48.69,
+      "method": "openssl speed",
+      "command": "speed -seconds 1 ML-KEM-512 ML-KEM-768 ML-KEM-1024 ecdhx25519 ecdhp256 ecdsap256 ed25519 rsa2048"
+    },
+    {
+      "algorithm": "Ed25519",
+      "operation": "verify",
+      "per_second": 6466.2,
+      "microseconds": 154.65,
+      "method": "openssl speed",
+      "command": "speed -seconds 1 ML-KEM-512 ML-KEM-768 ML-KEM-1024 ecdhx25519 ecdhp256 ecdsap256 ed25519 rsa2048"
+    },
+    {
+      "algorithm": "ML-KEM-512",
+      "operation": "keygen",
+      "per_second": 27442.0,
+      "microseconds": 36.44,
+      "method": "openssl speed",
+      "command": "speed -seconds 1 ML-KEM-512 ML-KEM-768 ML-KEM-1024 ecdhx25519 ecdhp256 ecdsap256 ed25519 rsa2048"
+    },
+    {
+      "algorithm": "ML-KEM-512",
+      "operation": "encapsulate",
+      "per_second": 42586.0,
+      "microseconds": 23.48,
+      "method": "openssl speed",
+      "command": "speed -seconds 1 ML-KEM-512 ML-KEM-768 ML-KEM-1024 ecdhx25519 ecdhp256 ecdsap256 ed25519 rsa2048"
+    },
+    {
+      "algorithm": "ML-KEM-512",
+      "operation": "decapsulate",
+      "per_second": 28959.5,
+      "microseconds": 34.53,
+      "method": "openssl speed",
+      "command": "speed -seconds 1 ML-KEM-512 ML-KEM-768 ML-KEM-1024 ecdhx25519 ecdhp256 ecdsap256 ed25519 rsa2048"
+    },
+    {
+      "algorithm": "ML-KEM-768",
+      "operation": "keygen",
+      "per_second": 19921.4,
+      "microseconds": 50.2,
+      "method": "openssl speed",
+      "command": "speed -seconds 1 ML-KEM-512 ML-KEM-768 ML-KEM-1024 ecdhx25519 ecdhp256 ecdsap256 ed25519 rsa2048"
+    },
+    {
+      "algorithm": "ML-KEM-768",
+      "operation": "encapsulate",
+      "per_second": 32011.0,
+      "microseconds": 31.24,
+      "method": "openssl speed",
+      "command": "speed -seconds 1 ML-KEM-512 ML-KEM-768 ML-KEM-1024 ecdhx25519 ecdhp256 ecdsap256 ed25519 rsa2048"
+    },
+    {
+      "algorithm": "ML-KEM-768",
+      "operation": "decapsulate",
+      "per_second": 20367.0,
+      "microseconds": 49.1,
+      "method": "openssl speed",
+      "command": "speed -seconds 1 ML-KEM-512 ML-KEM-768 ML-KEM-1024 ecdhx25519 ecdhp256 ecdsap256 ed25519 rsa2048"
+    },
+    {
+      "algorithm": "ML-KEM-1024",
+      "operation": "keygen",
+      "per_second": 13220.9,
+      "microseconds": 75.64,
+      "method": "openssl speed",
+      "command": "speed -seconds 1 ML-KEM-512 ML-KEM-768 ML-KEM-1024 ecdhx25519 ecdhp256 ecdsap256 ed25519 rsa2048"
+    },
+    {
+      "algorithm": "ML-KEM-1024",
+      "operation": "encapsulate",
+      "per_second": 26332.8,
+      "microseconds": 37.98,
+      "method": "openssl speed",
+      "command": "speed -seconds 1 ML-KEM-512 ML-KEM-768 ML-KEM-1024 ecdhx25519 ecdhp256 ecdsap256 ed25519 rsa2048"
+    },
+    {
+      "algorithm": "ML-KEM-1024",
+      "operation": "decapsulate",
+      "per_second": 16074.0,
+      "microseconds": 62.21,
+      "method": "openssl speed",
+      "command": "speed -seconds 1 ML-KEM-512 ML-KEM-768 ML-KEM-1024 ecdhx25519 ecdhp256 ecdsap256 ed25519 rsa2048"
+    },
+    {
+      "algorithm": "ML-DSA-44",
+      "operation": "sign",
+      "per_second": 968.8,
+      "microseconds": 1032.22,
+      "method": "libcrypto via ctypes (includes per-call context set-up)",
+      "iterations": 969,
+      "seconds": 1.0,
+      "signature_bytes": 2420
+    },
+    {
+      "algorithm": "ML-DSA-44",
+      "operation": "verify",
+      "per_second": 5163.6,
+      "microseconds": 193.66,
+      "method": "libcrypto via ctypes (includes per-call context set-up)",
+      "iterations": 5164,
+      "seconds": 1.0,
+      "signature_bytes": 2420
+    },
+    {
+      "algorithm": "ML-DSA-65",
+      "operation": "sign",
+      "per_second": 643.1,
+      "microseconds": 1555.04,
+      "method": "libcrypto via ctypes (includes per-call context set-up)",
+      "iterations": 644,
+      "seconds": 1.001,
+      "signature_bytes": 3309
+    },
+    {
+      "algorithm": "ML-DSA-65",
+      "operation": "verify",
+      "per_second": 3332.7,
+      "microseconds": 300.05,
+      "method": "libcrypto via ctypes (includes per-call context set-up)",
+      "iterations": 3333,
+      "seconds": 1.0,
+      "signature_bytes": 3309
+    },
+    {
+      "algorithm": "ML-DSA-87",
+      "operation": "sign",
+      "per_second": 516.3,
+      "microseconds": 1936.69,
+      "method": "libcrypto via ctypes (includes per-call context set-up)",
+      "iterations": 518,
+      "seconds": 1.003,
+      "signature_bytes": 4627
+    },
+    {
+      "algorithm": "ML-DSA-87",
+      "operation": "verify",
+      "per_second": 2219.4,
+      "microseconds": 450.57,
+      "method": "libcrypto via ctypes (includes per-call context set-up)",
+      "iterations": 2220,
+      "seconds": 1.0,
+      "signature_bytes": 4627
+    },
+    {
+      "algorithm": "SLH-DSA-SHA2-128s",
+      "operation": "sign",
+      "per_second": 2.2,
+      "microseconds": 456901.73,
+      "method": "libcrypto via ctypes (includes per-call context set-up)",
+      "iterations": 3,
+      "seconds": 1.371,
+      "signature_bytes": 7856
+    },
+    {
+      "algorithm": "SLH-DSA-SHA2-128s",
+      "operation": "verify",
+      "per_second": 2097.1,
+      "microseconds": 476.86,
+      "method": "libcrypto via ctypes (includes per-call context set-up)",
+      "iterations": 2098,
+      "seconds": 1.0,
+      "signature_bytes": 7856
+    },
+    {
+      "algorithm": "SLH-DSA-SHA2-128f",
+      "operation": "sign",
+      "per_second": 45.8,
+      "microseconds": 21816.91,
+      "method": "libcrypto via ctypes (includes per-call context set-up)",
+      "iterations": 46,
+      "seconds": 1.004,
+      "signature_bytes": 17088
+    },
+    {
+      "algorithm": "SLH-DSA-SHA2-128f",
+      "operation": "verify",
+      "per_second": 761.0,
+      "microseconds": 1314.1,
+      "method": "libcrypto via ctypes (includes per-call context set-up)",
+      "iterations": 761,
+      "seconds": 1.0,
+      "signature_bytes": 17088
+    }
+  ],
+  "not_measured": [],
+  "measured": true,
+  "tool": {
+    "openssl": "C:\\Program Files\\Git\\mingw64\\bin\\openssl.EXE",
+    "version": "3.5.4"
+  }
+}

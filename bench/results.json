@@ -1,0 +1,1427 @@
+{
+  "measured_at": "2026-09-24T16:08:23+00:00",
+  "git_commit": "ce55cccb078338a48e8776ed9218a9ce7c672b45",
+  "corpus": "bench/corpus (written by bench/make_corpus.py; licence-clean, authored for this benchmark)",
+  "matching": "One-to-one. Names at algorithm-family level after normalisation; source findings must be in the expected file within 2 lines; dependencies by library or package.",
+  "first_run": {
+    "tune": {
+      "tp": 52,
+      "fp": 4,
+      "fn": 7,
+      "precision": 0.929,
+      "recall": 0.881,
+      "f1": 0.904
+    },
+    "holdout": {
+      "tp": 24,
+      "fp": 3,
+      "fn": 3,
+      "precision": 0.889,
+      "recall": 0.889,
+      "f1": 0.889
+    }
+  },
+  "corrections_after_first_run": [
+    {
+      "kind": "rule",
+      "split_seen": "tune",
+      "what": "Python: Cipher(algorithms.AES(...)) detected (py-crypto-cipher-aes)."
+    },
+    {
+      "kind": "rule",
+      "split_seen": "tune",
+      "what": "Go: a crypto/des import is not reported when the file calls 3DES."
+    },
+    {
+      "kind": "knowledge base",
+      "split_seen": "tune",
+      "what": "Ruby openssl gem added (PQC status: not established)."
+    },
+    {
+      "kind": "label",
+      "split_seen": "tune",
+      "what": "go.mod `go 1.22` is a Go standard-library runtime; now expected."
+    },
+    {
+      "kind": "label",
+      "split_seen": "tune",
+      "what": "AESGCM.generate_key + AESGCM(key) is one AES use, not two."
+    },
+    {
+      "kind": "label",
+      "split_seen": "tune",
+      "what": "IKE `sha1` is HMAC integrity (HMAC-SHA-1), labelled HMAC, not SHA-1."
+    },
+    {
+      "kind": "scorer",
+      "split_seen": "holdout",
+      "what": "JOSE names (RS256, ES256, HS256) normalised to their family; the tool already reported RSA / HMAC for them."
+    },
+    {
+      "kind": "fixture",
+      "split_seen": "holdout",
+      "what": "AES S-box fixture now embeds the full 256-byte table; the first one held only a 32-byte prefix, which no real binary contains."
+    }
+  ],
+  "caveats": [
+    "The corpus is small (tens of cases per surface) and written by the same team that wrote the rules; the held-out 30% was chosen by hash and not used to tune rules, but it is not an independent corpus.",
+    "Binary and container cases are synthetic byte patterns (banners, constants, certificates, package databases), not compiled third-party software.",
+    "Symmetric ciphers on SSH (aes128-cbc, chacha20-poly1305) are not labelled or scored; key exchange and host keys are."
+  ],
+  "splits": {
+    "all": {
+      "overall": {
+        "tp": 83,
+        "fp": 2,
+        "fn": 3,
+        "precision": 0.976,
+        "recall": 0.965,
+        "f1": 0.971,
+        "cases": 85
+      },
+      "by_surface": {
+        "binary": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "cases": 6
+        },
+        "config": {
+          "tp": 9,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.9,
+          "f1": 0.947,
+          "cases": 8
+        },
+        "container": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "cases": 2
+        },
+        "dependency": {
+          "tp": 11,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "cases": 8
+        },
+        "source": {
+          "tp": 50,
+          "fp": 2,
+          "fn": 2,
+          "precision": 0.962,
+          "recall": 0.962,
+          "f1": 0.962,
+          "cases": 59
+        },
+        "ssh": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "cases": 2
+        }
+      },
+      "by_language": {
+        "c": {
+          "tp": 8,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "cases": 8
+        },
+        "csharp": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "cases": 7
+        },
+        "go": {
+          "tp": 8,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.889,
+          "recall": 1.0,
+          "f1": 0.941,
+          "cases": 9
+        },
+        "java": {
+          "tp": 8,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.889,
+          "recall": 1.0,
+          "f1": 0.941,
+          "cases": 9
+        },
+        "javascript": {
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "cases": 8
+        },
+        "python": {
+          "tp": 9,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.9,
+          "f1": 0.947,
+          "cases": 12
+        },
+        "rust": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.8,
+          "f1": 0.889,
+          "cases": 6
+        }
+      }
+    },
+    "tune": {
+      "overall": {
+        "tp": 56,
+        "fp": 1,
+        "fn": 3,
+        "precision": 0.982,
+        "recall": 0.949,
+        "f1": 0.966,
+        "cases": 58
+      },
+      "by_surface": {
+        "binary": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "cases": 3
+        },
+        "config": {
+          "tp": 7,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.875,
+          "f1": 0.933,
+          "cases": 6
+        },
+        "container": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "cases": 2
+        },
+        "dependency": {
+          "tp": 9,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "cases": 6
+        },
+        "source": {
+          "tp": 32,
+          "fp": 1,
+          "fn": 2,
+          "precision": 0.97,
+          "recall": 0.941,
+          "f1": 0.955,
+          "cases": 40
+        },
+        "ssh": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "cases": 1
+        }
+      },
+      "by_language": {
+        "c": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "cases": 5
+        },
+        "csharp": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "cases": 5
+        },
+        "go": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "cases": 7
+        },
+        "java": {
+          "tp": 5,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.833,
+          "recall": 1.0,
+          "f1": 0.909,
+          "cases": 6
+        },
+        "javascript": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "cases": 6
+        },
+        "python": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.833,
+          "f1": 0.909,
+          "cases": 8
+        },
+        "rust": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.667,
+          "f1": 0.8,
+          "cases": 3
+        }
+      }
+    },
+    "holdout": {
+      "overall": {
+        "tp": 27,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.964,
+        "recall": 1.0,
+        "f1": 0.982,
+        "cases": 27
+      },
+      "by_surface": {
+        "binary": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "cases": 3
+        },
+        "config": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "cases": 2
+        },
+        "dependency": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "cases": 2
+        },
+        "source": {
+          "tp": 18,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.947,
+          "recall": 1.0,
+          "f1": 0.973,
+          "cases": 19
+        },
+        "ssh": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "cases": 1
+        }
+      },
+      "by_language": {
+        "c": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "cases": 3
+        },
+        "csharp": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "cases": 2
+        },
+        "go": {
+          "tp": 2,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.667,
+          "recall": 1.0,
+          "f1": 0.8,
+          "cases": 2
+        },
+        "java": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "cases": 3
+        },
+        "javascript": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "cases": 2
+        },
+        "python": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "cases": 4
+        },
+        "rust": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "cases": 3
+        }
+      }
+    }
+  },
+  "cases": [
+    {
+      "id": "binary/openssl-banner",
+      "surface": "binary",
+      "language": null,
+      "split": "tune",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "binary/aes-sbox",
+      "surface": "binary",
+      "language": null,
+      "split": "holdout",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "binary/sha256-constants",
+      "surface": "binary",
+      "language": null,
+      "split": "tune",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "binary/embedded-certificate",
+      "surface": "binary",
+      "language": null,
+      "split": "holdout",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "binary/jar-keypairgenerator",
+      "surface": "binary",
+      "language": null,
+      "split": "tune",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "binary/decoy-plain-elf",
+      "surface": "binary",
+      "language": null,
+      "split": "holdout",
+      "decoy": true,
+      "tp": 0,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "config/nginx-tlsv1",
+      "surface": "config",
+      "language": null,
+      "split": "tune",
+      "decoy": false,
+      "tp": 1,
+      "misses": [
+        {
+          "name": "TLSv1.2"
+        }
+      ],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "config/nginx-rc4",
+      "surface": "config",
+      "language": null,
+      "split": "tune",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "config/sshd-weak-kex",
+      "surface": "config",
+      "language": null,
+      "split": "holdout",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "config/sshd-3des",
+      "surface": "config",
+      "language": null,
+      "split": "tune",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "config/openssl-cnf-minprotocol",
+      "surface": "config",
+      "language": null,
+      "split": "tune",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "config/strongswan-modp1024",
+      "surface": "config",
+      "language": null,
+      "split": "tune",
+      "decoy": false,
+      "tp": 3,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "config/terraform-kms-rsa",
+      "surface": "config",
+      "language": null,
+      "split": "holdout",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "config/decoy-plain-http",
+      "surface": "config",
+      "language": null,
+      "split": "tune",
+      "decoy": true,
+      "tp": 0,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "container/dpkg-openssl-and-tls-config",
+      "surface": "container",
+      "language": null,
+      "split": "tune",
+      "decoy": false,
+      "tp": 2,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "container/decoy-no-crypto",
+      "surface": "container",
+      "language": null,
+      "split": "tune",
+      "decoy": true,
+      "tp": 0,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "dependency/pypi-requirements",
+      "surface": "dependency",
+      "language": null,
+      "split": "tune",
+      "decoy": false,
+      "tp": 2,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "dependency/npm-package-lock",
+      "surface": "dependency",
+      "language": null,
+      "split": "holdout",
+      "decoy": false,
+      "tp": 2,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "dependency/maven-bouncycastle",
+      "surface": "dependency",
+      "language": null,
+      "split": "tune",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "dependency/go-mod-xcrypto",
+      "surface": "dependency",
+      "language": null,
+      "split": "tune",
+      "decoy": false,
+      "tp": 2,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "dependency/cargo-ring-rsa",
+      "surface": "dependency",
+      "language": null,
+      "split": "tune",
+      "decoy": false,
+      "tp": 2,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "dependency/composer-phpseclib",
+      "surface": "dependency",
+      "language": null,
+      "split": "tune",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "dependency/gemfile-openssl",
+      "surface": "dependency",
+      "language": null,
+      "split": "tune",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "dependency/decoy-no-crypto",
+      "surface": "dependency",
+      "language": null,
+      "split": "holdout",
+      "decoy": true,
+      "tp": 0,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/python/hashlib-md5",
+      "surface": "source",
+      "language": "python",
+      "split": "holdout",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/python/hashlib-new-sha1",
+      "surface": "source",
+      "language": "python",
+      "split": "tune",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/python/rsa-keygen",
+      "surface": "source",
+      "language": "python",
+      "split": "tune",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/python/ec-p256",
+      "surface": "source",
+      "language": "python",
+      "split": "tune",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/python/aesgcm",
+      "surface": "source",
+      "language": "python",
+      "split": "tune",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/python/pycryptodome-des3",
+      "surface": "source",
+      "language": "python",
+      "split": "holdout",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/python/jwt-rs256",
+      "surface": "source",
+      "language": "python",
+      "split": "holdout",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/python/cipher-aes-cbc",
+      "surface": "source",
+      "language": "python",
+      "split": "tune",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/python/bare-sha256-import",
+      "surface": "source",
+      "language": "python",
+      "split": "tune",
+      "decoy": false,
+      "tp": 0,
+      "misses": [
+        {
+          "file": "checksum.py",
+          "line": 5,
+          "name": "SHA-256"
+        }
+      ],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/python/ssl-tlsv1",
+      "surface": "source",
+      "language": "python",
+      "split": "holdout",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/python/decoy-comment-and-log",
+      "surface": "source",
+      "language": "python",
+      "split": "tune",
+      "decoy": true,
+      "tp": 0,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/python/decoy-identifiers",
+      "surface": "source",
+      "language": "python",
+      "split": "tune",
+      "decoy": true,
+      "tp": 0,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/java/messagedigest-md5",
+      "surface": "source",
+      "language": "java",
+      "split": "holdout",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/java/rsa-keypairgenerator",
+      "surface": "source",
+      "language": "java",
+      "split": "tune",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/java/cipher-aes-gcm",
+      "surface": "source",
+      "language": "java",
+      "split": "holdout",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/java/cipher-desede",
+      "surface": "source",
+      "language": "java",
+      "split": "holdout",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/java/signature-sha1withrsa",
+      "surface": "source",
+      "language": "java",
+      "split": "tune",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/java/ec-keypair",
+      "surface": "source",
+      "language": "java",
+      "split": "tune",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [
+        {
+          "location": "source/java/ec-keypair/EcKeys.java:7",
+          "names": [
+            "ECDSA"
+          ]
+        }
+      ],
+      "collector_failures": []
+    },
+    {
+      "id": "source/java/sslcontext-tlsv1",
+      "surface": "source",
+      "language": "java",
+      "split": "tune",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/java/mac-hmacsha256",
+      "surface": "source",
+      "language": "java",
+      "split": "tune",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/java/decoy-strings",
+      "surface": "source",
+      "language": "java",
+      "split": "tune",
+      "decoy": true,
+      "tp": 0,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/go/md5-sum",
+      "surface": "source",
+      "language": "go",
+      "split": "tune",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/go/rsa-generatekey",
+      "surface": "source",
+      "language": "go",
+      "split": "tune",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/go/ecdsa-p256",
+      "surface": "source",
+      "language": "go",
+      "split": "holdout",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [
+        {
+          "location": "source/go/ecdsa-p256/ec.go:10",
+          "names": [
+            "ECDSA"
+          ]
+        }
+      ],
+      "collector_failures": []
+    },
+    {
+      "id": "source/go/aes-newcipher",
+      "surface": "source",
+      "language": "go",
+      "split": "tune",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/go/sha1-new",
+      "surface": "source",
+      "language": "go",
+      "split": "tune",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/go/tls-minversion-10",
+      "surface": "source",
+      "language": "go",
+      "split": "tune",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/go/tripledes",
+      "surface": "source",
+      "language": "go",
+      "split": "tune",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/go/ed25519",
+      "surface": "source",
+      "language": "go",
+      "split": "holdout",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/go/decoy-comment",
+      "surface": "source",
+      "language": "go",
+      "split": "tune",
+      "decoy": true,
+      "tp": 0,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/c/rsa-generate",
+      "surface": "source",
+      "language": "c",
+      "split": "tune",
+      "decoy": false,
+      "tp": 2,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/c/md5-oneshot",
+      "surface": "source",
+      "language": "c",
+      "split": "tune",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/c/evp-aes-gcm",
+      "surface": "source",
+      "language": "c",
+      "split": "holdout",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/c/evp-3des",
+      "surface": "source",
+      "language": "c",
+      "split": "holdout",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/c/cipher-list-rc4",
+      "surface": "source",
+      "language": "c",
+      "split": "tune",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/c/ec-p256",
+      "surface": "source",
+      "language": "c",
+      "split": "tune",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/c/sha1-oneshot",
+      "surface": "source",
+      "language": "c",
+      "split": "holdout",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/c/decoy-comment-printf",
+      "surface": "source",
+      "language": "c",
+      "split": "tune",
+      "decoy": true,
+      "tp": 0,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/javascript/createhash-md5",
+      "surface": "source",
+      "language": "javascript",
+      "split": "tune",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/javascript/rsa-keypair",
+      "surface": "source",
+      "language": "javascript",
+      "split": "tune",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/javascript/cipheriv-3des",
+      "surface": "source",
+      "language": "javascript",
+      "split": "tune",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/javascript/jwt-hs256",
+      "surface": "source",
+      "language": "javascript",
+      "split": "holdout",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/javascript/webcrypto-ecdsa",
+      "surface": "source",
+      "language": "javascript",
+      "split": "tune",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/javascript/cipheriv-aes-gcm",
+      "surface": "source",
+      "language": "javascript",
+      "split": "tune",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/javascript/named-import-sha1",
+      "surface": "source",
+      "language": "javascript",
+      "split": "holdout",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/javascript/decoy-strings",
+      "surface": "source",
+      "language": "javascript",
+      "split": "tune",
+      "decoy": true,
+      "tp": 0,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/rust/ring-ecdsa",
+      "surface": "source",
+      "language": "rust",
+      "split": "tune",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/rust/rsa-crate",
+      "surface": "source",
+      "language": "rust",
+      "split": "tune",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/rust/md5-compute",
+      "surface": "source",
+      "language": "rust",
+      "split": "tune",
+      "decoy": false,
+      "tp": 0,
+      "misses": [
+        {
+          "file": "etag.rs",
+          "line": 2,
+          "name": "MD5"
+        }
+      ],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/rust/sha1-new",
+      "surface": "source",
+      "language": "rust",
+      "split": "holdout",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/rust/aes-gcm",
+      "surface": "source",
+      "language": "rust",
+      "split": "holdout",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/rust/decoy-comment",
+      "surface": "source",
+      "language": "rust",
+      "split": "holdout",
+      "decoy": true,
+      "tp": 0,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/csharp/md5-create",
+      "surface": "source",
+      "language": "csharp",
+      "split": "tune",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/csharp/rsa-create",
+      "surface": "source",
+      "language": "csharp",
+      "split": "tune",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/csharp/sha1-create",
+      "surface": "source",
+      "language": "csharp",
+      "split": "holdout",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/csharp/aes-create",
+      "surface": "source",
+      "language": "csharp",
+      "split": "holdout",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/csharp/tripledes-create",
+      "surface": "source",
+      "language": "csharp",
+      "split": "tune",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/csharp/ecdsa-p256",
+      "surface": "source",
+      "language": "csharp",
+      "split": "tune",
+      "decoy": false,
+      "tp": 1,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "source/csharp/decoy-string",
+      "surface": "source",
+      "language": "csharp",
+      "split": "tune",
+      "decoy": true,
+      "tp": 0,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "ssh/ssh-legacy-kex",
+      "surface": "ssh",
+      "language": null,
+      "split": "tune",
+      "decoy": false,
+      "tp": 3,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    },
+    {
+      "id": "ssh/ssh-modern",
+      "surface": "ssh",
+      "language": null,
+      "split": "holdout",
+      "decoy": false,
+      "tp": 3,
+      "misses": [],
+      "false_positives": [],
+      "collector_failures": []
+    }
+  ]
+}

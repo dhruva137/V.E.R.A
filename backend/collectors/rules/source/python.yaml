@@ -1,0 +1,60 @@
+# Source rules: Python. See collectors/source_scanner.py for the rule schema.
+language: python
+grammars: {.py: python, .pyw: python}
+strings: [string]
+queries:
+  call: '(call function: (_) @callee arguments: (argument_list) @args) @site'
+  reference: '(attribute) @site'
+  import: '[(import_statement) (import_from_statement)] @site'
+rules:
+  # hashlib
+  - {id: py-hashlib-md5, kind: call, match: '^hashlib\.md5$', algorithm: MD5, usage: hashing}
+  - {id: py-hashlib-sha1, kind: call, match: '^hashlib\.sha1$', algorithm: SHA-1, usage: hashing}
+  - {id: py-hashlib-sha2, kind: call, match: '^hashlib\.sha(224|256|384|512)$', algorithm: 'SHA-{1}', usage: hashing}
+  - {id: py-hashlib-new, kind: call, match: '^hashlib\.new$', algorithm_from: {arg: 0, kwarg: name}, usage: hashing}
+  # pyca/cryptography
+  - {id: py-crypto-rsa-gen, kind: call, match: '(?:^|\.)rsa\.generate_private_key$', algorithm: RSA, usage: signing, key_size: {kwarg: key_size, arg: 1}}
+  - {id: py-crypto-ec-gen, kind: call, match: '(?:^|\.)ec\.generate_private_key$', algorithm: ECDSA, usage: signing, key_size: {arg: 0, kwarg: curve, pattern: 'SECP(\d+)[RK]1'}}
+  - {id: py-crypto-dsa-gen, kind: call, match: '(?:^|\.)dsa\.generate_private_key$', algorithm: DSA, usage: signing, key_size: {kwarg: key_size, arg: 0}}
+  - {id: py-crypto-dh-gen, kind: call, match: '(?:^|\.)dh\.generate_parameters$', algorithm: DH, usage: key_exchange, key_size: {kwarg: key_size, arg: 1}}
+  - {id: py-crypto-ed25519, kind: call, match: '(?:^|\.)Ed25519PrivateKey\.generate$', algorithm: Ed25519, usage: signing}
+  - {id: py-crypto-ed448, kind: call, match: '(?:^|\.)Ed448PrivateKey\.generate$', algorithm: Ed448, usage: signing}
+  - {id: py-crypto-x25519, kind: call, match: '(?:^|\.)X25519PrivateKey\.generate$', algorithm: X25519, usage: key_exchange}
+  - {id: py-crypto-x448, kind: call, match: '(?:^|\.)X448PrivateKey\.generate$', algorithm: X448, usage: key_exchange}
+  - {id: py-crypto-aead-aes, kind: call, match: '(?:^|\.)(AESGCM|AESCCM|AESOCB3|AESSIV|AESGCMSIV)$', algorithm: AES, usage: encryption}
+  - {id: py-crypto-chacha, kind: call, match: '(?:^|\.)ChaCha20Poly1305$', algorithm: ChaCha20, usage: encryption}
+  - {id: py-crypto-3des, kind: call, match: '(?:^|\.)(algorithms\.)?TripleDES$', algorithm: 3DES, usage: encryption}
+  - {id: py-crypto-cipher-aes, kind: call, match: '(?:^|\.)algorithms\.AES(?:128|256)?$', algorithm: AES, usage: encryption}
+  - {id: py-crypto-blowfish, kind: call, match: '(?:^|\.)(algorithms\.)?Blowfish$', algorithm: Blowfish, usage: encryption}
+  - {id: py-crypto-arc4, kind: call, match: '(?:^|\.)(algorithms\.)?ARC4$', algorithm: RC4, usage: encryption}
+  - {id: py-crypto-hash-md5, kind: call, match: '(?:^|\.)hashes\.MD5$', algorithm: MD5, usage: hashing}
+  - {id: py-crypto-hash-sha1, kind: call, match: '(?:^|\.)hashes\.SHA1$', algorithm: SHA-1, usage: hashing}
+  - {id: py-crypto-fernet, kind: call, match: '(?:^|\.)Fernet$', algorithm: AES-128, usage: encryption, note: 'Fernet is AES-128-CBC with HMAC-SHA256.'}
+  # PyCryptodome
+  - {id: py-pycryptodome-rsa, kind: call, match: '(?:^|\.)RSA\.generate$', algorithm: RSA, usage: signing, key_size: {arg: 0, kwarg: bits}}
+  - {id: py-pycryptodome-ecc, kind: call, match: '(?:^|\.)ECC\.generate$', algorithm: ECDSA, usage: signing, key_size: {kwarg: curve, pattern: '(\d{3})'}}
+  - {id: py-pycryptodome-dsa, kind: call, match: '(?:^|\.)DSA\.generate$', algorithm: DSA, usage: signing, key_size: {arg: 0}}
+  - {id: py-pycryptodome-des3, kind: call, match: '(?:^|\.)DES3\.new$', algorithm: 3DES, usage: encryption}
+  - {id: py-pycryptodome-des, kind: call, match: '(?:^|\.)DES\.new$', algorithm: DES, usage: encryption}
+  - {id: py-pycryptodome-aes, kind: call, match: '(?:^|\.)AES\.new$', algorithm: AES, usage: encryption, mode: {arg: 1, pattern: 'MODE_(\w+)'}}
+  - {id: py-pycryptodome-arc4, kind: call, match: '(?:^|\.)ARC4\.new$', algorithm: RC4, usage: encryption}
+  - {id: py-pycryptodome-blowfish, kind: call, match: '(?:^|\.)Blowfish\.new$', algorithm: Blowfish, usage: encryption}
+  - {id: py-pycryptodome-md5, kind: call, match: '(?:^|\.)MD5\.new$', algorithm: MD5, usage: hashing}
+  - {id: py-pycryptodome-sha1, kind: call, match: '(?:^|\.)SHA1\.new$', algorithm: SHA-1, usage: hashing}
+  # python-rsa, paramiko
+  - {id: py-rsa-newkeys, kind: call, match: '^rsa\.newkeys$', algorithm: RSA, usage: signing, key_size: {arg: 0}}
+  - {id: py-paramiko-rsa, kind: call, match: '(?:^|\.)RSAKey\.generate$', algorithm: RSA, usage: signing, key_size: {arg: 0, kwarg: bits}}
+  - {id: py-paramiko-ecdsa, kind: call, match: '(?:^|\.)ECDSAKey\.generate$', algorithm: ECDSA, usage: signing}
+  - {id: py-paramiko-dss, kind: call, match: '(?:^|\.)DSSKey\.generate$', algorithm: DSA, usage: signing}
+  - {id: py-ecdsa-signingkey, kind: call, match: '^ecdsa\.SigningKey\.generate$', algorithm: ECDSA, usage: signing}
+  # JWT
+  - {id: py-jwt-encode, kind: call, match: '(?:^|\.)jwt\.encode$', algorithm_from: {kwarg: algorithm, arg: 2}, usage: signing}
+  # liboqs-python
+  - {id: py-oqs-kem, kind: call, match: '(?:^|\.)KeyEncapsulation$', algorithm_from: {arg: 0}, usage: key_exchange}
+  - {id: py-oqs-sig, kind: call, match: '^oqs\.Signature$', algorithm_from: {arg: 0}, usage: signing}
+  # ssl module protocol constants
+  - {id: py-ssl-protocol, kind: reference, match: '^ssl\.PROTOCOL_(SSLv2|SSLv3|TLSv1|TLSv1_1)$', protocol: '{1}', usage: encryption}
+  - {id: py-ssl-tlsversion, kind: reference, match: '^ssl\.TLSVersion\.(SSLv3|TLSv1|TLSv1_1)$', protocol: '{1}', usage: encryption}
+  # imports (only reported when the file has no call site for the same algorithm)
+  - {id: py-import-des, kind: import, match: 'from\s+Crypto(dome)?\.Cipher\s+import\s+.*\bDES\b', algorithm: DES, usage: encryption}
+  - {id: py-import-md5, kind: import, match: 'from\s+Crypto(dome)?\.Hash\s+import\s+.*\bMD5\b', algorithm: MD5, usage: hashing}

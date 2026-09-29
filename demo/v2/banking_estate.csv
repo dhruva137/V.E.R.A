@@ -1,0 +1,401 @@
+name,asset_class,algorithm,key_size,source_type,hostname,environment,owner,department
+treasury-0000.banking.internal,token_signing,RSA,2048,keystore,treasury-0000.banking.internal,staging,Infrastructure,Bank
+treasury-0001.banking.internal,tls_certificate,RSA,2048,tls,treasury-0001.banking.internal,dr,PKI Team,Bank
+archive-0002.banking.internal,tls_certificate,ML-DSA-65,,tls,archive-0002.banking.internal,production,PKI Team,Bank
+netbanking-0003.banking.internal,root_ca,ECDSA,384,keystore,netbanking-0003.banking.internal,production,Infrastructure,Bank
+archive-0004.banking.internal,tls_key_exchange,ECDHE,256,tls,archive-0004.banking.internal,production,Platform Engineering,Bank
+netbanking-0005.banking.internal,token_signing,ECDSA,256,keystore,netbanking-0005.banking.internal,production,Network Ops,Bank
+netbanking-0006.banking.internal,issuing_ca,RSA,2048,keystore,netbanking-0006.banking.internal,staging,,Bank
+archive-0007.banking.internal,token_signing,RSA,2048,keystore,archive-0007.banking.internal,production,,Bank
+archive-0008.banking.internal,payment_hsm,RSA,2048,keystore,archive-0008.banking.internal,production,PKI Team,Bank
+treasury-0009.banking.internal,tls_key_exchange,ECDHE,256,tls,treasury-0009.banking.internal,production,PKI Team,Bank
+treasury-0010.banking.internal,tls_key_exchange,ECDHE,256,tls,treasury-0010.banking.internal,production,,Bank
+swift-gw-0011.banking.internal,tls_certificate,ECDSA,256,tls,swift-gw-0011.banking.internal,production,,Bank
+corebank-0012.banking.internal,tls_certificate,ECDSA,256,tls,corebank-0012.banking.internal,production,Platform Engineering,Bank
+swift-gw-0013.banking.internal,backup_encryption,RSA,2048,keystore,swift-gw-0013.banking.internal,production,PKI Team,Bank
+corebank-0014.banking.internal,tls_certificate,RSA,2048,tls,corebank-0014.banking.internal,production,Platform Engineering,Bank
+archive-0015.banking.internal,root_ca,RSA,4096,keystore,archive-0015.banking.internal,production,Payments Ops,Bank
+corebank-0016.banking.internal,database_tls,RSA,2048,tls,corebank-0016.banking.internal,production,Network Ops,Bank
+netbanking-0017.banking.internal,tls_certificate,RSA,2048,tls,netbanking-0017.banking.internal,production,Platform Engineering,Bank
+treasury-0018.banking.internal,tls_certificate,RSA,2048,tls,treasury-0018.banking.internal,production,Infrastructure,Bank
+corebank-0019.banking.internal,tls_certificate,RSA,2048,tls,corebank-0019.banking.internal,production,Platform Engineering,Bank
+treasury-0020.banking.internal,tls_certificate,RSA,2048,tls,treasury-0020.banking.internal,dr,Payments Ops,Bank
+swift-gw-0021.banking.internal,tls_certificate,RSA,2048,tls,swift-gw-0021.banking.internal,production,PKI Team,Bank
+corebank-0022.banking.internal,tls_certificate,ECDSA,256,tls,corebank-0022.banking.internal,production,Network Ops,Bank
+swift-gw-0023.banking.internal,token_signing,RSA,2048,keystore,swift-gw-0023.banking.internal,production,Platform Engineering,Bank
+archive-0024.banking.internal,token_signing,RSA,2048,keystore,archive-0024.banking.internal,production,Data Platform,Bank
+archive-0025.banking.internal,token_signing,RSA,2048,keystore,archive-0025.banking.internal,production,PKI Team,Bank
+swift-gw-0026.banking.internal,tls_certificate,RSA,2048,tls,swift-gw-0026.banking.internal,production,Application Security,Bank
+corebank-0027.banking.internal,tls_certificate,ECDSA,256,tls,corebank-0027.banking.internal,production,PKI Team,Bank
+corebank-0028.banking.internal,vpn_ipsec,DH,2048,keystore,corebank-0028.banking.internal,production,Infrastructure,Bank
+corebank-0029.banking.internal,vpn_ipsec,DH,2048,keystore,corebank-0029.banking.internal,production,Platform Engineering,Bank
+swift-gw-0030.banking.internal,payment_hsm,RSA,2048,keystore,swift-gw-0030.banking.internal,production,Platform Engineering,Bank
+archive-0031.banking.internal,backup_encryption,RSA,2048,keystore,archive-0031.banking.internal,staging,Payments Ops,Bank
+netbanking-0032.banking.internal,backup_encryption,AES,256,keystore,netbanking-0032.banking.internal,staging,Application Security,Bank
+swift-gw-0033.banking.internal,database_tls,ECDSA,256,tls,swift-gw-0033.banking.internal,dr,Network Ops,Bank
+corebank-0034.banking.internal,tls_key_exchange,ECDHE,256,tls,corebank-0034.banking.internal,production,Infrastructure,Bank
+swift-gw-0035.banking.internal,issuing_ca,RSA,2048,keystore,swift-gw-0035.banking.internal,production,,Bank
+netbanking-0036.banking.internal,database_tls,ECDSA,256,tls,netbanking-0036.banking.internal,production,Network Ops,Bank
+netbanking-0037.banking.internal,payment_hsm,ECDSA,256,keystore,netbanking-0037.banking.internal,staging,Data Platform,Bank
+netbanking-0038.banking.internal,tls_certificate,RSA,2048,tls,netbanking-0038.banking.internal,staging,Application Security,Bank
+corebank-0039.banking.internal,tls_key_exchange,ECDHE,256,tls,corebank-0039.banking.internal,production,Application Security,Bank
+netbanking-0040.banking.internal,tls_key_exchange,ECDHE,256,tls,netbanking-0040.banking.internal,staging,Data Platform,Bank
+netbanking-0041.banking.internal,token_signing,RSA,2048,keystore,netbanking-0041.banking.internal,production,Platform Engineering,Bank
+swift-gw-0042.banking.internal,tls_certificate,ML-DSA-65,,tls,swift-gw-0042.banking.internal,staging,,Bank
+archive-0043.banking.internal,payment_hsm,ECDSA,256,keystore,archive-0043.banking.internal,staging,Payments Ops,Bank
+treasury-0044.banking.internal,tls_key_exchange,ECDHE,256,tls,treasury-0044.banking.internal,staging,Infrastructure,Bank
+corebank-0045.banking.internal,tls_certificate,ECDSA,256,tls,corebank-0045.banking.internal,production,Platform Engineering,Bank
+netbanking-0046.banking.internal,tls_key_exchange,X25519,255,tls,netbanking-0046.banking.internal,production,Payments Ops,Bank
+swift-gw-0047.banking.internal,tls_key_exchange,X25519,255,tls,swift-gw-0047.banking.internal,production,Network Ops,Bank
+treasury-0048.banking.internal,database_tls,RSA,2048,tls,treasury-0048.banking.internal,production,,Bank
+archive-0049.banking.internal,token_signing,ECDSA,256,keystore,archive-0049.banking.internal,staging,Payments Ops,Bank
+swift-gw-0050.banking.internal,backup_encryption,AES,256,keystore,swift-gw-0050.banking.internal,production,,Bank
+treasury-0051.banking.internal,tls_certificate,RSA,2048,tls,treasury-0051.banking.internal,production,,Bank
+swift-gw-0052.banking.internal,tls_certificate,RSA,2048,tls,swift-gw-0052.banking.internal,production,Infrastructure,Bank
+corebank-0053.banking.internal,tls_key_exchange,X25519,255,tls,corebank-0053.banking.internal,production,Payments Ops,Bank
+corebank-0054.banking.internal,tls_key_exchange,ECDHE,256,tls,corebank-0054.banking.internal,production,,Bank
+treasury-0055.banking.internal,tls_certificate,RSA,2048,tls,treasury-0055.banking.internal,production,,Bank
+archive-0056.banking.internal,database_tls,RSA,2048,tls,archive-0056.banking.internal,production,Application Security,Bank
+treasury-0057.banking.internal,tls_key_exchange,ECDHE,256,tls,treasury-0057.banking.internal,staging,Network Ops,Bank
+corebank-0058.banking.internal,tls_certificate,ECDSA,256,tls,corebank-0058.banking.internal,production,Infrastructure,Bank
+corebank-0059.banking.internal,tls_key_exchange,ECDHE,256,tls,corebank-0059.banking.internal,production,,Bank
+swift-gw-0060.banking.internal,issuing_ca,ECDSA,256,keystore,swift-gw-0060.banking.internal,staging,Network Ops,Bank
+archive-0061.banking.internal,tls_key_exchange,ECDHE,256,tls,archive-0061.banking.internal,staging,Network Ops,Bank
+archive-0062.banking.internal,tls_certificate,ECDSA,256,tls,archive-0062.banking.internal,production,,Bank
+swift-gw-0063.banking.internal,tls_certificate,ECDSA,256,tls,swift-gw-0063.banking.internal,production,,Bank
+corebank-0064.banking.internal,tls_certificate,RSA,2048,tls,corebank-0064.banking.internal,production,Data Platform,Bank
+swift-gw-0065.banking.internal,tls_certificate,RSA,2048,tls,swift-gw-0065.banking.internal,production,,Bank
+treasury-0066.banking.internal,backup_encryption,AES,256,keystore,treasury-0066.banking.internal,production,Payments Ops,Bank
+treasury-0067.banking.internal,backup_encryption,RSA,2048,keystore,treasury-0067.banking.internal,production,Network Ops,Bank
+corebank-0068.banking.internal,issuing_ca,RSA,2048,keystore,corebank-0068.banking.internal,dr,Infrastructure,Bank
+archive-0069.banking.internal,database_tls,RSA,2048,tls,archive-0069.banking.internal,production,PKI Team,Bank
+swift-gw-0070.banking.internal,tls_certificate,ECDSA,256,tls,swift-gw-0070.banking.internal,production,,Bank
+swift-gw-0071.banking.internal,issuing_ca,RSA,2048,keystore,swift-gw-0071.banking.internal,staging,Payments Ops,Bank
+swift-gw-0072.banking.internal,tls_certificate,ECDSA,256,tls,swift-gw-0072.banking.internal,production,,Bank
+swift-gw-0073.banking.internal,payment_hsm,RSA,2048,keystore,swift-gw-0073.banking.internal,staging,Platform Engineering,Bank
+swift-gw-0074.banking.internal,tls_key_exchange,ECDHE,256,tls,swift-gw-0074.banking.internal,production,PKI Team,Bank
+archive-0075.banking.internal,tls_key_exchange,ECDHE,256,tls,archive-0075.banking.internal,production,Platform Engineering,Bank
+archive-0076.banking.internal,backup_encryption,RSA,2048,keystore,archive-0076.banking.internal,production,Data Platform,Bank
+archive-0077.banking.internal,tls_certificate,RSA,2048,tls,archive-0077.banking.internal,production,PKI Team,Bank
+netbanking-0078.banking.internal,token_signing,ECDSA,256,keystore,netbanking-0078.banking.internal,production,PKI Team,Bank
+archive-0079.banking.internal,vpn_ipsec,ECDHE,256,keystore,archive-0079.banking.internal,production,Platform Engineering,Bank
+netbanking-0080.banking.internal,tls_key_exchange,ECDHE,256,tls,netbanking-0080.banking.internal,production,Platform Engineering,Bank
+archive-0081.banking.internal,tls_certificate,RSA,2048,tls,archive-0081.banking.internal,production,Data Platform,Bank
+treasury-0082.banking.internal,tls_certificate,ECDSA,256,tls,treasury-0082.banking.internal,dr,Application Security,Bank
+corebank-0083.banking.internal,tls_certificate,RSA,2048,tls,corebank-0083.banking.internal,production,Application Security,Bank
+swift-gw-0084.banking.internal,tls_certificate,ECDSA,256,tls,swift-gw-0084.banking.internal,production,Payments Ops,Bank
+archive-0085.banking.internal,tls_certificate,ECDSA,256,tls,archive-0085.banking.internal,production,Data Platform,Bank
+netbanking-0086.banking.internal,vpn_ipsec,ECDHE,256,keystore,netbanking-0086.banking.internal,production,Payments Ops,Bank
+archive-0087.banking.internal,tls_certificate,RSA,2048,tls,archive-0087.banking.internal,production,Payments Ops,Bank
+corebank-0088.banking.internal,database_tls,ECDSA,256,tls,corebank-0088.banking.internal,production,Data Platform,Bank
+swift-gw-0089.banking.internal,tls_certificate,ECDSA,256,tls,swift-gw-0089.banking.internal,production,Infrastructure,Bank
+treasury-0090.banking.internal,token_signing,RSA,2048,keystore,treasury-0090.banking.internal,production,Application Security,Bank
+corebank-0091.banking.internal,payment_hsm,RSA,2048,keystore,corebank-0091.banking.internal,staging,Network Ops,Bank
+corebank-0092.banking.internal,backup_encryption,AES,256,keystore,corebank-0092.banking.internal,staging,Network Ops,Bank
+netbanking-0093.banking.internal,database_tls,ECDSA,256,tls,netbanking-0093.banking.internal,staging,,Bank
+archive-0094.banking.internal,token_signing,ECDSA,256,keystore,archive-0094.banking.internal,production,Infrastructure,Bank
+netbanking-0095.banking.internal,root_ca,ECDSA,384,keystore,netbanking-0095.banking.internal,production,,Bank
+swift-gw-0096.banking.internal,database_tls,RSA,2048,tls,swift-gw-0096.banking.internal,staging,Payments Ops,Bank
+archive-0097.banking.internal,payment_hsm,RSA,4096,keystore,archive-0097.banking.internal,dr,,Bank
+corebank-0098.banking.internal,database_tls,RSA,2048,tls,corebank-0098.banking.internal,production,Infrastructure,Bank
+netbanking-0099.banking.internal,tls_certificate,ECDSA,256,tls,netbanking-0099.banking.internal,staging,Payments Ops,Bank
+archive-0100.banking.internal,tls_certificate,ECDSA,256,tls,archive-0100.banking.internal,production,Platform Engineering,Bank
+treasury-0101.banking.internal,tls_certificate,RSA,2048,tls,treasury-0101.banking.internal,staging,Application Security,Bank
+corebank-0102.banking.internal,database_tls,RSA,2048,tls,corebank-0102.banking.internal,staging,Application Security,Bank
+treasury-0103.banking.internal,tls_key_exchange,ECDHE,256,tls,treasury-0103.banking.internal,production,Data Platform,Bank
+swift-gw-0104.banking.internal,tls_certificate,RSA,2048,tls,swift-gw-0104.banking.internal,production,Payments Ops,Bank
+netbanking-0105.banking.internal,backup_encryption,RSA,2048,keystore,netbanking-0105.banking.internal,production,,Bank
+swift-gw-0106.banking.internal,vpn_ipsec,ECDHE,256,keystore,swift-gw-0106.banking.internal,production,Payments Ops,Bank
+treasury-0107.banking.internal,token_signing,RSA,2048,keystore,treasury-0107.banking.internal,production,Infrastructure,Bank
+corebank-0108.banking.internal,tls_key_exchange,X25519,255,tls,corebank-0108.banking.internal,dr,,Bank
+netbanking-0109.banking.internal,database_tls,ECDSA,256,tls,netbanking-0109.banking.internal,staging,Network Ops,Bank
+netbanking-0110.banking.internal,token_signing,RSA,2048,keystore,netbanking-0110.banking.internal,staging,Application Security,Bank
+swift-gw-0111.banking.internal,vpn_ipsec,ECDHE,256,keystore,swift-gw-0111.banking.internal,staging,,Bank
+netbanking-0112.banking.internal,tls_key_exchange,ECDHE,256,tls,netbanking-0112.banking.internal,production,Infrastructure,Bank
+corebank-0113.banking.internal,tls_certificate,RSA,2048,tls,corebank-0113.banking.internal,production,Network Ops,Bank
+netbanking-0114.banking.internal,tls_key_exchange,ECDHE,256,tls,netbanking-0114.banking.internal,dr,Data Platform,Bank
+corebank-0115.banking.internal,tls_key_exchange,X25519,255,tls,corebank-0115.banking.internal,production,PKI Team,Bank
+swift-gw-0116.banking.internal,database_tls,RSA,2048,tls,swift-gw-0116.banking.internal,production,Payments Ops,Bank
+treasury-0117.banking.internal,tls_certificate,ECDSA,256,tls,treasury-0117.banking.internal,production,Infrastructure,Bank
+archive-0118.banking.internal,database_tls,RSA,2048,tls,archive-0118.banking.internal,production,Infrastructure,Bank
+treasury-0119.banking.internal,tls_certificate,RSA,2048,tls,treasury-0119.banking.internal,staging,Network Ops,Bank
+corebank-0120.banking.internal,vpn_ipsec,DH,2048,keystore,corebank-0120.banking.internal,production,Network Ops,Bank
+swift-gw-0121.banking.internal,tls_certificate,RSA,2048,tls,swift-gw-0121.banking.internal,production,Application Security,Bank
+corebank-0122.banking.internal,database_tls,RSA,2048,tls,corebank-0122.banking.internal,staging,PKI Team,Bank
+netbanking-0123.banking.internal,backup_encryption,RSA,2048,keystore,netbanking-0123.banking.internal,production,,Bank
+corebank-0124.banking.internal,root_ca,ECDSA,384,keystore,corebank-0124.banking.internal,dr,,Bank
+corebank-0125.banking.internal,tls_certificate,ECDSA,256,tls,corebank-0125.banking.internal,production,Application Security,Bank
+treasury-0126.banking.internal,tls_certificate,ECDSA,256,tls,treasury-0126.banking.internal,production,Application Security,Bank
+corebank-0127.banking.internal,tls_certificate,ML-DSA-65,,tls,corebank-0127.banking.internal,production,Infrastructure,Bank
+archive-0128.banking.internal,backup_encryption,AES,256,keystore,archive-0128.banking.internal,production,Payments Ops,Bank
+swift-gw-0129.banking.internal,tls_key_exchange,ECDHE,256,tls,swift-gw-0129.banking.internal,production,Data Platform,Bank
+corebank-0130.banking.internal,tls_certificate,RSA,2048,tls,corebank-0130.banking.internal,staging,Platform Engineering,Bank
+swift-gw-0131.banking.internal,tls_certificate,ECDSA,256,tls,swift-gw-0131.banking.internal,dr,Platform Engineering,Bank
+archive-0132.banking.internal,vpn_ipsec,ECDHE,256,keystore,archive-0132.banking.internal,production,,Bank
+corebank-0133.banking.internal,payment_hsm,RSA,2048,keystore,corebank-0133.banking.internal,staging,,Bank
+treasury-0134.banking.internal,issuing_ca,RSA,2048,keystore,treasury-0134.banking.internal,production,,Bank
+corebank-0135.banking.internal,backup_encryption,AES,256,keystore,corebank-0135.banking.internal,production,Platform Engineering,Bank
+swift-gw-0136.banking.internal,tls_certificate,ECDSA,256,tls,swift-gw-0136.banking.internal,production,Payments Ops,Bank
+netbanking-0137.banking.internal,tls_certificate,RSA,2048,tls,netbanking-0137.banking.internal,production,Network Ops,Bank
+corebank-0138.banking.internal,tls_certificate,RSA,2048,tls,corebank-0138.banking.internal,staging,PKI Team,Bank
+netbanking-0139.banking.internal,payment_hsm,RSA,2048,keystore,netbanking-0139.banking.internal,production,PKI Team,Bank
+treasury-0140.banking.internal,tls_certificate,ML-DSA-65,,tls,treasury-0140.banking.internal,production,PKI Team,Bank
+archive-0141.banking.internal,tls_certificate,RSA,2048,tls,archive-0141.banking.internal,staging,Application Security,Bank
+archive-0142.banking.internal,tls_certificate,ECDSA,256,tls,archive-0142.banking.internal,production,Platform Engineering,Bank
+corebank-0143.banking.internal,vpn_ipsec,ECDHE,256,keystore,corebank-0143.banking.internal,production,Infrastructure,Bank
+swift-gw-0144.banking.internal,token_signing,RSA,2048,keystore,swift-gw-0144.banking.internal,production,,Bank
+corebank-0145.banking.internal,database_tls,RSA,2048,tls,corebank-0145.banking.internal,staging,Data Platform,Bank
+swift-gw-0146.banking.internal,tls_certificate,RSA,2048,tls,swift-gw-0146.banking.internal,production,,Bank
+corebank-0147.banking.internal,vpn_ipsec,DH,2048,keystore,corebank-0147.banking.internal,production,,Bank
+treasury-0148.banking.internal,tls_certificate,ECDSA,256,tls,treasury-0148.banking.internal,production,Payments Ops,Bank
+archive-0149.banking.internal,payment_hsm,RSA,2048,keystore,archive-0149.banking.internal,production,Application Security,Bank
+netbanking-0150.banking.internal,tls_certificate,ECDSA,256,tls,netbanking-0150.banking.internal,production,Data Platform,Bank
+swift-gw-0151.banking.internal,tls_certificate,RSA,2048,tls,swift-gw-0151.banking.internal,production,Payments Ops,Bank
+corebank-0152.banking.internal,database_tls,RSA,2048,tls,corebank-0152.banking.internal,production,Network Ops,Bank
+netbanking-0153.banking.internal,tls_key_exchange,ECDHE,256,tls,netbanking-0153.banking.internal,production,Infrastructure,Bank
+netbanking-0154.banking.internal,tls_key_exchange,ML-KEM-768,,tls,netbanking-0154.banking.internal,production,Application Security,Bank
+netbanking-0155.banking.internal,tls_certificate,ECDSA,256,tls,netbanking-0155.banking.internal,production,,Bank
+corebank-0156.banking.internal,tls_certificate,RSA,2048,tls,corebank-0156.banking.internal,production,PKI Team,Bank
+corebank-0157.banking.internal,issuing_ca,ECDSA,256,keystore,corebank-0157.banking.internal,staging,Platform Engineering,Bank
+swift-gw-0158.banking.internal,backup_encryption,AES,256,keystore,swift-gw-0158.banking.internal,production,,Bank
+archive-0159.banking.internal,tls_certificate,RSA,2048,tls,archive-0159.banking.internal,dr,Network Ops,Bank
+swift-gw-0160.banking.internal,tls_certificate,RSA,2048,tls,swift-gw-0160.banking.internal,production,Application Security,Bank
+netbanking-0161.banking.internal,issuing_ca,ECDSA,256,keystore,netbanking-0161.banking.internal,production,Infrastructure,Bank
+archive-0162.banking.internal,database_tls,ECDSA,256,tls,archive-0162.banking.internal,staging,Payments Ops,Bank
+archive-0163.banking.internal,backup_encryption,RSA,2048,keystore,archive-0163.banking.internal,production,,Bank
+netbanking-0164.banking.internal,tls_certificate,RSA,2048,tls,netbanking-0164.banking.internal,production,,Bank
+swift-gw-0165.banking.internal,tls_certificate,RSA,2048,tls,swift-gw-0165.banking.internal,production,Payments Ops,Bank
+netbanking-0166.banking.internal,database_tls,ECDSA,256,tls,netbanking-0166.banking.internal,staging,,Bank
+treasury-0167.banking.internal,vpn_ipsec,ECDHE,256,keystore,treasury-0167.banking.internal,production,Application Security,Bank
+corebank-0168.banking.internal,payment_hsm,RSA,2048,keystore,corebank-0168.banking.internal,staging,PKI Team,Bank
+swift-gw-0169.banking.internal,payment_hsm,RSA,4096,keystore,swift-gw-0169.banking.internal,production,Data Platform,Bank
+treasury-0170.banking.internal,tls_certificate,ECDSA,256,tls,treasury-0170.banking.internal,production,PKI Team,Bank
+archive-0171.banking.internal,token_signing,ECDSA,256,keystore,archive-0171.banking.internal,production,Platform Engineering,Bank
+corebank-0172.banking.internal,payment_hsm,RSA,2048,keystore,corebank-0172.banking.internal,production,,Bank
+treasury-0173.banking.internal,token_signing,RSA,2048,keystore,treasury-0173.banking.internal,dr,Data Platform,Bank
+treasury-0174.banking.internal,issuing_ca,RSA,2048,keystore,treasury-0174.banking.internal,staging,Data Platform,Bank
+treasury-0175.banking.internal,tls_certificate,ECDSA,256,tls,treasury-0175.banking.internal,dr,PKI Team,Bank
+treasury-0176.banking.internal,tls_certificate,RSA,2048,tls,treasury-0176.banking.internal,staging,Application Security,Bank
+swift-gw-0177.banking.internal,vpn_ipsec,ECDHE,256,keystore,swift-gw-0177.banking.internal,production,PKI Team,Bank
+treasury-0178.banking.internal,tls_key_exchange,ECDHE,256,tls,treasury-0178.banking.internal,dr,Payments Ops,Bank
+archive-0179.banking.internal,vpn_ipsec,ECDHE,256,keystore,archive-0179.banking.internal,production,Infrastructure,Bank
+netbanking-0180.banking.internal,database_tls,ECDSA,256,tls,netbanking-0180.banking.internal,production,Data Platform,Bank
+swift-gw-0181.banking.internal,issuing_ca,ECDSA,256,keystore,swift-gw-0181.banking.internal,production,Platform Engineering,Bank
+treasury-0182.banking.internal,issuing_ca,ECDSA,256,keystore,treasury-0182.banking.internal,production,Network Ops,Bank
+swift-gw-0183.banking.internal,tls_certificate,RSA,2048,tls,swift-gw-0183.banking.internal,production,Infrastructure,Bank
+treasury-0184.banking.internal,issuing_ca,ECDSA,256,keystore,treasury-0184.banking.internal,production,Data Platform,Bank
+corebank-0185.banking.internal,payment_hsm,RSA,4096,keystore,corebank-0185.banking.internal,production,Application Security,Bank
+treasury-0186.banking.internal,token_signing,RSA,2048,keystore,treasury-0186.banking.internal,production,Platform Engineering,Bank
+treasury-0187.banking.internal,tls_key_exchange,ECDHE,256,tls,treasury-0187.banking.internal,staging,Application Security,Bank
+treasury-0188.banking.internal,tls_key_exchange,ECDHE,256,tls,treasury-0188.banking.internal,production,PKI Team,Bank
+swift-gw-0189.banking.internal,payment_hsm,RSA,2048,keystore,swift-gw-0189.banking.internal,production,Data Platform,Bank
+swift-gw-0190.banking.internal,token_signing,RSA,2048,keystore,swift-gw-0190.banking.internal,production,Network Ops,Bank
+netbanking-0191.banking.internal,issuing_ca,RSA,2048,keystore,netbanking-0191.banking.internal,production,Network Ops,Bank
+netbanking-0192.banking.internal,tls_key_exchange,ECDHE,256,tls,netbanking-0192.banking.internal,production,Network Ops,Bank
+swift-gw-0193.banking.internal,tls_certificate,ML-DSA-65,,tls,swift-gw-0193.banking.internal,production,PKI Team,Bank
+swift-gw-0194.banking.internal,payment_hsm,3DES,112,keystore,swift-gw-0194.banking.internal,production,Payments Ops,Bank
+treasury-0195.banking.internal,tls_key_exchange,ECDHE,256,tls,treasury-0195.banking.internal,production,PKI Team,Bank
+treasury-0196.banking.internal,tls_key_exchange,ECDHE,256,tls,treasury-0196.banking.internal,production,Platform Engineering,Bank
+corebank-0197.banking.internal,database_tls,RSA,2048,tls,corebank-0197.banking.internal,staging,,Bank
+netbanking-0198.banking.internal,database_tls,RSA,2048,tls,netbanking-0198.banking.internal,production,,Bank
+archive-0199.banking.internal,tls_certificate,RSA,2048,tls,archive-0199.banking.internal,production,Data Platform,Bank
+netbanking-0200.banking.internal,payment_hsm,RSA,2048,keystore,netbanking-0200.banking.internal,production,PKI Team,Bank
+archive-0201.banking.internal,root_ca,ECDSA,384,keystore,archive-0201.banking.internal,dr,PKI Team,Bank
+archive-0202.banking.internal,tls_key_exchange,ECDHE,256,tls,archive-0202.banking.internal,production,Payments Ops,Bank
+corebank-0203.banking.internal,payment_hsm,RSA,2048,keystore,corebank-0203.banking.internal,staging,Network Ops,Bank
+swift-gw-0204.banking.internal,tls_certificate,RSA,2048,tls,swift-gw-0204.banking.internal,production,Network Ops,Bank
+corebank-0205.banking.internal,payment_hsm,RSA,2048,keystore,corebank-0205.banking.internal,dr,PKI Team,Bank
+corebank-0206.banking.internal,payment_hsm,3DES,112,keystore,corebank-0206.banking.internal,production,,Bank
+archive-0207.banking.internal,backup_encryption,RSA,2048,keystore,archive-0207.banking.internal,production,Infrastructure,Bank
+archive-0208.banking.internal,vpn_ipsec,ECDHE,256,keystore,archive-0208.banking.internal,production,Infrastructure,Bank
+swift-gw-0209.banking.internal,tls_certificate,RSA,2048,tls,swift-gw-0209.banking.internal,staging,,Bank
+swift-gw-0210.banking.internal,payment_hsm,ECDSA,256,keystore,swift-gw-0210.banking.internal,production,Infrastructure,Bank
+archive-0211.banking.internal,tls_key_exchange,ECDHE,256,tls,archive-0211.banking.internal,production,PKI Team,Bank
+swift-gw-0212.banking.internal,token_signing,RSA,2048,keystore,swift-gw-0212.banking.internal,production,Data Platform,Bank
+treasury-0213.banking.internal,issuing_ca,RSA,2048,keystore,treasury-0213.banking.internal,production,Platform Engineering,Bank
+netbanking-0214.banking.internal,vpn_ipsec,DH,2048,keystore,netbanking-0214.banking.internal,production,PKI Team,Bank
+swift-gw-0215.banking.internal,tls_certificate,RSA,2048,tls,swift-gw-0215.banking.internal,production,Data Platform,Bank
+swift-gw-0216.banking.internal,token_signing,ECDSA,256,keystore,swift-gw-0216.banking.internal,dr,Application Security,Bank
+treasury-0217.banking.internal,issuing_ca,ECDSA,256,keystore,treasury-0217.banking.internal,production,,Bank
+archive-0218.banking.internal,tls_key_exchange,X25519,255,tls,archive-0218.banking.internal,production,Network Ops,Bank
+archive-0219.banking.internal,tls_certificate,RSA,2048,tls,archive-0219.banking.internal,production,Payments Ops,Bank
+swift-gw-0220.banking.internal,tls_key_exchange,ECDHE,256,tls,swift-gw-0220.banking.internal,production,,Bank
+archive-0221.banking.internal,root_ca,RSA,4096,keystore,archive-0221.banking.internal,staging,Platform Engineering,Bank
+swift-gw-0222.banking.internal,payment_hsm,RSA,2048,keystore,swift-gw-0222.banking.internal,production,Network Ops,Bank
+treasury-0223.banking.internal,database_tls,ECDSA,256,tls,treasury-0223.banking.internal,staging,Infrastructure,Bank
+treasury-0224.banking.internal,tls_certificate,RSA,2048,tls,treasury-0224.banking.internal,production,PKI Team,Bank
+treasury-0225.banking.internal,token_signing,RSA,2048,keystore,treasury-0225.banking.internal,dr,PKI Team,Bank
+netbanking-0226.banking.internal,token_signing,RSA,2048,keystore,netbanking-0226.banking.internal,production,Network Ops,Bank
+treasury-0227.banking.internal,database_tls,ECDSA,256,tls,treasury-0227.banking.internal,production,Platform Engineering,Bank
+netbanking-0228.banking.internal,tls_certificate,RSA,2048,tls,netbanking-0228.banking.internal,production,PKI Team,Bank
+treasury-0229.banking.internal,database_tls,RSA,2048,tls,treasury-0229.banking.internal,production,Infrastructure,Bank
+swift-gw-0230.banking.internal,vpn_ipsec,ECDHE,256,keystore,swift-gw-0230.banking.internal,production,Platform Engineering,Bank
+treasury-0231.banking.internal,tls_key_exchange,ECDHE,256,tls,treasury-0231.banking.internal,production,Application Security,Bank
+corebank-0232.banking.internal,tls_certificate,RSA,2048,tls,corebank-0232.banking.internal,production,Platform Engineering,Bank
+corebank-0233.banking.internal,tls_certificate,ECDSA,256,tls,corebank-0233.banking.internal,staging,Payments Ops,Bank
+treasury-0234.banking.internal,tls_certificate,ECDSA,256,tls,treasury-0234.banking.internal,production,PKI Team,Bank
+netbanking-0235.banking.internal,tls_certificate,RSA,2048,tls,netbanking-0235.banking.internal,production,,Bank
+archive-0236.banking.internal,database_tls,RSA,2048,tls,archive-0236.banking.internal,dr,Network Ops,Bank
+swift-gw-0237.banking.internal,payment_hsm,RSA,2048,keystore,swift-gw-0237.banking.internal,production,PKI Team,Bank
+netbanking-0238.banking.internal,tls_certificate,ML-DSA-65,,tls,netbanking-0238.banking.internal,production,PKI Team,Bank
+archive-0239.banking.internal,database_tls,ECDSA,256,tls,archive-0239.banking.internal,production,Platform Engineering,Bank
+corebank-0240.banking.internal,payment_hsm,3DES,112,keystore,corebank-0240.banking.internal,staging,PKI Team,Bank
+corebank-0241.banking.internal,database_tls,RSA,2048,tls,corebank-0241.banking.internal,staging,Application Security,Bank
+netbanking-0242.banking.internal,tls_certificate,ECDSA,256,tls,netbanking-0242.banking.internal,production,PKI Team,Bank
+corebank-0243.banking.internal,tls_certificate,ECDSA,256,tls,corebank-0243.banking.internal,production,Platform Engineering,Bank
+netbanking-0244.banking.internal,tls_certificate,RSA,2048,tls,netbanking-0244.banking.internal,production,Infrastructure,Bank
+swift-gw-0245.banking.internal,root_ca,ECDSA,384,keystore,swift-gw-0245.banking.internal,staging,Data Platform,Bank
+swift-gw-0246.banking.internal,tls_certificate,ML-DSA-65,,tls,swift-gw-0246.banking.internal,production,PKI Team,Bank
+swift-gw-0247.banking.internal,payment_hsm,3DES,112,keystore,swift-gw-0247.banking.internal,production,Platform Engineering,Bank
+corebank-0248.banking.internal,tls_key_exchange,ECDHE,256,tls,corebank-0248.banking.internal,production,PKI Team,Bank
+treasury-0249.banking.internal,tls_certificate,RSA,2048,tls,treasury-0249.banking.internal,staging,Payments Ops,Bank
+archive-0250.banking.internal,tls_certificate,RSA,2048,tls,archive-0250.banking.internal,production,Network Ops,Bank
+corebank-0251.banking.internal,tls_certificate,ECDSA,256,tls,corebank-0251.banking.internal,staging,Payments Ops,Bank
+corebank-0252.banking.internal,tls_certificate,RSA,2048,tls,corebank-0252.banking.internal,dr,PKI Team,Bank
+netbanking-0253.banking.internal,token_signing,RSA,2048,keystore,netbanking-0253.banking.internal,production,,Bank
+swift-gw-0254.banking.internal,database_tls,RSA,2048,tls,swift-gw-0254.banking.internal,dr,Data Platform,Bank
+archive-0255.banking.internal,issuing_ca,RSA,2048,keystore,archive-0255.banking.internal,dr,Network Ops,Bank
+archive-0256.banking.internal,database_tls,ECDSA,256,tls,archive-0256.banking.internal,production,Platform Engineering,Bank
+archive-0257.banking.internal,token_signing,RSA,2048,keystore,archive-0257.banking.internal,staging,Data Platform,Bank
+corebank-0258.banking.internal,database_tls,RSA,2048,tls,corebank-0258.banking.internal,dr,PKI Team,Bank
+netbanking-0259.banking.internal,tls_certificate,RSA,2048,tls,netbanking-0259.banking.internal,production,Platform Engineering,Bank
+swift-gw-0260.banking.internal,database_tls,RSA,2048,tls,swift-gw-0260.banking.internal,production,,Bank
+corebank-0261.banking.internal,tls_certificate,RSA,2048,tls,corebank-0261.banking.internal,production,Application Security,Bank
+netbanking-0262.banking.internal,token_signing,ECDSA,256,keystore,netbanking-0262.banking.internal,production,Network Ops,Bank
+swift-gw-0263.banking.internal,tls_certificate,RSA,2048,tls,swift-gw-0263.banking.internal,production,,Bank
+netbanking-0264.banking.internal,root_ca,RSA,4096,keystore,netbanking-0264.banking.internal,staging,Data Platform,Bank
+netbanking-0265.banking.internal,tls_key_exchange,ML-KEM-768,,tls,netbanking-0265.banking.internal,production,PKI Team,Bank
+corebank-0266.banking.internal,tls_certificate,RSA,2048,tls,corebank-0266.banking.internal,production,Payments Ops,Bank
+netbanking-0267.banking.internal,tls_certificate,RSA,2048,tls,netbanking-0267.banking.internal,production,Application Security,Bank
+swift-gw-0268.banking.internal,tls_certificate,RSA,2048,tls,swift-gw-0268.banking.internal,dr,,Bank
+netbanking-0269.banking.internal,tls_certificate,RSA,2048,tls,netbanking-0269.banking.internal,production,,Bank
+netbanking-0270.banking.internal,vpn_ipsec,ECDHE,256,keystore,netbanking-0270.banking.internal,staging,,Bank
+corebank-0271.banking.internal,database_tls,RSA,2048,tls,corebank-0271.banking.internal,production,,Bank
+netbanking-0272.banking.internal,database_tls,RSA,2048,tls,netbanking-0272.banking.internal,production,Payments Ops,Bank
+treasury-0273.banking.internal,tls_certificate,ECDSA,256,tls,treasury-0273.banking.internal,staging,,Bank
+treasury-0274.banking.internal,tls_certificate,ECDSA,256,tls,treasury-0274.banking.internal,production,Network Ops,Bank
+netbanking-0275.banking.internal,tls_key_exchange,ECDHE,256,tls,netbanking-0275.banking.internal,production,PKI Team,Bank
+archive-0276.banking.internal,tls_certificate,ECDSA,256,tls,archive-0276.banking.internal,production,Application Security,Bank
+treasury-0277.banking.internal,tls_certificate,ECDSA,256,tls,treasury-0277.banking.internal,production,Platform Engineering,Bank
+treasury-0278.banking.internal,vpn_ipsec,DH,2048,keystore,treasury-0278.banking.internal,dr,Network Ops,Bank
+treasury-0279.banking.internal,tls_certificate,ECDSA,256,tls,treasury-0279.banking.internal,dr,Infrastructure,Bank
+swift-gw-0280.banking.internal,payment_hsm,RSA,2048,keystore,swift-gw-0280.banking.internal,production,,Bank
+archive-0281.banking.internal,tls_certificate,RSA,2048,tls,archive-0281.banking.internal,production,Data Platform,Bank
+netbanking-0282.banking.internal,payment_hsm,RSA,2048,keystore,netbanking-0282.banking.internal,production,PKI Team,Bank
+treasury-0283.banking.internal,issuing_ca,ECDSA,256,keystore,treasury-0283.banking.internal,production,,Bank
+netbanking-0284.banking.internal,tls_key_exchange,ECDHE,256,tls,netbanking-0284.banking.internal,production,Platform Engineering,Bank
+netbanking-0285.banking.internal,backup_encryption,RSA,2048,keystore,netbanking-0285.banking.internal,production,Infrastructure,Bank
+treasury-0286.banking.internal,tls_key_exchange,ECDHE,256,tls,treasury-0286.banking.internal,staging,Payments Ops,Bank
+netbanking-0287.banking.internal,tls_certificate,ECDSA,256,tls,netbanking-0287.banking.internal,production,Payments Ops,Bank
+archive-0288.banking.internal,tls_key_exchange,X25519,255,tls,archive-0288.banking.internal,staging,Application Security,Bank
+archive-0289.banking.internal,backup_encryption,RSA,2048,keystore,archive-0289.banking.internal,production,Platform Engineering,Bank
+netbanking-0290.banking.internal,tls_certificate,ECDSA,256,tls,netbanking-0290.banking.internal,production,,Bank
+swift-gw-0291.banking.internal,tls_certificate,RSA,2048,tls,swift-gw-0291.banking.internal,production,,Bank
+treasury-0292.banking.internal,database_tls,RSA,2048,tls,treasury-0292.banking.internal,production,Platform Engineering,Bank
+swift-gw-0293.banking.internal,tls_certificate,RSA,2048,tls,swift-gw-0293.banking.internal,staging,Platform Engineering,Bank
+netbanking-0294.banking.internal,tls_certificate,ECDSA,256,tls,netbanking-0294.banking.internal,production,Platform Engineering,Bank
+netbanking-0295.banking.internal,tls_key_exchange,ECDHE,256,tls,netbanking-0295.banking.internal,production,,Bank
+treasury-0296.banking.internal,tls_certificate,RSA,2048,tls,treasury-0296.banking.internal,staging,Network Ops,Bank
+treasury-0297.banking.internal,token_signing,ECDSA,256,keystore,treasury-0297.banking.internal,production,Data Platform,Bank
+swift-gw-0298.banking.internal,tls_certificate,RSA,2048,tls,swift-gw-0298.banking.internal,dr,Network Ops,Bank
+corebank-0299.banking.internal,tls_certificate,RSA,2048,tls,corebank-0299.banking.internal,staging,Infrastructure,Bank
+swift-gw-0300.banking.internal,tls_key_exchange,ECDHE,256,tls,swift-gw-0300.banking.internal,production,PKI Team,Bank
+archive-0301.banking.internal,tls_certificate,RSA,2048,tls,archive-0301.banking.internal,production,Platform Engineering,Bank
+corebank-0302.banking.internal,backup_encryption,RSA,2048,keystore,corebank-0302.banking.internal,production,,Bank
+corebank-0303.banking.internal,database_tls,RSA,2048,tls,corebank-0303.banking.internal,production,PKI Team,Bank
+netbanking-0304.banking.internal,tls_certificate,RSA,2048,tls,netbanking-0304.banking.internal,production,,Bank
+archive-0305.banking.internal,database_tls,RSA,2048,tls,archive-0305.banking.internal,production,,Bank
+archive-0306.banking.internal,root_ca,RSA,4096,keystore,archive-0306.banking.internal,dr,Application Security,Bank
+corebank-0307.banking.internal,database_tls,ECDSA,256,tls,corebank-0307.banking.internal,production,Data Platform,Bank
+archive-0308.banking.internal,vpn_ipsec,DH,2048,keystore,archive-0308.banking.internal,production,Application Security,Bank
+corebank-0309.banking.internal,backup_encryption,RSA,2048,keystore,corebank-0309.banking.internal,production,,Bank
+swift-gw-0310.banking.internal,tls_certificate,RSA,2048,tls,swift-gw-0310.banking.internal,staging,Infrastructure,Bank
+netbanking-0311.banking.internal,database_tls,ECDSA,256,tls,netbanking-0311.banking.internal,production,Payments Ops,Bank
+swift-gw-0312.banking.internal,tls_key_exchange,ECDHE,256,tls,swift-gw-0312.banking.internal,production,Network Ops,Bank
+treasury-0313.banking.internal,vpn_ipsec,ECDHE,256,keystore,treasury-0313.banking.internal,staging,Data Platform,Bank
+swift-gw-0314.banking.internal,tls_key_exchange,ECDHE,256,tls,swift-gw-0314.banking.internal,production,,Bank
+swift-gw-0315.banking.internal,issuing_ca,RSA,2048,keystore,swift-gw-0315.banking.internal,production,Network Ops,Bank
+swift-gw-0316.banking.internal,database_tls,RSA,2048,tls,swift-gw-0316.banking.internal,production,Payments Ops,Bank
+netbanking-0317.banking.internal,tls_certificate,ECDSA,256,tls,netbanking-0317.banking.internal,production,Application Security,Bank
+archive-0318.banking.internal,tls_certificate,ECDSA,256,tls,archive-0318.banking.internal,staging,,Bank
+archive-0319.banking.internal,tls_certificate,RSA,2048,tls,archive-0319.banking.internal,production,Data Platform,Bank
+swift-gw-0320.banking.internal,tls_certificate,ECDSA,256,tls,swift-gw-0320.banking.internal,production,PKI Team,Bank
+netbanking-0321.banking.internal,token_signing,RSA,2048,keystore,netbanking-0321.banking.internal,production,Payments Ops,Bank
+corebank-0322.banking.internal,issuing_ca,RSA,2048,keystore,corebank-0322.banking.internal,production,Data Platform,Bank
+netbanking-0323.banking.internal,database_tls,RSA,2048,tls,netbanking-0323.banking.internal,staging,Platform Engineering,Bank
+archive-0324.banking.internal,tls_certificate,RSA,2048,tls,archive-0324.banking.internal,production,PKI Team,Bank
+netbanking-0325.banking.internal,database_tls,ECDSA,256,tls,netbanking-0325.banking.internal,production,Data Platform,Bank
+archive-0326.banking.internal,tls_certificate,ECDSA,256,tls,archive-0326.banking.internal,dr,Data Platform,Bank
+netbanking-0327.banking.internal,tls_certificate,RSA,2048,tls,netbanking-0327.banking.internal,dr,,Bank
+corebank-0328.banking.internal,tls_certificate,ML-DSA-65,,tls,corebank-0328.banking.internal,production,Network Ops,Bank
+corebank-0329.banking.internal,database_tls,RSA,2048,tls,corebank-0329.banking.internal,production,Platform Engineering,Bank
+treasury-0330.banking.internal,payment_hsm,RSA,2048,keystore,treasury-0330.banking.internal,production,PKI Team,Bank
+archive-0331.banking.internal,vpn_ipsec,ECDHE,256,keystore,archive-0331.banking.internal,staging,Application Security,Bank
+archive-0332.banking.internal,tls_certificate,ECDSA,256,tls,archive-0332.banking.internal,dr,Application Security,Bank
+archive-0333.banking.internal,tls_certificate,RSA,2048,tls,archive-0333.banking.internal,production,Platform Engineering,Bank
+corebank-0334.banking.internal,payment_hsm,RSA,4096,keystore,corebank-0334.banking.internal,staging,,Bank
+corebank-0335.banking.internal,payment_hsm,RSA,4096,keystore,corebank-0335.banking.internal,production,Platform Engineering,Bank
+archive-0336.banking.internal,database_tls,RSA,2048,tls,archive-0336.banking.internal,production,PKI Team,Bank
+swift-gw-0337.banking.internal,tls_certificate,RSA,2048,tls,swift-gw-0337.banking.internal,production,Data Platform,Bank
+swift-gw-0338.banking.internal,payment_hsm,RSA,2048,keystore,swift-gw-0338.banking.internal,production,,Bank
+treasury-0339.banking.internal,token_signing,RSA,2048,keystore,treasury-0339.banking.internal,production,Application Security,Bank
+swift-gw-0340.banking.internal,tls_key_exchange,ECDHE,256,tls,swift-gw-0340.banking.internal,production,PKI Team,Bank
+treasury-0341.banking.internal,tls_certificate,RSA,2048,tls,treasury-0341.banking.internal,staging,Data Platform,Bank
+netbanking-0342.banking.internal,tls_certificate,ECDSA,256,tls,netbanking-0342.banking.internal,staging,Application Security,Bank
+archive-0343.banking.internal,token_signing,RSA,2048,keystore,archive-0343.banking.internal,staging,Data Platform,Bank
+archive-0344.banking.internal,tls_certificate,RSA,2048,tls,archive-0344.banking.internal,staging,Infrastructure,Bank
+treasury-0345.banking.internal,tls_certificate,RSA,2048,tls,treasury-0345.banking.internal,production,Infrastructure,Bank
+corebank-0346.banking.internal,tls_certificate,RSA,2048,tls,corebank-0346.banking.internal,production,Data Platform,Bank
+netbanking-0347.banking.internal,tls_certificate,RSA,2048,tls,netbanking-0347.banking.internal,production,Platform Engineering,Bank
+netbanking-0348.banking.internal,root_ca,ECDSA,384,keystore,netbanking-0348.banking.internal,production,Data Platform,Bank
+swift-gw-0349.banking.internal,tls_certificate,RSA,2048,tls,swift-gw-0349.banking.internal,production,PKI Team,Bank
+netbanking-0350.banking.internal,tls_certificate,ECDSA,256,tls,netbanking-0350.banking.internal,production,Payments Ops,Bank
+swift-gw-0351.banking.internal,vpn_ipsec,DH,2048,keystore,swift-gw-0351.banking.internal,staging,Platform Engineering,Bank
+treasury-0352.banking.internal,tls_key_exchange,ECDHE,256,tls,treasury-0352.banking.internal,production,PKI Team,Bank
+corebank-0353.banking.internal,tls_certificate,RSA,2048,tls,corebank-0353.banking.internal,production,Platform Engineering,Bank
+treasury-0354.banking.internal,tls_certificate,RSA,2048,tls,treasury-0354.banking.internal,staging,Infrastructure,Bank
+archive-0355.banking.internal,root_ca,RSA,4096,keystore,archive-0355.banking.internal,production,Infrastructure,Bank
+swift-gw-0356.banking.internal,tls_key_exchange,ECDHE,256,tls,swift-gw-0356.banking.internal,production,Network Ops,Bank
+corebank-0357.banking.internal,tls_key_exchange,ML-KEM-768,,tls,corebank-0357.banking.internal,production,Network Ops,Bank
+corebank-0358.banking.internal,payment_hsm,RSA,2048,keystore,corebank-0358.banking.internal,dr,Infrastructure,Bank
+corebank-0359.banking.internal,tls_certificate,RSA,2048,tls,corebank-0359.banking.internal,production,,Bank
+swift-gw-0360.banking.internal,tls_certificate,RSA,2048,tls,swift-gw-0360.banking.internal,staging,Payments Ops,Bank
+archive-0361.banking.internal,payment_hsm,ECDSA,256,keystore,archive-0361.banking.internal,production,Application Security,Bank
+treasury-0362.banking.internal,payment_hsm,RSA,2048,keystore,treasury-0362.banking.internal,production,,Bank
+swift-gw-0363.banking.internal,payment_hsm,RSA,2048,keystore,swift-gw-0363.banking.internal,production,Network Ops,Bank
+corebank-0364.banking.internal,tls_certificate,RSA,2048,tls,corebank-0364.banking.internal,production,,Bank
+corebank-0365.banking.internal,tls_key_exchange,X25519,255,tls,corebank-0365.banking.internal,production,Infrastructure,Bank
+corebank-0366.banking.internal,tls_certificate,RSA,2048,tls,corebank-0366.banking.internal,dr,PKI Team,Bank
+swift-gw-0367.banking.internal,vpn_ipsec,DH,2048,keystore,swift-gw-0367.banking.internal,production,Network Ops,Bank
+swift-gw-0368.banking.internal,tls_key_exchange,ECDHE,256,tls,swift-gw-0368.banking.internal,production,PKI Team,Bank
+corebank-0369.banking.internal,token_signing,RSA,2048,keystore,corebank-0369.banking.internal,dr,PKI Team,Bank
+swift-gw-0370.banking.internal,tls_certificate,ECDSA,256,tls,swift-gw-0370.banking.internal,production,Payments Ops,Bank
+corebank-0371.banking.internal,tls_certificate,ECDSA,256,tls,corebank-0371.banking.internal,dr,Infrastructure,Bank
+treasury-0372.banking.internal,backup_encryption,AES,256,keystore,treasury-0372.banking.internal,staging,Platform Engineering,Bank
+corebank-0373.banking.internal,backup_encryption,RSA,2048,keystore,corebank-0373.banking.internal,production,Platform Engineering,Bank
+treasury-0374.banking.internal,issuing_ca,ECDSA,256,keystore,treasury-0374.banking.internal,production,Network Ops,Bank
+archive-0375.banking.internal,tls_key_exchange,ECDHE,256,tls,archive-0375.banking.internal,production,,Bank
+swift-gw-0376.banking.internal,token_signing,RSA,2048,keystore,swift-gw-0376.banking.internal,production,Application Security,Bank
+archive-0377.banking.internal,tls_key_exchange,ECDHE,256,tls,archive-0377.banking.internal,production,PKI Team,Bank
+swift-gw-0378.banking.internal,tls_certificate,ML-DSA-65,,tls,swift-gw-0378.banking.internal,staging,Payments Ops,Bank
+netbanking-0379.banking.internal,tls_certificate,RSA,2048,tls,netbanking-0379.banking.internal,production,PKI Team,Bank
+netbanking-0380.banking.internal,database_tls,RSA,2048,tls,netbanking-0380.banking.internal,production,Platform Engineering,Bank
+swift-gw-0381.banking.internal,database_tls,RSA,2048,tls,swift-gw-0381.banking.internal,production,Payments Ops,Bank
+swift-gw-0382.banking.internal,tls_certificate,RSA,2048,tls,swift-gw-0382.banking.internal,production,,Bank
+treasury-0383.banking.internal,vpn_ipsec,DH,2048,keystore,treasury-0383.banking.internal,production,Network Ops,Bank
+netbanking-0384.banking.internal,tls_certificate,ML-DSA-65,,tls,netbanking-0384.banking.internal,production,Data Platform,Bank
+archive-0385.banking.internal,token_signing,RSA,2048,keystore,archive-0385.banking.internal,production,Infrastructure,Bank
+treasury-0386.banking.internal,tls_certificate,ECDSA,256,tls,treasury-0386.banking.internal,staging,PKI Team,Bank
+corebank-0387.banking.internal,tls_key_exchange,ECDHE,256,tls,corebank-0387.banking.internal,production,Data Platform,Bank
+corebank-0388.banking.internal,tls_certificate,ECDSA,256,tls,corebank-0388.banking.internal,staging,Network Ops,Bank
+corebank-0389.banking.internal,tls_certificate,RSA,2048,tls,corebank-0389.banking.internal,production,,Bank
+swift-gw-0390.banking.internal,tls_certificate,RSA,2048,tls,swift-gw-0390.banking.internal,staging,Infrastructure,Bank
+swift-gw-0391.banking.internal,tls_certificate,ECDSA,256,tls,swift-gw-0391.banking.internal,production,PKI Team,Bank
+treasury-0392.banking.internal,database_tls,RSA,2048,tls,treasury-0392.banking.internal,production,Network Ops,Bank
+treasury-0393.banking.internal,tls_key_exchange,ECDHE,256,tls,treasury-0393.banking.internal,production,Payments Ops,Bank
+corebank-0394.banking.internal,tls_certificate,ECDSA,256,tls,corebank-0394.banking.internal,production,,Bank
+archive-0395.banking.internal,database_tls,RSA,2048,tls,archive-0395.banking.internal,production,Platform Engineering,Bank
+treasury-0396.banking.internal,database_tls,RSA,2048,tls,treasury-0396.banking.internal,production,Platform Engineering,Bank
+archive-0397.banking.internal,backup_encryption,AES,256,keystore,archive-0397.banking.internal,production,Data Platform,Bank
+corebank-0398.banking.internal,payment_hsm,RSA,2048,keystore,corebank-0398.banking.internal,production,Network Ops,Bank
+netbanking-0399.banking.internal,tls_certificate,ML-DSA-65,,tls,netbanking-0399.banking.internal,production,PKI Team,Bank

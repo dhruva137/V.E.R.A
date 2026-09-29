@@ -1,0 +1,32 @@
+# Source rules: Rust (openssl crate, RustCrypto, ring, ml-kem).
+language: rust
+grammars: {.rs: rust}
+strings: [string_literal, raw_string_literal]
+queries:
+  call: '(call_expression function: (_) @callee arguments: (arguments) @args) @site'
+  import: '(use_declaration argument: (_) @path) @site'
+rules:
+  - {id: rs-openssl-rsa, kind: call, match: '(?:^|::)Rsa::generate$', algorithm: RSA, usage: signing, key_size: {arg: 0}}
+  - {id: rs-rsa-crate, kind: call, match: '(?:^|::)RsaPrivateKey::new$', algorithm: RSA, usage: signing, key_size: {arg: 1}}
+  - {id: rs-openssl-ec, kind: call, match: '(?:^|::)EcKey::generate$', algorithm: ECDSA, usage: signing}
+  - {id: rs-openssl-group, kind: call, match: '(?:^|::)EcGroup::from_curve_name$', algorithm: ECDSA, usage: signing, key_size: {arg: 0, pattern: '(?:PRIME|SECP)(\d{3})'}}
+  - {id: rs-md5, kind: call, match: '(?:^|::)(Md5::new|md5::compute)$', algorithm: MD5, usage: hashing}
+  - {id: rs-sha1, kind: call, match: '(?:^|::)Sha1::new$', algorithm: SHA-1, usage: hashing}
+  - {id: rs-des3, kind: call, match: '(?:^|::)TdesEde3::new', algorithm: 3DES, usage: encryption}
+  - {id: rs-des, kind: call, match: '(?:^|::)Des::new', algorithm: DES, usage: encryption}
+  - {id: rs-aes-gcm, kind: call, match: '(?:^|::)Aes(128|256)Gcm::new', algorithm: 'AES-{1}', usage: encryption}
+  - {id: rs-chacha, kind: call, match: '(?:^|::)(X)?ChaCha20Poly1305::new', algorithm: ChaCha20, usage: encryption}
+  - {id: rs-ring-ecdsa, kind: call, match: '(?:^|::)EcdsaKeyPair::(generate_pkcs8|from_pkcs8)$', algorithm: ECDSA, usage: signing, key_size: {arg: 0, pattern: 'P(\d{3})'}}
+  - {id: rs-ring-ed25519, kind: call, match: '(?:^|::)Ed25519KeyPair::(generate_pkcs8|from_pkcs8)$', algorithm: Ed25519, usage: signing}
+  - {id: rs-ring-rsa, kind: call, match: '(?:^|::)RsaKeyPair::(from_pkcs8|from_der)$', algorithm: RSA, usage: signing}
+  - {id: rs-ring-agreement, kind: call, match: '(?:^|::)EphemeralPrivateKey::generate$', algorithm_from: {arg: 0, pattern: '(X25519|ECDH_P256|ECDH_P384)'}, usage: key_exchange}
+  - {id: rs-ed25519-dalek, kind: call, match: '(?:^|::)SigningKey::generate$', algorithm: Ed25519, usage: signing, confidence: 0.5}
+  - {id: rs-ml-kem, kind: call, match: '(?:^|::)MlKem(512|768|1024)::generate$', algorithm: 'ML-KEM-{1}', usage: key_exchange}
+  - {id: rs-use-md5, kind: import, match: '^md5(::|$)', algorithm: MD5, usage: hashing}
+  - {id: rs-use-sha1, kind: import, match: '^sha1(::|$)', algorithm: SHA-1, usage: hashing}
+  - {id: rs-use-rsa, kind: import, match: '^rsa(::|$)', algorithm: RSA, usage: signing}
+  - {id: rs-use-des, kind: import, match: '^des(::|$)', algorithm: DES, usage: encryption}
+  - {id: rs-use-p256, kind: import, match: '^p256(::|$)', algorithm: ECDSA, usage: signing}
+  - {id: rs-use-x25519, kind: import, match: '^x25519_dalek(::|$)', algorithm: X25519, usage: key_exchange}
+  - {id: rs-use-ed25519, kind: import, match: '^ed25519_dalek(::|$)', algorithm: Ed25519, usage: signing}
+  - {id: rs-use-mlkem, kind: import, match: '^ml_kem(::|$)', algorithm: ML-KEM-768, usage: key_exchange}

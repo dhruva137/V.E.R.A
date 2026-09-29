@@ -1,0 +1,1041 @@
+{
+  "source": "certificate",
+  "collected_at": "2026-08-29T09:00:00Z",
+  "note": "Chain metadata only. Issuer/subject pairs resolve the hierarchy, which is what produces the dependency graph.",
+  "certificates": [
+    {
+      "subject": "CN=Tejomaya Root CA G3,O=Tejomaya Bank,C=IN",
+      "issuer": "CN=Tejomaya Root CA G3,O=Tejomaya Bank,C=IN",
+      "serial_number": "92:BE:0D:53:77:DE:00:92",
+      "not_before": "2018-09-20",
+      "not_after": "2038-06-07",
+      "days_remaining": 4300,
+      "signature_algorithm": "SHA256withRSA",
+      "public_key_algorithm": "RSA",
+      "public_key_size": 4096,
+      "basic_constraints_ca": true,
+      "path_length": 2,
+      "subject_alt_names": [],
+      "key_usage": [
+        "keyCertSign",
+        "cRLSign"
+      ],
+      "extended_key_usage": [],
+      "sha256_fingerprint": "50:B7:5A:0D:F1:4D:36:FE:CC:5E:06:7F:73:32:A7:1C",
+      "self_signed": true
+    },
+    {
+      "subject": "CN=Tejomaya Issuing CA - Services,O=Tejomaya Bank,C=IN",
+      "issuer": "CN=Tejomaya Root CA G3,O=Tejomaya Bank,C=IN",
+      "serial_number": "A1:40:13:CA:12:5E:BF:3A",
+      "not_before": "2022-10-29",
+      "not_after": "2031-03-06",
+      "days_remaining": 1650,
+      "signature_algorithm": "SHA256withRSA",
+      "public_key_algorithm": "RSA",
+      "public_key_size": 3072,
+      "basic_constraints_ca": true,
+      "path_length": 0,
+      "subject_alt_names": [],
+      "key_usage": [
+        "keyCertSign",
+        "cRLSign"
+      ],
+      "extended_key_usage": [],
+      "sha256_fingerprint": "26:78:39:6E:F1:7E:5F:98:DD:28:5E:EC:31:8C:69:BF",
+      "self_signed": false
+    },
+    {
+      "subject": "CN=Tejomaya Issuing CA - Devices,O=Tejomaya Bank,C=IN",
+      "issuer": "CN=Tejomaya Root CA G3,O=Tejomaya Bank,C=IN",
+      "serial_number": "E1:8C:D8:64:4D:29:DA:76",
+      "not_before": "2022-10-29",
+      "not_after": "2031-03-06",
+      "days_remaining": 1650,
+      "signature_algorithm": "SHA256withRSA",
+      "public_key_algorithm": "RSA",
+      "public_key_size": 3072,
+      "basic_constraints_ca": true,
+      "path_length": 0,
+      "subject_alt_names": [],
+      "key_usage": [
+        "keyCertSign",
+        "cRLSign"
+      ],
+      "extended_key_usage": [],
+      "sha256_fingerprint": "5E:80:99:BA:2A:DB:25:E1:61:D4:B8:9D:7B:F3:D0:35",
+      "self_signed": false
+    },
+    {
+      "subject": "CN=corebank-api.tejomaya.internal,O=Tejomaya Bank,C=IN",
+      "issuer": "CN=Tejomaya Issuing CA - Services,O=Tejomaya Bank,C=IN",
+      "serial_number": "EE:8A:FC:8E:A2:93:DD:46",
+      "not_before": "2024-11-27",
+      "not_after": "2026-11-25",
+      "days_remaining": 88,
+      "signature_algorithm": "SHA256withRSA",
+      "public_key_algorithm": "RSA",
+      "public_key_size": 2048,
+      "basic_constraints_ca": false,
+      "path_length": null,
+      "subject_alt_names": [
+        "corebank-api.tejomaya.internal"
+      ],
+      "key_usage": [
+        "digitalSignature",
+        "keyEncipherment"
+      ],
+      "extended_key_usage": [
+        "serverAuth"
+      ],
+      "sha256_fingerprint": "58:4D:1D:66:FF:95:B1:13:1E:01:3A:16:01:A1:25:3E",
+      "self_signed": false
+    },
+    {
+      "subject": "CN=mq-broker.tejomaya.internal,O=Tejomaya Bank,C=IN",
+      "issuer": "CN=Tejomaya Issuing CA - Services,O=Tejomaya Bank,C=IN",
+      "serial_number": "C1:05:CE:D5:44:2B:F5:22",
+      "not_before": "2024-09-28",
+      "not_after": "2026-09-19",
+      "days_remaining": 21,
+      "signature_algorithm": "SHA256withRSA",
+      "public_key_algorithm": "RSA",
+      "public_key_size": 2048,
+      "basic_constraints_ca": false,
+      "path_length": null,
+      "subject_alt_names": [
+        "mq-broker.tejomaya.internal"
+      ],
+      "key_usage": [
+        "digitalSignature",
+        "keyEncipherment"
+      ],
+      "extended_key_usage": [
+        "serverAuth"
+      ],
+      "sha256_fingerprint": "C2:F5:32:7B:D3:B5:B1:3E:69:B0:06:79:11:22:85:C0",
+      "self_signed": false
+    },
+    {
+      "subject": "CN=upi-switch.tejomaya.internal,O=Tejomaya Bank,C=IN",
+      "issuer": "CN=Tejomaya Issuing CA - Services,O=Tejomaya Bank,C=IN",
+      "serial_number": "67:F9:74:C2:B0:02:2E:C8",
+      "not_before": "2025-07-25",
+      "not_after": "2027-05-16",
+      "days_remaining": 260,
+      "signature_algorithm": "SHA256withECDSA",
+      "public_key_algorithm": "ECDSA",
+      "public_key_size": 256,
+      "basic_constraints_ca": false,
+      "path_length": null,
+      "subject_alt_names": [
+        "upi-switch.tejomaya.internal"
+      ],
+      "key_usage": [
+        "digitalSignature",
+        "keyEncipherment"
+      ],
+      "extended_key_usage": [
+        "serverAuth"
+      ],
+      "sha256_fingerprint": "47:DE:B2:11:FF:7C:97:CC:5A:69:93:61:D0:89:62:52",
+      "self_signed": false
+    },
+    {
+      "subject": "CN=Tejomaya Issuing CA - TLS,O=Tejomaya Bank,C=IN",
+      "issuer": "CN=Tejomaya Root CA G3,O=Tejomaya Bank,C=IN",
+      "serial_number": "00:A4:0F:25:FD:AA:A8:EA",
+      "not_before": "2022-10-29",
+      "not_after": "2031-03-06",
+      "days_remaining": 1650,
+      "signature_algorithm": "SHA256withRSA",
+      "public_key_algorithm": "RSA",
+      "public_key_size": 3072,
+      "basic_constraints_ca": true,
+      "path_length": 0,
+      "subject_alt_names": [],
+      "key_usage": [
+        "keyCertSign",
+        "cRLSign"
+      ],
+      "extended_key_usage": [],
+      "sha256_fingerprint": "D2:54:61:8F:06:BA:EF:85:9A:43:B6:A5:FE:3B:90:76",
+      "self_signed": false
+    },
+    {
+      "subject": "CN=internetbanking-portal.tejomaya.internal,O=Tejomaya Bank,C=IN",
+      "issuer": "CN=Tejomaya Issuing CA - TLS,O=Tejomaya Bank,C=IN",
+      "serial_number": "9A:F7:8E:95:9E:34:8E:44",
+      "not_before": "2024-09-28",
+      "not_after": "2026-09-20",
+      "days_remaining": 22,
+      "signature_algorithm": "SHA256withRSA",
+      "public_key_algorithm": "RSA",
+      "public_key_size": 2048,
+      "basic_constraints_ca": false,
+      "path_length": null,
+      "subject_alt_names": [
+        "internetbanking-portal.tejomaya.internal"
+      ],
+      "key_usage": [
+        "digitalSignature",
+        "keyEncipherment"
+      ],
+      "extended_key_usage": [
+        "serverAuth"
+      ],
+      "sha256_fingerprint": "0B:FC:E4:7A:31:C3:D5:69:BD:1D:95:31:86:A1:0A:84",
+      "self_signed": false
+    },
+    {
+      "subject": "CN=mobile-api.tejomaya.internal,O=Tejomaya Bank,C=IN",
+      "issuer": "CN=Tejomaya Issuing CA - Services,O=Tejomaya Bank,C=IN",
+      "serial_number": "74:33:70:8F:16:64:CC:7E",
+      "not_before": "2025-07-25",
+      "not_after": "2027-06-25",
+      "days_remaining": 300,
+      "signature_algorithm": "SHA256withECDSA",
+      "public_key_algorithm": "ECDSA",
+      "public_key_size": 256,
+      "basic_constraints_ca": false,
+      "path_length": null,
+      "subject_alt_names": [
+        "mobile-api.tejomaya.internal"
+      ],
+      "key_usage": [
+        "digitalSignature",
+        "keyEncipherment"
+      ],
+      "extended_key_usage": [
+        "serverAuth"
+      ],
+      "sha256_fingerprint": "75:ED:ED:64:12:30:37:2C:0B:11:4B:77:DA:7F:1A:68",
+      "self_signed": false
+    },
+    {
+      "subject": "CN=imps-gateway.tejomaya.internal,O=Tejomaya Bank,C=IN",
+      "issuer": "CN=Tejomaya Issuing CA - Services,O=Tejomaya Bank,C=IN",
+      "serial_number": "C7:98:B7:CD:34:69:9F:2E",
+      "not_before": "2025-11-02",
+      "not_after": "2028-05-30",
+      "days_remaining": 640,
+      "signature_algorithm": "SHA256withRSA",
+      "public_key_algorithm": "RSA",
+      "public_key_size": 2048,
+      "basic_constraints_ca": false,
+      "path_length": null,
+      "subject_alt_names": [
+        "imps-gateway.tejomaya.internal"
+      ],
+      "key_usage": [
+        "digitalSignature",
+        "keyEncipherment"
+      ],
+      "extended_key_usage": [
+        "serverAuth"
+      ],
+      "sha256_fingerprint": "7A:70:55:D9:E8:B7:AD:18:85:5E:E5:AF:42:00:BF:43",
+      "self_signed": false
+    },
+    {
+      "subject": "CN=neft-gateway.tejomaya.internal,O=Tejomaya Bank,C=IN",
+      "issuer": "CN=Tejomaya Issuing CA - Services,O=Tejomaya Bank,C=IN",
+      "serial_number": "A8:F1:36:24:45:9F:61:3C",
+      "not_before": "2024-09-08",
+      "not_after": "2026-09-10",
+      "days_remaining": 12,
+      "signature_algorithm": "SHA256withRSA",
+      "public_key_algorithm": "RSA",
+      "public_key_size": 2048,
+      "basic_constraints_ca": false,
+      "path_length": null,
+      "subject_alt_names": [
+        "neft-gateway.tejomaya.internal"
+      ],
+      "key_usage": [
+        "digitalSignature",
+        "keyEncipherment"
+      ],
+      "extended_key_usage": [
+        "serverAuth"
+      ],
+      "sha256_fingerprint": "AC:3A:69:73:A4:D2:A7:E7:54:59:02:78:2A:ED:C9:80",
+      "self_signed": false
+    },
+    {
+      "subject": "CN=rtgs-gateway.tejomaya.internal,O=Tejomaya Bank,C=IN",
+      "issuer": "CN=Tejomaya Issuing CA - Services,O=Tejomaya Bank,C=IN",
+      "serial_number": "03:A7:CB:8B:B1:FA:84:4D",
+      "not_before": "2025-09-13",
+      "not_after": "2028-01-11",
+      "days_remaining": 500,
+      "signature_algorithm": "SHA256withRSA",
+      "public_key_algorithm": "RSA",
+      "public_key_size": 3072,
+      "basic_constraints_ca": false,
+      "path_length": null,
+      "subject_alt_names": [
+        "rtgs-gateway.tejomaya.internal"
+      ],
+      "key_usage": [
+        "digitalSignature",
+        "keyEncipherment"
+      ],
+      "extended_key_usage": [
+        "serverAuth"
+      ],
+      "sha256_fingerprint": "62:66:7F:9C:3C:02:0E:44:41:02:F0:B4:56:AA:09:16",
+      "self_signed": false
+    },
+    {
+      "subject": "CN=card-auth.tejomaya.internal,O=Tejomaya Bank,C=IN",
+      "issuer": "CN=Tejomaya Issuing CA - Services,O=Tejomaya Bank,C=IN",
+      "serial_number": "39:53:F5:29:67:F5:2A:D1",
+      "not_before": "2025-07-05",
+      "not_after": "2027-03-27",
+      "days_remaining": 210,
+      "signature_algorithm": "SHA256withECDSA",
+      "public_key_algorithm": "ECDSA",
+      "public_key_size": 256,
+      "basic_constraints_ca": false,
+      "path_length": null,
+      "subject_alt_names": [
+        "card-auth.tejomaya.internal"
+      ],
+      "key_usage": [
+        "digitalSignature",
+        "keyEncipherment"
+      ],
+      "extended_key_usage": [
+        "serverAuth"
+      ],
+      "sha256_fingerprint": "E4:57:59:17:94:FA:BA:85:BD:FF:0E:D6:E6:C9:F8:C8",
+      "self_signed": false
+    },
+    {
+      "subject": "CN=fraud-scoring.tejomaya.internal,O=Tejomaya Bank,C=IN",
+      "issuer": "CN=Tejomaya Issuing CA - Services,O=Tejomaya Bank,C=IN",
+      "serial_number": "DD:A3:B2:06:F9:9E:9B:15",
+      "not_before": "2026-02-10",
+      "not_after": "2028-08-28",
+      "days_remaining": 730,
+      "signature_algorithm": "SHA256withRSA",
+      "public_key_algorithm": "RSA",
+      "public_key_size": 2048,
+      "basic_constraints_ca": false,
+      "path_length": null,
+      "subject_alt_names": [
+        "fraud-scoring.tejomaya.internal"
+      ],
+      "key_usage": [
+        "digitalSignature",
+        "keyEncipherment"
+      ],
+      "extended_key_usage": [
+        "serverAuth"
+      ],
+      "sha256_fingerprint": "DD:05:0C:C3:5B:F9:C9:BE:6D:49:DE:0F:6B:2B:39:56",
+      "self_signed": false
+    },
+    {
+      "subject": "CN=ledger-core.tejomaya.internal,O=Tejomaya Bank,C=IN",
+      "issuer": "CN=Tejomaya Issuing CA - Services,O=Tejomaya Bank,C=IN",
+      "serial_number": "AE:E5:37:A8:2C:01:87:E0",
+      "not_before": "2025-11-02",
+      "not_after": "2027-10-03",
+      "days_remaining": 400,
+      "signature_algorithm": "SHA256withRSA",
+      "public_key_algorithm": "RSA",
+      "public_key_size": 3072,
+      "basic_constraints_ca": false,
+      "path_length": null,
+      "subject_alt_names": [
+        "ledger-core.tejomaya.internal"
+      ],
+      "key_usage": [
+        "digitalSignature",
+        "keyEncipherment"
+      ],
+      "extended_key_usage": [
+        "serverAuth"
+      ],
+      "sha256_fingerprint": "13:27:2D:56:BF:CE:55:08:DC:C0:7F:A3:A9:5B:3A:9D",
+      "self_signed": false
+    },
+    {
+      "subject": "CN=statements.tejomaya.internal,O=Tejomaya Bank,C=IN",
+      "issuer": "CN=Tejomaya Issuing CA - Services,O=Tejomaya Bank,C=IN",
+      "serial_number": "2C:94:0F:F7:F5:FF:6A:EC",
+      "not_before": "2024-08-19",
+      "not_after": "2026-08-21",
+      "days_remaining": -8,
+      "signature_algorithm": "SHA256withRSA",
+      "public_key_algorithm": "RSA",
+      "public_key_size": 2048,
+      "basic_constraints_ca": false,
+      "path_length": null,
+      "subject_alt_names": [
+        "statements.tejomaya.internal"
+      ],
+      "key_usage": [
+        "digitalSignature",
+        "keyEncipherment"
+      ],
+      "extended_key_usage": [
+        "serverAuth"
+      ],
+      "sha256_fingerprint": "6F:07:97:C8:F2:3E:0C:30:CC:D0:E2:1E:E9:32:00:3A",
+      "self_signed": false
+    },
+    {
+      "subject": "CN=notifications.tejomaya.internal,O=Tejomaya Bank,C=IN",
+      "issuer": "CN=Tejomaya Issuing CA - TLS,O=Tejomaya Bank,C=IN",
+      "serial_number": "6D:7B:E5:7C:FC:61:BA:52",
+      "not_before": "2025-07-05",
+      "not_after": "2027-02-05",
+      "days_remaining": 160,
+      "signature_algorithm": "SHA256withECDSA",
+      "public_key_algorithm": "ECDSA",
+      "public_key_size": 256,
+      "basic_constraints_ca": false,
+      "path_length": null,
+      "subject_alt_names": [
+        "notifications.tejomaya.internal"
+      ],
+      "key_usage": [
+        "digitalSignature",
+        "keyEncipherment"
+      ],
+      "extended_key_usage": [
+        "serverAuth"
+      ],
+      "sha256_fingerprint": "F5:65:2C:5A:27:BB:D3:6C:B2:2D:9F:61:16:62:21:A2",
+      "self_signed": false
+    },
+    {
+      "subject": "CN=kyc-service.tejomaya.internal,O=Tejomaya Bank,C=IN",
+      "issuer": "CN=Tejomaya Issuing CA - Services,O=Tejomaya Bank,C=IN",
+      "serial_number": "87:5F:AB:4A:3C:49:B4:B9",
+      "not_before": "2025-01-06",
+      "not_after": "2026-11-27",
+      "days_remaining": 90,
+      "signature_algorithm": "SHA256withRSA",
+      "public_key_algorithm": "RSA",
+      "public_key_size": 2048,
+      "basic_constraints_ca": false,
+      "path_length": null,
+      "subject_alt_names": [
+        "kyc-service.tejomaya.internal"
+      ],
+      "key_usage": [
+        "digitalSignature",
+        "keyEncipherment"
+      ],
+      "extended_key_usage": [
+        "serverAuth"
+      ],
+      "sha256_fingerprint": "E4:CD:06:72:01:83:F3:24:14:14:82:46:C2:C3:6C:1A",
+      "self_signed": false
+    },
+    {
+      "subject": "CN=aml-screening.tejomaya.internal,O=Tejomaya Bank,C=IN",
+      "issuer": "CN=Tejomaya Issuing CA - Services,O=Tejomaya Bank,C=IN",
+      "serial_number": "F3:72:39:6F:B9:0E:87:C2",
+      "not_before": "2024-10-08",
+      "not_after": "2026-09-25",
+      "days_remaining": 27,
+      "signature_algorithm": "SHA256withRSA",
+      "public_key_algorithm": "RSA",
+      "public_key_size": 2048,
+      "basic_constraints_ca": false,
+      "path_length": null,
+      "subject_alt_names": [
+        "aml-screening.tejomaya.internal"
+      ],
+      "key_usage": [
+        "digitalSignature",
+        "keyEncipherment"
+      ],
+      "extended_key_usage": [
+        "serverAuth"
+      ],
+      "sha256_fingerprint": "36:19:0E:F7:FB:9D:AE:71:C3:B2:19:5A:7A:68:CA:21",
+      "self_signed": false
+    },
+    {
+      "subject": "CN=forex-rates.tejomaya.internal,O=Tejomaya Bank,C=IN",
+      "issuer": "CN=Tejomaya Issuing CA - TLS,O=Tejomaya Bank,C=IN",
+      "serial_number": "E0:4D:6E:10:FE:1C:CB:E2",
+      "not_before": "2026-05-21",
+      "not_after": "2028-11-06",
+      "days_remaining": 800,
+      "signature_algorithm": "SHA256withECDSA",
+      "public_key_algorithm": "ECDSA",
+      "public_key_size": 256,
+      "basic_constraints_ca": false,
+      "path_length": null,
+      "subject_alt_names": [
+        "forex-rates.tejomaya.internal"
+      ],
+      "key_usage": [
+        "digitalSignature",
+        "keyEncipherment"
+      ],
+      "extended_key_usage": [
+        "serverAuth"
+      ],
+      "sha256_fingerprint": "2A:D6:DD:35:8E:A2:22:35:BA:E1:76:0C:88:45:79:5E",
+      "self_signed": false
+    },
+    {
+      "subject": "CN=loan-origination.tejomaya.internal,O=Tejomaya Bank,C=IN",
+      "issuer": "CN=Tejomaya Issuing CA - Services,O=Tejomaya Bank,C=IN",
+      "serial_number": "65:A2:AD:C0:A1:35:42:A5",
+      "not_before": "2025-08-14",
+      "not_after": "2027-08-04",
+      "days_remaining": 340,
+      "signature_algorithm": "SHA256withRSA",
+      "public_key_algorithm": "RSA",
+      "public_key_size": 2048,
+      "basic_constraints_ca": false,
+      "path_length": null,
+      "subject_alt_names": [
+        "loan-origination.tejomaya.internal"
+      ],
+      "key_usage": [
+        "digitalSignature",
+        "keyEncipherment"
+      ],
+      "extended_key_usage": [
+        "serverAuth"
+      ],
+      "sha256_fingerprint": "46:7A:CA:FD:A0:42:EC:25:88:2F:7A:6B:48:42:5E:AB",
+      "self_signed": false
+    },
+    {
+      "subject": "CN=deposits-api.tejomaya.internal,O=Tejomaya Bank,C=IN",
+      "issuer": "CN=Tejomaya Issuing CA - Services,O=Tejomaya Bank,C=IN",
+      "serial_number": "DE:D0:B2:CE:DA:76:92:0C",
+      "not_before": "2025-12-12",
+      "not_after": "2028-04-30",
+      "days_remaining": 610,
+      "signature_algorithm": "SHA256withRSA",
+      "public_key_algorithm": "RSA",
+      "public_key_size": 2048,
+      "basic_constraints_ca": false,
+      "path_length": null,
+      "subject_alt_names": [
+        "deposits-api.tejomaya.internal"
+      ],
+      "key_usage": [
+        "digitalSignature",
+        "keyEncipherment"
+      ],
+      "extended_key_usage": [
+        "serverAuth"
+      ],
+      "sha256_fingerprint": "12:CB:63:FD:94:8B:D1:FC:3E:BA:1E:7D:D7:22:F6:68",
+      "self_signed": false
+    },
+    {
+      "subject": "CN=wallet-service.tejomaya.internal,O=Tejomaya Bank,C=IN",
+      "issuer": "CN=Tejomaya Issuing CA - Services,O=Tejomaya Bank,C=IN",
+      "serial_number": "8B:D8:FA:14:99:9F:5E:4D",
+      "not_before": "2024-11-17",
+      "not_after": "2026-10-23",
+      "days_remaining": 55,
+      "signature_algorithm": "SHA256withECDSA",
+      "public_key_algorithm": "ECDSA",
+      "public_key_size": 256,
+      "basic_constraints_ca": false,
+      "path_length": null,
+      "subject_alt_names": [
+        "wallet-service.tejomaya.internal"
+      ],
+      "key_usage": [
+        "digitalSignature",
+        "keyEncipherment"
+      ],
+      "extended_key_usage": [
+        "serverAuth"
+      ],
+      "sha256_fingerprint": "9C:6F:75:37:74:69:56:6A:4D:5B:39:24:9E:27:5F:83",
+      "self_signed": false
+    },
+    {
+      "subject": "CN=merchant-onboarding.tejomaya.internal,O=Tejomaya Bank,C=IN",
+      "issuer": "CN=Tejomaya Issuing CA - TLS,O=Tejomaya Bank,C=IN",
+      "serial_number": "F9:BB:72:15:AC:39:4E:EF",
+      "not_before": "2025-11-02",
+      "not_after": "2027-12-22",
+      "days_remaining": 480,
+      "signature_algorithm": "SHA256withRSA",
+      "public_key_algorithm": "RSA",
+      "public_key_size": 2048,
+      "basic_constraints_ca": false,
+      "path_length": null,
+      "subject_alt_names": [
+        "merchant-onboarding.tejomaya.internal"
+      ],
+      "key_usage": [
+        "digitalSignature",
+        "keyEncipherment"
+      ],
+      "extended_key_usage": [
+        "serverAuth"
+      ],
+      "sha256_fingerprint": "C0:3C:0A:16:28:7E:A9:80:AD:F6:19:C3:D7:B3:4F:5A",
+      "self_signed": false
+    },
+    {
+      "subject": "CN=settlement-api.tejomaya.internal,O=Tejomaya Bank,C=IN",
+      "issuer": "CN=Tejomaya Issuing CA - Services,O=Tejomaya Bank,C=IN",
+      "serial_number": "B7:5C:4B:A9:1B:68:5D:D2",
+      "not_before": "2024-07-30",
+      "not_after": "2026-09-03",
+      "days_remaining": 5,
+      "signature_algorithm": "SHA256withRSA",
+      "public_key_algorithm": "RSA",
+      "public_key_size": 3072,
+      "basic_constraints_ca": false,
+      "path_length": null,
+      "subject_alt_names": [
+        "settlement-api.tejomaya.internal"
+      ],
+      "key_usage": [
+        "digitalSignature",
+        "keyEncipherment"
+      ],
+      "extended_key_usage": [
+        "serverAuth"
+      ],
+      "sha256_fingerprint": "01:91:EC:21:C9:DE:E8:F4:E6:45:D5:50:74:55:81:87",
+      "self_signed": false
+    },
+    {
+      "subject": "CN=recon-engine.tejomaya.internal,O=Tejomaya Bank,C=IN",
+      "issuer": "CN=Tejomaya Issuing CA - Services,O=Tejomaya Bank,C=IN",
+      "serial_number": "20:F7:B1:23:A3:3E:9D:97",
+      "not_before": "2025-07-05",
+      "not_after": "2027-06-15",
+      "days_remaining": 290,
+      "signature_algorithm": "SHA256withRSA",
+      "public_key_algorithm": "RSA",
+      "public_key_size": 2048,
+      "basic_constraints_ca": false,
+      "path_length": null,
+      "subject_alt_names": [
+        "recon-engine.tejomaya.internal"
+      ],
+      "key_usage": [
+        "digitalSignature",
+        "keyEncipherment"
+      ],
+      "extended_key_usage": [
+        "serverAuth"
+      ],
+      "sha256_fingerprint": "D9:81:73:4A:9D:35:AC:0F:A1:2E:E3:73:28:0B:3F:DF",
+      "self_signed": false
+    },
+    {
+      "subject": "CN=reporting-api.tejomaya.internal,O=Tejomaya Bank,C=IN",
+      "issuer": "CN=Tejomaya Issuing CA - TLS,O=Tejomaya Bank,C=IN",
+      "serial_number": "E9:E6:5E:CC:22:4B:12:17",
+      "not_before": "2026-06-10",
+      "not_after": "2029-02-14",
+      "days_remaining": 900,
+      "signature_algorithm": "SHA256withRSA",
+      "public_key_algorithm": "RSA",
+      "public_key_size": 2048,
+      "basic_constraints_ca": false,
+      "path_length": null,
+      "subject_alt_names": [
+        "reporting-api.tejomaya.internal"
+      ],
+      "key_usage": [
+        "digitalSignature",
+        "keyEncipherment"
+      ],
+      "extended_key_usage": [
+        "serverAuth"
+      ],
+      "sha256_fingerprint": "80:62:95:63:5D:67:10:1A:B0:57:77:27:DC:D8:71:AB",
+      "self_signed": false
+    },
+    {
+      "subject": "CN=admin-portal.tejomaya.internal,O=Tejomaya Bank,C=IN",
+      "issuer": "CN=Tejomaya Issuing CA - TLS,O=Tejomaya Bank,C=IN",
+      "serial_number": "9B:FE:54:58:90:BC:5C:5B",
+      "not_before": "2025-03-27",
+      "not_after": "2027-01-06",
+      "days_remaining": 130,
+      "signature_algorithm": "SHA256withRSA",
+      "public_key_algorithm": "RSA",
+      "public_key_size": 2048,
+      "basic_constraints_ca": false,
+      "path_length": null,
+      "subject_alt_names": [
+        "admin-portal.tejomaya.internal"
+      ],
+      "key_usage": [
+        "digitalSignature",
+        "keyEncipherment"
+      ],
+      "extended_key_usage": [
+        "serverAuth"
+      ],
+      "sha256_fingerprint": "18:C9:9D:51:43:46:52:D4:CF:D0:1D:DA:DC:55:64:AD",
+      "self_signed": false
+    },
+    {
+      "subject": "CN=partner-gateway.tejomaya.internal,O=Tejomaya Bank,C=IN",
+      "issuer": "CN=Tejomaya Issuing CA - Services,O=Tejomaya Bank,C=IN",
+      "serial_number": "C8:D2:BD:AF:B9:C9:FE:24",
+      "not_before": "2025-10-03",
+      "not_after": "2027-10-23",
+      "days_remaining": 420,
+      "signature_algorithm": "SHA256withRSA",
+      "public_key_algorithm": "RSA",
+      "public_key_size": 3072,
+      "basic_constraints_ca": false,
+      "path_length": null,
+      "subject_alt_names": [
+        "partner-gateway.tejomaya.internal"
+      ],
+      "key_usage": [
+        "digitalSignature",
+        "keyEncipherment"
+      ],
+      "extended_key_usage": [
+        "serverAuth"
+      ],
+      "sha256_fingerprint": "5B:DF:0E:BA:CE:E7:43:C7:C7:26:8F:3C:EB:37:49:C9",
+      "self_signed": false
+    },
+    {
+      "subject": "CN=webhook-dispatch.tejomaya.internal,O=Tejomaya Bank,C=IN",
+      "issuer": "CN=Tejomaya Issuing CA - TLS,O=Tejomaya Bank,C=IN",
+      "serial_number": "48:74:0A:AF:E6:93:F0:36",
+      "not_before": "2025-07-15",
+      "not_after": "2027-05-06",
+      "days_remaining": 250,
+      "signature_algorithm": "SHA256withECDSA",
+      "public_key_algorithm": "ECDSA",
+      "public_key_size": 256,
+      "basic_constraints_ca": false,
+      "path_length": null,
+      "subject_alt_names": [
+        "webhook-dispatch.tejomaya.internal"
+      ],
+      "key_usage": [
+        "digitalSignature",
+        "keyEncipherment"
+      ],
+      "extended_key_usage": [
+        "serverAuth"
+      ],
+      "sha256_fingerprint": "47:D4:42:89:8E:F1:2E:92:E4:AD:A9:25:99:CB:E8:9E",
+      "self_signed": false
+    },
+    {
+      "subject": "CN=otp-service.tejomaya.internal,O=Tejomaya Bank,C=IN",
+      "issuer": "CN=Tejomaya Issuing CA - Services,O=Tejomaya Bank,C=IN",
+      "serial_number": "DB:25:3E:EE:21:60:1D:97",
+      "not_before": "2024-09-28",
+      "not_after": "2026-09-16",
+      "days_remaining": 18,
+      "signature_algorithm": "SHA256withRSA",
+      "public_key_algorithm": "RSA",
+      "public_key_size": 2048,
+      "basic_constraints_ca": false,
+      "path_length": null,
+      "subject_alt_names": [
+        "otp-service.tejomaya.internal"
+      ],
+      "key_usage": [
+        "digitalSignature",
+        "keyEncipherment"
+      ],
+      "extended_key_usage": [
+        "serverAuth"
+      ],
+      "sha256_fingerprint": "A6:B7:5A:2C:63:2C:6B:23:EA:53:E6:A1:9F:31:C9:E1",
+      "self_signed": false
+    },
+    {
+      "subject": "CN=esign-service.tejomaya.internal,O=Tejomaya Bank,C=IN",
+      "issuer": "CN=Tejomaya Issuing CA - Services,O=Tejomaya Bank,C=IN",
+      "serial_number": "5E:D0:EF:03:2D:49:37:6D",
+      "not_before": "2025-09-03",
+      "not_after": "2027-08-24",
+      "days_remaining": 360,
+      "signature_algorithm": "SHA256withRSA",
+      "public_key_algorithm": "RSA",
+      "public_key_size": 2048,
+      "basic_constraints_ca": false,
+      "path_length": null,
+      "subject_alt_names": [
+        "esign-service.tejomaya.internal"
+      ],
+      "key_usage": [
+        "digitalSignature",
+        "keyEncipherment"
+      ],
+      "extended_key_usage": [
+        "serverAuth"
+      ],
+      "sha256_fingerprint": "DF:A5:76:D1:B2:59:CB:3D:09:BB:84:31:97:F1:E7:4F",
+      "self_signed": false
+    },
+    {
+      "subject": "CN=jwt-issuer.tejomaya.internal,O=Tejomaya Bank,C=IN",
+      "issuer": "CN=Tejomaya Issuing CA - Services,O=Tejomaya Bank,C=IN",
+      "serial_number": "C6:73:C4:14:61:7E:51:D1",
+      "not_before": "2025-12-12",
+      "not_after": "2028-02-20",
+      "days_remaining": 540,
+      "signature_algorithm": "SHA256withECDSA",
+      "public_key_algorithm": "ECDSA",
+      "public_key_size": 256,
+      "basic_constraints_ca": false,
+      "path_length": null,
+      "subject_alt_names": [
+        "jwt-issuer.tejomaya.internal"
+      ],
+      "key_usage": [
+        "digitalSignature",
+        "keyEncipherment"
+      ],
+      "extended_key_usage": [
+        "serverAuth"
+      ],
+      "sha256_fingerprint": "78:81:17:A1:E6:06:20:22:51:7B:42:D0:4B:43:88:97",
+      "self_signed": false
+    },
+    {
+      "subject": "CN=document-store.tejomaya.internal,O=Tejomaya Bank,C=IN",
+      "issuer": "CN=Tejomaya Issuing CA - TLS,O=Tejomaya Bank,C=IN",
+      "serial_number": "32:19:79:4A:5C:B5:39:D5",
+      "not_before": "2026-04-01",
+      "not_after": "2028-07-29",
+      "days_remaining": 700,
+      "signature_algorithm": "SHA256withRSA",
+      "public_key_algorithm": "RSA",
+      "public_key_size": 2048,
+      "basic_constraints_ca": false,
+      "path_length": null,
+      "subject_alt_names": [
+        "document-store.tejomaya.internal"
+      ],
+      "key_usage": [
+        "digitalSignature",
+        "keyEncipherment"
+      ],
+      "extended_key_usage": [
+        "serverAuth"
+      ],
+      "sha256_fingerprint": "03:08:36:D5:6D:87:8E:05:BD:D8:75:48:5A:33:8A:A8",
+      "self_signed": false
+    },
+    {
+      "subject": "CN=audit-log.tejomaya.internal,O=Tejomaya Bank,C=IN",
+      "issuer": "CN=Tejomaya Issuing CA - TLS,O=Tejomaya Bank,C=IN",
+      "serial_number": "10:B4:D4:10:A4:81:D8:59",
+      "not_before": "2025-07-25",
+      "not_after": "2027-07-15",
+      "days_remaining": 320,
+      "signature_algorithm": "SHA256withRSA",
+      "public_key_algorithm": "RSA",
+      "public_key_size": 2048,
+      "basic_constraints_ca": false,
+      "path_length": null,
+      "subject_alt_names": [
+        "audit-log.tejomaya.internal"
+      ],
+      "key_usage": [
+        "digitalSignature",
+        "keyEncipherment"
+      ],
+      "extended_key_usage": [
+        "serverAuth"
+      ],
+      "sha256_fingerprint": "65:61:80:C0:0F:86:6E:82:5F:D2:AA:0C:CE:7C:BE:94",
+      "self_signed": false
+    },
+    {
+      "subject": "CN=config-service.tejomaya.internal,O=Tejomaya Bank,C=IN",
+      "issuer": "CN=Tejomaya Issuing CA - TLS,O=Tejomaya Bank,C=IN",
+      "serial_number": "15:BC:19:51:35:A5:77:DA",
+      "not_before": "2026-02-10",
+      "not_after": "2028-04-30",
+      "days_remaining": 610,
+      "signature_algorithm": "SHA256withECDSA",
+      "public_key_algorithm": "ECDSA",
+      "public_key_size": 256,
+      "basic_constraints_ca": false,
+      "path_length": null,
+      "subject_alt_names": [
+        "config-service.tejomaya.internal"
+      ],
+      "key_usage": [
+        "digitalSignature",
+        "keyEncipherment"
+      ],
+      "extended_key_usage": [
+        "serverAuth"
+      ],
+      "sha256_fingerprint": "93:D2:66:E6:F3:64:2E:0A:FF:1A:83:AC:7F:CE:C0:56",
+      "self_signed": false
+    },
+    {
+      "subject": "CN=firmware-update.tejomaya.internal,O=Tejomaya Bank,C=IN",
+      "issuer": "CN=Tejomaya Issuing CA - Devices,O=Tejomaya Bank,C=IN",
+      "serial_number": "FB:55:5D:D2:B2:F6:D8:7E",
+      "not_before": "2025-11-02",
+      "not_after": "2029-09-02",
+      "days_remaining": 1100,
+      "signature_algorithm": "SHA256withRSA",
+      "public_key_algorithm": "RSA",
+      "public_key_size": 3072,
+      "basic_constraints_ca": false,
+      "path_length": null,
+      "subject_alt_names": [
+        "firmware-update.tejomaya.internal"
+      ],
+      "key_usage": [
+        "digitalSignature",
+        "keyEncipherment"
+      ],
+      "extended_key_usage": [
+        "serverAuth"
+      ],
+      "sha256_fingerprint": "C7:BC:8D:C8:DB:55:62:73:40:BB:A3:73:7A:91:8F:44",
+      "self_signed": false
+    },
+    {
+      "subject": "CN=pos-terminal-leaf.tejomaya.internal,O=Tejomaya Bank,C=IN",
+      "issuer": "CN=Tejomaya Issuing CA - Devices,O=Tejomaya Bank,C=IN",
+      "serial_number": "CE:3E:18:71:AC:EA:1D:72",
+      "not_before": "2025-09-13",
+      "not_after": "2027-12-22",
+      "days_remaining": 480,
+      "signature_algorithm": "SHA256withECDSA",
+      "public_key_algorithm": "ECDSA",
+      "public_key_size": 256,
+      "basic_constraints_ca": false,
+      "path_length": null,
+      "subject_alt_names": [
+        "pos-terminal-leaf.tejomaya.internal"
+      ],
+      "key_usage": [
+        "digitalSignature",
+        "keyEncipherment"
+      ],
+      "extended_key_usage": [
+        "serverAuth"
+      ],
+      "sha256_fingerprint": "F0:87:60:CC:53:86:43:7C:C8:BE:8C:15:68:85:FA:F8",
+      "self_signed": false
+    },
+    {
+      "subject": "CN=code-sign-portal.tejomaya.internal,O=Tejomaya Bank,C=IN",
+      "issuer": "CN=Tejomaya Issuing CA - Services,O=Tejomaya Bank,C=IN",
+      "serial_number": "D2:CC:C9:AF:C0:F0:81:B3",
+      "not_before": "2025-11-02",
+      "not_after": "2027-05-16",
+      "days_remaining": 260,
+      "signature_algorithm": "SHA256withRSA",
+      "public_key_algorithm": "RSA",
+      "public_key_size": 3072,
+      "basic_constraints_ca": false,
+      "path_length": null,
+      "subject_alt_names": [
+        "code-sign-portal.tejomaya.internal"
+      ],
+      "key_usage": [
+        "digitalSignature",
+        "keyEncipherment"
+      ],
+      "extended_key_usage": [
+        "serverAuth"
+      ],
+      "sha256_fingerprint": "C1:B6:9C:C0:7D:5B:85:6D:49:65:55:B7:D7:1F:E4:B9",
+      "self_signed": false
+    },
+    {
+      "subject": "CN=grafana-internal.tejomaya.internal,O=Tejomaya Bank,C=IN",
+      "issuer": "CN=Tejomaya Issuing CA - TLS,O=Tejomaya Bank,C=IN",
+      "serial_number": "AC:AB:2A:94:40:8F:9F:37",
+      "not_before": "2024-06-20",
+      "not_after": "2026-08-10",
+      "days_remaining": -19,
+      "signature_algorithm": "SHA256withRSA",
+      "public_key_algorithm": "RSA",
+      "public_key_size": 2048,
+      "basic_constraints_ca": false,
+      "path_length": null,
+      "subject_alt_names": [
+        "grafana-internal.tejomaya.internal"
+      ],
+      "key_usage": [
+        "digitalSignature",
+        "keyEncipherment"
+      ],
+      "extended_key_usage": [
+        "serverAuth"
+      ],
+      "sha256_fingerprint": "45:98:7E:88:3A:57:E8:8A:D5:72:46:1A:41:2E:CF:A9",
+      "self_signed": false
+    },
+    {
+      "subject": "CN=kafka-connect.tejomaya.internal,O=Tejomaya Bank,C=IN",
+      "issuer": "CN=Tejomaya Issuing CA - TLS,O=Tejomaya Bank,C=IN",
+      "serial_number": "57:48:CF:15:34:A8:AF:CE",
+      "not_before": "2025-06-25",
+      "not_after": "2027-03-27",
+      "days_remaining": 210,
+      "signature_algorithm": "SHA256withRSA",
+      "public_key_algorithm": "RSA",
+      "public_key_size": 2048,
+      "basic_constraints_ca": false,
+      "path_length": null,
+      "subject_alt_names": [
+        "kafka-connect.tejomaya.internal"
+      ],
+      "key_usage": [
+        "digitalSignature",
+        "keyEncipherment"
+      ],
+      "extended_key_usage": [
+        "serverAuth"
+      ],
+      "sha256_fingerprint": "E8:C8:8A:38:AE:C4:60:5F:EE:E6:0D:32:00:8F:85:22",
+      "self_signed": false
+    },
+    {
+      "subject": "CN=service-mesh-gw.tejomaya.internal,O=Tejomaya Bank,C=IN",
+      "issuer": "CN=Tejomaya Issuing CA - TLS,O=Tejomaya Bank,C=IN",
+      "serial_number": "5B:61:CF:AA:05:A4:C1:7F",
+      "not_before": "2025-11-02",
+      "not_after": "2027-09-13",
+      "days_remaining": 380,
+      "signature_algorithm": "SHA384withECDSA",
+      "public_key_algorithm": "ECDSA",
+      "public_key_size": 384,
+      "basic_constraints_ca": false,
+      "path_length": null,
+      "subject_alt_names": [
+        "service-mesh-gw.tejomaya.internal"
+      ],
+      "key_usage": [
+        "digitalSignature",
+        "keyEncipherment"
+      ],
+      "extended_key_usage": [
+        "serverAuth"
+      ],
+      "sha256_fingerprint": "D5:F7:E3:DA:EE:02:E6:D7:3A:7F:AA:8E:31:73:1D:92",
+      "self_signed": false
+    }
+  ]
+}

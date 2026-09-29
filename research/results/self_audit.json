@@ -1,0 +1,341 @@
+{
+  "commit": "2fb8ca9",
+  "seed": 20260928,
+  "0.5_identity": {
+    "feature_list_equal": true,
+    "exported_at_commit": "3249b86",
+    "max_abs_prediction_difference_vs_refit": 0.390189048141273,
+    "sealed_O0_O2_shipped": {
+      "roc_auc": 0.8266,
+      "pr_auc": 0.7371,
+      "n": 9227,
+      "crypto": 3142
+    },
+    "v1_1_reported_sealed": 0.8263
+  },
+  "0.1_leakage": {
+    "dev": {
+      "rows": 13742,
+      "byte_identical_to_train": 179,
+      "share": 0.013,
+      "with": {
+        "roc_auc": 0.8025,
+        "pr_auc": 0.7898,
+        "n": 13742,
+        "crypto": 6560
+      },
+      "without": {
+        "roc_auc": 0.8004,
+        "pr_auc": 0.791,
+        "n": 13563,
+        "crypto": 6556
+      }
+    },
+    "sealed": {
+      "rows": 16283,
+      "byte_identical_to_train": 27,
+      "share": 0.0017,
+      "with": {
+        "roc_auc": 0.8369,
+        "pr_auc": 0.7575,
+        "n": 16283,
+        "crypto": 5708
+      },
+      "without": {
+        "roc_auc": 0.8369,
+        "pr_auc": 0.7577,
+        "n": 16256,
+        "crypto": 5705
+      }
+    },
+    "sealed_b": {
+      "rows": 43114,
+      "byte_identical_to_train": 58,
+      "share": 0.0013,
+      "with": {
+        "roc_auc": 0.7957,
+        "pr_auc": 0.58,
+        "n": 43114,
+        "crypto": 7614
+      },
+      "without": {
+        "roc_auc": 0.7961,
+        "pr_auc": 0.5804,
+        "n": 43056,
+        "crypto": 7605
+      }
+    },
+    "sealed_c": {
+      "rows": 561,
+      "byte_identical_to_train": 5,
+      "share": 0.0089,
+      "with": {
+        "roc_auc": 0.6489,
+        "pr_auc": 0.8412,
+        "n": 561,
+        "crypto": 418
+      },
+      "without": {
+        "roc_auc": 0.6441,
+        "pr_auc": 0.8393,
+        "n": 556,
+        "crypto": 415
+      }
+    },
+    "byte_identical_keys_with_conflicting_labels": 49
+  },
+  "0.3_per_library": {
+    "threshold_from_dev_nulls": 0.744,
+    "libraries": {
+      "argon2": {
+        "split": "sealed_c",
+        "n": 383,
+        "crypto": 242,
+        "metrics": {
+          "roc_auc": 0.6343,
+          "pr_auc": 0.7336,
+          "n": 383,
+          "crypto": 242
+        },
+        "recall_at_dev_fpr_5pct": 0.376,
+        "false_positive_rate_at_dev_fpr_5pct": 0.227
+      },
+      "bearssl": {
+        "split": "sealed",
+        "n": 7925,
+        "crypto": 5239,
+        "metrics": {
+          "roc_auc": 0.8212,
+          "pr_auc": 0.8953,
+          "n": 7925,
+          "crypto": 5239
+        },
+        "recall_at_dev_fpr_5pct": 0.5016,
+        "false_positive_rate_at_dev_fpr_5pct": 0.0923
+      },
+      "blake3": {
+        "split": "sealed_c",
+        "n": 160,
+        "crypto": 160,
+        "metrics": null,
+        "recall_at_dev_fpr_5pct": 0.3438,
+        "false_positive_rate_at_dev_fpr_5pct": null
+      },
+      "brotli": {
+        "split": "sealed",
+        "n": 3780,
+        "crypto": 0,
+        "metrics": null,
+        "recall_at_dev_fpr_5pct": null,
+        "false_positive_rate_at_dev_fpr_5pct": 0.0733
+      },
+      "libdeflate": {
+        "split": "sealed",
+        "n": 801,
+        "crypto": 0,
+        "metrics": null,
+        "recall_at_dev_fpr_5pct": null,
+        "false_positive_rate_at_dev_fpr_5pct": 0.0699
+      },
+      "libpng": {
+        "split": "sealed_b",
+        "n": 6325,
+        "crypto": 0,
+        "metrics": null,
+        "recall_at_dev_fpr_5pct": null,
+        "false_positive_rate_at_dev_fpr_5pct": 0.0232
+      },
+      "libsodium": {
+        "split": "sealed_b",
+        "n": 3102,
+        "crypto": 2702,
+        "metrics": {
+          "roc_auc": 0.6501,
+          "pr_auc": 0.9241,
+          "n": 3102,
+          "crypto": 2702
+        },
+        "recall_at_dev_fpr_5pct": 0.4167,
+        "false_positive_rate_at_dev_fpr_5pct": 0.1975
+      },
+      "lodepng": {
+        "split": "sealed",
+        "n": 2393,
+        "crypto": 0,
+        "metrics": null,
+        "recall_at_dev_fpr_5pct": null,
+        "false_positive_rate_at_dev_fpr_5pct": 0.0639
+      },
+      "siphash": {
+        "split": "sealed",
+        "n": 32,
+        "crypto": 32,
+        "metrics": null,
+        "recall_at_dev_fpr_5pct": 0.9688,
+        "false_positive_rate_at_dev_fpr_5pct": null
+      },
+      "sqlite": {
+        "split": "sealed_b",
+        "n": 26268,
+        "crypto": 0,
+        "metrics": null,
+        "recall_at_dev_fpr_5pct": null,
+        "false_positive_rate_at_dev_fpr_5pct": 0.0186
+      },
+      "tiny_sha3": {
+        "split": "sealed_c",
+        "n": 13,
+        "crypto": 13,
+        "metrics": null,
+        "recall_at_dev_fpr_5pct": 1.0,
+        "false_positive_rate_at_dev_fpr_5pct": null
+      },
+      "tweetnacl": {
+        "split": "sealed",
+        "n": 434,
+        "crypto": 434,
+        "metrics": null,
+        "recall_at_dev_fpr_5pct": 0.4032,
+        "false_positive_rate_at_dev_fpr_5pct": null
+      },
+      "wolfssl": {
+        "split": "sealed_b",
+        "n": 7361,
+        "crypto": 4903,
+        "metrics": {
+          "roc_auc": 0.6956,
+          "pr_auc": 0.8346,
+          "n": 7361,
+          "crypto": 4903
+        },
+        "recall_at_dev_fpr_5pct": 0.2823,
+        "false_positive_rate_at_dev_fpr_5pct": 0.0545
+      },
+      "yyjson": {
+        "split": "sealed",
+        "n": 891,
+        "crypto": 0,
+        "metrics": null,
+        "recall_at_dev_fpr_5pct": null,
+        "false_positive_rate_at_dev_fpr_5pct": 0.0146
+      }
+    },
+    "crypto_libraries_evaluated": [
+      "argon2",
+      "bearssl",
+      "blake3",
+      "libsodium",
+      "siphash",
+      "tiny_sha3",
+      "tweetnacl",
+      "wolfssl"
+    ],
+    "all_sealed": {
+      "roc_auc": 0.8198,
+      "pr_auc": 0.6622,
+      "n": 59868,
+      "crypto": 13725
+    }
+  },
+  "0.2_validity": {
+    "prevalence_manipulation": "positives are removed from the test side only; calibration is nulls only; test nulls remain a random subset (grouped by source function) of the same null population as calibration, so exchangeability is preserved by construction",
+    "pooled_studies_caveat": "pooled studies split functions at random, so calibration and test share libraries; this is favourable to exchangeability and is why the library-disjoint test below exists",
+    "library_disjoint_binaries": {
+      "calibration": "shipped nulls (dev + sealed, per ISA)",
+      "test": "sealed_b + sealed_c, O0/O2",
+      "alpha": 0.1,
+      "cells": {
+        "m=50,prev=0.05": {
+          "mean_fdp": 0.0133,
+          "fdp_ci99_upper": 0.0281,
+          "power": 0.0867
+        },
+        "m=50,prev=0.01": {
+          "mean_fdp": 0.015,
+          "fdp_ci99_upper": 0.0326,
+          "power": 0.0533
+        },
+        "m=100,prev=0.05": {
+          "mean_fdp": 0.0078,
+          "fdp_ci99_upper": 0.0168,
+          "power": 0.0573
+        },
+        "m=100,prev=0.01": {
+          "mean_fdp": 0.0017,
+          "fdp_ci99_upper": 0.006,
+          "power": 0.04
+        },
+        "m=500,prev=0.05": {
+          "mean_fdp": 0.0006,
+          "fdp_ci99_upper": 0.002,
+          "power": 0.0247
+        },
+        "m=500,prev=0.01": {
+          "mean_fdp": 0.0,
+          "fdp_ci99_upper": 0.0,
+          "power": 0.012
+        }
+      }
+    },
+    "null_share_above_calibration_q95": {
+      "argon2": {
+        "x86-64": 0.175,
+        "aarch64": 0.2222,
+        "arm32": 0.2222
+      },
+      "libpng": {
+        "x86-64": 0.021,
+        "aarch64": 0.0214,
+        "arm32": 0.013
+      },
+      "libsodium": {
+        "x86-64": 0.1908,
+        "aarch64": 0.2157,
+        "arm32": 0.2
+      },
+      "sqlite": {
+        "x86-64": 0.0182,
+        "aarch64": 0.0192,
+        "arm32": 0.0022
+      },
+      "wolfssl": {
+        "x86-64": 0.0347,
+        "aarch64": 0.0374,
+        "arm32": 0.0649
+      }
+    }
+  },
+  "0.4_findcrypt_fair": {
+    "as_released_all_rules": {
+      "tpr": 0.375,
+      "fpr": 0.286
+    },
+    "crypto_rules_only": {
+      "tpr": 0.375,
+      "fpr": 0.0
+    },
+    "false_alarm_rules": [
+      "CRC32_poly_Constant"
+    ],
+    "programs_whose_primitive_findcrypt_knows": [
+      "monocypher_x86_64",
+      "monocypher_aarch64",
+      "tweetnacl_x86_64",
+      "tweetnacl_aarch64",
+      "sqlite_chacha_x86_64",
+      "sqlite_chacha_aarch64"
+    ],
+    "missed_by_findcrypt_found_by_vera": [
+      "microecc_aarch64",
+      "microecc_x86_64",
+      "mldsa44_aarch64",
+      "mldsa44_x86_64",
+      "mlkem768_aarch64",
+      "mlkem768_x86_64",
+      "siphash_aarch64",
+      "siphash_x86_64"
+    ],
+    "note": "Findcrypt identifies known constants; its CRC32 rule fires on checksums by design, so those are not errors of the tool. It is complementary: it names algorithms, VERA certifies presence."
+  },
+  "minutes": 0.7
+}

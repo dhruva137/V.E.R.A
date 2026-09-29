@@ -1,0 +1,665 @@
+{
+  "commit": "2fb8ca9",
+  "seed": 20260928,
+  "label_counts": {
+    "core": 27011,
+    "orchestration": 13748,
+    "unmatched": 481,
+    "noncrypto": 87048
+  },
+  "rows": {
+    "dev/O0": 4896,
+    "dev/O2": 2896,
+    "dev/O3": 2878,
+    "dev/Os": 3072,
+    "sealed/O0": 5771,
+    "sealed/O2": 3456,
+    "sealed/O3": 3425,
+    "sealed/Os": 3631,
+    "sealed_b/O0": 14917,
+    "sealed_b/O2": 9245,
+    "sealed_b/O3": 9168,
+    "sealed_b/Os": 9784,
+    "train/O0": 15056,
+    "train/O2": 8550,
+    "train/O3": 8466,
+    "train/Os": 8848
+  },
+  "B5_sealed_by_opt": {
+    "O0": {
+      "v1_trained_O0_O2": {
+        "roc_auc": 0.8095,
+        "pr_auc": 0.7045,
+        "n": 5771,
+        "crypto": 1895
+      },
+      "v1_trained_all_opts": {
+        "roc_auc": 0.8024,
+        "pr_auc": 0.7015,
+        "n": 5771,
+        "crypto": 1895
+      }
+    },
+    "O2": {
+      "v1_trained_O0_O2": {
+        "roc_auc": 0.8529,
+        "pr_auc": 0.7832,
+        "n": 3456,
+        "crypto": 1247
+      },
+      "v1_trained_all_opts": {
+        "roc_auc": 0.8628,
+        "pr_auc": 0.7924,
+        "n": 3456,
+        "crypto": 1247
+      }
+    },
+    "O3": {
+      "v1_trained_O0_O2": {
+        "roc_auc": 0.8562,
+        "pr_auc": 0.7887,
+        "n": 3425,
+        "crypto": 1224
+      },
+      "v1_trained_all_opts": {
+        "roc_auc": 0.8668,
+        "pr_auc": 0.7977,
+        "n": 3425,
+        "crypto": 1224
+      }
+    },
+    "Os": {
+      "v1_trained_O0_O2": {
+        "roc_auc": 0.8445,
+        "pr_auc": 0.7746,
+        "n": 3631,
+        "crypto": 1342
+      },
+      "v1_trained_all_opts": {
+        "roc_auc": 0.8627,
+        "pr_auc": 0.7967,
+        "n": 3631,
+        "crypto": 1342
+      }
+    }
+  },
+  "A2_sealed_b": {
+    "v1_trained_O0_O2": {
+      "roc_auc": 0.7965,
+      "pr_auc": 0.5804,
+      "n": 43114,
+      "crypto": 7614
+    },
+    "v1_trained_all_opts": {
+      "roc_auc": 0.8006,
+      "pr_auc": 0.587,
+      "n": 43114,
+      "crypto": 7614
+    },
+    "loops": {
+      "roc_auc": 0.8005,
+      "pr_auc": 0.5847,
+      "n": 43114,
+      "crypto": 7614
+    }
+  },
+  "A2_sealed_b_by_isa": {
+    "x86-64": {
+      "roc_auc": 0.7933,
+      "pr_auc": 0.5392,
+      "n": 20565,
+      "crypto": 3036
+    },
+    "aarch64": {
+      "roc_auc": 0.7418,
+      "pr_auc": 0.5504,
+      "n": 11244,
+      "crypto": 2299
+    },
+    "arm32": {
+      "roc_auc": 0.8595,
+      "pr_auc": 0.7025,
+      "n": 11305,
+      "crypto": 2279
+    }
+  },
+  "A2_sealed_b_by_opt": {
+    "O0": {
+      "roc_auc": 0.7788,
+      "pr_auc": 0.5051,
+      "n": 14917,
+      "crypto": 2479
+    },
+    "O2": {
+      "roc_auc": 0.8057,
+      "pr_auc": 0.6158,
+      "n": 9245,
+      "crypto": 1684
+    },
+    "O3": {
+      "roc_auc": 0.8099,
+      "pr_auc": 0.6246,
+      "n": 9168,
+      "crypto": 1677
+    },
+    "Os": {
+      "roc_auc": 0.8039,
+      "pr_auc": 0.6097,
+      "n": 9784,
+      "crypto": 1774
+    }
+  },
+  "A2_sealed_b_by_library": {
+    "libpng": {
+      "n": 6331,
+      "crypto": 0,
+      "mean_score_crypto": null,
+      "mean_score_noncrypto": 0.152
+    },
+    "libsodium": {
+      "n": 3110,
+      "crypto": 2710,
+      "mean_score_crypto": 0.563,
+      "mean_score_noncrypto": 0.381
+    },
+    "sqlite": {
+      "n": 26304,
+      "crypto": 0,
+      "mean_score_crypto": null,
+      "mean_score_noncrypto": 0.141
+    },
+    "wolfssl": {
+      "n": 7369,
+      "crypto": 4904,
+      "mean_score_crypto": 0.451,
+      "mean_score_noncrypto": 0.229
+    }
+  },
+  "B1_sealed_b": {
+    "combiner_coef": {
+      "learned": 0.385,
+      "loops": 0.181,
+      "findcrypt": 2.001,
+      "ntt": 2.085
+    },
+    "rung_coverage": {
+      "findcrypt_on_crypto": 0.028,
+      "findcrypt_on_noncrypto": 0.024,
+      "ntt_on_crypto": 0.0096,
+      "ntt_on_noncrypto": 0.0
+    },
+    "pooled": {
+      "natural": {
+        "learned_v1@0.05": {
+          "mean_fdp": 0.0367,
+          "fdp_ci99_upper": 0.0404,
+          "mean_power": 0.123
+        },
+        "loops@0.05": {
+          "mean_fdp": 0.0377,
+          "fdp_ci99_upper": 0.0424,
+          "mean_power": 0.1022
+        },
+        "findcrypt@0.05": {
+          "mean_fdp": 0.0,
+          "fdp_ci99_upper": 0.0,
+          "mean_power": 0.0
+        },
+        "ntt@0.05": {
+          "mean_fdp": 0.0,
+          "fdp_ci99_upper": 0.0,
+          "mean_power": 0.0
+        },
+        "stacked_fusion@0.05": {
+          "mean_fdp": 0.0381,
+          "fdp_ci99_upper": 0.0425,
+          "mean_power": 0.0898
+        },
+        "evalue_average@0.05": {
+          "mean_fdp": 0.0,
+          "fdp_ci99_upper": 0.0,
+          "mean_power": 0.0
+        },
+        "learned_v1@0.1": {
+          "mean_fdp": 0.0783,
+          "fdp_ci99_upper": 0.0831,
+          "mean_power": 0.1949
+        },
+        "loops@0.1": {
+          "mean_fdp": 0.078,
+          "fdp_ci99_upper": 0.0829,
+          "mean_power": 0.2105
+        },
+        "findcrypt@0.1": {
+          "mean_fdp": 0.0,
+          "fdp_ci99_upper": 0.0,
+          "mean_power": 0.0
+        },
+        "ntt@0.1": {
+          "mean_fdp": 0.0,
+          "fdp_ci99_upper": 0.0,
+          "mean_power": 0.0049
+        },
+        "stacked_fusion@0.1": {
+          "mean_fdp": 0.0785,
+          "fdp_ci99_upper": 0.0836,
+          "mean_power": 0.1444
+        },
+        "evalue_average@0.1": {
+          "mean_fdp": 0.0,
+          "fdp_ci99_upper": 0.0,
+          "mean_power": 0.0
+        },
+        "learned_v1@0.2": {
+          "mean_fdp": 0.1566,
+          "fdp_ci99_upper": 0.1624,
+          "mean_power": 0.2873
+        },
+        "loops@0.2": {
+          "mean_fdp": 0.1556,
+          "fdp_ci99_upper": 0.1612,
+          "mean_power": 0.2972
+        },
+        "findcrypt@0.2": {
+          "mean_fdp": 0.0,
+          "fdp_ci99_upper": 0.0,
+          "mean_power": 0.0
+        },
+        "ntt@0.2": {
+          "mean_fdp": 0.0,
+          "fdp_ci99_upper": 0.0,
+          "mean_power": 0.0089
+        },
+        "stacked_fusion@0.2": {
+          "mean_fdp": 0.1587,
+          "fdp_ci99_upper": 0.1648,
+          "mean_power": 0.2398
+        },
+        "evalue_average@0.2": {
+          "mean_fdp": 0.0,
+          "fdp_ci99_upper": 0.0,
+          "mean_power": 0.0004
+        }
+      },
+      "0.05": {
+        "learned_v1@0.05": {
+          "mean_fdp": 0.0272,
+          "fdp_ci99_upper": 0.0379,
+          "mean_power": 0.0194
+        },
+        "loops@0.05": {
+          "mean_fdp": 0.019,
+          "fdp_ci99_upper": 0.0297,
+          "mean_power": 0.0088
+        },
+        "findcrypt@0.05": {
+          "mean_fdp": 0.0,
+          "fdp_ci99_upper": 0.0,
+          "mean_power": 0.0
+        },
+        "ntt@0.05": {
+          "mean_fdp": 0.0,
+          "fdp_ci99_upper": 0.0,
+          "mean_power": 0.0
+        },
+        "stacked_fusion@0.05": {
+          "mean_fdp": 0.0237,
+          "fdp_ci99_upper": 0.0357,
+          "mean_power": 0.0113
+        },
+        "evalue_average@0.05": {
+          "mean_fdp": 0.0,
+          "fdp_ci99_upper": 0.0,
+          "mean_power": 0.0
+        },
+        "learned_v1@0.1": {
+          "mean_fdp": 0.0803,
+          "fdp_ci99_upper": 0.0956,
+          "mean_power": 0.0728
+        },
+        "loops@0.1": {
+          "mean_fdp": 0.0639,
+          "fdp_ci99_upper": 0.0808,
+          "mean_power": 0.0454
+        },
+        "findcrypt@0.1": {
+          "mean_fdp": 0.0,
+          "fdp_ci99_upper": 0.0,
+          "mean_power": 0.0
+        },
+        "ntt@0.1": {
+          "mean_fdp": 0.0,
+          "fdp_ci99_upper": 0.0,
+          "mean_power": 0.0
+        },
+        "stacked_fusion@0.1": {
+          "mean_fdp": 0.0751,
+          "fdp_ci99_upper": 0.0928,
+          "mean_power": 0.057
+        },
+        "evalue_average@0.1": {
+          "mean_fdp": 0.0,
+          "fdp_ci99_upper": 0.0,
+          "mean_power": 0.0
+        },
+        "learned_v1@0.2": {
+          "mean_fdp": 0.1861,
+          "fdp_ci99_upper": 0.2014,
+          "mean_power": 0.1432
+        },
+        "loops@0.2": {
+          "mean_fdp": 0.1904,
+          "fdp_ci99_upper": 0.2085,
+          "mean_power": 0.1322
+        },
+        "findcrypt@0.2": {
+          "mean_fdp": 0.0,
+          "fdp_ci99_upper": 0.0,
+          "mean_power": 0.0
+        },
+        "ntt@0.2": {
+          "mean_fdp": 0.0,
+          "fdp_ci99_upper": 0.0,
+          "mean_power": 0.0002
+        },
+        "stacked_fusion@0.2": {
+          "mean_fdp": 0.187,
+          "fdp_ci99_upper": 0.2057,
+          "mean_power": 0.1009
+        },
+        "evalue_average@0.2": {
+          "mean_fdp": 0.0,
+          "fdp_ci99_upper": 0.0,
+          "mean_power": 0.0
+        }
+      },
+      "0.01": {
+        "learned_v1@0.05": {
+          "mean_fdp": 0.0,
+          "fdp_ci99_upper": 0.0,
+          "mean_power": 0.0
+        },
+        "loops@0.05": {
+          "mean_fdp": 0.0,
+          "fdp_ci99_upper": 0.0,
+          "mean_power": 0.0
+        },
+        "findcrypt@0.05": {
+          "mean_fdp": 0.0,
+          "fdp_ci99_upper": 0.0,
+          "mean_power": 0.0
+        },
+        "ntt@0.05": {
+          "mean_fdp": 0.0,
+          "fdp_ci99_upper": 0.0,
+          "mean_power": 0.0
+        },
+        "stacked_fusion@0.05": {
+          "mean_fdp": 0.0,
+          "fdp_ci99_upper": 0.0,
+          "mean_power": 0.0
+        },
+        "evalue_average@0.05": {
+          "mean_fdp": 0.0,
+          "fdp_ci99_upper": 0.0,
+          "mean_power": 0.0
+        },
+        "learned_v1@0.1": {
+          "mean_fdp": 0.0103,
+          "fdp_ci99_upper": 0.0235,
+          "mean_power": 0.0024
+        },
+        "loops@0.1": {
+          "mean_fdp": 0.0051,
+          "fdp_ci99_upper": 0.0143,
+          "mean_power": 0.0011
+        },
+        "findcrypt@0.1": {
+          "mean_fdp": 0.0,
+          "fdp_ci99_upper": 0.0,
+          "mean_power": 0.0
+        },
+        "ntt@0.1": {
+          "mean_fdp": 0.0,
+          "fdp_ci99_upper": 0.0,
+          "mean_power": 0.0
+        },
+        "stacked_fusion@0.1": {
+          "mean_fdp": 0.0135,
+          "fdp_ci99_upper": 0.0291,
+          "mean_power": 0.0029
+        },
+        "evalue_average@0.1": {
+          "mean_fdp": 0.0,
+          "fdp_ci99_upper": 0.0,
+          "mean_power": 0.0
+        },
+        "learned_v1@0.2": {
+          "mean_fdp": 0.1046,
+          "fdp_ci99_upper": 0.1417,
+          "mean_power": 0.0247
+        },
+        "loops@0.2": {
+          "mean_fdp": 0.0708,
+          "fdp_ci99_upper": 0.1051,
+          "mean_power": 0.0125
+        },
+        "findcrypt@0.2": {
+          "mean_fdp": 0.0,
+          "fdp_ci99_upper": 0.0,
+          "mean_power": 0.0
+        },
+        "ntt@0.2": {
+          "mean_fdp": 0.0,
+          "fdp_ci99_upper": 0.0,
+          "mean_power": 0.0
+        },
+        "stacked_fusion@0.2": {
+          "mean_fdp": 0.109,
+          "fdp_ci99_upper": 0.1499,
+          "mean_power": 0.0172
+        },
+        "evalue_average@0.2": {
+          "mean_fdp": 0.0,
+          "fdp_ci99_upper": 0.0,
+          "mean_power": 0.0
+        }
+      }
+    },
+    "binaries": {
+      "m=50,prev=0.05": {
+        "learned_v1": {
+          "mean_fdp": 0.0812,
+          "fdp_ci99_upper": 0.1184,
+          "power": 0.1583,
+          "binaries": 300
+        },
+        "loops": {
+          "mean_fdp": 0.0962,
+          "fdp_ci99_upper": 0.1362,
+          "power": 0.1533,
+          "binaries": 300
+        },
+        "findcrypt": {
+          "mean_fdp": 0.0,
+          "fdp_ci99_upper": 0.0,
+          "power": 0.0,
+          "binaries": 300
+        },
+        "ntt": {
+          "mean_fdp": 0.0,
+          "fdp_ci99_upper": 0.0,
+          "power": 0.015,
+          "binaries": 300
+        },
+        "stacked_fusion": {
+          "mean_fdp": 0.1228,
+          "fdp_ci99_upper": 0.1678,
+          "power": 0.1367,
+          "binaries": 300
+        }
+      },
+      "m=50,prev=0.01": {
+        "learned_v1": {
+          "mean_fdp": 0.0933,
+          "fdp_ci99_upper": 0.1356,
+          "power": 0.1533,
+          "binaries": 300
+        },
+        "loops": {
+          "mean_fdp": 0.0872,
+          "fdp_ci99_upper": 0.1283,
+          "power": 0.1267,
+          "binaries": 300
+        },
+        "findcrypt": {
+          "mean_fdp": 0.0033,
+          "fdp_ci99_upper": 0.0119,
+          "power": 0.0,
+          "binaries": 300
+        },
+        "ntt": {
+          "mean_fdp": 0.0,
+          "fdp_ci99_upper": 0.0,
+          "power": 0.01,
+          "binaries": 300
+        },
+        "stacked_fusion": {
+          "mean_fdp": 0.0806,
+          "fdp_ci99_upper": 0.1197,
+          "power": 0.1333,
+          "binaries": 300
+        }
+      },
+      "m=100,prev=0.05": {
+        "learned_v1": {
+          "mean_fdp": 0.1168,
+          "fdp_ci99_upper": 0.1567,
+          "power": 0.1387,
+          "binaries": 300
+        },
+        "loops": {
+          "mean_fdp": 0.091,
+          "fdp_ci99_upper": 0.127,
+          "power": 0.118,
+          "binaries": 300
+        },
+        "findcrypt": {
+          "mean_fdp": 0.0,
+          "fdp_ci99_upper": 0.0,
+          "power": 0.0,
+          "binaries": 300
+        },
+        "ntt": {
+          "mean_fdp": 0.0,
+          "fdp_ci99_upper": 0.0,
+          "power": 0.014,
+          "binaries": 300
+        },
+        "stacked_fusion": {
+          "mean_fdp": 0.088,
+          "fdp_ci99_upper": 0.1232,
+          "power": 0.11,
+          "binaries": 300
+        }
+      },
+      "m=100,prev=0.01": {
+        "learned_v1": {
+          "mean_fdp": 0.1017,
+          "fdp_ci99_upper": 0.1447,
+          "power": 0.08,
+          "binaries": 300
+        },
+        "loops": {
+          "mean_fdp": 0.1094,
+          "fdp_ci99_upper": 0.1541,
+          "power": 0.0867,
+          "binaries": 300
+        },
+        "findcrypt": {
+          "mean_fdp": 0.0,
+          "fdp_ci99_upper": 0.0,
+          "power": 0.0,
+          "binaries": 300
+        },
+        "ntt": {
+          "mean_fdp": 0.0,
+          "fdp_ci99_upper": 0.0,
+          "power": 0.0033,
+          "binaries": 300
+        },
+        "stacked_fusion": {
+          "mean_fdp": 0.09,
+          "fdp_ci99_upper": 0.1312,
+          "power": 0.0767,
+          "binaries": 300
+        }
+      },
+      "m=500,prev=0.05": {
+        "learned_v1": {
+          "mean_fdp": 0.0711,
+          "fdp_ci99_upper": 0.0935,
+          "power": 0.0952,
+          "binaries": 300
+        },
+        "loops": {
+          "mean_fdp": 0.0786,
+          "fdp_ci99_upper": 0.1012,
+          "power": 0.0828,
+          "binaries": 300
+        },
+        "findcrypt": {
+          "mean_fdp": 0.0,
+          "fdp_ci99_upper": 0.0,
+          "power": 0.0,
+          "binaries": 300
+        },
+        "ntt": {
+          "mean_fdp": 0.0,
+          "fdp_ci99_upper": 0.0,
+          "power": 0.0013,
+          "binaries": 300
+        },
+        "stacked_fusion": {
+          "mean_fdp": 0.0807,
+          "fdp_ci99_upper": 0.1055,
+          "power": 0.0781,
+          "binaries": 300
+        }
+      },
+      "m=500,prev=0.01": {
+        "learned_v1": {
+          "mean_fdp": 0.0467,
+          "fdp_ci99_upper": 0.0719,
+          "power": 0.0293,
+          "binaries": 300
+        },
+        "loops": {
+          "mean_fdp": 0.0217,
+          "fdp_ci99_upper": 0.0384,
+          "power": 0.0167,
+          "binaries": 300
+        },
+        "findcrypt": {
+          "mean_fdp": 0.0,
+          "fdp_ci99_upper": 0.0,
+          "power": 0.0,
+          "binaries": 300
+        },
+        "ntt": {
+          "mean_fdp": 0.0,
+          "fdp_ci99_upper": 0.0,
+          "power": 0.0013,
+          "binaries": 300
+        },
+        "stacked_fusion": {
+          "mean_fdp": 0.0436,
+          "fdp_ci99_upper": 0.0702,
+          "power": 0.024,
+          "binaries": 300
+        }
+      }
+    }
+  },
+  "minutes": 3.6
+}

@@ -1,0 +1,46 @@
+surface: dependency
+holdout_percent: 30
+cases:
+- id: dependency/pypi-requirements
+  split: tune
+  path: dependency/pypi-requirements
+  expect:
+  - library: cryptography
+  - library: pycryptodome
+- id: dependency/npm-package-lock
+  split: holdout
+  path: dependency/npm-package-lock
+  expect:
+  - library: node-forge
+  - library: jsonwebtoken
+- id: dependency/maven-bouncycastle
+  split: tune
+  path: dependency/maven-bouncycastle
+  expect:
+  - library: bcprov
+- id: dependency/go-mod-xcrypto
+  split: tune
+  path: dependency/go-mod-xcrypto
+  expect:
+  - library: golang.org/x/crypto
+  - library: Go standard library
+- id: dependency/cargo-ring-rsa
+  split: tune
+  path: dependency/cargo-ring-rsa
+  expect:
+  - library: ring
+  - library: rsa
+- id: dependency/composer-phpseclib
+  split: tune
+  path: dependency/composer-phpseclib
+  expect:
+  - library: phpseclib
+- id: dependency/gemfile-openssl
+  split: tune
+  path: dependency/gemfile-openssl
+  expect:
+  - library: openssl
+- id: dependency/decoy-no-crypto
+  split: holdout
+  path: dependency/decoy-no-crypto
+  expect: []

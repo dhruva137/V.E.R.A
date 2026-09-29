@@ -1,0 +1,123 @@
+{
+  "commit": "2fb8ca9",
+  "model": "gnn_cfg_hybrid",
+  "note": "",
+  "pool_rows": 2519,
+  "clean": {
+    "v1": {
+      "roc_auc": 0.8555,
+      "pr_auc": 0.7847
+    },
+    "v2": {
+      "roc_auc": 0.8517,
+      "pr_auc": 0.7813
+    }
+  },
+  "attacks": {
+    "dead_code_10": {
+      "v1/crypto_only": {
+        "roc_auc": 0.861,
+        "mean_fdp": 0.0,
+        "fdp_ci99_upper": 0.0,
+        "mean_power": 0.0
+      },
+      "v1/everything": {
+        "roc_auc": 0.8557,
+        "mean_fdp": 0.0031,
+        "fdp_ci99_upper": 0.011,
+        "mean_power": 0.0015
+      },
+      "v2/crypto_only": {
+        "roc_auc": 0.8546,
+        "mean_fdp": 0.0034,
+        "fdp_ci99_upper": 0.0121,
+        "mean_power": 0.0013
+      },
+      "v2/everything": {
+        "roc_auc": 0.8512,
+        "mean_fdp": 0.0,
+        "fdp_ci99_upper": 0.0,
+        "mean_power": 0.0
+      }
+    },
+    "dead_code_30": {
+      "v1/crypto_only": {
+        "roc_auc": 0.87,
+        "mean_fdp": 0.0,
+        "fdp_ci99_upper": 0.0,
+        "mean_power": 0.0
+      },
+      "v1/everything": {
+        "roc_auc": 0.8507,
+        "mean_fdp": 0.0093,
+        "fdp_ci99_upper": 0.0231,
+        "mean_power": 0.0046
+      },
+      "v2/crypto_only": {
+        "roc_auc": 0.8621,
+        "mean_fdp": 0.0,
+        "fdp_ci99_upper": 0.0,
+        "mean_power": 0.0
+      },
+      "v2/everything": {
+        "roc_auc": 0.8518,
+        "mean_fdp": 0.0,
+        "fdp_ci99_upper": 0.0,
+        "mean_power": 0.0
+      }
+    },
+    "substitute": {
+      "v1/crypto_only": {
+        "roc_auc": 0.8305,
+        "mean_fdp": 0.0,
+        "fdp_ci99_upper": 0.0,
+        "mean_power": 0.0
+      },
+      "v1/everything": {
+        "roc_auc": 0.8407,
+        "mean_fdp": 0.0,
+        "fdp_ci99_upper": 0.0,
+        "mean_power": 0.0
+      },
+      "v2/crypto_only": {
+        "roc_auc": 0.8534,
+        "mean_fdp": 0.0,
+        "fdp_ci99_upper": 0.0,
+        "mean_power": 0.0
+      },
+      "v2/everything": {
+        "roc_auc": 0.849,
+        "mean_fdp": 0.0,
+        "fdp_ci99_upper": 0.0,
+        "mean_power": 0.0
+      }
+    },
+    "blind_constants": {
+      "v1/crypto_only": {
+        "roc_auc": 0.8777,
+        "mean_fdp": 0.0021,
+        "fdp_ci99_upper": 0.0075,
+        "mean_power": 0.0021
+      },
+      "v1/everything": {
+        "roc_auc": 0.8604,
+        "mean_fdp": 0.0031,
+        "fdp_ci99_upper": 0.0112,
+        "mean_power": 0.0015
+      },
+      "v2/crypto_only": {
+        "roc_auc": 0.8714,
+        "mean_fdp": 0.0,
+        "fdp_ci99_upper": 0.0,
+        "mean_power": 0.0
+      },
+      "v2/everything": {
+        "roc_auc": 0.8617,
+        "mean_fdp": 0.0,
+        "fdp_ci99_upper": 0.0,
+        "mean_power": 0.0
+      }
+    }
+  },
+  "minutes": 1.5
+}

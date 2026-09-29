@@ -1,0 +1,14 @@
+{
+  "note": "One entry per threat-model version. A score may only change for two reasons: the clock (time passed) or a new entry here. Tests fail if the resources table changes without one.",
+  "versions": [
+    {
+      "version": "2026.09.1",
+      "created": "2026-09-24",
+      "gri_edition": "Quantum Threat Timeline Report 2025 (7th edition), Global Risk Institute, Mosca & Piani, published 9 Mar 2026, 26 experts",
+      "report_date": "2026-03-09",
+      "D": 2.0,
+      "resources_table_hash": "f8624ad8844546ea37ab21b4494d96d13357782bc3f3a8f290aa2baff7cb01ef",
+      "changelog": "First versioned model. Per-primitive horizon from verified logical-qubit estimates: RSA-2048 1,409 (Gidney 2025, reference), P-256 1,193 (EUROCRYPT 2026), secp256k1 1,200 (Google Quantum AI 2026). Unverified rows use the reference curve. Z now carries an explicit clock term from the report date."
+    }
+  ]
+}

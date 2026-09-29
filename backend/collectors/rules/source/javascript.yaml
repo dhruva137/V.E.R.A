@@ -1,0 +1,27 @@
+# Source rules: JavaScript and TypeScript (node:crypto, WebCrypto, jsonwebtoken, node-forge, CryptoJS, noble).
+language: javascript
+grammars: {.js: javascript, .mjs: javascript, .cjs: javascript, .jsx: javascript, .ts: typescript, .mts: typescript, .tsx: tsx}
+strings: [string, template_string]
+queries:
+  call: '(call_expression function: (_) @callee arguments: (arguments) @args) @site'
+  new: '(new_expression constructor: (_) @callee arguments: (arguments) @args) @site'
+rules:
+  - {id: js-createhash, kind: call, match: '(?:^|\.)createHash$', algorithm_from: {arg: 0}, usage: hashing}
+  - {id: js-createhmac, kind: call, match: '(?:^|\.)createHmac$', algorithm: HMAC, usage: authentication}
+  - {id: js-cipheriv, kind: call, match: '(?:^|\.)(createCipheriv|createDecipheriv|createCipher|createDecipher)$', algorithm_from: {arg: 0}, usage: encryption}
+  - {id: js-keypair, kind: call, match: '(?:^|\.)generateKeyPair(Sync)?$', algorithm_from: {arg: 0}, usage: signing, key_size: {property: modulusLength}}
+  - {id: js-sign, kind: call, match: '(?:^|\.)(createSign|createVerify)$', algorithm_from: {arg: 0, signature: true}, usage: signing}
+  - {id: js-dh, kind: call, match: '(?:^|\.)(createDiffieHellman|createDiffieHellmanGroup|getDiffieHellman)$', algorithm: DH, usage: key_exchange}
+  - {id: js-ecdh, kind: call, match: '(?:^|\.)createECDH$', algorithm: ECDH, usage: key_exchange, key_size: {arg: 0, pattern: '(\d{3})'}}
+  - {id: js-subtle, kind: call, match: '(?:^|\.)subtle\.(generateKey|sign|verify|encrypt|decrypt|deriveKey|deriveBits|wrapKey)$', algorithm_from: {arg: 0, property: name}, usage: signing, key_size: {property: modulusLength}}
+  - {id: js-subtle-import, kind: call, match: '(?:^|\.)subtle\.importKey$', algorithm_from: {arg: 2, property: name}, usage: signing}
+  - {id: js-jwt-sign, kind: call, match: '(?:^|\.)jwt\.sign$', algorithm_from: {arg: 2, property: algorithm}, usage: signing}
+  - {id: js-forge-rsa, kind: call, match: '(?:^|\.)pki\.rsa\.generateKeyPair$', algorithm: RSA, usage: signing, key_size: {arg: 0, property: bits}}
+  - {id: js-forge-md5, kind: call, match: '(?:^|\.)md\.md5\.create$', algorithm: MD5, usage: hashing}
+  - {id: js-forge-sha1, kind: call, match: '(?:^|\.)md\.sha1\.create$', algorithm: SHA-1, usage: hashing}
+  - {id: js-forge-cipher, kind: call, match: '(?:^|\.)cipher\.(createCipher|createDecipher)$', algorithm_from: {arg: 0}, usage: encryption}
+  - {id: js-cryptojs, kind: call, match: '^CryptoJS\.(MD5|SHA1|DES|TripleDES|RC4|AES|SHA256)(\.(encrypt|decrypt))?$', algorithm: '{1}', usage: encryption}
+  - {id: js-noble-mlkem, kind: call, match: '(?:^|\.)ml_kem(512|768|1024)\.(keygen|encapsulate)$', algorithm: 'ML-KEM-{1}', usage: key_exchange}
+  - {id: js-noble-mldsa, kind: call, match: '(?:^|\.)ml_dsa(44|65|87)\.(keygen|sign)$', algorithm: 'ML-DSA-{1}', usage: signing}
+  - {id: js-node-rsa, kind: new, match: '^NodeRSA$', algorithm: RSA, usage: signing, key_size: {property: b}}
+  - {id: js-elliptic, kind: new, match: '^(EC|elliptic\.ec)$', algorithm: ECDSA, usage: signing}

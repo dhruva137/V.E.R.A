@@ -1,0 +1,401 @@
+name,asset_class,algorithm,key_size,source_type,hostname,environment,owner,department
+scada-0000.industrial.internal,device_identity,ECDSA,256,keystore,scada-0000.industrial.internal,production,Infrastructure,Manufacturing
+historian-0001.industrial.internal,device_identity,ECDSA,256,keystore,historian-0001.industrial.internal,production,Platform Engineering,Manufacturing
+scada-0002.industrial.internal,tls_certificate,RSA,2048,tls,scada-0002.industrial.internal,staging,Data Platform,Manufacturing
+historian-0003.industrial.internal,config,RSA,2048,config,historian-0003.industrial.internal,staging,Platform Engineering,Manufacturing
+historian-0004.industrial.internal,tls_certificate,ECDSA,256,tls,historian-0004.industrial.internal,production,Network Ops,Manufacturing
+scada-0005.industrial.internal,firmware_signing,ECDSA,256,keystore,scada-0005.industrial.internal,production,PKI Team,Manufacturing
+scada-0006.industrial.internal,firmware_signing,ECDSA,256,keystore,scada-0006.industrial.internal,production,Infrastructure,Manufacturing
+plc-gw-0007.industrial.internal,tls_certificate,RSA,2048,tls,plc-gw-0007.industrial.internal,production,Data Platform,Manufacturing
+mes-0008.industrial.internal,config,RSA,2048,config,mes-0008.industrial.internal,production,,Manufacturing
+scada-0009.industrial.internal,device_identity,ECDSA,256,keystore,scada-0009.industrial.internal,production,Application Security,Manufacturing
+edge-0010.industrial.internal,tls_certificate,RSA,2048,tls,edge-0010.industrial.internal,production,Infrastructure,Manufacturing
+scada-0011.industrial.internal,device_identity,ECDSA,256,keystore,scada-0011.industrial.internal,production,Platform Engineering,Manufacturing
+mes-0012.industrial.internal,config,RSA,2048,config,mes-0012.industrial.internal,staging,,Manufacturing
+mes-0013.industrial.internal,firmware_signing,RSA,2048,keystore,mes-0013.industrial.internal,staging,,Manufacturing
+edge-0014.industrial.internal,code_signing,RSA,3072,keystore,edge-0014.industrial.internal,staging,Network Ops,Manufacturing
+plc-gw-0015.industrial.internal,code_signing,RSA,3072,keystore,plc-gw-0015.industrial.internal,production,Platform Engineering,Manufacturing
+historian-0016.industrial.internal,config,ECDHE,256,config,historian-0016.industrial.internal,staging,Infrastructure,Manufacturing
+mes-0017.industrial.internal,config,RSA,2048,config,mes-0017.industrial.internal,production,Payments Ops,Manufacturing
+scada-0018.industrial.internal,tls_certificate,RSA,2048,tls,scada-0018.industrial.internal,production,Platform Engineering,Manufacturing
+scada-0019.industrial.internal,firmware_signing,ECDSA,256,keystore,scada-0019.industrial.internal,production,Platform Engineering,Manufacturing
+plc-gw-0020.industrial.internal,tls_certificate,RSA,2048,tls,plc-gw-0020.industrial.internal,production,Platform Engineering,Manufacturing
+mes-0021.industrial.internal,vpn_ipsec,DH,2048,keystore,mes-0021.industrial.internal,production,PKI Team,Manufacturing
+edge-0022.industrial.internal,config,RSA,2048,config,edge-0022.industrial.internal,staging,,Manufacturing
+scada-0023.industrial.internal,config,ECDHE,256,config,scada-0023.industrial.internal,production,Payments Ops,Manufacturing
+edge-0024.industrial.internal,tls_certificate,ECDSA,256,tls,edge-0024.industrial.internal,production,Payments Ops,Manufacturing
+edge-0025.industrial.internal,tls_certificate,RSA,2048,tls,edge-0025.industrial.internal,staging,Data Platform,Manufacturing
+edge-0026.industrial.internal,device_identity,ECDSA,256,keystore,edge-0026.industrial.internal,production,Payments Ops,Manufacturing
+historian-0027.industrial.internal,device_identity,ECDSA,256,keystore,historian-0027.industrial.internal,staging,Data Platform,Manufacturing
+plc-gw-0028.industrial.internal,firmware_signing,RSA,2048,keystore,plc-gw-0028.industrial.internal,staging,PKI Team,Manufacturing
+scada-0029.industrial.internal,device_identity,RSA,2048,keystore,scada-0029.industrial.internal,production,Infrastructure,Manufacturing
+historian-0030.industrial.internal,config,ECDHE,256,config,historian-0030.industrial.internal,production,Payments Ops,Manufacturing
+plc-gw-0031.industrial.internal,vpn_ipsec,DH,2048,keystore,plc-gw-0031.industrial.internal,staging,Data Platform,Manufacturing
+historian-0032.industrial.internal,tls_certificate,ECDSA,256,tls,historian-0032.industrial.internal,production,Payments Ops,Manufacturing
+scada-0033.industrial.internal,tls_certificate,RSA,2048,tls,scada-0033.industrial.internal,staging,Infrastructure,Manufacturing
+scada-0034.industrial.internal,firmware_signing,RSA,2048,keystore,scada-0034.industrial.internal,staging,Network Ops,Manufacturing
+historian-0035.industrial.internal,firmware_signing,ECDSA,256,keystore,historian-0035.industrial.internal,production,Payments Ops,Manufacturing
+mes-0036.industrial.internal,device_identity,ECDSA,256,keystore,mes-0036.industrial.internal,production,Network Ops,Manufacturing
+scada-0037.industrial.internal,firmware_signing,ECDSA,256,keystore,scada-0037.industrial.internal,production,Payments Ops,Manufacturing
+scada-0038.industrial.internal,config,ECDHE,256,config,scada-0038.industrial.internal,production,Infrastructure,Manufacturing
+edge-0039.industrial.internal,tls_certificate,RSA,2048,tls,edge-0039.industrial.internal,production,,Manufacturing
+mes-0040.industrial.internal,tls_certificate,ECDSA,256,tls,mes-0040.industrial.internal,production,Application Security,Manufacturing
+plc-gw-0041.industrial.internal,device_identity,ECDSA,256,keystore,plc-gw-0041.industrial.internal,production,,Manufacturing
+mes-0042.industrial.internal,root_ca,ECDSA,384,keystore,mes-0042.industrial.internal,production,Data Platform,Manufacturing
+mes-0043.industrial.internal,device_identity,RSA,2048,keystore,mes-0043.industrial.internal,production,Platform Engineering,Manufacturing
+scada-0044.industrial.internal,config,ECDHE,256,config,scada-0044.industrial.internal,production,Payments Ops,Manufacturing
+mes-0045.industrial.internal,config,ECDHE,256,config,mes-0045.industrial.internal,dr,,Manufacturing
+scada-0046.industrial.internal,config,ECDHE,256,config,scada-0046.industrial.internal,production,Platform Engineering,Manufacturing
+edge-0047.industrial.internal,firmware_signing,ECDSA,256,keystore,edge-0047.industrial.internal,production,,Manufacturing
+mes-0048.industrial.internal,device_identity,ECDSA,256,keystore,mes-0048.industrial.internal,production,Payments Ops,Manufacturing
+edge-0049.industrial.internal,vpn_ipsec,ECDHE,256,keystore,edge-0049.industrial.internal,staging,Payments Ops,Manufacturing
+plc-gw-0050.industrial.internal,tls_certificate,ECDSA,256,tls,plc-gw-0050.industrial.internal,production,Network Ops,Manufacturing
+mes-0051.industrial.internal,tls_certificate,RSA,2048,tls,mes-0051.industrial.internal,production,,Manufacturing
+historian-0052.industrial.internal,root_ca,RSA,4096,keystore,historian-0052.industrial.internal,production,Network Ops,Manufacturing
+scada-0053.industrial.internal,vpn_ipsec,ECDHE,256,keystore,scada-0053.industrial.internal,production,Network Ops,Manufacturing
+scada-0054.industrial.internal,code_signing,RSA,3072,keystore,scada-0054.industrial.internal,production,PKI Team,Manufacturing
+historian-0055.industrial.internal,device_identity,RSA,2048,keystore,historian-0055.industrial.internal,production,Data Platform,Manufacturing
+edge-0056.industrial.internal,config,RSA,2048,config,edge-0056.industrial.internal,production,Data Platform,Manufacturing
+plc-gw-0057.industrial.internal,tls_certificate,RSA,2048,tls,plc-gw-0057.industrial.internal,dr,,Manufacturing
+plc-gw-0058.industrial.internal,tls_certificate,ECDSA,256,tls,plc-gw-0058.industrial.internal,production,Data Platform,Manufacturing
+historian-0059.industrial.internal,firmware_signing,ECDSA,256,keystore,historian-0059.industrial.internal,production,Payments Ops,Manufacturing
+scada-0060.industrial.internal,firmware_signing,ECDSA,256,keystore,scada-0060.industrial.internal,production,,Manufacturing
+historian-0061.industrial.internal,device_identity,RSA,2048,keystore,historian-0061.industrial.internal,production,Application Security,Manufacturing
+mes-0062.industrial.internal,vpn_ipsec,ECDHE,256,keystore,mes-0062.industrial.internal,production,Application Security,Manufacturing
+historian-0063.industrial.internal,device_identity,RSA,2048,keystore,historian-0063.industrial.internal,production,Payments Ops,Manufacturing
+historian-0064.industrial.internal,device_identity,RSA,2048,keystore,historian-0064.industrial.internal,staging,,Manufacturing
+mes-0065.industrial.internal,tls_certificate,ML-DSA-65,,tls,mes-0065.industrial.internal,dr,PKI Team,Manufacturing
+edge-0066.industrial.internal,code_signing,RSA,3072,keystore,edge-0066.industrial.internal,dr,Platform Engineering,Manufacturing
+mes-0067.industrial.internal,device_identity,ECDSA,256,keystore,mes-0067.industrial.internal,production,Data Platform,Manufacturing
+mes-0068.industrial.internal,config,RSA,2048,config,mes-0068.industrial.internal,production,,Manufacturing
+plc-gw-0069.industrial.internal,firmware_signing,RSA,2048,keystore,plc-gw-0069.industrial.internal,production,,Manufacturing
+historian-0070.industrial.internal,config,RSA,2048,config,historian-0070.industrial.internal,production,Platform Engineering,Manufacturing
+scada-0071.industrial.internal,root_ca,ECDSA,384,keystore,scada-0071.industrial.internal,production,Network Ops,Manufacturing
+mes-0072.industrial.internal,firmware_signing,RSA,2048,keystore,mes-0072.industrial.internal,production,Payments Ops,Manufacturing
+scada-0073.industrial.internal,vpn_ipsec,DH,2048,keystore,scada-0073.industrial.internal,production,PKI Team,Manufacturing
+historian-0074.industrial.internal,tls_certificate,RSA,2048,tls,historian-0074.industrial.internal,production,Platform Engineering,Manufacturing
+scada-0075.industrial.internal,device_identity,RSA,2048,keystore,scada-0075.industrial.internal,production,,Manufacturing
+scada-0076.industrial.internal,device_identity,ECDSA,256,keystore,scada-0076.industrial.internal,production,PKI Team,Manufacturing
+mes-0077.industrial.internal,tls_certificate,RSA,2048,tls,mes-0077.industrial.internal,production,Infrastructure,Manufacturing
+plc-gw-0078.industrial.internal,device_identity,ECDSA,256,keystore,plc-gw-0078.industrial.internal,production,Infrastructure,Manufacturing
+scada-0079.industrial.internal,device_identity,RSA,2048,keystore,scada-0079.industrial.internal,production,PKI Team,Manufacturing
+edge-0080.industrial.internal,firmware_signing,ECDSA,256,keystore,edge-0080.industrial.internal,production,Infrastructure,Manufacturing
+plc-gw-0081.industrial.internal,vpn_ipsec,DH,2048,keystore,plc-gw-0081.industrial.internal,production,Network Ops,Manufacturing
+edge-0082.industrial.internal,tls_certificate,ECDSA,256,tls,edge-0082.industrial.internal,staging,,Manufacturing
+scada-0083.industrial.internal,config,RSA,2048,config,scada-0083.industrial.internal,production,Platform Engineering,Manufacturing
+edge-0084.industrial.internal,root_ca,RSA,4096,keystore,edge-0084.industrial.internal,production,Platform Engineering,Manufacturing
+mes-0085.industrial.internal,config,ECDHE,256,config,mes-0085.industrial.internal,production,Payments Ops,Manufacturing
+scada-0086.industrial.internal,code_signing,ECDSA,256,keystore,scada-0086.industrial.internal,staging,,Manufacturing
+scada-0087.industrial.internal,config,RSA,2048,config,scada-0087.industrial.internal,production,,Manufacturing
+edge-0088.industrial.internal,device_identity,ECDSA,256,keystore,edge-0088.industrial.internal,production,Application Security,Manufacturing
+plc-gw-0089.industrial.internal,device_identity,ECDSA,256,keystore,plc-gw-0089.industrial.internal,production,Application Security,Manufacturing
+scada-0090.industrial.internal,firmware_signing,ECDSA,256,keystore,scada-0090.industrial.internal,production,Application Security,Manufacturing
+scada-0091.industrial.internal,config,ECDHE,256,config,scada-0091.industrial.internal,production,PKI Team,Manufacturing
+plc-gw-0092.industrial.internal,device_identity,RSA,2048,keystore,plc-gw-0092.industrial.internal,production,,Manufacturing
+scada-0093.industrial.internal,tls_certificate,RSA,2048,tls,scada-0093.industrial.internal,production,Infrastructure,Manufacturing
+edge-0094.industrial.internal,config,ECDHE,256,config,edge-0094.industrial.internal,production,Network Ops,Manufacturing
+edge-0095.industrial.internal,device_identity,RSA,2048,keystore,edge-0095.industrial.internal,staging,Application Security,Manufacturing
+plc-gw-0096.industrial.internal,device_identity,RSA,2048,keystore,plc-gw-0096.industrial.internal,production,Infrastructure,Manufacturing
+mes-0097.industrial.internal,firmware_signing,ECDSA,256,keystore,mes-0097.industrial.internal,production,,Manufacturing
+plc-gw-0098.industrial.internal,vpn_ipsec,ECDHE,256,keystore,plc-gw-0098.industrial.internal,production,Platform Engineering,Manufacturing
+historian-0099.industrial.internal,tls_certificate,ECDSA,256,tls,historian-0099.industrial.internal,production,Data Platform,Manufacturing
+edge-0100.industrial.internal,firmware_signing,RSA,2048,keystore,edge-0100.industrial.internal,dr,,Manufacturing
+plc-gw-0101.industrial.internal,device_identity,ECDSA,256,keystore,plc-gw-0101.industrial.internal,production,Network Ops,Manufacturing
+mes-0102.industrial.internal,device_identity,ECDSA,256,keystore,mes-0102.industrial.internal,staging,Data Platform,Manufacturing
+scada-0103.industrial.internal,device_identity,RSA,2048,keystore,scada-0103.industrial.internal,staging,Platform Engineering,Manufacturing
+edge-0104.industrial.internal,vpn_ipsec,ECDHE,256,keystore,edge-0104.industrial.internal,production,Application Security,Manufacturing
+plc-gw-0105.industrial.internal,config,RSA,2048,config,plc-gw-0105.industrial.internal,production,Application Security,Manufacturing
+historian-0106.industrial.internal,firmware_signing,RSA,2048,keystore,historian-0106.industrial.internal,staging,Network Ops,Manufacturing
+plc-gw-0107.industrial.internal,firmware_signing,RSA,2048,keystore,plc-gw-0107.industrial.internal,dr,PKI Team,Manufacturing
+edge-0108.industrial.internal,code_signing,RSA,3072,keystore,edge-0108.industrial.internal,production,Application Security,Manufacturing
+scada-0109.industrial.internal,code_signing,ECDSA,256,keystore,scada-0109.industrial.internal,production,Payments Ops,Manufacturing
+mes-0110.industrial.internal,tls_certificate,RSA,2048,tls,mes-0110.industrial.internal,dr,PKI Team,Manufacturing
+edge-0111.industrial.internal,device_identity,ECDSA,256,keystore,edge-0111.industrial.internal,production,Infrastructure,Manufacturing
+plc-gw-0112.industrial.internal,vpn_ipsec,ECDHE,256,keystore,plc-gw-0112.industrial.internal,production,Data Platform,Manufacturing
+historian-0113.industrial.internal,tls_certificate,RSA,2048,tls,historian-0113.industrial.internal,production,,Manufacturing
+scada-0114.industrial.internal,code_signing,RSA,3072,keystore,scada-0114.industrial.internal,production,PKI Team,Manufacturing
+scada-0115.industrial.internal,tls_certificate,RSA,2048,tls,scada-0115.industrial.internal,production,Network Ops,Manufacturing
+scada-0116.industrial.internal,code_signing,RSA,3072,keystore,scada-0116.industrial.internal,production,PKI Team,Manufacturing
+mes-0117.industrial.internal,firmware_signing,RSA,2048,keystore,mes-0117.industrial.internal,staging,Network Ops,Manufacturing
+plc-gw-0118.industrial.internal,device_identity,ECDSA,256,keystore,plc-gw-0118.industrial.internal,production,Infrastructure,Manufacturing
+mes-0119.industrial.internal,config,ECDHE,256,config,mes-0119.industrial.internal,production,Network Ops,Manufacturing
+mes-0120.industrial.internal,firmware_signing,ECDSA,256,keystore,mes-0120.industrial.internal,production,Network Ops,Manufacturing
+plc-gw-0121.industrial.internal,device_identity,RSA,2048,keystore,plc-gw-0121.industrial.internal,production,,Manufacturing
+historian-0122.industrial.internal,device_identity,RSA,2048,keystore,historian-0122.industrial.internal,production,Network Ops,Manufacturing
+mes-0123.industrial.internal,device_identity,ECDSA,256,keystore,mes-0123.industrial.internal,production,PKI Team,Manufacturing
+edge-0124.industrial.internal,vpn_ipsec,ECDHE,256,keystore,edge-0124.industrial.internal,production,,Manufacturing
+edge-0125.industrial.internal,tls_certificate,ECDSA,256,tls,edge-0125.industrial.internal,production,Platform Engineering,Manufacturing
+scada-0126.industrial.internal,firmware_signing,RSA,2048,keystore,scada-0126.industrial.internal,production,Payments Ops,Manufacturing
+plc-gw-0127.industrial.internal,firmware_signing,ECDSA,256,keystore,plc-gw-0127.industrial.internal,production,Payments Ops,Manufacturing
+scada-0128.industrial.internal,firmware_signing,RSA,2048,keystore,scada-0128.industrial.internal,production,PKI Team,Manufacturing
+historian-0129.industrial.internal,config,ECDHE,256,config,historian-0129.industrial.internal,production,Infrastructure,Manufacturing
+plc-gw-0130.industrial.internal,device_identity,RSA,2048,keystore,plc-gw-0130.industrial.internal,staging,Payments Ops,Manufacturing
+scada-0131.industrial.internal,vpn_ipsec,ECDHE,256,keystore,scada-0131.industrial.internal,production,Network Ops,Manufacturing
+mes-0132.industrial.internal,device_identity,ECDSA,256,keystore,mes-0132.industrial.internal,production,Data Platform,Manufacturing
+scada-0133.industrial.internal,device_identity,ECDSA,256,keystore,scada-0133.industrial.internal,production,Platform Engineering,Manufacturing
+scada-0134.industrial.internal,vpn_ipsec,ECDHE,256,keystore,scada-0134.industrial.internal,dr,Network Ops,Manufacturing
+plc-gw-0135.industrial.internal,vpn_ipsec,DH,2048,keystore,plc-gw-0135.industrial.internal,production,,Manufacturing
+mes-0136.industrial.internal,firmware_signing,RSA,2048,keystore,mes-0136.industrial.internal,production,Network Ops,Manufacturing
+edge-0137.industrial.internal,code_signing,RSA,3072,keystore,edge-0137.industrial.internal,production,Data Platform,Manufacturing
+scada-0138.industrial.internal,firmware_signing,ECDSA,256,keystore,scada-0138.industrial.internal,production,Network Ops,Manufacturing
+edge-0139.industrial.internal,tls_certificate,ECDSA,256,tls,edge-0139.industrial.internal,production,Payments Ops,Manufacturing
+plc-gw-0140.industrial.internal,device_identity,RSA,2048,keystore,plc-gw-0140.industrial.internal,staging,Infrastructure,Manufacturing
+historian-0141.industrial.internal,firmware_signing,RSA,2048,keystore,historian-0141.industrial.internal,production,Infrastructure,Manufacturing
+mes-0142.industrial.internal,firmware_signing,ECDSA,256,keystore,mes-0142.industrial.internal,production,,Manufacturing
+mes-0143.industrial.internal,code_signing,ECDSA,256,keystore,mes-0143.industrial.internal,production,Application Security,Manufacturing
+plc-gw-0144.industrial.internal,tls_certificate,RSA,2048,tls,plc-gw-0144.industrial.internal,staging,PKI Team,Manufacturing
+mes-0145.industrial.internal,tls_certificate,ECDSA,256,tls,mes-0145.industrial.internal,production,Data Platform,Manufacturing
+plc-gw-0146.industrial.internal,config,RSA,2048,config,plc-gw-0146.industrial.internal,production,Data Platform,Manufacturing
+plc-gw-0147.industrial.internal,vpn_ipsec,DH,2048,keystore,plc-gw-0147.industrial.internal,production,Data Platform,Manufacturing
+mes-0148.industrial.internal,tls_certificate,RSA,2048,tls,mes-0148.industrial.internal,production,Payments Ops,Manufacturing
+historian-0149.industrial.internal,tls_certificate,RSA,2048,tls,historian-0149.industrial.internal,production,Network Ops,Manufacturing
+mes-0150.industrial.internal,firmware_signing,RSA,2048,keystore,mes-0150.industrial.internal,production,Application Security,Manufacturing
+mes-0151.industrial.internal,device_identity,ECDSA,256,keystore,mes-0151.industrial.internal,staging,Application Security,Manufacturing
+historian-0152.industrial.internal,device_identity,RSA,2048,keystore,historian-0152.industrial.internal,production,Payments Ops,Manufacturing
+plc-gw-0153.industrial.internal,firmware_signing,RSA,2048,keystore,plc-gw-0153.industrial.internal,production,,Manufacturing
+historian-0154.industrial.internal,firmware_signing,RSA,2048,keystore,historian-0154.industrial.internal,production,,Manufacturing
+historian-0155.industrial.internal,device_identity,RSA,2048,keystore,historian-0155.industrial.internal,production,Application Security,Manufacturing
+mes-0156.industrial.internal,firmware_signing,RSA,2048,keystore,mes-0156.industrial.internal,production,Data Platform,Manufacturing
+scada-0157.industrial.internal,device_identity,RSA,2048,keystore,scada-0157.industrial.internal,production,Data Platform,Manufacturing
+edge-0158.industrial.internal,firmware_signing,ECDSA,256,keystore,edge-0158.industrial.internal,staging,Infrastructure,Manufacturing
+scada-0159.industrial.internal,device_identity,RSA,2048,keystore,scada-0159.industrial.internal,staging,Data Platform,Manufacturing
+mes-0160.industrial.internal,device_identity,RSA,2048,keystore,mes-0160.industrial.internal,staging,Network Ops,Manufacturing
+plc-gw-0161.industrial.internal,tls_certificate,ECDSA,256,tls,plc-gw-0161.industrial.internal,production,,Manufacturing
+historian-0162.industrial.internal,device_identity,RSA,2048,keystore,historian-0162.industrial.internal,production,Network Ops,Manufacturing
+edge-0163.industrial.internal,device_identity,ECDSA,256,keystore,edge-0163.industrial.internal,staging,,Manufacturing
+historian-0164.industrial.internal,config,RSA,2048,config,historian-0164.industrial.internal,staging,Infrastructure,Manufacturing
+plc-gw-0165.industrial.internal,config,RSA,2048,config,plc-gw-0165.industrial.internal,staging,Infrastructure,Manufacturing
+scada-0166.industrial.internal,vpn_ipsec,DH,2048,keystore,scada-0166.industrial.internal,staging,Platform Engineering,Manufacturing
+scada-0167.industrial.internal,tls_certificate,ECDSA,256,tls,scada-0167.industrial.internal,production,Payments Ops,Manufacturing
+edge-0168.industrial.internal,code_signing,RSA,3072,keystore,edge-0168.industrial.internal,staging,Network Ops,Manufacturing
+plc-gw-0169.industrial.internal,firmware_signing,ECDSA,256,keystore,plc-gw-0169.industrial.internal,production,Application Security,Manufacturing
+edge-0170.industrial.internal,root_ca,RSA,4096,keystore,edge-0170.industrial.internal,production,,Manufacturing
+plc-gw-0171.industrial.internal,config,RSA,2048,config,plc-gw-0171.industrial.internal,production,Application Security,Manufacturing
+mes-0172.industrial.internal,code_signing,RSA,3072,keystore,mes-0172.industrial.internal,production,Payments Ops,Manufacturing
+scada-0173.industrial.internal,tls_certificate,ML-DSA-65,,tls,scada-0173.industrial.internal,production,Network Ops,Manufacturing
+historian-0174.industrial.internal,tls_certificate,RSA,2048,tls,historian-0174.industrial.internal,production,,Manufacturing
+mes-0175.industrial.internal,config,RSA,2048,config,mes-0175.industrial.internal,staging,Application Security,Manufacturing
+historian-0176.industrial.internal,config,ECDHE,256,config,historian-0176.industrial.internal,production,,Manufacturing
+historian-0177.industrial.internal,firmware_signing,ECDSA,256,keystore,historian-0177.industrial.internal,production,Network Ops,Manufacturing
+historian-0178.industrial.internal,firmware_signing,ECDSA,256,keystore,historian-0178.industrial.internal,staging,,Manufacturing
+edge-0179.industrial.internal,device_identity,RSA,2048,keystore,edge-0179.industrial.internal,staging,Infrastructure,Manufacturing
+edge-0180.industrial.internal,tls_certificate,ECDSA,256,tls,edge-0180.industrial.internal,production,Application Security,Manufacturing
+edge-0181.industrial.internal,vpn_ipsec,DH,2048,keystore,edge-0181.industrial.internal,production,Platform Engineering,Manufacturing
+edge-0182.industrial.internal,vpn_ipsec,DH,2048,keystore,edge-0182.industrial.internal,dr,,Manufacturing
+historian-0183.industrial.internal,device_identity,RSA,2048,keystore,historian-0183.industrial.internal,production,Application Security,Manufacturing
+plc-gw-0184.industrial.internal,tls_certificate,ECDSA,256,tls,plc-gw-0184.industrial.internal,production,Infrastructure,Manufacturing
+historian-0185.industrial.internal,config,ECDHE,256,config,historian-0185.industrial.internal,dr,Infrastructure,Manufacturing
+edge-0186.industrial.internal,tls_certificate,RSA,2048,tls,edge-0186.industrial.internal,dr,Application Security,Manufacturing
+historian-0187.industrial.internal,firmware_signing,RSA,2048,keystore,historian-0187.industrial.internal,staging,Network Ops,Manufacturing
+historian-0188.industrial.internal,device_identity,ECDSA,256,keystore,historian-0188.industrial.internal,production,,Manufacturing
+historian-0189.industrial.internal,firmware_signing,ECDSA,256,keystore,historian-0189.industrial.internal,production,PKI Team,Manufacturing
+scada-0190.industrial.internal,tls_certificate,ML-DSA-65,,tls,scada-0190.industrial.internal,production,Network Ops,Manufacturing
+mes-0191.industrial.internal,config,RSA,2048,config,mes-0191.industrial.internal,staging,Infrastructure,Manufacturing
+plc-gw-0192.industrial.internal,code_signing,RSA,3072,keystore,plc-gw-0192.industrial.internal,production,Platform Engineering,Manufacturing
+scada-0193.industrial.internal,device_identity,ECDSA,256,keystore,scada-0193.industrial.internal,production,Payments Ops,Manufacturing
+scada-0194.industrial.internal,tls_certificate,RSA,2048,tls,scada-0194.industrial.internal,production,Payments Ops,Manufacturing
+edge-0195.industrial.internal,config,RSA,2048,config,edge-0195.industrial.internal,production,,Manufacturing
+edge-0196.industrial.internal,config,RSA,2048,config,edge-0196.industrial.internal,staging,Payments Ops,Manufacturing
+scada-0197.industrial.internal,config,ECDHE,256,config,scada-0197.industrial.internal,production,,Manufacturing
+scada-0198.industrial.internal,tls_certificate,RSA,2048,tls,scada-0198.industrial.internal,production,Data Platform,Manufacturing
+mes-0199.industrial.internal,tls_certificate,ECDSA,256,tls,mes-0199.industrial.internal,production,Platform Engineering,Manufacturing
+plc-gw-0200.industrial.internal,device_identity,ECDSA,256,keystore,plc-gw-0200.industrial.internal,production,Data Platform,Manufacturing
+edge-0201.industrial.internal,tls_certificate,RSA,2048,tls,edge-0201.industrial.internal,production,Data Platform,Manufacturing
+mes-0202.industrial.internal,device_identity,ECDSA,256,keystore,mes-0202.industrial.internal,production,,Manufacturing
+mes-0203.industrial.internal,tls_certificate,ECDSA,256,tls,mes-0203.industrial.internal,dr,Payments Ops,Manufacturing
+mes-0204.industrial.internal,device_identity,RSA,2048,keystore,mes-0204.industrial.internal,dr,Platform Engineering,Manufacturing
+plc-gw-0205.industrial.internal,device_identity,ECDSA,256,keystore,plc-gw-0205.industrial.internal,production,Payments Ops,Manufacturing
+scada-0206.industrial.internal,tls_certificate,RSA,2048,tls,scada-0206.industrial.internal,production,Platform Engineering,Manufacturing
+historian-0207.industrial.internal,firmware_signing,RSA,2048,keystore,historian-0207.industrial.internal,dr,Payments Ops,Manufacturing
+edge-0208.industrial.internal,firmware_signing,RSA,2048,keystore,edge-0208.industrial.internal,staging,PKI Team,Manufacturing
+mes-0209.industrial.internal,device_identity,ECDSA,256,keystore,mes-0209.industrial.internal,production,Data Platform,Manufacturing
+mes-0210.industrial.internal,firmware_signing,ECDSA,256,keystore,mes-0210.industrial.internal,dr,Application Security,Manufacturing
+historian-0211.industrial.internal,config,RSA,2048,config,historian-0211.industrial.internal,production,PKI Team,Manufacturing
+historian-0212.industrial.internal,device_identity,ECDSA,256,keystore,historian-0212.industrial.internal,production,PKI Team,Manufacturing
+edge-0213.industrial.internal,tls_certificate,RSA,2048,tls,edge-0213.industrial.internal,staging,Data Platform,Manufacturing
+scada-0214.industrial.internal,device_identity,ECDSA,256,keystore,scada-0214.industrial.internal,dr,PKI Team,Manufacturing
+mes-0215.industrial.internal,tls_certificate,RSA,2048,tls,mes-0215.industrial.internal,production,Platform Engineering,Manufacturing
+scada-0216.industrial.internal,tls_certificate,ECDSA,256,tls,scada-0216.industrial.internal,production,Infrastructure,Manufacturing
+mes-0217.industrial.internal,config,ECDHE,256,config,mes-0217.industrial.internal,dr,,Manufacturing
+mes-0218.industrial.internal,code_signing,RSA,3072,keystore,mes-0218.industrial.internal,staging,Infrastructure,Manufacturing
+mes-0219.industrial.internal,tls_certificate,RSA,2048,tls,mes-0219.industrial.internal,production,Application Security,Manufacturing
+edge-0220.industrial.internal,device_identity,RSA,2048,keystore,edge-0220.industrial.internal,staging,PKI Team,Manufacturing
+edge-0221.industrial.internal,tls_certificate,ECDSA,256,tls,edge-0221.industrial.internal,staging,Infrastructure,Manufacturing
+scada-0222.industrial.internal,tls_certificate,RSA,2048,tls,scada-0222.industrial.internal,production,Data Platform,Manufacturing
+scada-0223.industrial.internal,vpn_ipsec,ECDHE,256,keystore,scada-0223.industrial.internal,staging,Infrastructure,Manufacturing
+mes-0224.industrial.internal,device_identity,RSA,2048,keystore,mes-0224.industrial.internal,staging,,Manufacturing
+mes-0225.industrial.internal,tls_certificate,RSA,2048,tls,mes-0225.industrial.internal,production,Payments Ops,Manufacturing
+scada-0226.industrial.internal,device_identity,ECDSA,256,keystore,scada-0226.industrial.internal,production,,Manufacturing
+edge-0227.industrial.internal,device_identity,ECDSA,256,keystore,edge-0227.industrial.internal,production,Platform Engineering,Manufacturing
+edge-0228.industrial.internal,tls_certificate,ECDSA,256,tls,edge-0228.industrial.internal,staging,Infrastructure,Manufacturing
+historian-0229.industrial.internal,firmware_signing,ECDSA,256,keystore,historian-0229.industrial.internal,production,Network Ops,Manufacturing
+mes-0230.industrial.internal,tls_certificate,RSA,2048,tls,mes-0230.industrial.internal,production,Network Ops,Manufacturing
+scada-0231.industrial.internal,config,ECDHE,256,config,scada-0231.industrial.internal,production,Infrastructure,Manufacturing
+plc-gw-0232.industrial.internal,firmware_signing,ECDSA,256,keystore,plc-gw-0232.industrial.internal,dr,Platform Engineering,Manufacturing
+plc-gw-0233.industrial.internal,device_identity,RSA,2048,keystore,plc-gw-0233.industrial.internal,production,Payments Ops,Manufacturing
+historian-0234.industrial.internal,vpn_ipsec,ECDHE,256,keystore,historian-0234.industrial.internal,staging,Infrastructure,Manufacturing
+historian-0235.industrial.internal,device_identity,ECDSA,256,keystore,historian-0235.industrial.internal,production,,Manufacturing
+mes-0236.industrial.internal,tls_certificate,ECDSA,256,tls,mes-0236.industrial.internal,staging,Network Ops,Manufacturing
+edge-0237.industrial.internal,tls_certificate,ML-DSA-65,,tls,edge-0237.industrial.internal,production,Application Security,Manufacturing
+scada-0238.industrial.internal,firmware_signing,RSA,2048,keystore,scada-0238.industrial.internal,production,Network Ops,Manufacturing
+scada-0239.industrial.internal,tls_certificate,RSA,2048,tls,scada-0239.industrial.internal,production,,Manufacturing
+scada-0240.industrial.internal,firmware_signing,RSA,2048,keystore,scada-0240.industrial.internal,production,,Manufacturing
+scada-0241.industrial.internal,vpn_ipsec,ECDHE,256,keystore,scada-0241.industrial.internal,production,PKI Team,Manufacturing
+edge-0242.industrial.internal,tls_certificate,ECDSA,256,tls,edge-0242.industrial.internal,staging,PKI Team,Manufacturing
+scada-0243.industrial.internal,tls_certificate,RSA,2048,tls,scada-0243.industrial.internal,production,,Manufacturing
+scada-0244.industrial.internal,firmware_signing,ECDSA,256,keystore,scada-0244.industrial.internal,production,Data Platform,Manufacturing
+plc-gw-0245.industrial.internal,config,ECDHE,256,config,plc-gw-0245.industrial.internal,production,Infrastructure,Manufacturing
+historian-0246.industrial.internal,code_signing,RSA,3072,keystore,historian-0246.industrial.internal,production,Network Ops,Manufacturing
+scada-0247.industrial.internal,device_identity,ECDSA,256,keystore,scada-0247.industrial.internal,production,Data Platform,Manufacturing
+scada-0248.industrial.internal,firmware_signing,ECDSA,256,keystore,scada-0248.industrial.internal,production,Network Ops,Manufacturing
+plc-gw-0249.industrial.internal,code_signing,ECDSA,256,keystore,plc-gw-0249.industrial.internal,production,Payments Ops,Manufacturing
+plc-gw-0250.industrial.internal,firmware_signing,RSA,2048,keystore,plc-gw-0250.industrial.internal,staging,,Manufacturing
+scada-0251.industrial.internal,tls_certificate,RSA,2048,tls,scada-0251.industrial.internal,production,Infrastructure,Manufacturing
+edge-0252.industrial.internal,tls_certificate,RSA,2048,tls,edge-0252.industrial.internal,production,Payments Ops,Manufacturing
+scada-0253.industrial.internal,device_identity,RSA,2048,keystore,scada-0253.industrial.internal,production,,Manufacturing
+historian-0254.industrial.internal,config,RSA,2048,config,historian-0254.industrial.internal,staging,Application Security,Manufacturing
+plc-gw-0255.industrial.internal,device_identity,ECDSA,256,keystore,plc-gw-0255.industrial.internal,production,PKI Team,Manufacturing
+scada-0256.industrial.internal,device_identity,ECDSA,256,keystore,scada-0256.industrial.internal,production,Payments Ops,Manufacturing
+mes-0257.industrial.internal,device_identity,RSA,2048,keystore,mes-0257.industrial.internal,staging,Platform Engineering,Manufacturing
+historian-0258.industrial.internal,tls_certificate,ECDSA,256,tls,historian-0258.industrial.internal,production,,Manufacturing
+historian-0259.industrial.internal,config,ECDHE,256,config,historian-0259.industrial.internal,production,Data Platform,Manufacturing
+mes-0260.industrial.internal,tls_certificate,ML-DSA-65,,tls,mes-0260.industrial.internal,production,Application Security,Manufacturing
+plc-gw-0261.industrial.internal,code_signing,RSA,3072,keystore,plc-gw-0261.industrial.internal,production,Infrastructure,Manufacturing
+historian-0262.industrial.internal,config,ECDHE,256,config,historian-0262.industrial.internal,production,Platform Engineering,Manufacturing
+scada-0263.industrial.internal,root_ca,ECDSA,384,keystore,scada-0263.industrial.internal,staging,Platform Engineering,Manufacturing
+plc-gw-0264.industrial.internal,config,RSA,2048,config,plc-gw-0264.industrial.internal,dr,Payments Ops,Manufacturing
+historian-0265.industrial.internal,device_identity,ECDSA,256,keystore,historian-0265.industrial.internal,production,PKI Team,Manufacturing
+mes-0266.industrial.internal,vpn_ipsec,DH,2048,keystore,mes-0266.industrial.internal,production,,Manufacturing
+scada-0267.industrial.internal,tls_certificate,RSA,2048,tls,scada-0267.industrial.internal,production,Data Platform,Manufacturing
+edge-0268.industrial.internal,root_ca,RSA,4096,keystore,edge-0268.industrial.internal,production,Infrastructure,Manufacturing
+mes-0269.industrial.internal,tls_certificate,RSA,2048,tls,mes-0269.industrial.internal,dr,,Manufacturing
+mes-0270.industrial.internal,vpn_ipsec,ECDHE,256,keystore,mes-0270.industrial.internal,production,Infrastructure,Manufacturing
+edge-0271.industrial.internal,code_signing,ECDSA,256,keystore,edge-0271.industrial.internal,production,Payments Ops,Manufacturing
+historian-0272.industrial.internal,root_ca,RSA,4096,keystore,historian-0272.industrial.internal,production,Infrastructure,Manufacturing
+plc-gw-0273.industrial.internal,config,RSA,2048,config,plc-gw-0273.industrial.internal,staging,Network Ops,Manufacturing
+historian-0274.industrial.internal,config,RSA,2048,config,historian-0274.industrial.internal,production,Payments Ops,Manufacturing
+historian-0275.industrial.internal,device_identity,ECDSA,256,keystore,historian-0275.industrial.internal,production,Infrastructure,Manufacturing
+historian-0276.industrial.internal,tls_certificate,RSA,2048,tls,historian-0276.industrial.internal,production,Network Ops,Manufacturing
+scada-0277.industrial.internal,root_ca,ECDSA,384,keystore,scada-0277.industrial.internal,production,Infrastructure,Manufacturing
+edge-0278.industrial.internal,firmware_signing,RSA,2048,keystore,edge-0278.industrial.internal,production,Platform Engineering,Manufacturing
+historian-0279.industrial.internal,code_signing,ECDSA,256,keystore,historian-0279.industrial.internal,dr,Network Ops,Manufacturing
+mes-0280.industrial.internal,device_identity,ECDSA,256,keystore,mes-0280.industrial.internal,staging,Platform Engineering,Manufacturing
+scada-0281.industrial.internal,vpn_ipsec,DH,2048,keystore,scada-0281.industrial.internal,staging,Payments Ops,Manufacturing
+edge-0282.industrial.internal,config,RSA,2048,config,edge-0282.industrial.internal,staging,Infrastructure,Manufacturing
+historian-0283.industrial.internal,device_identity,ECDSA,256,keystore,historian-0283.industrial.internal,production,PKI Team,Manufacturing
+edge-0284.industrial.internal,device_identity,ECDSA,256,keystore,edge-0284.industrial.internal,production,Data Platform,Manufacturing
+plc-gw-0285.industrial.internal,device_identity,RSA,2048,keystore,plc-gw-0285.industrial.internal,production,Network Ops,Manufacturing
+scada-0286.industrial.internal,vpn_ipsec,ECDHE,256,keystore,scada-0286.industrial.internal,production,PKI Team,Manufacturing
+plc-gw-0287.industrial.internal,firmware_signing,RSA,2048,keystore,plc-gw-0287.industrial.internal,staging,Infrastructure,Manufacturing
+edge-0288.industrial.internal,device_identity,ECDSA,256,keystore,edge-0288.industrial.internal,production,Data Platform,Manufacturing
+mes-0289.industrial.internal,firmware_signing,ECDSA,256,keystore,mes-0289.industrial.internal,dr,PKI Team,Manufacturing
+edge-0290.industrial.internal,firmware_signing,ECDSA,256,keystore,edge-0290.industrial.internal,staging,Network Ops,Manufacturing
+historian-0291.industrial.internal,config,ECDHE,256,config,historian-0291.industrial.internal,production,Infrastructure,Manufacturing
+mes-0292.industrial.internal,device_identity,ECDSA,256,keystore,mes-0292.industrial.internal,production,Network Ops,Manufacturing
+scada-0293.industrial.internal,vpn_ipsec,DH,2048,keystore,scada-0293.industrial.internal,staging,Data Platform,Manufacturing
+scada-0294.industrial.internal,firmware_signing,RSA,2048,keystore,scada-0294.industrial.internal,production,Application Security,Manufacturing
+scada-0295.industrial.internal,tls_certificate,RSA,2048,tls,scada-0295.industrial.internal,dr,Data Platform,Manufacturing
+plc-gw-0296.industrial.internal,device_identity,ECDSA,256,keystore,plc-gw-0296.industrial.internal,production,,Manufacturing
+historian-0297.industrial.internal,tls_certificate,ECDSA,256,tls,historian-0297.industrial.internal,production,Platform Engineering,Manufacturing
+historian-0298.industrial.internal,config,RSA,2048,config,historian-0298.industrial.internal,production,,Manufacturing
+edge-0299.industrial.internal,tls_certificate,RSA,2048,tls,edge-0299.industrial.internal,production,Data Platform,Manufacturing
+edge-0300.industrial.internal,tls_certificate,RSA,2048,tls,edge-0300.industrial.internal,staging,Application Security,Manufacturing
+historian-0301.industrial.internal,firmware_signing,ECDSA,256,keystore,historian-0301.industrial.internal,production,Platform Engineering,Manufacturing
+historian-0302.industrial.internal,tls_certificate,RSA,2048,tls,historian-0302.industrial.internal,production,PKI Team,Manufacturing
+historian-0303.industrial.internal,device_identity,ECDSA,256,keystore,historian-0303.industrial.internal,production,Infrastructure,Manufacturing
+plc-gw-0304.industrial.internal,firmware_signing,ECDSA,256,keystore,plc-gw-0304.industrial.internal,production,PKI Team,Manufacturing
+edge-0305.industrial.internal,tls_certificate,ECDSA,256,tls,edge-0305.industrial.internal,dr,Infrastructure,Manufacturing
+historian-0306.industrial.internal,vpn_ipsec,ECDHE,256,keystore,historian-0306.industrial.internal,production,,Manufacturing
+mes-0307.industrial.internal,code_signing,ECDSA,256,keystore,mes-0307.industrial.internal,production,Network Ops,Manufacturing
+historian-0308.industrial.internal,device_identity,RSA,2048,keystore,historian-0308.industrial.internal,production,PKI Team,Manufacturing
+historian-0309.industrial.internal,tls_certificate,ECDSA,256,tls,historian-0309.industrial.internal,staging,Application Security,Manufacturing
+scada-0310.industrial.internal,code_signing,ECDSA,256,keystore,scada-0310.industrial.internal,production,Data Platform,Manufacturing
+edge-0311.industrial.internal,tls_certificate,RSA,2048,tls,edge-0311.industrial.internal,production,,Manufacturing
+mes-0312.industrial.internal,config,RSA,2048,config,mes-0312.industrial.internal,production,Platform Engineering,Manufacturing
+mes-0313.industrial.internal,vpn_ipsec,ECDHE,256,keystore,mes-0313.industrial.internal,production,Infrastructure,Manufacturing
+plc-gw-0314.industrial.internal,firmware_signing,ECDSA,256,keystore,plc-gw-0314.industrial.internal,staging,Payments Ops,Manufacturing
+edge-0315.industrial.internal,vpn_ipsec,ECDHE,256,keystore,edge-0315.industrial.internal,production,PKI Team,Manufacturing
+plc-gw-0316.industrial.internal,config,RSA,2048,config,plc-gw-0316.industrial.internal,production,Infrastructure,Manufacturing
+mes-0317.industrial.internal,vpn_ipsec,DH,2048,keystore,mes-0317.industrial.internal,production,PKI Team,Manufacturing
+historian-0318.industrial.internal,device_identity,RSA,2048,keystore,historian-0318.industrial.internal,production,Network Ops,Manufacturing
+plc-gw-0319.industrial.internal,config,ECDHE,256,config,plc-gw-0319.industrial.internal,production,,Manufacturing
+scada-0320.industrial.internal,tls_certificate,ECDSA,256,tls,scada-0320.industrial.internal,production,Platform Engineering,Manufacturing
+edge-0321.industrial.internal,config,ECDHE,256,config,edge-0321.industrial.internal,production,Payments Ops,Manufacturing
+historian-0322.industrial.internal,device_identity,ECDSA,256,keystore,historian-0322.industrial.internal,production,Infrastructure,Manufacturing
+mes-0323.industrial.internal,config,ECDHE,256,config,mes-0323.industrial.internal,production,,Manufacturing
+edge-0324.industrial.internal,firmware_signing,RSA,2048,keystore,edge-0324.industrial.internal,staging,Application Security,Manufacturing
+plc-gw-0325.industrial.internal,device_identity,ECDSA,256,keystore,plc-gw-0325.industrial.internal,production,PKI Team,Manufacturing
+edge-0326.industrial.internal,code_signing,ECDSA,256,keystore,edge-0326.industrial.internal,production,Payments Ops,Manufacturing
+mes-0327.industrial.internal,tls_certificate,RSA,2048,tls,mes-0327.industrial.internal,staging,,Manufacturing
+plc-gw-0328.industrial.internal,config,ECDHE,256,config,plc-gw-0328.industrial.internal,production,Network Ops,Manufacturing
+historian-0329.industrial.internal,vpn_ipsec,DH,2048,keystore,historian-0329.industrial.internal,staging,Payments Ops,Manufacturing
+mes-0330.industrial.internal,device_identity,RSA,2048,keystore,mes-0330.industrial.internal,production,Payments Ops,Manufacturing
+historian-0331.industrial.internal,config,ECDHE,256,config,historian-0331.industrial.internal,staging,Network Ops,Manufacturing
+historian-0332.industrial.internal,config,RSA,2048,config,historian-0332.industrial.internal,production,Data Platform,Manufacturing
+scada-0333.industrial.internal,device_identity,ECDSA,256,keystore,scada-0333.industrial.internal,staging,Network Ops,Manufacturing
+plc-gw-0334.industrial.internal,code_signing,ECDSA,256,keystore,plc-gw-0334.industrial.internal,production,Data Platform,Manufacturing
+edge-0335.industrial.internal,device_identity,ECDSA,256,keystore,edge-0335.industrial.internal,production,Payments Ops,Manufacturing
+edge-0336.industrial.internal,config,RSA,2048,config,edge-0336.industrial.internal,production,Network Ops,Manufacturing
+scada-0337.industrial.internal,device_identity,ECDSA,256,keystore,scada-0337.industrial.internal,production,Payments Ops,Manufacturing
+mes-0338.industrial.internal,firmware_signing,ECDSA,256,keystore,mes-0338.industrial.internal,production,Network Ops,Manufacturing
+plc-gw-0339.industrial.internal,tls_certificate,ML-DSA-65,,tls,plc-gw-0339.industrial.internal,production,Data Platform,Manufacturing
+edge-0340.industrial.internal,firmware_signing,ECDSA,256,keystore,edge-0340.industrial.internal,production,Application Security,Manufacturing
+plc-gw-0341.industrial.internal,device_identity,RSA,2048,keystore,plc-gw-0341.industrial.internal,production,Payments Ops,Manufacturing
+plc-gw-0342.industrial.internal,device_identity,RSA,2048,keystore,plc-gw-0342.industrial.internal,production,Application Security,Manufacturing
+historian-0343.industrial.internal,root_ca,RSA,4096,keystore,historian-0343.industrial.internal,production,,Manufacturing
+scada-0344.industrial.internal,tls_certificate,ML-DSA-65,,tls,scada-0344.industrial.internal,staging,Payments Ops,Manufacturing
+scada-0345.industrial.internal,firmware_signing,RSA,2048,keystore,scada-0345.industrial.internal,production,Application Security,Manufacturing
+scada-0346.industrial.internal,vpn_ipsec,DH,2048,keystore,scada-0346.industrial.internal,production,Network Ops,Manufacturing
+historian-0347.industrial.internal,code_signing,RSA,3072,keystore,historian-0347.industrial.internal,production,Network Ops,Manufacturing
+historian-0348.industrial.internal,tls_certificate,ECDSA,256,tls,historian-0348.industrial.internal,production,Application Security,Manufacturing
+mes-0349.industrial.internal,vpn_ipsec,ECDHE,256,keystore,mes-0349.industrial.internal,staging,Data Platform,Manufacturing
+mes-0350.industrial.internal,firmware_signing,RSA,2048,keystore,mes-0350.industrial.internal,production,Payments Ops,Manufacturing
+edge-0351.industrial.internal,tls_certificate,ECDSA,256,tls,edge-0351.industrial.internal,dr,Infrastructure,Manufacturing
+historian-0352.industrial.internal,firmware_signing,RSA,2048,keystore,historian-0352.industrial.internal,staging,Infrastructure,Manufacturing
+edge-0353.industrial.internal,device_identity,RSA,2048,keystore,edge-0353.industrial.internal,production,Payments Ops,Manufacturing
+edge-0354.industrial.internal,firmware_signing,RSA,2048,keystore,edge-0354.industrial.internal,production,PKI Team,Manufacturing
+plc-gw-0355.industrial.internal,device_identity,RSA,2048,keystore,plc-gw-0355.industrial.internal,production,Data Platform,Manufacturing
+scada-0356.industrial.internal,tls_certificate,RSA,2048,tls,scada-0356.industrial.internal,production,Infrastructure,Manufacturing
+historian-0357.industrial.internal,vpn_ipsec,DH,2048,keystore,historian-0357.industrial.internal,production,PKI Team,Manufacturing
+plc-gw-0358.industrial.internal,device_identity,ECDSA,256,keystore,plc-gw-0358.industrial.internal,production,Payments Ops,Manufacturing
+mes-0359.industrial.internal,firmware_signing,ECDSA,256,keystore,mes-0359.industrial.internal,production,Platform Engineering,Manufacturing
+edge-0360.industrial.internal,firmware_signing,ECDSA,256,keystore,edge-0360.industrial.internal,production,Infrastructure,Manufacturing
+historian-0361.industrial.internal,device_identity,ECDSA,256,keystore,historian-0361.industrial.internal,staging,Payments Ops,Manufacturing
+historian-0362.industrial.internal,firmware_signing,RSA,2048,keystore,historian-0362.industrial.internal,production,Network Ops,Manufacturing
+edge-0363.industrial.internal,device_identity,RSA,2048,keystore,edge-0363.industrial.internal,staging,Network Ops,Manufacturing
+mes-0364.industrial.internal,firmware_signing,RSA,2048,keystore,mes-0364.industrial.internal,staging,Platform Engineering,Manufacturing
+scada-0365.industrial.internal,tls_certificate,ECDSA,256,tls,scada-0365.industrial.internal,production,Data Platform,Manufacturing
+scada-0366.industrial.internal,tls_certificate,RSA,2048,tls,scada-0366.industrial.internal,production,Payments Ops,Manufacturing
+edge-0367.industrial.internal,tls_certificate,ECDSA,256,tls,edge-0367.industrial.internal,dr,Application Security,Manufacturing
+edge-0368.industrial.internal,tls_certificate,ECDSA,256,tls,edge-0368.industrial.internal,production,Application Security,Manufacturing
+mes-0369.industrial.internal,code_signing,ECDSA,256,keystore,mes-0369.industrial.internal,dr,Network Ops,Manufacturing
+scada-0370.industrial.internal,vpn_ipsec,ECDHE,256,keystore,scada-0370.industrial.internal,production,Platform Engineering,Manufacturing
+mes-0371.industrial.internal,device_identity,RSA,2048,keystore,mes-0371.industrial.internal,dr,Infrastructure,Manufacturing
+plc-gw-0372.industrial.internal,firmware_signing,ECDSA,256,keystore,plc-gw-0372.industrial.internal,production,Infrastructure,Manufacturing
+edge-0373.industrial.internal,tls_certificate,RSA,2048,tls,edge-0373.industrial.internal,production,Network Ops,Manufacturing
+historian-0374.industrial.internal,vpn_ipsec,DH,2048,keystore,historian-0374.industrial.internal,production,Payments Ops,Manufacturing
+edge-0375.industrial.internal,firmware_signing,RSA,2048,keystore,edge-0375.industrial.internal,production,,Manufacturing
+historian-0376.industrial.internal,device_identity,ECDSA,256,keystore,historian-0376.industrial.internal,dr,,Manufacturing
+scada-0377.industrial.internal,device_identity,ECDSA,256,keystore,scada-0377.industrial.internal,production,Data Platform,Manufacturing
+mes-0378.industrial.internal,device_identity,ECDSA,256,keystore,mes-0378.industrial.internal,production,Data Platform,Manufacturing
+plc-gw-0379.industrial.internal,device_identity,RSA,2048,keystore,plc-gw-0379.industrial.internal,production,Application Security,Manufacturing
+scada-0380.industrial.internal,device_identity,ECDSA,256,keystore,scada-0380.industrial.internal,staging,Data Platform,Manufacturing
+plc-gw-0381.industrial.internal,firmware_signing,RSA,2048,keystore,plc-gw-0381.industrial.internal,staging,Application Security,Manufacturing
+scada-0382.industrial.internal,config,ECDHE,256,config,scada-0382.industrial.internal,production,Infrastructure,Manufacturing
+scada-0383.industrial.internal,tls_certificate,RSA,2048,tls,scada-0383.industrial.internal,production,PKI Team,Manufacturing
+scada-0384.industrial.internal,device_identity,ECDSA,256,keystore,scada-0384.industrial.internal,production,Network Ops,Manufacturing
+mes-0385.industrial.internal,device_identity,RSA,2048,keystore,mes-0385.industrial.internal,production,Payments Ops,Manufacturing
+historian-0386.industrial.internal,config,RSA,2048,config,historian-0386.industrial.internal,production,Payments Ops,Manufacturing
+plc-gw-0387.industrial.internal,device_identity,ECDSA,256,keystore,plc-gw-0387.industrial.internal,production,PKI Team,Manufacturing
+edge-0388.industrial.internal,tls_certificate,ECDSA,256,tls,edge-0388.industrial.internal,staging,Platform Engineering,Manufacturing
+edge-0389.industrial.internal,tls_certificate,ML-DSA-65,,tls,edge-0389.industrial.internal,production,Payments Ops,Manufacturing
+mes-0390.industrial.internal,vpn_ipsec,ECDHE,256,keystore,mes-0390.industrial.internal,production,,Manufacturing
+historian-0391.industrial.internal,tls_certificate,RSA,2048,tls,historian-0391.industrial.internal,staging,Application Security,Manufacturing
+historian-0392.industrial.internal,firmware_signing,RSA,2048,keystore,historian-0392.industrial.internal,dr,Network Ops,Manufacturing
+mes-0393.industrial.internal,code_signing,ECDSA,256,keystore,mes-0393.industrial.internal,production,PKI Team,Manufacturing
+plc-gw-0394.industrial.internal,firmware_signing,ECDSA,256,keystore,plc-gw-0394.industrial.internal,staging,Infrastructure,Manufacturing
+plc-gw-0395.industrial.internal,vpn_ipsec,ECDHE,256,keystore,plc-gw-0395.industrial.internal,staging,Application Security,Manufacturing
+plc-gw-0396.industrial.internal,tls_certificate,ECDSA,256,tls,plc-gw-0396.industrial.internal,production,Network Ops,Manufacturing
+plc-gw-0397.industrial.internal,code_signing,RSA,3072,keystore,plc-gw-0397.industrial.internal,staging,Data Platform,Manufacturing
+scada-0398.industrial.internal,device_identity,ECDSA,256,keystore,scada-0398.industrial.internal,production,Platform Engineering,Manufacturing
+edge-0399.industrial.internal,tls_certificate,RSA,2048,tls,edge-0399.industrial.internal,production,,Manufacturing

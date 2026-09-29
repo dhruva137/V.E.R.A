@@ -1,0 +1,33 @@
+organisation: "Live Collection Test"
+sector: payments
+tls:
+  enabled: true
+  probe_key_exchange_groups: true
+  endpoints:
+    - cloudflare.com:443
+    - www.google.com:443
+    - github.com:443
+certificates:
+  enabled: false
+keystores:
+  enabled: false
+pkcs11:
+  enabled: true
+  module: /opt/nfast/toolkits/pkcs11/libcknfast.so
+  slots:
+    - slot: 0
+      pin_env: VERA_HSM_PIN
+      label: TEST-HSM
+kmip:
+  enabled: true
+cloud_kms:
+  aws:
+    enabled: true
+    region: ap-south-1
+  azure:
+    enabled: false
+  gcp:
+    enabled: false
+output:
+  directory: demo/live/out
+  assert_no_key_material: true

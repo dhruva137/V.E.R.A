@@ -1,0 +1,323 @@
+{
+  "source": "tls",
+  "collected_at": "2026-09-22T09:30:00Z",
+  "synthetic": true,
+  "note": "Recorded handshakes of the demo bank's endpoints (synthetic).",
+  "findings": [
+    {
+      "id": "cap-cert-pay.tejomaya.example:443",
+      "source_type": "tls",
+      "source_location": "pay.tejomaya.example:443",
+      "asset_class": "tls_certificate",
+      "algorithm": "RSA",
+      "key_size": 2048,
+      "protocol": "TLSv1.2",
+      "signature_algorithm": "sha256WithRSAEncryption",
+      "cert_subject": "C=IN,O=Tejomaya Bank,CN=pay.tejomaya.example",
+      "cert_issuer": "C=IN,O=Tejomaya Bank,CN=Tejomaya Demo Root 1",
+      "cert_validity_start": "2025-01-01T00:00:00+00:00",
+      "cert_validity_end": "2026-05-16T00:00:00+00:00",
+      "cert_serial": "23057",
+      "usage": "signing",
+      "tags": [
+        "live-scan"
+      ],
+      "environment": "production",
+      "raw_details": {
+        "type": "certificate",
+        "peer_ip": "203.0.113.20",
+        "chain_trusted": true,
+        "trust_error": null,
+        "public_key_sha256": "f811fe4b61a6048eb019785f760a387af26f2bc066d3115dd4a6da38c7d155bc"
+      }
+    },
+    {
+      "id": "cap-suite-pay.tejomaya.example:443",
+      "source_type": "tls",
+      "source_location": "pay.tejomaya.example:443",
+      "asset_class": "tls_cipher_suite",
+      "protocol": "TLSv1.0",
+      "cipher_suite": "TLS_RSA_WITH_3DES_EDE_CBC_SHA",
+      "usage": "encryption",
+      "tags": [
+        "live-scan"
+      ],
+      "environment": "production",
+      "raw_details": {
+        "type": "cipher_suite",
+        "peer_ip": "203.0.113.20"
+      }
+    },
+    {
+      "id": "cap-cert-ledger-core.tejomaya.internal:443",
+      "source_type": "tls",
+      "source_location": "ledger-core.tejomaya.internal:443",
+      "asset_class": "tls_certificate",
+      "algorithm": "RSA",
+      "key_size": 3072,
+      "protocol": "TLSv1.2",
+      "signature_algorithm": "sha256WithRSAEncryption",
+      "cert_subject": "CN=ledger-core.tejomaya.internal,O=Tejomaya Bank,C=IN",
+      "cert_issuer": "CN=Tejomaya Issuing CA - Services,O=Tejomaya Bank,C=IN",
+      "cert_validity_start": "2025-11-02",
+      "cert_validity_end": "2027-10-03",
+      "cert_serial": "AE:E5:37:A8:2C:01:87:E0",
+      "usage": "signing",
+      "tags": [
+        "live-scan"
+      ],
+      "environment": "production",
+      "raw_details": {
+        "type": "certificate",
+        "peer_ip": "203.0.113.30",
+        "chain_trusted": true,
+        "trust_error": null
+      }
+    },
+    {
+      "id": "cap-suite-ledger-core.tejomaya.internal:443",
+      "source_type": "tls",
+      "source_location": "ledger-core.tejomaya.internal:443",
+      "asset_class": "tls_cipher_suite",
+      "protocol": "TLSv1.2",
+      "cipher_suite": "ECDHE-RSA-AES256-GCM-SHA384",
+      "usage": "encryption",
+      "tags": [
+        "live-scan"
+      ],
+      "environment": "production",
+      "raw_details": {
+        "type": "cipher_suite",
+        "peer_ip": "203.0.113.30"
+      }
+    },
+    {
+      "id": "cap-kex-ledger-core.tejomaya.internal:443",
+      "source_type": "tls",
+      "source_location": "ledger-core.tejomaya.internal:443",
+      "asset_class": "tls_key_exchange",
+      "protocol": "TLSv1.2",
+      "key_exchange": "X25519",
+      "usage": "key_exchange",
+      "tags": [
+        "live-scan"
+      ],
+      "environment": "production",
+      "raw_details": {
+        "type": "key_exchange",
+        "peer_ip": "203.0.113.30",
+        "hybrid_status": "unknown"
+      }
+    },
+    {
+      "id": "cap-cert-mq-broker.tejomaya.internal:5671",
+      "source_type": "tls",
+      "source_location": "mq-broker.tejomaya.internal:5671",
+      "asset_class": "tls_certificate",
+      "algorithm": "RSA",
+      "key_size": 2048,
+      "protocol": "TLSv1.2",
+      "signature_algorithm": "sha256WithRSAEncryption",
+      "cert_subject": "CN=mq-broker.tejomaya.internal,O=Tejomaya Bank,C=IN",
+      "cert_issuer": "CN=Tejomaya Issuing CA - Services,O=Tejomaya Bank,C=IN",
+      "cert_validity_start": "2024-09-28",
+      "cert_validity_end": "2026-09-19",
+      "cert_serial": "C1:05:CE:D5:44:2B:F5:22",
+      "usage": "signing",
+      "tags": [
+        "live-scan"
+      ],
+      "environment": "production",
+      "raw_details": {
+        "type": "certificate",
+        "peer_ip": "10.30.1.12",
+        "chain_trusted": true,
+        "trust_error": null
+      }
+    },
+    {
+      "id": "cap-suite-mq-broker.tejomaya.internal:5671",
+      "source_type": "tls",
+      "source_location": "mq-broker.tejomaya.internal:5671",
+      "asset_class": "tls_cipher_suite",
+      "protocol": "TLSv1.2",
+      "cipher_suite": "ECDHE-RSA-AES128-GCM-SHA256",
+      "usage": "encryption",
+      "tags": [
+        "live-scan"
+      ],
+      "environment": "production",
+      "raw_details": {
+        "type": "cipher_suite",
+        "peer_ip": "10.30.1.12"
+      }
+    },
+    {
+      "id": "cap-kex-mq-broker.tejomaya.internal:5671",
+      "source_type": "tls",
+      "source_location": "mq-broker.tejomaya.internal:5671",
+      "asset_class": "tls_key_exchange",
+      "protocol": "TLSv1.2",
+      "key_exchange": "ECDHE",
+      "usage": "key_exchange",
+      "tags": [
+        "live-scan"
+      ],
+      "environment": "production",
+      "raw_details": {
+        "type": "key_exchange",
+        "peer_ip": "10.30.1.12",
+        "hybrid_status": "unknown"
+      }
+    },
+    {
+      "id": "cap-cert-corebank-api.tejomaya.internal:8443",
+      "source_type": "tls",
+      "source_location": "corebank-api.tejomaya.internal:8443",
+      "asset_class": "tls_certificate",
+      "algorithm": "RSA",
+      "key_size": 2048,
+      "protocol": "TLSv1.2",
+      "signature_algorithm": "sha256WithRSAEncryption",
+      "cert_subject": "CN=corebank-api.tejomaya.internal,O=Tejomaya Bank,C=IN",
+      "cert_issuer": "CN=Tejomaya Issuing CA - Services,O=Tejomaya Bank,C=IN",
+      "cert_validity_start": "2024-11-27",
+      "cert_validity_end": "2026-11-25",
+      "cert_serial": "EE:8A:FC:8E:A2:93:DD:46",
+      "usage": "signing",
+      "tags": [
+        "live-scan"
+      ],
+      "environment": "production",
+      "raw_details": {
+        "type": "certificate",
+        "peer_ip": "10.30.2.40",
+        "chain_trusted": true,
+        "trust_error": null
+      }
+    },
+    {
+      "id": "cap-suite-corebank-api.tejomaya.internal:8443",
+      "source_type": "tls",
+      "source_location": "corebank-api.tejomaya.internal:8443",
+      "asset_class": "tls_cipher_suite",
+      "protocol": "TLSv1.3",
+      "cipher_suite": "TLS_AES_256_GCM_SHA384",
+      "usage": "encryption",
+      "tags": [
+        "live-scan"
+      ],
+      "environment": "production",
+      "raw_details": {
+        "type": "cipher_suite",
+        "peer_ip": "10.30.2.40"
+      }
+    },
+    {
+      "id": "cap-kex-corebank-api.tejomaya.internal:8443",
+      "source_type": "tls",
+      "source_location": "corebank-api.tejomaya.internal:8443",
+      "asset_class": "tls_key_exchange",
+      "protocol": "TLSv1.3",
+      "key_exchange": "X25519",
+      "usage": "key_exchange",
+      "tags": [
+        "live-scan"
+      ],
+      "environment": "production",
+      "raw_details": {
+        "type": "key_exchange",
+        "peer_ip": "10.30.2.40",
+        "hybrid_status": "unknown"
+      }
+    },
+    {
+      "id": "cap-cert-upi-switch.tejomaya.internal:443",
+      "source_type": "tls",
+      "source_location": "upi-switch.tejomaya.internal:443",
+      "asset_class": "tls_certificate",
+      "algorithm": "ECDSA",
+      "key_size": 256,
+      "protocol": "TLSv1.2",
+      "signature_algorithm": "ecdsa-with-SHA256",
+      "cert_subject": "CN=upi-switch.tejomaya.internal,O=Tejomaya Bank,C=IN",
+      "cert_issuer": "CN=Tejomaya Issuing CA - Services,O=Tejomaya Bank,C=IN",
+      "cert_validity_start": "2025-07-25",
+      "cert_validity_end": "2027-05-16",
+      "cert_serial": "67:F9:74:C2:B0:02:2E:C8",
+      "usage": "signing",
+      "tags": [
+        "live-scan"
+      ],
+      "environment": "production",
+      "raw_details": {
+        "type": "certificate",
+        "peer_ip": "10.30.2.51",
+        "chain_trusted": true,
+        "trust_error": null
+      }
+    },
+    {
+      "id": "cap-cert-partner-gateway.tejomaya.internal:443",
+      "source_type": "tls",
+      "source_location": "partner-gateway.tejomaya.internal:443",
+      "asset_class": "tls_certificate",
+      "algorithm": "RSA",
+      "key_size": 2048,
+      "protocol": "TLSv1.2",
+      "signature_algorithm": "sha256WithRSAEncryption",
+      "cert_subject": "CN=partner-gateway.tejomaya.internal,O=Tejomaya Bank,C=IN",
+      "cert_issuer": "CN=Tejomaya Issuing CA - Services,O=Tejomaya Bank,C=IN",
+      "cert_validity_start": "2019-04-10T00:00:00+00:00",
+      "cert_validity_end": "2027-04-10T00:00:00+00:00",
+      "cert_serial": "1911",
+      "usage": "signing",
+      "tags": [
+        "live-scan"
+      ],
+      "environment": "production",
+      "raw_details": {
+        "type": "certificate",
+        "peer_ip": "10.30.4.8",
+        "chain_trusted": true,
+        "trust_error": null,
+        "public_key_sha256": "6b698344cd69c6a50e6d41ee9eec11cb37ff60f834efd7ac687222330455cf53"
+      }
+    },
+    {
+      "id": "cap-suite-portal.tejomaya.example:443",
+      "source_type": "tls",
+      "source_location": "portal.tejomaya.example:443",
+      "asset_class": "tls_cipher_suite",
+      "protocol": "TLSv1.3",
+      "cipher_suite": "TLS_AES_128_GCM_SHA256",
+      "usage": "encryption",
+      "tags": [
+        "live-scan"
+      ],
+      "environment": "production",
+      "raw_details": {
+        "type": "cipher_suite",
+        "peer_ip": "203.0.113.41"
+      }
+    },
+    {
+      "id": "cap-kex-portal.tejomaya.example:443",
+      "source_type": "tls",
+      "source_location": "portal.tejomaya.example:443",
+      "asset_class": "tls_key_exchange",
+      "protocol": "TLSv1.3",
+      "key_exchange": "X25519MLKEM768",
+      "usage": "key_exchange",
+      "tags": [
+        "live-scan"
+      ],
+      "environment": "production",
+      "raw_details": {
+        "type": "key_exchange",
+        "peer_ip": "203.0.113.41",
+        "hybrid_status": "supported"
+      }
+    }
+  ]
+}

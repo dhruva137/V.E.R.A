@@ -1,0 +1,42 @@
+# Source rules: Go (standard library crypto/*, x/crypto).
+language: go
+grammars: {.go: go}
+strings: [interpreted_string_literal, raw_string_literal]
+queries:
+  call: '(call_expression function: (_) @callee arguments: (argument_list) @args) @site'
+  reference: '(selector_expression operand: (identifier) field: (field_identifier)) @site'
+  import: '(import_spec path: (_) @path) @site'
+rules:
+  - {id: go-rsa-gen, kind: call, match: '^rsa\.GenerateKey$', algorithm: RSA, usage: signing, key_size: {arg: 1}}
+  - {id: go-rsa-ops, kind: call, match: '^rsa\.(SignPKCS1v15|SignPSS|EncryptPKCS1v15|EncryptOAEP|DecryptPKCS1v15|DecryptOAEP|VerifyPKCS1v15|VerifyPSS)$', algorithm: RSA, usage: signing}
+  - {id: go-ecdsa, kind: call, match: '^ecdsa\.(GenerateKey|Sign|SignASN1|Verify|VerifyASN1)$', algorithm: ECDSA, usage: signing, key_size: {arg: 0, pattern: 'P(\d{3})'}}
+  - {id: go-elliptic, kind: call, match: '^elliptic\.P(224|256|384|521)$', algorithm: ECDSA, usage: signing, key_size: {template: '{1}'}}
+  - {id: go-ecdh-nist, kind: call, match: '^ecdh\.P(256|384|521)$', algorithm: ECDH, usage: key_exchange, key_size: {template: '{1}'}}
+  - {id: go-ecdh-x25519, kind: call, match: '^ecdh\.X25519$', algorithm: X25519, usage: key_exchange}
+  - {id: go-ed25519, kind: call, match: '^ed25519\.(GenerateKey|Sign|Verify|NewKeyFromSeed)$', algorithm: Ed25519, usage: signing}
+  - {id: go-dsa, kind: call, match: '^dsa\.(GenerateKey|GenerateParameters|Sign|Verify)$', algorithm: DSA, usage: signing}
+  - {id: go-md5, kind: call, match: '^md5\.(New|Sum)$', algorithm: MD5, usage: hashing}
+  - {id: go-sha1, kind: call, match: '^sha1\.(New|Sum)$', algorithm: SHA-1, usage: hashing}
+  - {id: go-sha256, kind: call, match: '^sha256\.(New|Sum256)$', algorithm: SHA-256, usage: hashing}
+  - {id: go-des3, kind: call, match: '^des\.NewTripleDESCipher$', algorithm: 3DES, usage: encryption}
+  - {id: go-des, kind: call, match: '^des\.NewCipher$', algorithm: DES, usage: encryption}
+  - {id: go-rc4, kind: call, match: '^rc4\.NewCipher$', algorithm: RC4, usage: encryption}
+  - {id: go-aes, kind: call, match: '^aes\.NewCipher$', algorithm: AES, usage: encryption}
+  - {id: go-blowfish, kind: call, match: '^blowfish\.NewCipher$', algorithm: Blowfish, usage: encryption}
+  - {id: go-chacha, kind: call, match: '^chacha20poly1305\.NewX?$', algorithm: ChaCha20, usage: encryption}
+  - {id: go-mlkem, kind: call, match: '^mlkem\.GenerateKey(768|1024)$', algorithm: 'ML-KEM-{1}', usage: key_exchange}
+  - {id: go-tls-version, kind: reference, match: '^tls\.Version(SSL30|TLS10|TLS11)$', protocol: '{1}', usage: encryption}
+  - {id: go-tls-hybrid, kind: reference, match: '^tls\.X25519MLKEM768$', algorithm: X25519MLKEM768, usage: key_exchange}
+  - {id: go-tls-curve, kind: reference, match: '^tls\.Curve(P256|P384|P521)$', algorithm: ECDH, usage: key_exchange}
+  - {id: go-tls-x25519, kind: reference, match: '^tls\.X25519$', algorithm: X25519, usage: key_exchange}
+  - {id: go-x509-sig, kind: reference, match: '^x509\.(SHA1WithRSA|MD5WithRSA|SHA256WithRSA|SHA256WithRSAPSS)$', algorithm: RSA, usage: signing}
+  - {id: go-x509-ecsig, kind: reference, match: '^x509\.ECDSAWith(SHA1|SHA256|SHA384)$', algorithm: ECDSA, usage: signing}
+  - {id: go-tls-suite, kind: reference, match: '^tls\.(TLS_\w+)$', cipher_suite: '{1}', usage: encryption}
+  - {id: go-import-md5, kind: import, match: '^"crypto/md5"$', algorithm: MD5, usage: hashing}
+  - {id: go-import-sha1, kind: import, match: '^"crypto/sha1"$', algorithm: SHA-1, usage: hashing}
+  - {id: go-import-des, kind: import, match: '^"crypto/des"$', algorithm: DES, usage: encryption}
+  - {id: go-import-rc4, kind: import, match: '^"crypto/rc4"$', algorithm: RC4, usage: encryption}
+  - {id: go-import-rsa, kind: import, match: '^"crypto/rsa"$', algorithm: RSA, usage: signing}
+  - {id: go-import-ecdsa, kind: import, match: '^"crypto/ecdsa"$', algorithm: ECDSA, usage: signing}
+  - {id: go-import-dsa, kind: import, match: '^"crypto/dsa"$', algorithm: DSA, usage: signing}
+  - {id: go-import-mlkem, kind: import, match: '^"crypto/mlkem"$', algorithm: ML-KEM-768, usage: key_exchange}

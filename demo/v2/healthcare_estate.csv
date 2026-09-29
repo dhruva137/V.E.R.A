@@ -1,0 +1,401 @@
+name,asset_class,algorithm,key_size,source_type,hostname,environment,owner,department
+pacs-0000.healthcare.internal,device_identity,ECDSA,256,keystore,pacs-0000.healthcare.internal,production,Infrastructure,Healthcare
+lab-if-0001.healthcare.internal,device_identity,ECDSA,256,keystore,lab-if-0001.healthcare.internal,production,Platform Engineering,Healthcare
+pacs-0002.healthcare.internal,backup_encryption,RSA,2048,keystore,pacs-0002.healthcare.internal,staging,Data Platform,Healthcare
+lab-if-0003.healthcare.internal,firmware_signing,RSA,2048,keystore,lab-if-0003.healthcare.internal,staging,Platform Engineering,Healthcare
+lab-if-0004.healthcare.internal,database_tls,RSA,2048,tls,lab-if-0004.healthcare.internal,production,Network Ops,Healthcare
+pacs-0005.healthcare.internal,tls_certificate,ECDSA,256,tls,pacs-0005.healthcare.internal,production,PKI Team,Healthcare
+pacs-0006.healthcare.internal,tls_certificate,ECDSA,256,tls,pacs-0006.healthcare.internal,production,Infrastructure,Healthcare
+ehr-0007.healthcare.internal,database_tls,RSA,2048,tls,ehr-0007.healthcare.internal,production,Data Platform,Healthcare
+hl7-gw-0008.healthcare.internal,token_signing,RSA,2048,keystore,hl7-gw-0008.healthcare.internal,production,,Healthcare
+pacs-0009.healthcare.internal,device_identity,ECDSA,256,keystore,pacs-0009.healthcare.internal,production,Application Security,Healthcare
+portal-0010.healthcare.internal,database_tls,RSA,2048,tls,portal-0010.healthcare.internal,production,Infrastructure,Healthcare
+pacs-0011.healthcare.internal,device_identity,ECDSA,256,keystore,pacs-0011.healthcare.internal,production,Platform Engineering,Healthcare
+hl7-gw-0012.healthcare.internal,backup_encryption,RSA,2048,keystore,hl7-gw-0012.healthcare.internal,staging,,Healthcare
+hl7-gw-0013.healthcare.internal,tls_certificate,RSA,2048,tls,hl7-gw-0013.healthcare.internal,staging,,Healthcare
+portal-0014.healthcare.internal,database_tls,RSA,2048,tls,portal-0014.healthcare.internal,staging,Network Ops,Healthcare
+ehr-0015.healthcare.internal,device_identity,ECDSA,256,keystore,ehr-0015.healthcare.internal,production,Platform Engineering,Healthcare
+lab-if-0016.healthcare.internal,backup_encryption,AES,256,keystore,lab-if-0016.healthcare.internal,staging,Infrastructure,Healthcare
+hl7-gw-0017.healthcare.internal,token_signing,RSA,2048,keystore,hl7-gw-0017.healthcare.internal,production,Payments Ops,Healthcare
+pacs-0018.healthcare.internal,database_tls,RSA,2048,tls,pacs-0018.healthcare.internal,production,Platform Engineering,Healthcare
+pacs-0019.healthcare.internal,tls_certificate,ECDSA,256,tls,pacs-0019.healthcare.internal,production,Platform Engineering,Healthcare
+ehr-0020.healthcare.internal,backup_encryption,RSA,2048,keystore,ehr-0020.healthcare.internal,production,Platform Engineering,Healthcare
+hl7-gw-0021.healthcare.internal,vpn_ipsec,DH,2048,keystore,hl7-gw-0021.healthcare.internal,production,PKI Team,Healthcare
+portal-0022.healthcare.internal,token_signing,RSA,2048,keystore,portal-0022.healthcare.internal,staging,,Healthcare
+pacs-0023.healthcare.internal,token_signing,RSA,2048,keystore,pacs-0023.healthcare.internal,production,Payments Ops,Healthcare
+portal-0024.healthcare.internal,database_tls,RSA,2048,tls,portal-0024.healthcare.internal,production,Payments Ops,Healthcare
+portal-0025.healthcare.internal,database_tls,RSA,2048,tls,portal-0025.healthcare.internal,staging,Data Platform,Healthcare
+portal-0026.healthcare.internal,tls_certificate,RSA,2048,tls,portal-0026.healthcare.internal,production,Payments Ops,Healthcare
+lab-if-0027.healthcare.internal,device_identity,ECDSA,256,keystore,lab-if-0027.healthcare.internal,staging,Data Platform,Healthcare
+ehr-0028.healthcare.internal,tls_certificate,RSA,2048,tls,ehr-0028.healthcare.internal,staging,PKI Team,Healthcare
+pacs-0029.healthcare.internal,tls_certificate,ECDSA,256,tls,pacs-0029.healthcare.internal,production,Infrastructure,Healthcare
+lab-if-0030.healthcare.internal,firmware_signing,ECDSA,256,keystore,lab-if-0030.healthcare.internal,production,Payments Ops,Healthcare
+ehr-0031.healthcare.internal,token_signing,RSA,2048,keystore,ehr-0031.healthcare.internal,staging,Data Platform,Healthcare
+lab-if-0032.healthcare.internal,database_tls,ECDSA,256,tls,lab-if-0032.healthcare.internal,production,Payments Ops,Healthcare
+pacs-0033.healthcare.internal,database_tls,RSA,2048,tls,pacs-0033.healthcare.internal,staging,Infrastructure,Healthcare
+pacs-0034.healthcare.internal,tls_certificate,RSA,2048,tls,pacs-0034.healthcare.internal,staging,Network Ops,Healthcare
+lab-if-0035.healthcare.internal,tls_certificate,ML-DSA-65,,tls,lab-if-0035.healthcare.internal,production,Payments Ops,Healthcare
+hl7-gw-0036.healthcare.internal,tls_certificate,RSA,2048,tls,hl7-gw-0036.healthcare.internal,production,Network Ops,Healthcare
+pacs-0037.healthcare.internal,tls_certificate,ECDSA,256,tls,pacs-0037.healthcare.internal,production,Payments Ops,Healthcare
+pacs-0038.healthcare.internal,backup_encryption,RSA,2048,keystore,pacs-0038.healthcare.internal,production,Infrastructure,Healthcare
+portal-0039.healthcare.internal,backup_encryption,RSA,2048,keystore,portal-0039.healthcare.internal,production,,Healthcare
+hl7-gw-0040.healthcare.internal,backup_encryption,AES,256,keystore,hl7-gw-0040.healthcare.internal,production,Application Security,Healthcare
+ehr-0041.healthcare.internal,tls_certificate,RSA,2048,tls,ehr-0041.healthcare.internal,production,,Healthcare
+hl7-gw-0042.healthcare.internal,backup_encryption,AES,256,keystore,hl7-gw-0042.healthcare.internal,production,Data Platform,Healthcare
+hl7-gw-0043.healthcare.internal,tls_certificate,ECDSA,256,tls,hl7-gw-0043.healthcare.internal,production,Platform Engineering,Healthcare
+pacs-0044.healthcare.internal,token_signing,ECDSA,256,keystore,pacs-0044.healthcare.internal,production,Payments Ops,Healthcare
+hl7-gw-0045.healthcare.internal,token_signing,RSA,2048,keystore,hl7-gw-0045.healthcare.internal,dr,,Healthcare
+pacs-0046.healthcare.internal,firmware_signing,ECDSA,256,keystore,pacs-0046.healthcare.internal,production,Platform Engineering,Healthcare
+portal-0047.healthcare.internal,tls_certificate,ML-DSA-65,,tls,portal-0047.healthcare.internal,production,,Healthcare
+hl7-gw-0048.healthcare.internal,tls_certificate,RSA,2048,tls,hl7-gw-0048.healthcare.internal,production,Payments Ops,Healthcare
+portal-0049.healthcare.internal,vpn_ipsec,ECDHE,256,keystore,portal-0049.healthcare.internal,staging,Payments Ops,Healthcare
+ehr-0050.healthcare.internal,backup_encryption,AES,256,keystore,ehr-0050.healthcare.internal,production,Network Ops,Healthcare
+hl7-gw-0051.healthcare.internal,backup_encryption,RSA,2048,keystore,hl7-gw-0051.healthcare.internal,production,,Healthcare
+lab-if-0052.healthcare.internal,backup_encryption,RSA,2048,keystore,lab-if-0052.healthcare.internal,production,Network Ops,Healthcare
+pacs-0053.healthcare.internal,token_signing,RSA,2048,keystore,pacs-0053.healthcare.internal,production,Network Ops,Healthcare
+pacs-0054.healthcare.internal,database_tls,RSA,2048,tls,pacs-0054.healthcare.internal,production,PKI Team,Healthcare
+lab-if-0055.healthcare.internal,device_identity,RSA,2048,keystore,lab-if-0055.healthcare.internal,production,Data Platform,Healthcare
+portal-0056.healthcare.internal,firmware_signing,RSA,2048,keystore,portal-0056.healthcare.internal,production,Data Platform,Healthcare
+ehr-0057.healthcare.internal,backup_encryption,RSA,2048,keystore,ehr-0057.healthcare.internal,dr,,Healthcare
+ehr-0058.healthcare.internal,backup_encryption,AES,256,keystore,ehr-0058.healthcare.internal,production,Data Platform,Healthcare
+lab-if-0059.healthcare.internal,tls_certificate,ECDSA,256,tls,lab-if-0059.healthcare.internal,production,Payments Ops,Healthcare
+pacs-0060.healthcare.internal,tls_certificate,ECDSA,256,tls,pacs-0060.healthcare.internal,production,,Healthcare
+lab-if-0061.healthcare.internal,device_identity,RSA,2048,keystore,lab-if-0061.healthcare.internal,production,Application Security,Healthcare
+hl7-gw-0062.healthcare.internal,vpn_ipsec,ECDHE,256,keystore,hl7-gw-0062.healthcare.internal,production,Application Security,Healthcare
+lab-if-0063.healthcare.internal,tls_certificate,ECDSA,256,tls,lab-if-0063.healthcare.internal,production,Payments Ops,Healthcare
+lab-if-0064.healthcare.internal,device_identity,RSA,2048,keystore,lab-if-0064.healthcare.internal,staging,,Healthcare
+hl7-gw-0065.healthcare.internal,backup_encryption,AES,256,keystore,hl7-gw-0065.healthcare.internal,dr,PKI Team,Healthcare
+portal-0066.healthcare.internal,device_identity,ECDSA,256,keystore,portal-0066.healthcare.internal,dr,Platform Engineering,Healthcare
+hl7-gw-0067.healthcare.internal,device_identity,ECDSA,256,keystore,hl7-gw-0067.healthcare.internal,production,Data Platform,Healthcare
+hl7-gw-0068.healthcare.internal,firmware_signing,RSA,2048,keystore,hl7-gw-0068.healthcare.internal,production,,Healthcare
+ehr-0069.healthcare.internal,tls_certificate,RSA,2048,tls,ehr-0069.healthcare.internal,production,,Healthcare
+lab-if-0070.healthcare.internal,token_signing,RSA,2048,keystore,lab-if-0070.healthcare.internal,production,Platform Engineering,Healthcare
+pacs-0071.healthcare.internal,backup_encryption,AES,256,keystore,pacs-0071.healthcare.internal,production,Network Ops,Healthcare
+hl7-gw-0072.healthcare.internal,tls_certificate,RSA,2048,tls,hl7-gw-0072.healthcare.internal,production,Payments Ops,Healthcare
+pacs-0073.healthcare.internal,vpn_ipsec,DH,2048,keystore,pacs-0073.healthcare.internal,production,PKI Team,Healthcare
+lab-if-0074.healthcare.internal,backup_encryption,RSA,2048,keystore,lab-if-0074.healthcare.internal,production,Platform Engineering,Healthcare
+pacs-0075.healthcare.internal,tls_certificate,ECDSA,256,tls,pacs-0075.healthcare.internal,production,,Healthcare
+pacs-0076.healthcare.internal,tls_certificate,RSA,2048,tls,pacs-0076.healthcare.internal,production,PKI Team,Healthcare
+hl7-gw-0077.healthcare.internal,backup_encryption,RSA,2048,keystore,hl7-gw-0077.healthcare.internal,production,Infrastructure,Healthcare
+ehr-0078.healthcare.internal,device_identity,ECDSA,256,keystore,ehr-0078.healthcare.internal,production,Infrastructure,Healthcare
+pacs-0079.healthcare.internal,tls_certificate,ML-DSA-65,,tls,pacs-0079.healthcare.internal,production,PKI Team,Healthcare
+portal-0080.healthcare.internal,tls_certificate,ECDSA,256,tls,portal-0080.healthcare.internal,production,Infrastructure,Healthcare
+ehr-0081.healthcare.internal,vpn_ipsec,DH,2048,keystore,ehr-0081.healthcare.internal,production,Network Ops,Healthcare
+portal-0082.healthcare.internal,backup_encryption,AES,256,keystore,portal-0082.healthcare.internal,staging,,Healthcare
+pacs-0083.healthcare.internal,token_signing,RSA,2048,keystore,pacs-0083.healthcare.internal,production,Platform Engineering,Healthcare
+portal-0084.healthcare.internal,backup_encryption,RSA,2048,keystore,portal-0084.healthcare.internal,production,Platform Engineering,Healthcare
+hl7-gw-0085.healthcare.internal,token_signing,ECDSA,256,keystore,hl7-gw-0085.healthcare.internal,production,Payments Ops,Healthcare
+pacs-0086.healthcare.internal,device_identity,RSA,2048,keystore,pacs-0086.healthcare.internal,staging,,Healthcare
+pacs-0087.healthcare.internal,firmware_signing,RSA,2048,keystore,pacs-0087.healthcare.internal,production,,Healthcare
+portal-0088.healthcare.internal,device_identity,ECDSA,256,keystore,portal-0088.healthcare.internal,production,Application Security,Healthcare
+ehr-0089.healthcare.internal,device_identity,ECDSA,256,keystore,ehr-0089.healthcare.internal,production,Application Security,Healthcare
+pacs-0090.healthcare.internal,tls_certificate,ECDSA,256,tls,pacs-0090.healthcare.internal,production,Application Security,Healthcare
+pacs-0091.healthcare.internal,backup_encryption,AES,256,keystore,pacs-0091.healthcare.internal,production,PKI Team,Healthcare
+ehr-0092.healthcare.internal,tls_certificate,ML-DSA-65,,tls,ehr-0092.healthcare.internal,production,,Healthcare
+pacs-0093.healthcare.internal,backup_encryption,RSA,2048,keystore,pacs-0093.healthcare.internal,production,Infrastructure,Healthcare
+portal-0094.healthcare.internal,token_signing,ECDSA,256,keystore,portal-0094.healthcare.internal,production,Network Ops,Healthcare
+portal-0095.healthcare.internal,device_identity,RSA,2048,keystore,portal-0095.healthcare.internal,staging,Application Security,Healthcare
+ehr-0096.healthcare.internal,tls_certificate,ECDSA,256,tls,ehr-0096.healthcare.internal,production,Infrastructure,Healthcare
+hl7-gw-0097.healthcare.internal,tls_certificate,ECDSA,256,tls,hl7-gw-0097.healthcare.internal,production,,Healthcare
+ehr-0098.healthcare.internal,vpn_ipsec,ECDHE,256,keystore,ehr-0098.healthcare.internal,production,Platform Engineering,Healthcare
+lab-if-0099.healthcare.internal,backup_encryption,AES,256,keystore,lab-if-0099.healthcare.internal,production,Data Platform,Healthcare
+portal-0100.healthcare.internal,tls_certificate,RSA,2048,tls,portal-0100.healthcare.internal,dr,,Healthcare
+ehr-0101.healthcare.internal,tls_certificate,RSA,2048,tls,ehr-0101.healthcare.internal,production,Network Ops,Healthcare
+hl7-gw-0102.healthcare.internal,tls_certificate,ECDSA,256,tls,hl7-gw-0102.healthcare.internal,staging,Data Platform,Healthcare
+pacs-0103.healthcare.internal,tls_certificate,ECDSA,256,tls,pacs-0103.healthcare.internal,staging,Platform Engineering,Healthcare
+portal-0104.healthcare.internal,vpn_ipsec,ECDHE,256,keystore,portal-0104.healthcare.internal,production,Application Security,Healthcare
+ehr-0105.healthcare.internal,firmware_signing,RSA,2048,keystore,ehr-0105.healthcare.internal,production,Application Security,Healthcare
+lab-if-0106.healthcare.internal,tls_certificate,RSA,2048,tls,lab-if-0106.healthcare.internal,staging,Network Ops,Healthcare
+ehr-0107.healthcare.internal,tls_certificate,RSA,2048,tls,ehr-0107.healthcare.internal,dr,PKI Team,Healthcare
+portal-0108.healthcare.internal,database_tls,RSA,2048,tls,portal-0108.healthcare.internal,production,Application Security,Healthcare
+pacs-0109.healthcare.internal,device_identity,RSA,2048,keystore,pacs-0109.healthcare.internal,production,Payments Ops,Healthcare
+hl7-gw-0110.healthcare.internal,backup_encryption,RSA,2048,keystore,hl7-gw-0110.healthcare.internal,dr,PKI Team,Healthcare
+portal-0111.healthcare.internal,tls_certificate,RSA,2048,tls,portal-0111.healthcare.internal,production,Infrastructure,Healthcare
+ehr-0112.healthcare.internal,vpn_ipsec,ECDHE,256,keystore,ehr-0112.healthcare.internal,production,Data Platform,Healthcare
+lab-if-0113.healthcare.internal,database_tls,RSA,2048,tls,lab-if-0113.healthcare.internal,production,,Healthcare
+pacs-0114.healthcare.internal,database_tls,RSA,2048,tls,pacs-0114.healthcare.internal,production,PKI Team,Healthcare
+pacs-0115.healthcare.internal,database_tls,RSA,2048,tls,pacs-0115.healthcare.internal,production,Network Ops,Healthcare
+pacs-0116.healthcare.internal,device_identity,ECDSA,256,keystore,pacs-0116.healthcare.internal,production,PKI Team,Healthcare
+hl7-gw-0117.healthcare.internal,tls_certificate,RSA,2048,tls,hl7-gw-0117.healthcare.internal,staging,Network Ops,Healthcare
+ehr-0118.healthcare.internal,device_identity,ECDSA,256,keystore,ehr-0118.healthcare.internal,production,Infrastructure,Healthcare
+hl7-gw-0119.healthcare.internal,token_signing,ECDSA,256,keystore,hl7-gw-0119.healthcare.internal,production,Network Ops,Healthcare
+hl7-gw-0120.healthcare.internal,tls_certificate,ECDSA,256,tls,hl7-gw-0120.healthcare.internal,production,Network Ops,Healthcare
+ehr-0121.healthcare.internal,device_identity,RSA,2048,keystore,ehr-0121.healthcare.internal,production,,Healthcare
+lab-if-0122.healthcare.internal,tls_certificate,ECDSA,256,tls,lab-if-0122.healthcare.internal,production,Network Ops,Healthcare
+hl7-gw-0123.healthcare.internal,tls_certificate,RSA,2048,tls,hl7-gw-0123.healthcare.internal,production,PKI Team,Healthcare
+portal-0124.healthcare.internal,vpn_ipsec,ECDHE,256,keystore,portal-0124.healthcare.internal,production,,Healthcare
+portal-0125.healthcare.internal,backup_encryption,AES,256,keystore,portal-0125.healthcare.internal,production,Platform Engineering,Healthcare
+pacs-0126.healthcare.internal,tls_certificate,RSA,2048,tls,pacs-0126.healthcare.internal,production,Payments Ops,Healthcare
+ehr-0127.healthcare.internal,tls_certificate,ECDSA,256,tls,ehr-0127.healthcare.internal,production,Payments Ops,Healthcare
+pacs-0128.healthcare.internal,tls_certificate,RSA,2048,tls,pacs-0128.healthcare.internal,production,PKI Team,Healthcare
+lab-if-0129.healthcare.internal,token_signing,ECDSA,256,keystore,lab-if-0129.healthcare.internal,production,Infrastructure,Healthcare
+ehr-0130.healthcare.internal,tls_certificate,ECDSA,256,tls,ehr-0130.healthcare.internal,staging,Payments Ops,Healthcare
+pacs-0131.healthcare.internal,token_signing,ECDSA,256,keystore,pacs-0131.healthcare.internal,production,Network Ops,Healthcare
+hl7-gw-0132.healthcare.internal,tls_certificate,RSA,2048,tls,hl7-gw-0132.healthcare.internal,production,Data Platform,Healthcare
+pacs-0133.healthcare.internal,device_identity,ECDSA,256,keystore,pacs-0133.healthcare.internal,production,Platform Engineering,Healthcare
+pacs-0134.healthcare.internal,token_signing,ECDSA,256,keystore,pacs-0134.healthcare.internal,dr,Network Ops,Healthcare
+ehr-0135.healthcare.internal,vpn_ipsec,DH,2048,keystore,ehr-0135.healthcare.internal,production,,Healthcare
+hl7-gw-0136.healthcare.internal,tls_certificate,RSA,2048,tls,hl7-gw-0136.healthcare.internal,production,Network Ops,Healthcare
+portal-0137.healthcare.internal,device_identity,ECDSA,256,keystore,portal-0137.healthcare.internal,production,Data Platform,Healthcare
+pacs-0138.healthcare.internal,tls_certificate,ECDSA,256,tls,pacs-0138.healthcare.internal,production,Network Ops,Healthcare
+portal-0139.healthcare.internal,database_tls,RSA,2048,tls,portal-0139.healthcare.internal,production,Payments Ops,Healthcare
+ehr-0140.healthcare.internal,tls_certificate,ECDSA,256,tls,ehr-0140.healthcare.internal,staging,Infrastructure,Healthcare
+lab-if-0141.healthcare.internal,tls_certificate,ECDSA,256,tls,lab-if-0141.healthcare.internal,production,Infrastructure,Healthcare
+hl7-gw-0142.healthcare.internal,tls_certificate,ECDSA,256,tls,hl7-gw-0142.healthcare.internal,production,,Healthcare
+hl7-gw-0143.healthcare.internal,device_identity,RSA,2048,keystore,hl7-gw-0143.healthcare.internal,production,Application Security,Healthcare
+ehr-0144.healthcare.internal,database_tls,RSA,2048,tls,ehr-0144.healthcare.internal,staging,PKI Team,Healthcare
+hl7-gw-0145.healthcare.internal,database_tls,RSA,2048,tls,hl7-gw-0145.healthcare.internal,production,Data Platform,Healthcare
+ehr-0146.healthcare.internal,token_signing,RSA,2048,keystore,ehr-0146.healthcare.internal,production,Data Platform,Healthcare
+ehr-0147.healthcare.internal,vpn_ipsec,DH,2048,keystore,ehr-0147.healthcare.internal,production,Data Platform,Healthcare
+hl7-gw-0148.healthcare.internal,backup_encryption,RSA,2048,keystore,hl7-gw-0148.healthcare.internal,production,Payments Ops,Healthcare
+lab-if-0149.healthcare.internal,database_tls,RSA,2048,tls,lab-if-0149.healthcare.internal,production,Network Ops,Healthcare
+hl7-gw-0150.healthcare.internal,tls_certificate,RSA,2048,tls,hl7-gw-0150.healthcare.internal,production,Application Security,Healthcare
+hl7-gw-0151.healthcare.internal,tls_certificate,RSA,2048,tls,hl7-gw-0151.healthcare.internal,staging,Application Security,Healthcare
+lab-if-0152.healthcare.internal,tls_certificate,ECDSA,256,tls,lab-if-0152.healthcare.internal,production,Payments Ops,Healthcare
+ehr-0153.healthcare.internal,tls_certificate,RSA,2048,tls,ehr-0153.healthcare.internal,production,,Healthcare
+lab-if-0154.healthcare.internal,tls_certificate,ECDSA,256,tls,lab-if-0154.healthcare.internal,production,,Healthcare
+lab-if-0155.healthcare.internal,tls_certificate,ECDSA,256,tls,lab-if-0155.healthcare.internal,production,Application Security,Healthcare
+hl7-gw-0156.healthcare.internal,tls_certificate,RSA,2048,tls,hl7-gw-0156.healthcare.internal,production,Data Platform,Healthcare
+pacs-0157.healthcare.internal,device_identity,RSA,2048,keystore,pacs-0157.healthcare.internal,production,Data Platform,Healthcare
+portal-0158.healthcare.internal,tls_certificate,ECDSA,256,tls,portal-0158.healthcare.internal,staging,Infrastructure,Healthcare
+pacs-0159.healthcare.internal,tls_certificate,ECDSA,256,tls,pacs-0159.healthcare.internal,staging,Data Platform,Healthcare
+hl7-gw-0160.healthcare.internal,tls_certificate,ML-DSA-65,,tls,hl7-gw-0160.healthcare.internal,staging,Network Ops,Healthcare
+ehr-0161.healthcare.internal,backup_encryption,AES,256,keystore,ehr-0161.healthcare.internal,production,,Healthcare
+lab-if-0162.healthcare.internal,device_identity,RSA,2048,keystore,lab-if-0162.healthcare.internal,production,Network Ops,Healthcare
+portal-0163.healthcare.internal,tls_certificate,RSA,2048,tls,portal-0163.healthcare.internal,staging,,Healthcare
+lab-if-0164.healthcare.internal,firmware_signing,RSA,2048,keystore,lab-if-0164.healthcare.internal,staging,Infrastructure,Healthcare
+ehr-0165.healthcare.internal,firmware_signing,RSA,2048,keystore,ehr-0165.healthcare.internal,staging,Infrastructure,Healthcare
+pacs-0166.healthcare.internal,vpn_ipsec,DH,2048,keystore,pacs-0166.healthcare.internal,staging,Platform Engineering,Healthcare
+pacs-0167.healthcare.internal,database_tls,RSA,2048,tls,pacs-0167.healthcare.internal,production,Payments Ops,Healthcare
+portal-0168.healthcare.internal,database_tls,RSA,2048,tls,portal-0168.healthcare.internal,staging,Network Ops,Healthcare
+ehr-0169.healthcare.internal,tls_certificate,ML-DSA-65,,tls,ehr-0169.healthcare.internal,production,Application Security,Healthcare
+portal-0170.healthcare.internal,backup_encryption,RSA,2048,keystore,portal-0170.healthcare.internal,production,,Healthcare
+ehr-0171.healthcare.internal,backup_encryption,RSA,2048,keystore,ehr-0171.healthcare.internal,production,Application Security,Healthcare
+hl7-gw-0172.healthcare.internal,device_identity,ECDSA,256,keystore,hl7-gw-0172.healthcare.internal,production,Payments Ops,Healthcare
+pacs-0173.healthcare.internal,database_tls,ECDSA,256,tls,pacs-0173.healthcare.internal,production,Network Ops,Healthcare
+lab-if-0174.healthcare.internal,backup_encryption,RSA,2048,keystore,lab-if-0174.healthcare.internal,production,,Healthcare
+hl7-gw-0175.healthcare.internal,token_signing,RSA,2048,keystore,hl7-gw-0175.healthcare.internal,staging,Application Security,Healthcare
+lab-if-0176.healthcare.internal,backup_encryption,RSA,2048,keystore,lab-if-0176.healthcare.internal,production,,Healthcare
+lab-if-0177.healthcare.internal,tls_certificate,ECDSA,256,tls,lab-if-0177.healthcare.internal,production,Network Ops,Healthcare
+lab-if-0178.healthcare.internal,tls_certificate,ML-DSA-65,,tls,lab-if-0178.healthcare.internal,staging,,Healthcare
+portal-0179.healthcare.internal,tls_certificate,ECDSA,256,tls,portal-0179.healthcare.internal,staging,Infrastructure,Healthcare
+portal-0180.healthcare.internal,database_tls,ECDSA,256,tls,portal-0180.healthcare.internal,production,Application Security,Healthcare
+portal-0181.healthcare.internal,vpn_ipsec,DH,2048,keystore,portal-0181.healthcare.internal,production,Platform Engineering,Healthcare
+portal-0182.healthcare.internal,vpn_ipsec,DH,2048,keystore,portal-0182.healthcare.internal,dr,,Healthcare
+lab-if-0183.healthcare.internal,device_identity,RSA,2048,keystore,lab-if-0183.healthcare.internal,production,Application Security,Healthcare
+ehr-0184.healthcare.internal,backup_encryption,AES,256,keystore,ehr-0184.healthcare.internal,production,Infrastructure,Healthcare
+lab-if-0185.healthcare.internal,token_signing,RSA,2048,keystore,lab-if-0185.healthcare.internal,dr,Infrastructure,Healthcare
+portal-0186.healthcare.internal,database_tls,RSA,2048,tls,portal-0186.healthcare.internal,dr,Application Security,Healthcare
+lab-if-0187.healthcare.internal,tls_certificate,RSA,2048,tls,lab-if-0187.healthcare.internal,staging,Network Ops,Healthcare
+lab-if-0188.healthcare.internal,device_identity,ECDSA,256,keystore,lab-if-0188.healthcare.internal,production,,Healthcare
+lab-if-0189.healthcare.internal,tls_certificate,ECDSA,256,tls,lab-if-0189.healthcare.internal,production,PKI Team,Healthcare
+pacs-0190.healthcare.internal,backup_encryption,AES,256,keystore,pacs-0190.healthcare.internal,production,Network Ops,Healthcare
+hl7-gw-0191.healthcare.internal,token_signing,RSA,2048,keystore,hl7-gw-0191.healthcare.internal,staging,Infrastructure,Healthcare
+ehr-0192.healthcare.internal,device_identity,ECDSA,256,keystore,ehr-0192.healthcare.internal,production,Platform Engineering,Healthcare
+pacs-0193.healthcare.internal,tls_certificate,RSA,2048,tls,pacs-0193.healthcare.internal,production,Payments Ops,Healthcare
+pacs-0194.healthcare.internal,backup_encryption,RSA,2048,keystore,pacs-0194.healthcare.internal,production,Payments Ops,Healthcare
+portal-0195.healthcare.internal,firmware_signing,RSA,2048,keystore,portal-0195.healthcare.internal,production,,Healthcare
+portal-0196.healthcare.internal,token_signing,RSA,2048,keystore,portal-0196.healthcare.internal,staging,Payments Ops,Healthcare
+pacs-0197.healthcare.internal,backup_encryption,AES,256,keystore,pacs-0197.healthcare.internal,production,,Healthcare
+pacs-0198.healthcare.internal,database_tls,RSA,2048,tls,pacs-0198.healthcare.internal,production,Data Platform,Healthcare
+hl7-gw-0199.healthcare.internal,backup_encryption,RSA,2048,keystore,hl7-gw-0199.healthcare.internal,production,Platform Engineering,Healthcare
+ehr-0200.healthcare.internal,tls_certificate,RSA,2048,tls,ehr-0200.healthcare.internal,production,Data Platform,Healthcare
+portal-0201.healthcare.internal,backup_encryption,RSA,2048,keystore,portal-0201.healthcare.internal,production,Data Platform,Healthcare
+hl7-gw-0202.healthcare.internal,device_identity,ECDSA,256,keystore,hl7-gw-0202.healthcare.internal,production,,Healthcare
+hl7-gw-0203.healthcare.internal,backup_encryption,AES,256,keystore,hl7-gw-0203.healthcare.internal,dr,Payments Ops,Healthcare
+hl7-gw-0204.healthcare.internal,tls_certificate,ECDSA,256,tls,hl7-gw-0204.healthcare.internal,dr,Platform Engineering,Healthcare
+ehr-0205.healthcare.internal,tls_certificate,RSA,2048,tls,ehr-0205.healthcare.internal,production,Payments Ops,Healthcare
+pacs-0206.healthcare.internal,database_tls,RSA,2048,tls,pacs-0206.healthcare.internal,production,Platform Engineering,Healthcare
+lab-if-0207.healthcare.internal,tls_certificate,RSA,2048,tls,lab-if-0207.healthcare.internal,dr,Payments Ops,Healthcare
+portal-0208.healthcare.internal,tls_certificate,RSA,2048,tls,portal-0208.healthcare.internal,staging,PKI Team,Healthcare
+hl7-gw-0209.healthcare.internal,device_identity,ECDSA,256,keystore,hl7-gw-0209.healthcare.internal,production,Data Platform,Healthcare
+hl7-gw-0210.healthcare.internal,tls_certificate,ECDSA,256,tls,hl7-gw-0210.healthcare.internal,dr,Application Security,Healthcare
+lab-if-0211.healthcare.internal,token_signing,RSA,2048,keystore,lab-if-0211.healthcare.internal,production,PKI Team,Healthcare
+lab-if-0212.healthcare.internal,tls_certificate,RSA,2048,tls,lab-if-0212.healthcare.internal,production,PKI Team,Healthcare
+portal-0213.healthcare.internal,database_tls,RSA,2048,tls,portal-0213.healthcare.internal,staging,Data Platform,Healthcare
+pacs-0214.healthcare.internal,device_identity,ECDSA,256,keystore,pacs-0214.healthcare.internal,dr,PKI Team,Healthcare
+hl7-gw-0215.healthcare.internal,backup_encryption,RSA,2048,keystore,hl7-gw-0215.healthcare.internal,production,Platform Engineering,Healthcare
+pacs-0216.healthcare.internal,database_tls,ECDSA,256,tls,pacs-0216.healthcare.internal,production,Infrastructure,Healthcare
+hl7-gw-0217.healthcare.internal,backup_encryption,AES,256,keystore,hl7-gw-0217.healthcare.internal,dr,,Healthcare
+hl7-gw-0218.healthcare.internal,database_tls,RSA,2048,tls,hl7-gw-0218.healthcare.internal,staging,Infrastructure,Healthcare
+hl7-gw-0219.healthcare.internal,database_tls,RSA,2048,tls,hl7-gw-0219.healthcare.internal,production,Application Security,Healthcare
+portal-0220.healthcare.internal,device_identity,RSA,2048,keystore,portal-0220.healthcare.internal,staging,PKI Team,Healthcare
+portal-0221.healthcare.internal,backup_encryption,AES,256,keystore,portal-0221.healthcare.internal,staging,Infrastructure,Healthcare
+pacs-0222.healthcare.internal,backup_encryption,RSA,2048,keystore,pacs-0222.healthcare.internal,production,Data Platform,Healthcare
+pacs-0223.healthcare.internal,vpn_ipsec,ECDHE,256,keystore,pacs-0223.healthcare.internal,staging,Infrastructure,Healthcare
+hl7-gw-0224.healthcare.internal,tls_certificate,ECDSA,256,tls,hl7-gw-0224.healthcare.internal,staging,,Healthcare
+hl7-gw-0225.healthcare.internal,backup_encryption,RSA,2048,keystore,hl7-gw-0225.healthcare.internal,production,Payments Ops,Healthcare
+pacs-0226.healthcare.internal,device_identity,ECDSA,256,keystore,pacs-0226.healthcare.internal,production,,Healthcare
+portal-0227.healthcare.internal,tls_certificate,RSA,2048,tls,portal-0227.healthcare.internal,production,Platform Engineering,Healthcare
+portal-0228.healthcare.internal,database_tls,ECDSA,256,tls,portal-0228.healthcare.internal,staging,Infrastructure,Healthcare
+lab-if-0229.healthcare.internal,tls_certificate,ECDSA,256,tls,lab-if-0229.healthcare.internal,production,Network Ops,Healthcare
+hl7-gw-0230.healthcare.internal,database_tls,RSA,2048,tls,hl7-gw-0230.healthcare.internal,production,Network Ops,Healthcare
+pacs-0231.healthcare.internal,token_signing,ECDSA,256,keystore,pacs-0231.healthcare.internal,production,Infrastructure,Healthcare
+ehr-0232.healthcare.internal,tls_certificate,ML-DSA-65,,tls,ehr-0232.healthcare.internal,dr,Platform Engineering,Healthcare
+ehr-0233.healthcare.internal,device_identity,RSA,2048,keystore,ehr-0233.healthcare.internal,production,Payments Ops,Healthcare
+lab-if-0234.healthcare.internal,vpn_ipsec,ECDHE,256,keystore,lab-if-0234.healthcare.internal,staging,Infrastructure,Healthcare
+lab-if-0235.healthcare.internal,tls_certificate,RSA,2048,tls,lab-if-0235.healthcare.internal,production,,Healthcare
+hl7-gw-0236.healthcare.internal,database_tls,RSA,2048,tls,hl7-gw-0236.healthcare.internal,staging,Network Ops,Healthcare
+portal-0237.healthcare.internal,backup_encryption,AES,256,keystore,portal-0237.healthcare.internal,production,Application Security,Healthcare
+pacs-0238.healthcare.internal,tls_certificate,RSA,2048,tls,pacs-0238.healthcare.internal,production,Network Ops,Healthcare
+pacs-0239.healthcare.internal,backup_encryption,RSA,2048,keystore,pacs-0239.healthcare.internal,production,,Healthcare
+pacs-0240.healthcare.internal,tls_certificate,RSA,2048,tls,pacs-0240.healthcare.internal,production,,Healthcare
+pacs-0241.healthcare.internal,vpn_ipsec,ECDHE,256,keystore,pacs-0241.healthcare.internal,production,PKI Team,Healthcare
+portal-0242.healthcare.internal,database_tls,ECDSA,256,tls,portal-0242.healthcare.internal,staging,PKI Team,Healthcare
+pacs-0243.healthcare.internal,database_tls,RSA,2048,tls,pacs-0243.healthcare.internal,production,,Healthcare
+pacs-0244.healthcare.internal,tls_certificate,ECDSA,256,tls,pacs-0244.healthcare.internal,production,Data Platform,Healthcare
+ehr-0245.healthcare.internal,backup_encryption,AES,256,keystore,ehr-0245.healthcare.internal,production,Infrastructure,Healthcare
+lab-if-0246.healthcare.internal,device_identity,ECDSA,256,keystore,lab-if-0246.healthcare.internal,production,Network Ops,Healthcare
+pacs-0247.healthcare.internal,tls_certificate,RSA,2048,tls,pacs-0247.healthcare.internal,production,Data Platform,Healthcare
+pacs-0248.healthcare.internal,tls_certificate,ECDSA,256,tls,pacs-0248.healthcare.internal,production,Network Ops,Healthcare
+ehr-0249.healthcare.internal,database_tls,RSA,2048,tls,ehr-0249.healthcare.internal,production,Payments Ops,Healthcare
+ehr-0250.healthcare.internal,tls_certificate,ECDSA,256,tls,ehr-0250.healthcare.internal,staging,,Healthcare
+pacs-0251.healthcare.internal,database_tls,RSA,2048,tls,pacs-0251.healthcare.internal,production,Infrastructure,Healthcare
+portal-0252.healthcare.internal,database_tls,RSA,2048,tls,portal-0252.healthcare.internal,production,Payments Ops,Healthcare
+pacs-0253.healthcare.internal,tls_certificate,ECDSA,256,tls,pacs-0253.healthcare.internal,production,,Healthcare
+lab-if-0254.healthcare.internal,firmware_signing,RSA,2048,keystore,lab-if-0254.healthcare.internal,staging,Application Security,Healthcare
+ehr-0255.healthcare.internal,tls_certificate,RSA,2048,tls,ehr-0255.healthcare.internal,production,PKI Team,Healthcare
+pacs-0256.healthcare.internal,device_identity,ECDSA,256,keystore,pacs-0256.healthcare.internal,production,Payments Ops,Healthcare
+hl7-gw-0257.healthcare.internal,device_identity,RSA,2048,keystore,hl7-gw-0257.healthcare.internal,staging,Platform Engineering,Healthcare
+lab-if-0258.healthcare.internal,database_tls,RSA,2048,tls,lab-if-0258.healthcare.internal,production,,Healthcare
+lab-if-0259.healthcare.internal,token_signing,RSA,2048,keystore,lab-if-0259.healthcare.internal,production,Data Platform,Healthcare
+hl7-gw-0260.healthcare.internal,database_tls,ECDSA,256,tls,hl7-gw-0260.healthcare.internal,production,Application Security,Healthcare
+ehr-0261.healthcare.internal,database_tls,RSA,2048,tls,ehr-0261.healthcare.internal,production,Infrastructure,Healthcare
+lab-if-0262.healthcare.internal,token_signing,RSA,2048,keystore,lab-if-0262.healthcare.internal,production,Platform Engineering,Healthcare
+pacs-0263.healthcare.internal,backup_encryption,AES,256,keystore,pacs-0263.healthcare.internal,staging,Platform Engineering,Healthcare
+ehr-0264.healthcare.internal,backup_encryption,RSA,2048,keystore,ehr-0264.healthcare.internal,dr,Payments Ops,Healthcare
+lab-if-0265.healthcare.internal,tls_certificate,RSA,2048,tls,lab-if-0265.healthcare.internal,production,PKI Team,Healthcare
+hl7-gw-0266.healthcare.internal,token_signing,RSA,2048,keystore,hl7-gw-0266.healthcare.internal,production,,Healthcare
+pacs-0267.healthcare.internal,database_tls,RSA,2048,tls,pacs-0267.healthcare.internal,production,Data Platform,Healthcare
+portal-0268.healthcare.internal,backup_encryption,RSA,2048,keystore,portal-0268.healthcare.internal,production,Infrastructure,Healthcare
+hl7-gw-0269.healthcare.internal,database_tls,RSA,2048,tls,hl7-gw-0269.healthcare.internal,dr,,Healthcare
+hl7-gw-0270.healthcare.internal,token_signing,RSA,2048,keystore,hl7-gw-0270.healthcare.internal,production,Infrastructure,Healthcare
+portal-0271.healthcare.internal,device_identity,RSA,2048,keystore,portal-0271.healthcare.internal,production,Payments Ops,Healthcare
+lab-if-0272.healthcare.internal,backup_encryption,RSA,2048,keystore,lab-if-0272.healthcare.internal,production,Infrastructure,Healthcare
+ehr-0273.healthcare.internal,backup_encryption,RSA,2048,keystore,ehr-0273.healthcare.internal,staging,Network Ops,Healthcare
+lab-if-0274.healthcare.internal,token_signing,RSA,2048,keystore,lab-if-0274.healthcare.internal,production,Payments Ops,Healthcare
+lab-if-0275.healthcare.internal,device_identity,ECDSA,256,keystore,lab-if-0275.healthcare.internal,production,Infrastructure,Healthcare
+lab-if-0276.healthcare.internal,database_tls,RSA,2048,tls,lab-if-0276.healthcare.internal,production,Network Ops,Healthcare
+pacs-0277.healthcare.internal,backup_encryption,AES,256,keystore,pacs-0277.healthcare.internal,production,Infrastructure,Healthcare
+portal-0278.healthcare.internal,tls_certificate,RSA,2048,tls,portal-0278.healthcare.internal,production,Platform Engineering,Healthcare
+lab-if-0279.healthcare.internal,database_tls,ECDSA,256,tls,lab-if-0279.healthcare.internal,dr,Network Ops,Healthcare
+hl7-gw-0280.healthcare.internal,device_identity,ECDSA,256,keystore,hl7-gw-0280.healthcare.internal,staging,Platform Engineering,Healthcare
+pacs-0281.healthcare.internal,vpn_ipsec,DH,2048,keystore,pacs-0281.healthcare.internal,staging,Payments Ops,Healthcare
+portal-0282.healthcare.internal,token_signing,RSA,2048,keystore,portal-0282.healthcare.internal,staging,Infrastructure,Healthcare
+lab-if-0283.healthcare.internal,tls_certificate,RSA,2048,tls,lab-if-0283.healthcare.internal,production,PKI Team,Healthcare
+portal-0284.healthcare.internal,device_identity,ECDSA,256,keystore,portal-0284.healthcare.internal,production,Data Platform,Healthcare
+ehr-0285.healthcare.internal,tls_certificate,ECDSA,256,tls,ehr-0285.healthcare.internal,production,Network Ops,Healthcare
+pacs-0286.healthcare.internal,vpn_ipsec,ECDHE,256,keystore,pacs-0286.healthcare.internal,production,PKI Team,Healthcare
+ehr-0287.healthcare.internal,tls_certificate,RSA,2048,tls,ehr-0287.healthcare.internal,staging,Infrastructure,Healthcare
+portal-0288.healthcare.internal,device_identity,ECDSA,256,keystore,portal-0288.healthcare.internal,production,Data Platform,Healthcare
+hl7-gw-0289.healthcare.internal,tls_certificate,ML-DSA-65,,tls,hl7-gw-0289.healthcare.internal,dr,PKI Team,Healthcare
+portal-0290.healthcare.internal,tls_certificate,ML-DSA-65,,tls,portal-0290.healthcare.internal,staging,Network Ops,Healthcare
+lab-if-0291.healthcare.internal,firmware_signing,ECDSA,256,keystore,lab-if-0291.healthcare.internal,production,Infrastructure,Healthcare
+hl7-gw-0292.healthcare.internal,device_identity,ECDSA,256,keystore,hl7-gw-0292.healthcare.internal,production,Network Ops,Healthcare
+pacs-0293.healthcare.internal,vpn_ipsec,DH,2048,keystore,pacs-0293.healthcare.internal,staging,Data Platform,Healthcare
+pacs-0294.healthcare.internal,tls_certificate,RSA,2048,tls,pacs-0294.healthcare.internal,production,Application Security,Healthcare
+pacs-0295.healthcare.internal,backup_encryption,RSA,2048,keystore,pacs-0295.healthcare.internal,dr,Data Platform,Healthcare
+ehr-0296.healthcare.internal,device_identity,ECDSA,256,keystore,ehr-0296.healthcare.internal,production,,Healthcare
+lab-if-0297.healthcare.internal,database_tls,ECDSA,256,tls,lab-if-0297.healthcare.internal,production,Platform Engineering,Healthcare
+lab-if-0298.healthcare.internal,firmware_signing,RSA,2048,keystore,lab-if-0298.healthcare.internal,production,,Healthcare
+portal-0299.healthcare.internal,database_tls,RSA,2048,tls,portal-0299.healthcare.internal,production,Data Platform,Healthcare
+portal-0300.healthcare.internal,database_tls,RSA,2048,tls,portal-0300.healthcare.internal,staging,Application Security,Healthcare
+lab-if-0301.healthcare.internal,tls_certificate,ECDSA,256,tls,lab-if-0301.healthcare.internal,production,Platform Engineering,Healthcare
+lab-if-0302.healthcare.internal,database_tls,RSA,2048,tls,lab-if-0302.healthcare.internal,production,PKI Team,Healthcare
+lab-if-0303.healthcare.internal,device_identity,ECDSA,256,keystore,lab-if-0303.healthcare.internal,production,Infrastructure,Healthcare
+ehr-0304.healthcare.internal,tls_certificate,ECDSA,256,tls,ehr-0304.healthcare.internal,production,PKI Team,Healthcare
+portal-0305.healthcare.internal,backup_encryption,AES,256,keystore,portal-0305.healthcare.internal,dr,Infrastructure,Healthcare
+lab-if-0306.healthcare.internal,vpn_ipsec,ECDHE,256,keystore,lab-if-0306.healthcare.internal,production,,Healthcare
+hl7-gw-0307.healthcare.internal,database_tls,ECDSA,256,tls,hl7-gw-0307.healthcare.internal,production,Network Ops,Healthcare
+lab-if-0308.healthcare.internal,device_identity,RSA,2048,keystore,lab-if-0308.healthcare.internal,production,PKI Team,Healthcare
+lab-if-0309.healthcare.internal,database_tls,RSA,2048,tls,lab-if-0309.healthcare.internal,staging,Application Security,Healthcare
+pacs-0310.healthcare.internal,device_identity,RSA,2048,keystore,pacs-0310.healthcare.internal,production,Data Platform,Healthcare
+portal-0311.healthcare.internal,database_tls,RSA,2048,tls,portal-0311.healthcare.internal,production,,Healthcare
+hl7-gw-0312.healthcare.internal,firmware_signing,RSA,2048,keystore,hl7-gw-0312.healthcare.internal,production,Platform Engineering,Healthcare
+hl7-gw-0313.healthcare.internal,vpn_ipsec,ECDHE,256,keystore,hl7-gw-0313.healthcare.internal,production,Infrastructure,Healthcare
+ehr-0314.healthcare.internal,tls_certificate,ML-DSA-65,,tls,ehr-0314.healthcare.internal,staging,Payments Ops,Healthcare
+portal-0315.healthcare.internal,token_signing,ECDSA,256,keystore,portal-0315.healthcare.internal,production,PKI Team,Healthcare
+ehr-0316.healthcare.internal,firmware_signing,RSA,2048,keystore,ehr-0316.healthcare.internal,production,Infrastructure,Healthcare
+hl7-gw-0317.healthcare.internal,token_signing,RSA,2048,keystore,hl7-gw-0317.healthcare.internal,production,PKI Team,Healthcare
+lab-if-0318.healthcare.internal,tls_certificate,ECDSA,256,tls,lab-if-0318.healthcare.internal,production,Network Ops,Healthcare
+ehr-0319.healthcare.internal,token_signing,ECDSA,256,keystore,ehr-0319.healthcare.internal,production,,Healthcare
+pacs-0320.healthcare.internal,database_tls,ECDSA,256,tls,pacs-0320.healthcare.internal,production,Platform Engineering,Healthcare
+portal-0321.healthcare.internal,firmware_signing,ECDSA,256,keystore,portal-0321.healthcare.internal,production,Payments Ops,Healthcare
+lab-if-0322.healthcare.internal,device_identity,ECDSA,256,keystore,lab-if-0322.healthcare.internal,production,Infrastructure,Healthcare
+hl7-gw-0323.healthcare.internal,token_signing,RSA,2048,keystore,hl7-gw-0323.healthcare.internal,production,,Healthcare
+portal-0324.healthcare.internal,tls_certificate,RSA,2048,tls,portal-0324.healthcare.internal,staging,Application Security,Healthcare
+ehr-0325.healthcare.internal,device_identity,ECDSA,256,keystore,ehr-0325.healthcare.internal,production,PKI Team,Healthcare
+portal-0326.healthcare.internal,device_identity,RSA,2048,keystore,portal-0326.healthcare.internal,production,Payments Ops,Healthcare
+hl7-gw-0327.healthcare.internal,database_tls,RSA,2048,tls,hl7-gw-0327.healthcare.internal,staging,,Healthcare
+ehr-0328.healthcare.internal,token_signing,ECDSA,256,keystore,ehr-0328.healthcare.internal,production,Network Ops,Healthcare
+lab-if-0329.healthcare.internal,token_signing,RSA,2048,keystore,lab-if-0329.healthcare.internal,staging,Payments Ops,Healthcare
+hl7-gw-0330.healthcare.internal,tls_certificate,ECDSA,256,tls,hl7-gw-0330.healthcare.internal,production,Payments Ops,Healthcare
+lab-if-0331.healthcare.internal,backup_encryption,RSA,2048,keystore,lab-if-0331.healthcare.internal,staging,Network Ops,Healthcare
+lab-if-0332.healthcare.internal,firmware_signing,RSA,2048,keystore,lab-if-0332.healthcare.internal,production,Data Platform,Healthcare
+pacs-0333.healthcare.internal,tls_certificate,ECDSA,256,tls,pacs-0333.healthcare.internal,staging,Network Ops,Healthcare
+ehr-0334.healthcare.internal,device_identity,RSA,2048,keystore,ehr-0334.healthcare.internal,production,Data Platform,Healthcare
+portal-0335.healthcare.internal,tls_certificate,RSA,2048,tls,portal-0335.healthcare.internal,production,Payments Ops,Healthcare
+portal-0336.healthcare.internal,token_signing,RSA,2048,keystore,portal-0336.healthcare.internal,production,Network Ops,Healthcare
+pacs-0337.healthcare.internal,tls_certificate,RSA,2048,tls,pacs-0337.healthcare.internal,production,Payments Ops,Healthcare
+hl7-gw-0338.healthcare.internal,tls_certificate,ML-DSA-65,,tls,hl7-gw-0338.healthcare.internal,production,Network Ops,Healthcare
+ehr-0339.healthcare.internal,database_tls,ECDSA,256,tls,ehr-0339.healthcare.internal,production,Data Platform,Healthcare
+portal-0340.healthcare.internal,tls_certificate,ECDSA,256,tls,portal-0340.healthcare.internal,production,Application Security,Healthcare
+ehr-0341.healthcare.internal,device_identity,RSA,2048,keystore,ehr-0341.healthcare.internal,production,Payments Ops,Healthcare
+ehr-0342.healthcare.internal,tls_certificate,ML-DSA-65,,tls,ehr-0342.healthcare.internal,production,Application Security,Healthcare
+lab-if-0343.healthcare.internal,backup_encryption,RSA,2048,keystore,lab-if-0343.healthcare.internal,production,,Healthcare
+pacs-0344.healthcare.internal,backup_encryption,AES,256,keystore,pacs-0344.healthcare.internal,staging,Payments Ops,Healthcare
+pacs-0345.healthcare.internal,tls_certificate,RSA,2048,tls,pacs-0345.healthcare.internal,production,Application Security,Healthcare
+pacs-0346.healthcare.internal,vpn_ipsec,DH,2048,keystore,pacs-0346.healthcare.internal,production,Network Ops,Healthcare
+lab-if-0347.healthcare.internal,device_identity,ECDSA,256,keystore,lab-if-0347.healthcare.internal,production,Network Ops,Healthcare
+lab-if-0348.healthcare.internal,backup_encryption,AES,256,keystore,lab-if-0348.healthcare.internal,production,Application Security,Healthcare
+hl7-gw-0349.healthcare.internal,vpn_ipsec,ECDHE,256,keystore,hl7-gw-0349.healthcare.internal,staging,Data Platform,Healthcare
+hl7-gw-0350.healthcare.internal,tls_certificate,RSA,2048,tls,hl7-gw-0350.healthcare.internal,production,Payments Ops,Healthcare
+portal-0351.healthcare.internal,backup_encryption,AES,256,keystore,portal-0351.healthcare.internal,dr,Infrastructure,Healthcare
+lab-if-0352.healthcare.internal,tls_certificate,RSA,2048,tls,lab-if-0352.healthcare.internal,staging,Infrastructure,Healthcare
+portal-0353.healthcare.internal,device_identity,RSA,2048,keystore,portal-0353.healthcare.internal,production,Payments Ops,Healthcare
+portal-0354.healthcare.internal,tls_certificate,RSA,2048,tls,portal-0354.healthcare.internal,production,PKI Team,Healthcare
+ehr-0355.healthcare.internal,tls_certificate,ML-DSA-65,,tls,ehr-0355.healthcare.internal,production,Data Platform,Healthcare
+pacs-0356.healthcare.internal,backup_encryption,RSA,2048,keystore,pacs-0356.healthcare.internal,production,Infrastructure,Healthcare
+lab-if-0357.healthcare.internal,vpn_ipsec,DH,2048,keystore,lab-if-0357.healthcare.internal,production,PKI Team,Healthcare
+ehr-0358.healthcare.internal,tls_certificate,RSA,2048,tls,ehr-0358.healthcare.internal,production,Payments Ops,Healthcare
+hl7-gw-0359.healthcare.internal,tls_certificate,ECDSA,256,tls,hl7-gw-0359.healthcare.internal,production,Platform Engineering,Healthcare
+portal-0360.healthcare.internal,tls_certificate,ECDSA,256,tls,portal-0360.healthcare.internal,production,Infrastructure,Healthcare
+lab-if-0361.healthcare.internal,tls_certificate,RSA,2048,tls,lab-if-0361.healthcare.internal,staging,Payments Ops,Healthcare
+lab-if-0362.healthcare.internal,tls_certificate,RSA,2048,tls,lab-if-0362.healthcare.internal,production,Network Ops,Healthcare
+portal-0363.healthcare.internal,tls_certificate,ECDSA,256,tls,portal-0363.healthcare.internal,staging,Network Ops,Healthcare
+hl7-gw-0364.healthcare.internal,tls_certificate,RSA,2048,tls,hl7-gw-0364.healthcare.internal,staging,Platform Engineering,Healthcare
+pacs-0365.healthcare.internal,backup_encryption,AES,256,keystore,pacs-0365.healthcare.internal,production,Data Platform,Healthcare
+pacs-0366.healthcare.internal,backup_encryption,RSA,2048,keystore,pacs-0366.healthcare.internal,production,Payments Ops,Healthcare
+portal-0367.healthcare.internal,backup_encryption,AES,256,keystore,portal-0367.healthcare.internal,dr,Application Security,Healthcare
+portal-0368.healthcare.internal,backup_encryption,AES,256,keystore,portal-0368.healthcare.internal,production,Application Security,Healthcare
+hl7-gw-0369.healthcare.internal,database_tls,RSA,2048,tls,hl7-gw-0369.healthcare.internal,dr,Network Ops,Healthcare
+pacs-0370.healthcare.internal,token_signing,ECDSA,256,keystore,pacs-0370.healthcare.internal,production,Platform Engineering,Healthcare
+hl7-gw-0371.healthcare.internal,tls_certificate,ML-DSA-65,,tls,hl7-gw-0371.healthcare.internal,dr,Infrastructure,Healthcare
+ehr-0372.healthcare.internal,tls_certificate,ECDSA,256,tls,ehr-0372.healthcare.internal,production,Infrastructure,Healthcare
+portal-0373.healthcare.internal,database_tls,RSA,2048,tls,portal-0373.healthcare.internal,production,Network Ops,Healthcare
+lab-if-0374.healthcare.internal,vpn_ipsec,DH,2048,keystore,lab-if-0374.healthcare.internal,production,Payments Ops,Healthcare
+portal-0375.healthcare.internal,tls_certificate,ECDSA,256,tls,portal-0375.healthcare.internal,production,,Healthcare
+lab-if-0376.healthcare.internal,tls_certificate,ECDSA,256,tls,lab-if-0376.healthcare.internal,dr,,Healthcare
+pacs-0377.healthcare.internal,tls_certificate,RSA,2048,tls,pacs-0377.healthcare.internal,production,Data Platform,Healthcare
+hl7-gw-0378.healthcare.internal,tls_certificate,RSA,2048,tls,hl7-gw-0378.healthcare.internal,production,Data Platform,Healthcare
+ehr-0379.healthcare.internal,tls_certificate,ECDSA,256,tls,ehr-0379.healthcare.internal,production,Application Security,Healthcare
+pacs-0380.healthcare.internal,device_identity,ECDSA,256,keystore,pacs-0380.healthcare.internal,staging,Data Platform,Healthcare
+ehr-0381.healthcare.internal,tls_certificate,ECDSA,256,tls,ehr-0381.healthcare.internal,staging,Application Security,Healthcare
+pacs-0382.healthcare.internal,backup_encryption,AES,256,keystore,pacs-0382.healthcare.internal,production,Infrastructure,Healthcare
+pacs-0383.healthcare.internal,database_tls,RSA,2048,tls,pacs-0383.healthcare.internal,production,PKI Team,Healthcare
+pacs-0384.healthcare.internal,tls_certificate,RSA,2048,tls,pacs-0384.healthcare.internal,production,Network Ops,Healthcare
+hl7-gw-0385.healthcare.internal,device_identity,RSA,2048,keystore,hl7-gw-0385.healthcare.internal,production,Payments Ops,Healthcare
+lab-if-0386.healthcare.internal,backup_encryption,RSA,2048,keystore,lab-if-0386.healthcare.internal,production,Payments Ops,Healthcare
+ehr-0387.healthcare.internal,device_identity,ECDSA,256,keystore,ehr-0387.healthcare.internal,production,PKI Team,Healthcare
+portal-0388.healthcare.internal,backup_encryption,AES,256,keystore,portal-0388.healthcare.internal,staging,Platform Engineering,Healthcare
+portal-0389.healthcare.internal,database_tls,ECDSA,256,tls,portal-0389.healthcare.internal,production,Payments Ops,Healthcare
+hl7-gw-0390.healthcare.internal,vpn_ipsec,ECDHE,256,keystore,hl7-gw-0390.healthcare.internal,production,,Healthcare
+lab-if-0391.healthcare.internal,backup_encryption,RSA,2048,keystore,lab-if-0391.healthcare.internal,staging,Application Security,Healthcare
+lab-if-0392.healthcare.internal,tls_certificate,RSA,2048,tls,lab-if-0392.healthcare.internal,dr,Network Ops,Healthcare
+hl7-gw-0393.healthcare.internal,database_tls,ECDSA,256,tls,hl7-gw-0393.healthcare.internal,production,PKI Team,Healthcare
+ehr-0394.healthcare.internal,tls_certificate,ECDSA,256,tls,ehr-0394.healthcare.internal,staging,Infrastructure,Healthcare
+ehr-0395.healthcare.internal,token_signing,ECDSA,256,keystore,ehr-0395.healthcare.internal,staging,Application Security,Healthcare
+ehr-0396.healthcare.internal,database_tls,ECDSA,256,tls,ehr-0396.healthcare.internal,production,Network Ops,Healthcare
+ehr-0397.healthcare.internal,database_tls,RSA,2048,tls,ehr-0397.healthcare.internal,staging,Data Platform,Healthcare
+pacs-0398.healthcare.internal,device_identity,ECDSA,256,keystore,pacs-0398.healthcare.internal,production,Platform Engineering,Healthcare
+portal-0399.healthcare.internal,backup_encryption,RSA,2048,keystore,portal-0399.healthcare.internal,production,,Healthcare
