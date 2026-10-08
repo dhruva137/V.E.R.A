@@ -2,17 +2,19 @@
 
 ## Install
 
+Not on PyPI yet; a PyPI release is planned and the licence is to be announced. For now, install from the repository:
+
 ```bash
-pip install vera-cbom                 # engine + CLI (`vera`)
-pip install "vera-cbom[server]"       # + uvicorn, to run the API server (`vera serve`)
-pip install "vera-cbom[mcp]"          # + MCP adapter
-pip install "vera-cbom[all]"          # everything above
+pip install "vera-cbom @ git+https://github.com/dhruva137/V.E.R.A.git"                 # engine + CLI (`vera`)
+pip install "vera-cbom[server] @ git+https://github.com/dhruva137/V.E.R.A.git"       # + uvicorn, to run the API server (`vera serve`)
+pip install "vera-cbom[mcp] @ git+https://github.com/dhruva137/V.E.R.A.git"          # + MCP adapter
+pip install "vera-cbom[all] @ git+https://github.com/dhruva137/V.E.R.A.git"          # everything above
 ```
 
 Quick start (Python 3.11+):
 
 ```bash
-pip install vera-cbom
+pip install "vera-cbom @ git+https://github.com/dhruva137/V.E.R.A.git"
 vera scan --source ./my-project --binary ./build/app -o cbom.json
 vera version
 ```
