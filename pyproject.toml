@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 name = "vera-cbom"
 version = "0.1.0"
 description = "V.E.R.A.: certified cryptographic discovery that produces a CycloneDX 1.7 CBOM, including from stripped binaries."
-readme = "README.md"
+readme = "PYPI.md"
 requires-python = ">=3.11"
 license = "LicenseRef-TBA"
 authors = [{ name = "Dhruva P Gowda" }]
@@ -53,6 +53,7 @@ vera = "vera_cbom.cli:main"
 [project.urls]
 Homepage = "https://papertoanything.com/products/vera/"
 Repository = "https://github.com/dhruva137/V.E.R.A"
+Documentation = "https://github.com/dhruva137/V.E.R.A#readme"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/vera_cbom"]
@@ -72,5 +73,5 @@ packages = ["src/vera_cbom"]
 "bench/pqc_bench.json" = "vera_cbom/bench/pqc_bench.json"
 
 [tool.hatch.build.targets.sdist]
-include = ["src", "backend", "bench/pqc_bench.json", "README.md", "LICENSE", "NOTICE.md", "pyproject.toml"]
+include = ["src", "backend", "bench/pqc_bench.json", "PYPI.md", "README.md", "LICENSE", "NOTICE.md", "pyproject.toml"]
 exclude = ["backend/tests", "backend/data/*.db", "backend/data/signing", "**/__pycache__", "**/*.pyc"]

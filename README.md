@@ -20,11 +20,9 @@ vera version
 `vera serve` starts the API and OpenAPI docs on `http://127.0.0.1:8000/docs` (needs the `server` extra).
 Writable state lives under `~/.vera` (override with `VERA_HOME`).
 
-*Part of [Paper To Anything](https://papertoanything.com). Author: Dhruva P Gowda.*
+Part of Paper To Anything (https://papertoanything.com) — research software developed and maintained by Dhruva P Gowda. In development.
 
-
-**India's first certified crypto-discovery engine for the quantum-safe transition.**
-Built for Smart India Hackathon 2026 · Problem statement **SIH26164 (NTRO)**: Enterprise Cryptographic Discovery & Analysis Tool.
+**Certified cryptographic discovery for the quantum-safe transition.**
 
 V.E.R.A. finds every cryptographic asset an organisation runs — in source code, packages, compiled binaries,
 container images, configurations, keystores, HSMs, key managers, cloud key services and live TLS/SSH — including
@@ -48,7 +46,7 @@ is checked against CERT-In's Table 9 and signed with the post-quantum signature 
 - [Why certified discovery](#why-certified-discovery)
 - [Architecture](#architecture)
 - [The certified detector](#the-certified-detector)
-- [Problem-statement coverage](#problem-statement-coverage)
+- [Capability coverage](#capability-coverage)
 - [Measured results](#measured-results)
 - [Run it](#run-it)
 - [The interface](#the-interface)
@@ -185,17 +183,17 @@ Every learned finding carries machine-readable CycloneDX properties: `vera:detec
 
 ---
 
-## Problem-statement coverage
+## Capability coverage
 
-| PS SIH26164 asks | V.E.R.A. |
+| Capability | V.E.R.A. |
 |---|---|
-| (i) Discover cryptography across applications, libraries, binaries, containers, configurations, certificates, keys and protocols | **11 collectors**: source code in 7 languages (tree-sitter), dependencies in 9 ecosystems, binaries (ELF, PE, Mach-O, JAR), container images (layer-aware), configuration (nginx, Apache, HAProxy, OpenSSH, OpenSSL, strongSwan, Java, Terraform), keystores and certificates, HSM (PKCS#11) / KMIP / cloud KMS and certificate services (AWS, Azure, GCP), live TLS and SSH plus recorded captures |
-| (ii) Inventory classified by type, lifetime and business criticality | Identity resolution across collectors, so one key seen in a keystore, an HSM and a handshake is one asset. An estate register declares systems, exposure, criticality and data classes; X (data lifetime) comes from the data classes. Drift rules D1–D8 flag where declared policy and evidence disagree |
-| (iii) Quantum risk assessment | Mosca's inequality per asset with a **per-primitive CRQC horizon** (GRI Quantum Threat Timeline 2026, shifted by each primitive's published logical-qubit estimate); harvest-now-decrypt-later and forge-later exposure; slack in months against the DST milestones |
-| (iv) PQC or hybrid recommendations by risk, latency and cost | Targets per asset for NIST (FIPS 203/204/205) and CNSA 2.0 profiles, hybrid first where the peer may be classical; latency measured on the host; who can fix it (team, HSM vendor, cloud provider); procurement clause drafts for gated suppliers |
+| Discover cryptography across applications, libraries, binaries, containers, configurations, certificates, keys and protocols | **11 collectors**: source code in 7 languages (tree-sitter), dependencies in 9 ecosystems, binaries (ELF, PE, Mach-O, JAR), container images (layer-aware), configuration (nginx, Apache, HAProxy, OpenSSH, OpenSSL, strongSwan, Java, Terraform), keystores and certificates, HSM (PKCS#11) / KMIP / cloud KMS and certificate services (AWS, Azure, GCP), live TLS and SSH plus recorded captures |
+| Inventory classified by type, lifetime and business criticality | Identity resolution across collectors, so one key seen in a keystore, an HSM and a handshake is one asset. An estate register declares systems, exposure, criticality and data classes; X (data lifetime) comes from the data classes. Drift rules D1–D8 flag where declared policy and evidence disagree |
+| Quantum risk assessment | Mosca's inequality per asset with a **per-primitive CRQC horizon** (GRI Quantum Threat Timeline 2026, shifted by each primitive's published logical-qubit estimate); harvest-now-decrypt-later and forge-later exposure; slack in months against the DST milestones |
+| PQC or hybrid recommendations by risk, latency and cost | Targets per asset for NIST (FIPS 203/204/205) and CNSA 2.0 profiles, hybrid first where the peer may be classical; latency measured on the host; who can fix it (team, HSM vendor, cloud provider); procurement clause drafts for gated suppliers |
 | Deliverables | CycloneDX **1.7** (and 1.6) CBOM with versions and modes, **SARIF 2.1.0**, PDF report, **ML-DSA-65-signed** evidence manifest, hash-chained audit log, bilingual GUI |
 
-The full clause-by-clause table with the test that covers each row: [`docs/PS_COVERAGE.md`](docs/PS_COVERAGE.md).
+The full table with the test that covers each row: [`docs/PS_COVERAGE.md`](docs/PS_COVERAGE.md).
 
 ---
 
@@ -284,7 +282,7 @@ cd frontend && npm install && npm run dev                            # http://lo
 ollama pull qwen3:1.7b                                               # local agent model (optional)
 ```
 
-`python main.py` starts in **NTRO mode** unless you set these yourself: `VERA_AGENT_MODE=read_only`,
+`python main.py` starts in a restricted, offline mode unless you set these yourself: `VERA_AGENT_MODE=read_only`,
 `VERA_LLM_PROVIDER=ollama`, `VERA_LLM_MODEL=qwen3:1.7b`, `VERA_LLM_THINKING=0`, `VERA_OFFLINE=1`. The offline
 guard allows only this machine and scan targets an operator names. Settings → Runtime shows what is in force.
 
@@ -311,8 +309,8 @@ dark, fonts bundled so the browser fetches nothing from outside. Axe-core report
 | Plan | Recommendations (NIST or CNSA 2.0) with cost, suppliers that must ship PQC first, and each migration against its milestone |
 | Evidence | CBOM, SARIF, signed manifest and PDF downloads; CERT-In Table 9 conformance; audit-chain verification; the live certified detector |
 
-Roles are capability sets enforced by the API: viewer, auditor, engineer, risk owner (CISO), **analyst (NTRO,
-primary)** and admin. The assistant (press `/`) is read-only in NTRO mode, capped at 25 assets per approved change,
+Roles are capability sets enforced by the API: viewer, auditor, engineer, risk owner (CISO), **analyst
+(primary)** and admin. The assistant (press `/`) is read-only in that mode, capped at 25 assets per approved change,
 and writes every step to the audit chain.
 
 | | |
@@ -403,7 +401,7 @@ flowchart LR
         p14[CycloneDX 1.7 + CERT-In<br/>ML-DSA-65 signed evidence]
         p15[Bilingual GUI · roles<br/>governed local agent]
     end
-    subgraph P2["Phase 2 · SIH build"]
+    subgraph P2["Phase 2 · Next"]
         direction TB
         p21[GPU-accelerated certification<br/>data-centre scale]
         p22[eBPF runtime discovery<br/>crypto that actually executes]
@@ -426,9 +424,9 @@ timeline
     title Aligned with India's quantum-safe milestones
     2026 : Phase 1 built and measured
          : IndiCrypt-Bench released
-    SIH build : GPU certification
-              : eBPF runtime discovery
-              : Firmware and Android
+    Next : GPU certification
+         : eBPF runtime discovery
+         : Firmware and Android
     2027 : CII inventory milestone (DST)
          : Phase 3 pilot with a CII sector
     FY 2027-28 : Vendor CBOMs mandatory in procurement
@@ -483,3 +481,9 @@ Commit stamps inside result files name the development commit that produced each
 **Open-source components** are used under their own licences (see `backend/requirements.txt` and
 `frontend/package.json`), including FastAPI, tree-sitter, capstone, LIEF, pyelftools, cryptography, scikit-learn,
 React, Recharts and React Flow. See [`NOTICE.md`](NOTICE.md).
+
+---
+
+## Origin
+
+Development started in 2026 in response to Smart India Hackathon problem statement SIH26164 (NTRO). It continues as an independent research project.
