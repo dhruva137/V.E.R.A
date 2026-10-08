@@ -7,4 +7,4 @@ V.E.R.A. (Verified Enumeration of Risky Algorithms) © 2026 Dhruva P Gowda.
 - Open-source components are used under their own licences and acknowledged in `README.md`.
 - The benchmark lives in its own repository: [IndiCrypt-Bench](https://github.com/dhruva137/indicrypt-bench).
 
-Licence: to be announced.
+Licence: Apache-2.0 (see `LICENSE`).

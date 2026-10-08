@@ -46,3 +46,7 @@ research/e2e/images/
 # generated
 deck/icons/
 .gstack/
+
+# Python packaging
+dist/
+*.egg-info/

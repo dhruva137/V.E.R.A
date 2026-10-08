@@ -1,5 +1,28 @@
 # V.E.R.A. — Verified Enumeration of Risky Algorithms
 
+## Install
+
+```bash
+pip install vera-cbom                 # engine + CLI (`vera`)
+pip install "vera-cbom[server]"       # + uvicorn, to run the API server (`vera serve`)
+pip install "vera-cbom[mcp]"          # + MCP adapter
+pip install "vera-cbom[all]"          # everything above
+```
+
+Quick start (Python 3.11+):
+
+```bash
+pip install vera-cbom
+vera scan --source ./my-project --binary ./build/app -o cbom.json
+vera version
+```
+
+`vera serve` starts the API and OpenAPI docs on `http://127.0.0.1:8000/docs` (needs the `server` extra).
+Writable state lives under `~/.vera` (override with `VERA_HOME`).
+
+*Part of [Paper To Anything](https://papertoanything.com). Author: Dhruva P Gowda.*
+
+
 **India's first certified crypto-discovery engine for the quantum-safe transition.**
 Built for Smart India Hackathon 2026 · Problem statement **SIH26164 (NTRO)**: Enterprise Cryptographic Discovery & Analysis Tool.
 
