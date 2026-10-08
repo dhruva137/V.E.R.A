@@ -8,13 +8,13 @@ version = "0.1.0"
 description = "V.E.R.A.: certified cryptographic discovery that produces a CycloneDX 1.7 CBOM, including from stripped binaries."
 readme = "README.md"
 requires-python = ">=3.11"
-license = { text = "Apache-2.0" }
+license = "LicenseRef-TBA"
 authors = [{ name = "Dhruva P Gowda" }]
 keywords = ["cbom", "cryptography", "post-quantum", "cyclonedx", "crypto-agility", "binary-analysis"]
 classifiers = [
   "Development Status :: 4 - Beta",
   "Intended Audience :: Information Technology",
-  "License :: OSI Approved :: Apache Software License",
+  "License :: Other/Proprietary License",
   "Programming Language :: Python :: 3",
   "Topic :: Security :: Cryptography",
 ]
